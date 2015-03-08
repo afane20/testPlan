@@ -24,14 +24,9 @@ public class FileReviewHandler implements ReviewDataHandler {
           this.fileName = fileName;
      }
 
-     public String getFileName() {
-          return fileName;
-     }
-
-     public void setFileName(String fileName) {
-          this.fileName = fileName;
-     }
- 
+     public String getFileName() {return fileName;}
+     public void setFileName(String fileName) {this.fileName = fileName;}
+     
      public void addReview(Review review) {
           try {
                BufferedWriter writer = new BufferedWriter(new FileWriter(getFileName(), true));
@@ -64,9 +59,7 @@ public class FileReviewHandler implements ReviewDataHandler {
         //return reversed list
         List<Review> reverseView = Lists.reverse(list);
         return reverseView;
-        
-        //return normal list
-//        return list;
+       
     }
   
 }
