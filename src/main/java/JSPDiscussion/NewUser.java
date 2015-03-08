@@ -20,10 +20,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-/**
- *
- * @author Bryce
- */
 @WebServlet(name = "NewUser", urlPatterns = {"/NewUser"})
 public class NewUser extends HttpServlet {
 

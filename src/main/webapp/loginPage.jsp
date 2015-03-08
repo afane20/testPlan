@@ -1,8 +1,3 @@
-<%-- 
-    Document   : loginPage
-    Created on : Mar 3, 2015, 10:32:35 AM
-    Author     : Bryce
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

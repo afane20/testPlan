@@ -1,7 +1,5 @@
 <%-- 
-    Document   : HelloJsp
-    Created on : Feb 26, 2015, 10:46:32 AM
-    Author     : Bryce
+   
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

@@ -16,10 +16,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author Bryce
- */
 @WebServlet(name = "CreatePost", urlPatterns = {"/CreatePost"})
 public class CreatePost extends HttpServlet {
 

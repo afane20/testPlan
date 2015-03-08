@@ -22,10 +22,6 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-/**
- *
- * @author Bryce
- */
 @WebServlet(name = "LoginControl", urlPatterns = {"/LoginControl"})
 public class LoginControl extends HttpServlet {
 

@@ -1,8 +1,4 @@
-<%-- 
-    Document   : InvalidLogin
-    Created on : Mar 3, 2015, 7:19:32 PM
-    Author     : Bryce
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

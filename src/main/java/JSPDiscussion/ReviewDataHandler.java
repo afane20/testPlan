@@ -9,10 +9,6 @@ import JSPDiscussion.reviews.Review;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Bryce
- */
 public interface ReviewDataHandler {
     public List<Review> getReviews(); 
 }

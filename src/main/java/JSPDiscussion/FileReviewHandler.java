@@ -15,10 +15,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Bryce
- */
 public class FileReviewHandler implements ReviewDataHandler {
     
      private String fileName;

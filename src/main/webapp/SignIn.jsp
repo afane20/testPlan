@@ -1,8 +1,3 @@
-<%-- 
-    Document   : SignIn
-    Created on : Mar 3, 2015, 7:19:06 PM
-    Author     : Bryce
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -15,7 +10,7 @@
     <body>
          <header>
             <div class="container">
-                <h1>Welcome to Bryce Franzen's Java Review Page</h1>
+                <h1>Welcome to Yoshi's Review Page</h1>
             </div>
         </header>
         <main>

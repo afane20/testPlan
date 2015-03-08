@@ -9,10 +9,6 @@ import JSPDiscussion.reviews.Review;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Bryce
- */
 public class HardCodedReviewHandler implements ReviewDataHandler {
     @Override
     public List<Review> getReviews() {

@@ -1,8 +1,4 @@
-<%-- 
-    Document   : EnterNewPost
-    Created on : Mar 3, 2015, 7:19:46 PM
-    Author     : Bryce
---%>
+
 <%
 if(null == session.getAttribute("username")){  
   response.sendRedirect("SignIn.jsp");

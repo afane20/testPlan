@@ -1,8 +1,3 @@
-<%-- 
-    Document   : welcome
-    Created on : Mar 3, 2015, 10:44:10 AM
-    Author     : Bryce
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
