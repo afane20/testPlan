@@ -21,7 +21,7 @@ if(null == session.getAttribute("username")){
             <main>
                 <div>
                     <h2>Enter New Post</h2>
-                    <h3>Please do not put more that 2 commas! :) (due to Internal Functionality)</h3>
+                    <h4><i>Please do not put more that 2 commas! :) (due to Internal Functionality)</i></h4>
                     <span class="floatRight"><button onclick="window.location.href='SignIn.jsp'" id="logoutButton">Logout</button></span>
                 </div>
                 
@@ -35,8 +35,8 @@ if(null == session.getAttribute("username")){
                     <input type="submit" name="submit" value="Submit New Post" id="submitNewPostButton">
                 </form>
                 <button onclick="window.location.href='LoadPosts'" id="viewAll">View All Posts</button>
-           
-                <div><img src="eggs.jpg" width="300" height="300"></div>
+                <br><br><br>
+                <div><img src="fat-pikachu.png" width="300" height="300"></div>
             
             </main>
     </body>
