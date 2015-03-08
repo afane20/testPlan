@@ -21,7 +21,7 @@ if(null == session.getAttribute("username")){
             <main>
                 <div>
                     <h2>Enter New Post</h2>
-                    <h4><i style="color:red">No commas! make complete sentences</i></h4>
+                    <h4><i style="color:red">No commas!(due to internal functionality)</i></h4>
                     <span class="floatRight"><button onclick="window.location.href='SignIn.jsp'" id="logoutButton">Logout</button></span>
                 </div>
                 
