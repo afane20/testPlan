@@ -20,10 +20,10 @@ if(null == session.getAttribute("username")){
             </div>
         </header>
         
-                    <div><span class="floatRight"><button onclick="window.location.href='SignIn.jsp'" id="logoutButton">Logout</button></span>
-</div>
 
         <main>
+            <div><span class="floatRight"><button onclick="window.location.href='SignIn.jsp'" id="logoutButton">Logout</button></span></div>
+
             <br><br><br>
             <c:forEach items="${reviews}" var="review">
                 <div class="paddingBottom"><strong>${review.username}</strong> <span class="floatRight">${review.currentDateTime}</span></div>
