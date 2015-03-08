@@ -40,41 +40,21 @@ public class LoginControl extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {        
-// Write Initial User File
-//        JSONObject obj = new JSONObject();
-//        obj.put("Bryce", "qwerty");
-//        obj.put("Candice", "testing");
-//        obj.put("Bryan", "123456");
-//        
-//        FileWriter file = new FileWriter("/Users/Bryce/Documents/NetBeansProjects/FirstProject/src/main/java/JSPDiscussion/users.txt");
-////        String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
-////        FileWriter file = new FileWriter(dataDirectory + "/user.txt");
-//        
-//        try {
-//            file.write(obj.toJSONString());
-//            System.out.println("Successfully Copied JSON Object to File...");
-//            System.out.println("\nJSON Object: " + obj);
-// 
-//        } catch (IOException e) {
-//            e.printStackTrace();
-// 
-//        } finally {
-//            file.flush();
-//            file.close();
-//        }
         
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         
-// Read Users File
+        // Read Users File
         User newUser = new User();
-       // JSONParser parser = new JSONParser();
         try {
             
          List<User> list = new ArrayList<User>();
-            //Object obj = parser.parse(new FileReader("/Users/Bryce/Documents/NetBeansProjects/FirstProject/src/main/java/JSPDiscussion/users.txt"));
             try {
-                BufferedReader reader = new BufferedReader(new FileReader("/Users/Yeah/Documents/NetBeansProjects/JavaProject-master/src/main/java/JSPDiscussion/users.txt"));
+                //OPENSHIFT
+                String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
+                BufferedReader reader = new BufferedReader(new FileReader(dataDirectory + "/user.txt"));
+                //LOCALLY
+                // BufferedReader reader = new BufferedReader(new FileReader("/Users/Yeah/Documents/NetBeansProjects/JavaProject-master/src/main/java/JSPDiscussion/users.txt"));
 
                String line;
 
@@ -87,18 +67,6 @@ public class LoginControl extends HttpServlet {
           } catch (IOException e) {
                e.printStackTrace();
           }
-            
-            
-            
-            // For OPENSHIFT
-           // String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
-           // Object obj = parser.parse(new FileReader(dataDirectory + "/user.txt"));
-
-            //JSONObject jsonObject = (JSONObject) obj;
- 
-        //    String FilePassword = (String) jsonObject.get(username);
-       //      String FilePassword = newUser.getPassword();
-   
                      
             for (User readUser : list) {
                 if (readUser.getUsername().equals(username)){

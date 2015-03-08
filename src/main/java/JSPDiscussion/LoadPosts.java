@@ -36,10 +36,11 @@ public class LoadPosts extends HttpServlet {
             throws ServletException, IOException {
         
        // FOR OPENSHIFT 
-       // String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
-       // ReviewDataHandler handler = new FileReviewHandler(dataDirectory + "/list.txt");
+        String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
+        ReviewDataHandler handler = new FileReviewHandler(dataDirectory + "/list.txt");
         
-        FileReviewHandler handler = new FileReviewHandler("/Users/Yeah/Documents/NetBeansProjects/JavaProject-master/src/main/java/JSPDiscussion/list.txt");
+        //FOR LOCAL
+        //FileReviewHandler handler = new FileReviewHandler("/Users/Yeah/Documents/NetBeansProjects/JavaProject-master/src/main/java/JSPDiscussion/list.txt");
 
         request.setAttribute("reviews", handler.getReviews());
 
