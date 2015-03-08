@@ -1,11 +1,16 @@
 
  body {
+    width: 100%;
     margin: 0px;
     font-family: sans-serif;
     background-color: #f2f2f2;
     background: #aeefdc;
-    background-image: url("zenbg-1.png"), url(zenbg-2.png);
-    background-repeat: repeat-x, repeat;
+}
+
+#image {
+    position: absolute;
+    left: 600px; 
+    top: 400px;
 }
 header {
     background-color: #000;
