@@ -49,7 +49,7 @@
   
         </main>
         
-       <div id="image"><img src="Yoshi2.jpg" width="350" height="300"></div>
+        <div id="image"><img src="Yoshi2.jpg" width="350" height="300" style="margin-left: 70px"></div>
 
     </body>
 </html>

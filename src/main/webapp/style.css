@@ -8,9 +8,8 @@
 }
 
 #image {
-    position: absolute;
-    left: 600px; 
-    top: 400px;
+    position: initial;
+    padding: 100px;
 }
 header {
     background-color: #000;
