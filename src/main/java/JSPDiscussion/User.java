@@ -1,5 +1,10 @@
 package JSPDiscussion;
 
+import JSPDiscussion.reviews.Review;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class User {
     private String username;
     private String password; 
@@ -15,4 +20,8 @@ public class User {
         username = parts[0];
         password = parts[1];
     }
+     
+     public String toFileString() {
+            return username + "," + password;
+     }
 }

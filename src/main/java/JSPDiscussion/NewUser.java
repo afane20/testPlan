@@ -48,12 +48,14 @@ public class NewUser extends HttpServlet {
             List<User> list = new ArrayList<User>();
             
           try {
-                //BufferedReader reader = new BufferedReader(new FileReader("/Users/Yeah/Documents/NetBeansProjects/JavaProject-master/src/main/java/JSPDiscussion/users.txt"));
+                // LOCALLY
+               //BufferedReader reader = new BufferedReader(new FileReader("/Users/Yeah/Documents/NetBeansProjects/JavaProject-master/src/main/java/JSPDiscussion/users.txt"));
+               // OPENSHIFT
                 String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
-                BufferedReader reader = new BufferedReader(new FileReader(dataDirectory + "/user.txt"));
+                BufferedReader reader = new BufferedReader(new FileReader(dataDirectory + "/users.txt"));
                String line;
                while ((line = reader.readLine()) != null) {
-                    fileContent += line;
+                    fileContent += line + "\n";
                     User user = new User();
                     user.loadFromFileString(line);
                     list.add(user);
@@ -65,14 +67,14 @@ public class NewUser extends HttpServlet {
           
                list.add(newUser);
                // FOR LOCAL!!!          
-               // FileWriter file = new FileWriter("/Users/Yeah/Documents/NetBeansProjects/JavaProject-master/src/main/java/JSPDiscussion/users.txt");
+               //FileWriter file = new FileWriter("/Users/Yeah/Documents/NetBeansProjects/JavaProject-master/src/main/java/JSPDiscussion/users.txt");
                
                //for openshift!!
                String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
-               FileWriter file = new FileWriter(dataDirectory + "/user.txt");
-         
+               FileWriter file = new FileWriter(dataDirectory + "/users.txt");
+               System.out.println(fileContent);
                String information = fileContent + newUser.getUsername() + "," + newUser.getPassword();
-               
+               System.out.println(information);
                try {
                     file.write(information); // refer to ashlies code 
 

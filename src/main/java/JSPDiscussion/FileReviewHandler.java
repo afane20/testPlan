@@ -38,6 +38,16 @@ public class FileReviewHandler implements ReviewDataHandler {
           }
      }
 
+       public void addUser(User user) {
+          try {
+               BufferedWriter writer = new BufferedWriter(new FileWriter(getFileName(), true));
+               writer.write(user.toFileString() + "\n");
+               writer.close(); 
+
+          } catch (IOException e) {
+               e.printStackTrace();
+          }
+     }
      @Override
      public List<Review> getReviews() {
         List<Review> list = new ArrayList<Review>();

@@ -48,7 +48,7 @@ public class LoginControl extends HttpServlet {
             try {
                 //OPENSHIFT
                 String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
-                BufferedReader reader = new BufferedReader(new FileReader(dataDirectory + "/user.txt"));
+                BufferedReader reader = new BufferedReader(new FileReader(dataDirectory + "/users.txt"));
                 //LOCALLY
                 // BufferedReader reader = new BufferedReader(new FileReader("/Users/Yeah/Documents/NetBeansProjects/JavaProject-master/src/main/java/JSPDiscussion/users.txt"));
 
