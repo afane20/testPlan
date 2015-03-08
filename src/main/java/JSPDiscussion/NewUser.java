@@ -42,17 +42,18 @@ public class NewUser extends HttpServlet {
             User newUser = new User();
             newUser.setUsername(username);
             newUser.setPassword(password);
-        
+            String fileContent = "";
         try {
                 
             List<User> list = new ArrayList<User>();
-
+            
           try {
                 //BufferedReader reader = new BufferedReader(new FileReader("/Users/Yeah/Documents/NetBeansProjects/JavaProject-master/src/main/java/JSPDiscussion/users.txt"));
                 String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
                 BufferedReader reader = new BufferedReader(new FileReader(dataDirectory + "/user.txt"));
                String line;
                while ((line = reader.readLine()) != null) {
+                    fileContent += line;
                     User user = new User();
                     user.loadFromFileString(line);
                     list.add(user);
@@ -70,7 +71,7 @@ public class NewUser extends HttpServlet {
                String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
                FileWriter file = new FileWriter(dataDirectory + "/user.txt");
          
-               String information = newUser.getUsername() + "," + newUser.getPassword();
+               String information = fileContent + newUser.getUsername() + "," + newUser.getPassword();
                
                try {
                     file.write(information); // refer to ashlies code 
