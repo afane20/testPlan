@@ -59,7 +59,7 @@ h1 {
 #submitNewPostButton {
     float: right;
     padding: 10px 20px;
-    background-color: #009900;
+    background-color: #006AFF;
     border: none;
     color: #fff;
     cursor: pointer;
@@ -68,7 +68,8 @@ h1 {
 #loginButton {
     float: left;
     padding: 10px 20px;
-    background-color: #009900;
+    //background-color: #009900;
+    background-color: #436AC4;
     border: none;
     color: #fff;
     cursor: pointer;
@@ -76,7 +77,7 @@ h1 {
 }
 
 #logoutButton {
-    background: #cc0000;
+    background: #87B2ED;
     padding: 10px 40px;
     border: none;
     cursor: pointer;
