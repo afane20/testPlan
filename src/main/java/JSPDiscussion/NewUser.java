@@ -52,7 +52,6 @@ public class NewUser extends HttpServlet {
                 String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
                 BufferedReader reader = new BufferedReader(new FileReader(dataDirectory + "/user.txt"));
                String line;
-
                while ((line = reader.readLine()) != null) {
                     User user = new User();
                     user.loadFromFileString(line);
@@ -62,18 +61,19 @@ public class NewUser extends HttpServlet {
           } catch (IOException e) {
                e.printStackTrace();
           }
-
+          
+               list.add(newUser);
                // FOR LOCAL!!!          
                // FileWriter file = new FileWriter("/Users/Yeah/Documents/NetBeansProjects/JavaProject-master/src/main/java/JSPDiscussion/users.txt");
                
                //for openshift!!
                String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
                FileWriter file = new FileWriter(dataDirectory + "/user.txt");
-                
-                String information = newUser.getUsername() + "," + newUser.getPassword();
-                try {
+         
+               String information = newUser.getUsername() + "," + newUser.getPassword();
+               
+               try {
                     file.write(information); // refer to ashlies code 
-                    System.out.println("Successfully Copied JSON Object to File...");
 
                 } catch (IOException e) {
                     e.printStackTrace();
