@@ -22,6 +22,10 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+/**
+ *
+ * @author Bryce
+ */
 @WebServlet(name = "LoginControl", urlPatterns = {"/LoginControl"})
 public class LoginControl extends HttpServlet {
 
@@ -63,16 +67,29 @@ public class LoginControl extends HttpServlet {
           } catch (IOException e) {
                e.printStackTrace();
           }
+            
+            
+            
+            // For OPENSHIFT
+           // String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
+           // Object obj = parser.parse(new FileReader(dataDirectory + "/user.txt"));
+
+            //JSONObject jsonObject = (JSONObject) obj;
+ 
+        //    String FilePassword = (String) jsonObject.get(username);
+       //      String FilePassword = newUser.getPassword();
+   
                      
             for (User readUser : list) {
                 if (readUser.getUsername().equals(username)){
                     if (password.equals(readUser.getPassword())){
                 request.getSession().setAttribute("username", username);
                 request.getRequestDispatcher("EnterNewPost.jsp").forward(request, response);
-            }
-            else {
+                } else {
                 response.sendRedirect("InvalidLogin.jsp");
-            }
+                }
+              } else {
+                response.sendRedirect("InvalidLogin.jsp");
                 }
             }
             

@@ -37,11 +37,11 @@ public class CreatePost extends HttpServlet {
         Review newReview = new Review(username, reviewText, currentDateTime);
         
         // FOR  OPENSHIFT!!!!!!!!
-        //String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
-        //FileReviewHandler handler = new FileReviewHandler(dataDirectory + "/list.txt");
+        String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
+        FileReviewHandler handler = new FileReviewHandler(dataDirectory + "/list.txt");
         
         // Calling the constructor
-        FileReviewHandler handler = new FileReviewHandler("/Users/Yeah/Documents/NetBeansProjects/JavaProject-master/src/main/java/JSPDiscussion/list.txt");
+        //FileReviewHandler handler = new FileReviewHandler("/Users/Yeah/Documents/NetBeansProjects/JavaProject-master/src/main/java/JSPDiscussion/list.txt");
         handler.addReview(newReview);
         
         response.sendRedirect("LoadPosts");
