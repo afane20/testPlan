@@ -15,12 +15,15 @@ if(null == session.getAttribute("username")){
     <body>
             <header>
                 <div class="container">
-                    <span class="floatRight"><button onclick="window.location.href='SignIn.jsp'" id="logoutButton">Logout</button></span>
-                    <h1>Enter New Post</h1>
+                    <h2>Welcome ${sessionScope.username}</h2>
                 </div>
             </header>
             <main>
-                <h2>Welcome ${sessionScope.username}</h2>
+                <div>
+                    <h2>Enter New Post</h2>
+                    <span class="floatRight"><button onclick="window.location.href='SignIn.jsp'" id="logoutButton">Logout</button></span>
+                </div>
+                
                 <form action="CreatePost" method="POST" name="newComment">
                     <label for="newReview"></label>
                     <textarea autofocus name="newPost" id="newPostTextArea"></textarea><br />
@@ -30,7 +33,7 @@ if(null == session.getAttribute("username")){
                     <label for="submit"></label>
                     <input type="submit" name="submit" value="Submit New Post" id="submitNewPostButton">
                 </form>
-                <button onclick="window.location.href='LoadPosts'" id="GetPostsButton">View All Posts</button>
+                <button onclick="window.location.href='LoadPosts'" id="viewAll">View All Posts</button>
             </main>
     </body>
 </html>

@@ -49,11 +49,12 @@ h1 {
     height: 200px;
 }
 
-#GetPostsButton {
+#viewAll {
     float: left;
     padding: 10px 40px;
     border: none;
     cursor: pointer;
+    background-color: #FFB300;
 }
 
 #submitNewPostButton {

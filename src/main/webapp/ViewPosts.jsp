@@ -16,11 +16,12 @@ if(null == session.getAttribute("username")){
     <body>
         <header>
             <div class="container">
-                <span class="floatRight"><button onclick="window.location.href='SignIn.jsp'" id="logoutButton">Logout</button></span>
                 <h1>All Posts</h1>
             </div>
         </header>
         <main>
+            <div><span class="floatRight"><button onclick="window.location.href='SignIn.jsp'" id="logoutButton">Logout</button></span>
+</div>
             <c:forEach items="${reviews}" var="review">
                 <div class="paddingBottom"><strong>${review.username}</strong> <span class="floatRight">${review.currentDateTime}</span></div>
                 ${review.reviewText}<br /><br />
