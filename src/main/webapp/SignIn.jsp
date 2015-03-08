@@ -22,7 +22,7 @@
                     
                     <label for="password">Password:</label>
                     <input type="password" name="password" class="loginPage"/>
-                    
+                    <br><br>
                     <label for="submit"></label>
                     <input type="submit" value="Login" id="loginButton"/>
                 </form><br /><br /><br /><br />
@@ -38,11 +38,18 @@
                     
                     <label for="password2">Verify Password:</label>
                     <input type="password" name="password2" class="loginPage"/>
-                    
+                    <br><br>
                     <label for="submit"></label>
                     <input type="submit" value="Create New User" id="loginButton"/>
                 </form>
             </div>
+        
+            <div id="cloud" style="position:absolute; top:400px;"><span class="shadow"></span></div>
+            <br><br>
+  
         </main>
+        
+       <div id="image" style="position: relative;left: 600px; top: 30px;" ><img src="Yoshi2.jpg" width="350" height="300"></div>
+
     </body>
 </html>
