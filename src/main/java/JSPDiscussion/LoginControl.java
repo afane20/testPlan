@@ -84,7 +84,11 @@ public class LoginControl extends HttpServlet {
                 } else {
                 response.sendRedirect("InvalidLogin.jsp");
                 }
-              } 
+              } else if (!(readUser.getUsername().equals(username) || readUser.getPassword().equals(password))){
+               response.sendRedirect("InvalidLogin.jsp");
+
+              }
+                
             }
             
            
