@@ -40,7 +40,7 @@ public class CreatePost extends HttpServlet {
         //FileReviewHandler handler = new FileReviewHandler("/Users/Yeah/Documents/NetBeansProjects/JavaProject-master/src/main/java/JSPDiscussion/list.txt");
         handler.addReview(newReview);
         
-        response.sendRedirect("LoadPosts");
+        response.sendRedirect("LoadComments");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
