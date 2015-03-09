@@ -48,7 +48,6 @@ public class Review {
 
  
      public void loadFromFileString(String str) {
-            // TODO: Validation should be done here
             String[] parts = str.split(",");
 
             username = parts[0];

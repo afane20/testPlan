@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package JSPDiscussion;
 
 import java.io.BufferedReader;
@@ -50,10 +46,12 @@ public class NewUser extends HttpServlet {
           try {
                 // LOCALLY
                //BufferedReader reader = new BufferedReader(new FileReader("/Users/Yeah/Documents/NetBeansProjects/JavaProject-master/src/main/java/JSPDiscussion/users.txt"));
-               // OPENSHIFT
+              
+              // OPENSHIFT
                 String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
                 BufferedReader reader = new BufferedReader(new FileReader(dataDirectory + "/users.txt"));
-               String line;
+               // End of openshift
+                String line;
                while ((line = reader.readLine()) != null) {
                     fileContent += line + "\n";
                     User user = new User();
@@ -81,13 +79,12 @@ public class NewUser extends HttpServlet {
                 } catch (IOException e) {
                     e.printStackTrace();
 
-                } finally {
+                } 
                     file.flush();
                     file.close();
-                }
                 
                 request.getSession().setAttribute("username", username);
-                request.getRequestDispatcher("EnterNewPost.jsp").forward(request, response);
+                request.getRequestDispatcher("EnterPost.jsp").forward(request, response);
             } catch (Exception e) {
                 e.printStackTrace();
 

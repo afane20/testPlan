@@ -3,18 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.loginpractice;
+package JSPDiscussion;
 
+import JSPDiscussion.reviews.Review;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "logout", urlPatterns = {"/logout"})
-public class logout extends HttpServlet {
+@WebServlet(name = "LoadComments", urlPatterns = {"/LoadComments"})
+public class LoadComments extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -27,8 +30,17 @@ public class logout extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getSession().removeAttribute("username");
-        request.getRequestDispatcher("loginPage.jsp").forward(request, response);
+        
+       // FOR OPENSHIFT 
+        String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
+        ReviewDataHandler handler = new FileReviewHandler(dataDirectory + "/comments.txt");
+        
+        //FOR LOCAL
+        //FileReviewHandler handler = new FileReviewHandler("/Users/Yeah/Documents/NetBeansProjects/JavaProject-master/src/main/java/JSPDiscussion/comments.txt");
+
+        request.setAttribute("reviews", handler.getReviews());
+
+        request.getRequestDispatcher("ViewPosts.jsp").forward(request,response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

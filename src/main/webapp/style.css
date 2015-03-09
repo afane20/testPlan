@@ -18,50 +18,35 @@ header {
     padding: 10px 10px;
 
 }
-.container {
+
+#wrapper {
     width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
-main {
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-hr {
-    height: 2px;
-    background: #000;
-    border: none;
-}
+
 h1 {
     margin: 0px;
 }
 .paddingBottom {
     padding-bottom: 10px;
 }
-.floatRight{
-    float: right;
-}
 
-#newPostTextArea {
+#TextArea {
     width: 50%;
     height: 60px;
 }
 
-#viewAll {
-    float: left;
-    padding: 10px 40px;
-    border: none;
-    cursor: pointer;
-    background-color: #FFB300;
+#head {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-#submitNewPostButton {
-    float: right;
+.Button {
     padding: 10px 20px;
-    background-color: #006AFF;
+    background-color:  #2B318A;
     border: none;
-    color: #fff;
+    color: white;
     cursor: pointer;
 }
 
@@ -75,16 +60,6 @@ h1 {
     cursor: pointer;
     width: 50%;
 }
-
-#logoutButton {
-    background: #2B318A;
-    padding: 10px 40px;
-    border: none;
-    cursor: pointer;
-    color: #fff;
-    margin-left: 6px;
-}
-
 input {
     padding: 5px 6px;
     margin-bottom: 10px;
@@ -113,12 +88,6 @@ label {
     float: left;
 }
 
-.mainDiv2 {
-    width: 45%;
-    float: right;
-    padding-left: 40px;
-    border-left: 1px solid #d2d2d2;
-}
 
 #cloud {
 	width: 350px; height: 120px;

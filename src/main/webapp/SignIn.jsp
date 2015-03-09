@@ -8,46 +8,21 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-         <header>
-            <div class="container">
+       <header>
+            <div id="head">
                 <h1>Welcome to Yoshi's Review Page</h1>
             </div>
         </header>
-        <main>
+        <div id="wrapper">
             <div class="mainDiv1">
-                <h1>Sign In</h1>
-                <form action="LoginControl" method="POST">
-                    <label for="username">Username:</label>
-                    <input type="text" name="username" class="loginPage"/>
-                    
-                    <label for="password">Password:</label>
-                    <input type="password" name="password" class="loginPage"/>
-                    <br><br><br><br><br>
-                    <label for="submit"></label>
-                    <input type="submit" value="Login" id="loginButton"/>
-                </form><br /><br /><br /><br />
-            </div>
-            <div class="mainDiv2">
-                <h1>Register</h1>
-                <form action="NewUser" method="POST">
-                    <label for="username">Username:</label>
-                    <input type="text" name="username" class="loginPage"/>
-                    
-                    <label for="password">Password:</label>
-                    <input type="password" name="password" class="loginPage"/>
-                    
-                    <label for="password2">Verify Password:</label>
-                    <input type="password" name="password2" class="loginPage"/>
-                    <br><br>
-                    <label for="submit"></label>
-                    <input type="submit" value="Create New User" id="loginButton"/>
-                </form>
-            </div>
+                <a href="Login.jsp"><h1>Sign In</h1></a>
+                <a href="Register.jsp"><h1>Register</h1></a>
+            
         
             <div id="cloud" style="position:absolute; top:400px;"><span class="shadow"></span></div>
             <br><br>
-  
-        </main>
+            </div>
+        </div>
         
         <div id="image"><img src="Yoshi2.jpg" width="350" height="300" style="margin-left: 70px"></div>
 

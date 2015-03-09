@@ -10,27 +10,27 @@ if(null == session.getAttribute("username")){
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>All Posts</title>
+        <title>Comments... </title>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <header>
-            <div class="container">
-                <h1>All Posts</h1>
+            <div id="head">
+                <h1>Comments</h1>
             </div>
         </header>
         
 
-        <main>
-            <div><span class="floatRight"><button onclick="window.location.href='SignIn.jsp'" id="logoutButton">Logout</button></span></div>
+        <div id="wrapper">
+            <div><button onclick="window.location.href='SignIn.jsp'" class="Button">Logout</button>
 
             <br><br><br>
             <c:forEach items="${reviews}" var="review">
-                <div class="paddingBottom"><strong>${review.username}</strong> <span class="floatRight">${review.currentDateTime}</span></div>
+                <div><strong>${review.username}</strong> <span>${review.currentDateTime}</span></div>
                 ${review.reviewText}<br /><br />
-                <hr>
+                
             </c:forEach>
-            <button onclick="window.location.href='EnterNewPost.jsp'" id="submitNewPostButton">Enter a New Post</button>
-        </main>
+            <button onclick="window.location.href='EnterPost.jsp'" class="Button">New Post</button>
+        </div>
     </body>
 </html>

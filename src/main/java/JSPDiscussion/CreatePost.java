@@ -34,7 +34,7 @@ public class CreatePost extends HttpServlet {
         
         // FOR  OPENSHIFT!!!!!!!!
         String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
-        FileReviewHandler handler = new FileReviewHandler(dataDirectory + "/list.txt");
+        FileReviewHandler handler = new FileReviewHandler(dataDirectory + "/comments.txt");
         
         // Calling the constructor
         //FileReviewHandler handler = new FileReviewHandler("/Users/Yeah/Documents/NetBeansProjects/JavaProject-master/src/main/java/JSPDiscussion/list.txt");
