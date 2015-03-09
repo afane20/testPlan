@@ -49,7 +49,7 @@ public class NewUser extends HttpServlet {
               
               // OPENSHIFT
                 String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
-                BufferedReader reader = new BufferedReader(new FileReader(dataDirectory + "/users.txt"));
+                BufferedReader reader = new BufferedReader(new FileReader(dataDirectory + "/user.txt"));
                // End of openshift
                 String line;
                while ((line = reader.readLine()) != null) {
@@ -69,7 +69,7 @@ public class NewUser extends HttpServlet {
                
                //for openshift!!
                String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
-               FileWriter file = new FileWriter(dataDirectory + "/users.txt");
+               FileWriter file = new FileWriter(dataDirectory + "/user.txt");
                System.out.println(fileContent);
                String information = fileContent + newUser.getUsername() + "," + newUser.getPassword();
                System.out.println(information);
