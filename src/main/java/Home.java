@@ -43,13 +43,17 @@ public class Home extends HttpServlet {
             String name = request.getParameter("name");
             String emailId = request.getParameter("emailId");
 
- String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-   String DB_URL = "jdbc:mysql://localhost:3306/planit";
-
-   //  Database credentials
-   String USER = "root";
-   String PASS = "root";
+   String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
+//   String DB_URL = "jdbc:mysql://localhost:3306/planit";
+//
+//   //  Database credentials
+//   String USER = "root";
+//   String PASS = "root";
    
+   //FOR OPENSHIFT
+   String DB_URL = "jdbc:mysql://127.11.189.2:3306/planit";
+   String USER = "adminJINwHhB";
+   String PASS = "lrUe_5DxE1eK";
    Connection conn = null;
    Statement stmt = null;
    try{

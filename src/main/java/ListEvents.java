@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -44,11 +45,16 @@ public class ListEvents extends HttpServlet {
         
            // JDBC driver name and database URL
    String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-   String DB_URL = "jdbc:mysql://localhost:3306/";
+  // String DB_URL = "jdbc:mysql://localhost:3306/";
    String dbName = "planit";
    //  Database credentials
-   String USER = "root";
-   String PASS = "root";
+//   String USER = "root";
+//   String PASS = "root";
+   
+   //FOR OPENSHIFT
+   String DB_URL = "jdbc:mysql://127.11.189.2:3306/";
+   String USER = "adminJINwHhB";
+   String PASS = "lrUe_5DxE1eK";
    
    Connection conn = null;
    Statement stmt = null;
@@ -113,9 +119,13 @@ public class ListEvents extends HttpServlet {
           for (Event e:list ){
             System.out.println(e.getTitle());
           }
-          String fileName = "/Users/Yeah/Documents/NetBeansProjects/JavaComments/src/main/webapp/js/Events.js";
+          
+          //For Openshift
+           String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
+             //  FileWriter file = new FileWriter(dataDirectory + "/user.txt");
+          //String fileName = "/Users/Yeah/Documents/NetBeansProjects/JavaComments/src/main/webapp/js/Events.js";
           try {
-          PrintWriter writer = new PrintWriter (fileName, "UTF-8");
+          PrintWriter writer = new PrintWriter (dataDirectory + "/Events.js", "UTF-8");
           int count = 0;
           
           writer.println("var events = [");

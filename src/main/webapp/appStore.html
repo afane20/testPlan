@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PLANIT</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">-->
+        <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>-->
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+        <link rel="stylesheet" href="css/swiper.min.css" type="text/css"/>
+        <link rel="stylesheet" href="css/appStore.css" type="text/css"/>
+
+
+        <!-- jQuery local files -->
+        <script src="js/jquery/jquery.min.js"></script>
+        <script src="js/jquery/jquery-ui.min.js"></script>
+
+
+        <!-- Swiper JS -->
+        <script src="js/swiper.jquery.min.js"></script>
+        <script src="js/swiper.min.js"></script>
+
+
+        <!-- jQuery CDNs -->
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>-->
+
+
+        <script>
+
+        </script>
+
+    </head>
+    <body>
+        <header>
+            <img id="logo" src="img/planit-logo.png" alt="Planit Logo">
+            <div id="logo-name">
+                <h1>Planit</h1>
+                <p>Event awareness just got rounder!</p>
+            </div>
+        </header>
+        <div class="container-fluid">
+            <div class="col-xs-4">
+                <p>Planit is an event awareness application designed and developed for mobile-first use. It currently uses data from BYU-Idaho for its events.</p>
+                <a href="#" class="btn btn-lg btn-primary btn-block">Go to Application</a>
+            </div>
+            <div class="col-xs-8">
+                <div id='date-slider'>
+                    <!-- Swiper -->
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="img/academics.svg"></div>
+                            <div class="swiper-slide"><img src="img/mobileTime1.PNG"></div>
+                            <div class="swiper-slide"><img src="img/mobileTime2.PNG"></div>
+                            <div class="swiper-slide"><img src="img/comedy.svg"></div>
+                            <div class="swiper-slide"><img src="img/competition.svg"></div>
+                            <div class="swiper-slide"><img src="img/mobilePrice1.PNG"></div>
+                            <div class="swiper-slide"><img src="img/mobilePrice2.PNG"></div>
+                            <div class="swiper-slide"><img src="img/conference.svg"></div>
+                            <div class="swiper-slide"><img src="img/dance.svg"></div>
+                            <div class="swiper-slide"><img src="img/employee.svg"></div>
+                            <div class="swiper-slide"><img src="img/festive.svg"></div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <h1>What is it?</h1>
+                    <p>Planit is an events application developed for BYU-Idaho, and designed for a larger scale application.</p>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <h1>What does it do?</h1>
+                    <p>Plan is made to help people in an area find events that may interest them. After performing numerous surveys, design iterations, and user tests, we have come up with a prototype that we are happy with. Here’s what you can do with it:</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-xs-12"><h2>Time Sorting</h2></div>
+                <div class="col-xs-12 col-sm-4">
+                    <img src="img/mobileTime1.PNG" class="img-responsive" alt="mobile time demo 1">
+                </div>
+                <div class="col-xs-12 col-sm-8">
+                    <h3>Select a day.</h3>
+                    <p>Days are available for seven days at a time.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <img src="img/mobileTime1.PNG" class="img-responsive" alt="mobile time demo 1">
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <h3>Indicate a sorting method</h3>
+                    <p>You may choose to sort by time or by the cost of the event. Currently the event price is made up.</p>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <img src="img/mobilePrice1.PNG" class="img-responsive" alt="mobile price demo 1">
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <img src="img/mobilePrice2.PNG" class="img-responsive" alt="mobile price demo 2">
+                </div>
+                <div class="col-xs-12 col-sm-8">
+                    <h3>See the details</h3>
+                    <p>Click or touch on an event to see the details present.</p>
+                    <p>The details available here are:</p>
+                    <ul>
+                        <li>Event description</li>
+                        <li>Start time</li>
+                        <li>End time</li>
+                        <li>Location</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-xs-6 col-sm-4">
+                    <div class="info">
+                        <h2 class="text-center">Quick Date Selection</h2>
+                        <p>We discovered that most people do not plan further out than 2 weeks for activities they are interested in. Hence, we chose to have a quick way to get access to the events for two weeks.</p>
+                        <p>Instead of choosing a date in a drop down form, we chose to create a date slider. This provides fast access for mobile and tablet users to be able to adjust the date they are wanting.</p>
+                    </div>
+                </div>
+                <div class="col-xs-16 col-sm-4">
+                    <div class="info">
+                        <h2 class="text-center">Categorical Labeling</h2>
+                        <p>We would love to be able to search by category, but we found that it was too ambiguous.  Instead, our events are labeled with categorical icons to express what the category belongs to.</p>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4">
+                    <div class="info">
+                        <h2 class="text-center">Mobile First</h2>
+                        <p>We believe in designing for the mobile version of this application first.</p>
+                        <p>Currently the tablet and desktop designs and developments are not available.</p>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4">
+                    <div class="info">
+                        <h2 class="text-center">Sorting by Time & Price</h2>
+                        <p>We discovered that there was a unanimous agreement among user (based on our testing) that the time and cost of the event were the most important (followed closely by location).</p>
+                        <p>Hence, we chose to develop the application using objects that could work quickly to be sorted on the client side.</p>
+                        <p>Once one of the sorting buttons have been selected, any new date selected will have the sort feature applied to it for the selected button.</p>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4">
+                    <div class="info">
+                        <h2 class="text-center">Current BYU-Idaho Events</h2>
+                        <p>We wanted a way to find activities to do on campus in a fast way. Hence, the events that are in this application are from BYU-Idaho.</p>
+                        <p>The event information is extracted from the RSS feed of the BYU-Idaho calendar, saved as events to our database, and loaded up into our application as objects.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1>What lies in its future?</h1>
+                    <p>We have made a great deal of progress on this application thus far, but it has a way to go before it’s ready for the big leagues. Here’s what we are interested in developing for it:</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-4">
+                    <div class="info">
+                        <h2 class="text-center">Events from Facebook</h2>
+                        <p>The point of this application is to enhance event awareness. To do this, it will be wise for us to import public events into our system. That way you can start advertising that garage sale of yours somewhere besides CraigsList!</p>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4">
+                    <div class="info">
+                        <h2 class="text-center">Save Events to Calendar</h2>
+                        <p>We would love for our system to be able to not only allow our users to view events, but save them to their calendar! Get all of the monotonous data entry stuff out of the way!</p>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4">
+                    <div class="info">
+                        <h2 class="text-center">Earn Money</h2>
+                        <p>It would be great to have a business model so that our hard work can pay off.</p>
+                        <p>f you have suggestions for this, feel free to email us: <br><a href="mailto:people-planit@gmail.com">people-planit@gmail.com.</a></p>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4">
+                    <div class="info">
+                        <h2 class="text-center">Location Services</h2>
+                        <p>A great deal of our test groups indicated that it would be nice to filter the events by location. We agree.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1>Check it out:</h1>
+                    <p>We have made a great deal of progress on this application thus far, but it has a way to go before it’s ready for the big leagues. Here’s what we are interested in developing for it:</p>
+                    <a href="#" class="btn btn-lg btn-primary">Go to Application</a>
+                </div>
+            </div>
+            <script>
+                var mySwiper = new Swiper('.swiper-container', {
+                    // Optional parameters
+                    paginationHide: false,
+                    slidesPerView: 4,
+                    centeredSlides: true,
+                    paginationClickable: true,
+                    freeModeMomentum: true,
+                    slideToClickedSlide: true
+                });
+            </script>
+    </body>
+</html>

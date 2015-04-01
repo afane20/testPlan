@@ -50,11 +50,16 @@ public class Manage extends HttpServlet {
       
       // JDBC driver name and database URL
       String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-      String DB_URL = "jdbc:mysql://localhost:3306/planit";
+     // String DB_URL = "jdbc:mysql://localhost:3306/planit";
 
    //  Database credentials
-   String USER = "root";
-   String PASS = "root";
+//   String USER = "root";
+//   String PASS = "root";
+      
+      //FOR OPENSHIFT
+   String DB_URL = "jdbc:mysql://127.11.189.2:3306/planit";
+   String USER = "adminJINwHhB";
+   String PASS = "lrUe_5DxE1eK";
    
    Connection conn = null;
    Statement stmt = null;
