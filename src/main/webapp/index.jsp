@@ -23,7 +23,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/js/swiper.jquery.min.js"></script>
         <!--<script src="js/swiper.min.js"></script>-->
-        <script src="js/Events1.js"></script>
+        <script src="js/Events.js"></script>
        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/js/swiper.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.0.6/js/swiper.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/js/swiper.jquery.js"></script>

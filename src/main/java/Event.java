@@ -201,7 +201,7 @@ public class Event {
     // Path on Ashlie's computer
    // String fileName = "/Users/Ashlie/Documents/NetBeansProjects/PPP-master/src/main/webapp/js/Events.js";
           try {
-          //BufferedReader reader = new BufferedReader(new FileReader(dataDirectory + "/Events.js"));
+         // BufferedReader reader = new BufferedReader(new FileReader(dataDirectory + "/Events.js"));
           //dataDirectory + "/user.txt";
           PrintWriter writer = new PrintWriter (dataDirectory + "/Events.js", "UTF-8");
           int count = 0;
