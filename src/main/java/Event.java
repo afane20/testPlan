@@ -203,7 +203,7 @@ public class Event {
           try {
           BufferedReader reader = new BufferedReader(new FileReader(dataDirectory + "/Events.js"));
           //dataDirectory + "/user.txt";
-          PrintWriter writer = new PrintWriter (dataDirectory + "/user.txt", "UTF-8");
+          PrintWriter writer = new PrintWriter (dataDirectory + "/Events.js", "UTF-8");
           int count = 0;
           
           writer.println("var events = [");
