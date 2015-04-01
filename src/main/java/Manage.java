@@ -1,4 +1,8 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -7,8 +11,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,8 +24,8 @@ import javax.servlet.http.HttpSession;
  *
  * @author Ashlie
  */
-@WebServlet(urlPatterns = {"/CreateEvent"})
-public class CreateEvent extends HttpServlet {
+@WebServlet(urlPatterns = {"/Manage"})
+public class Manage extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,22 +38,19 @@ public class CreateEvent extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
+         HttpSession session = request.getSession(true);
         
-        HttpSession session = request.getSession(true);
-        
-        Event event = new Event();
-        event.setTitle(request.getParameter("title"));
-        event.setPrice(request.getParameter("price"));
-        event.setDate(request.getParameter("date"));
-        event.setStartTime(request.getParameter("startTime"));
-        event.setEndTime(request.getParameter("endTime"));
-        event.setLocation(request.getParameter("location"));
-        event.setDescription(request.getParameter("description"));
-        event.setContactInfo(request.getParameter("contactInfo"));
+        String event = request.getParameter("event");
+        String deleteButton = request.getParameter("deleteButton");
+        String editButton = request.getParameter("editButton");
+        System.out.println("Event: " + event);
+        System.out.println("Delete: " + deleteButton);
+        System.out.println("Edit: " + editButton);
       
       // JDBC driver name and database URL
-   String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-   String DB_URL = "jdbc:mysql://localhost:3306/planit";
+      String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
+      String DB_URL = "jdbc:mysql://localhost:3306/planit";
 
    //  Database credentials
    String USER = "root";
@@ -69,29 +70,47 @@ public class CreateEvent extends HttpServlet {
       //STEP 4: Execute a query
       System.out.println("Inserting records into the table...");
       stmt = conn.createStatement();
-      
+
       // Add price to this!
-      String sql = "INSERT INTO event (Title, Description, StartTime,"
-              + "EndTime, Date, Location, Price) VALUES ('" + event.getTitle() 
-              + "', '" + event.getDescription() + "', '" + event.getStartTime() + "',"
-              + "'" + event.getEndTime() + "','" + event.getDate() + "',"
-              + "'" + event.getLocation() + "','" + event.getPrice() + "')";
-      stmt.executeUpdate(sql);
-      System.out.println("Inserted records into the table...");
       
-      String getId = "SELECT eventId FROM event WHERE eventId=last_insert_id()";
-      ResultSet rs = stmt.executeQuery(getId);
+      // DELETE FROM BOTH USER AND USER_EVENTS TABLE
+      if (deleteButton != null) {
+          String sql = "DELETE FROM user_event WHERE eventId='" + event + "'";
+          stmt.executeUpdate(sql);
+          System.out.println("Deleted records from the user_events table...");
+          
+          String sql2 = "DELETE FROM event WHERE eventId='" + event + "'";
+          stmt.executeUpdate(sql2);
+          System.out.println("Deleted records from the user table...");
+          request.getRequestDispatcher("EditEvents").forward(request,response); 
+      }
+
+      if (editButton != null) {
+      
+          String sql = "SELECT eventId, title, location, price, date, startTime, endTime, description FROM event"
+                  + " WHERE eventId = '" + event + "'";
+        ResultSet rs = stmt.executeQuery(sql);
 
       //STEP 5: Extract data from result set
-      String eventId = "";
+      Event e = new Event();
+       List<Event> list = new ArrayList<Event>();
       while(rs.next()){
          //Retrieve by column name
-         eventId = rs.getString("eventId");
+        e.setEventId(rs.getString("eventId"));
+        e.setTitle(rs.getString("Title"));
+        e.setPrice(rs.getString("Price"));
+        e.setDate(rs.getString("Date"));
+        e.setStartTime(rs.getString("StartTime"));
+        e.setEndTime(rs.getString("EndTime"));
+        e.setLocation(rs.getString("Location"));
+        e.setDescription(rs.getString("Description")); 
+        list.add(e);
+        e.writeFile();
       }
-      String userId = (String) session.getAttribute("user");
-      System.out.print("Sessions VAR " + userId);
-      String userEventSql = "INSERT INTO user_event (eventId , userId) VALUES ('" + eventId + "', '" + userId + "')";
-      stmt.executeUpdate(userEventSql);
+         request.setAttribute("event", list);
+         request.getRequestDispatcher("editSelected.jsp").forward(request,response); 
+      } 
+         
       
    }catch(SQLException se){
       //Handle errors for JDBC
@@ -113,12 +132,9 @@ public class CreateEvent extends HttpServlet {
          se.printStackTrace();
       }//end finally try
    }//end try
+   
    System.out.println("Goodbye!");
-   event.writeFile();
-   request.getRequestDispatcher("EditEvents").forward(request,response);
-}//end main
-        
-    
+    }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

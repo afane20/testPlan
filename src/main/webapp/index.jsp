@@ -24,15 +24,28 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/js/swiper.jquery.min.js"></script>
         <!--<script src="js/swiper.min.js"></script>-->
         <script src="js/Events.js"></script>
+        <script>
+
+            function myFunction() {
+               var sAddress = "js/Events.js";
+               var oDiv=document.createElement('div');
+               oDiv.innerHTML='<script type="text/javascript" src="'+sAddress+'"><\/script>';
+               alert("Page is loaded"); 
+
+            }        
+        </script>
+
+
+    
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/js/swiper.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.0.6/js/swiper.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/js/swiper.jquery.js"></script>
 
-        <script src="js/planit.js"></script>
-
+        <script src="js/planit.js">
+        </script>
 
     </head>
-    <body>
+    <body onload="myFunction()">
         <script src="path/to/swiper.min.js"></script>
 
 
@@ -42,7 +55,15 @@
                 </fb:login-button>
                 <div id="status"></div>
 
-                <a href="CreateEvent.jsp">Create an Event</a>
+               <!-- <a href="CreateEvent.jsp">Create an Event</a>
+               Ashlie's code 
+               
+               -->
+                 <form action="Home" method="post">  
+                    <input type="hidden" name="name" id="name" value="response.name">
+                    <input type="hidden" name="emailId" id="emailId" value="response.email">
+                    <input type="Submit" value="Manage Events">
+                </form>
                 <p>Rexburg, ID</p>
                 <div id='sort-button-container'>
                     <input type='radio' name='sorting-buttons' class='sorting-buttons' id='sort-time'><label for='sort-time' class='glyphicon glyphicon-time sorting-buttons'></label>

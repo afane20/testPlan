@@ -8,6 +8,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.servlet.ServletException;
@@ -64,11 +66,17 @@ public class Home extends HttpServlet {
       stmt = conn.createStatement();
       
       // Add price to this!
-      
+
+ PreparedStatement pstmt = conn.prepareStatement("select emailId from user where emailId = '" + emailId + "'");
+ResultSet rs= pstmt.executeQuery();
+if(rs.next())
+  System.out.println("record found");
+else  {
+
       String sql = "INSERT INTO user (emailId, name) VALUES ('" + emailId + "', '" + name + "')";
       stmt.executeUpdate(sql);
       System.out.println("Inserted records into the table...");
-
+}
    }catch(SQLException se){
       //Handle errors for JDBC
       se.printStackTrace();
@@ -94,7 +102,7 @@ public class Home extends HttpServlet {
    session.setAttribute("user", emailId);
    
    System.out.println("Goodbye!");
-   response.sendRedirect("index.jsp");
+   response.sendRedirect("EditEvents");
 
    
 }
