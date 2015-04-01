@@ -1,6 +1,5 @@
-
-
-
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -21,7 +20,7 @@ import java.util.List;
 
 /**
  *
- * @author Ashlie
+ * @author Ashlie, Ernesto
  */
 public class Event {
     // Foreign keys //
@@ -123,7 +122,8 @@ public class Event {
     public void setDate(String date) {
         this.date = date;
     }
-     public void writeFile() {
+    
+    public void writeFile() {
                 
            // JDBC driver name and database URL
    String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
@@ -192,10 +192,12 @@ public class Event {
    System.out.println("Goodbye!");
    
    // Path on Ernesto's computer
+   // OPENSHIFT
+               // String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
+                //BufferedReader reader = new BufferedReader(new FileReader(dataDirectory + "/Events.js"));
    String fileName = "/Users/Yeah/Documents/NetBeansProjects/JavaComments/src/main/webapp/js/Events.js";
     // Path on Ashlie's computer
-   // String fileName = "/Users/Ashlie/Documents/NetBeansProjects/newtestPlan-master/src/main/webapp/public_html/js/Events.js";
-
+   // String fileName = "/Users/Ashlie/Documents/NetBeansProjects/PPP-master/src/main/webapp/js/Events.js";
           try {
           PrintWriter writer = new PrintWriter (fileName, "UTF-8");
           int count = 0;
@@ -209,12 +211,52 @@ public class Event {
               description = description.trim();
               description = description.replaceAll("\r?\n|\r/","");
               System.out.print(description);
+              
+              Categories ca = new Categories();
+              ca.readMap();
+              String a = ca.searchDescription(description);
+              System.out.println("found: " + a);
+        String picture;
+        switch (a) {
+            case "Fitness"     : picture = "img/fitness.svg";
+                     break;
+            case "Performance" : picture = "img/performance.svg";
+                     break;
+            case "Outdoors"    : picture = "img/outdoors.svg";
+                     break;
+            case "Academics"   : picture = "img/academics.svg";
+                     break;
+            case "Social"      : picture = "img/social.svg";
+                     break;
+            case "Instcruction": picture = "img/instruction.svg";
+                     break;
+            case "Festive"     : picture = "img/festive.svg";
+                     break;
+            case "Dance"       : picture = "img/dance.svg";
+                     break;
+            case "Spiritual"   : picture = "img/spiritual.svg";
+                     break;
+            case "Conference"  : picture = "img/conference.svg";
+                     break;
+            case "Competition" : picture = "img/competition.svg";
+                     break;
+            case "Comedy"      : picture = "img/comedy.svg";
+                     break;
+            case "Theatre"     : picture = "img/theatre.svg";
+                     break;
+            case "Employee"    : picture = "img/employee.svg";
+                     break;   
+            default            : picture = "img/dance.svg";
+                     break;
+        }
+        System.out.println(picture);
+        
               writer.println("\"Description\": \"" + description  + "\",");
               writer.println("\"StartTime\": \""+ items.getStartTime() + "\",");
               writer.println("\"EndTime\": \""+ items.getEndTime() + "\",");
               writer.println("\"Date\": \""+ items.getDate() + "\",");
               writer.println("\"Price\": \""+ items.getPrice() + "\",");
-              writer.println("\"Picture\": \""+ "img\\/BYU-Idaho_Medallion_Logo.png" + "\",");
+              writer.println("\"Picture\": \""+ picture + "\",");
               writer.println("\"Location\": \""+ items.getLocation() + "\",");
               writer.println("\"Email\": null},");
               if (count  == 100){

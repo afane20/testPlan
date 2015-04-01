@@ -22,8 +22,8 @@ $().ready(function () {
 
     //Created random values for the price to work with
     for (var i = 0; i < events.length; i++) {
-        events[i].Price = Math.floor(Math.random() * 6);
-        events[i].Price = (events[i].Price * 100) / 100;
+      //  events[i].Price = Math.floor(Math.random() * 6);
+      //  events[i].Price = (events[i].Price * 100) / 100;
 
         //parses start time and converts to an integer
         events[i].StartTime = Number.parseInt(events[i].StartTime.split(':', 1));
@@ -31,19 +31,19 @@ $().ready(function () {
         //parses end time
         events[i].EndTime = Number.parseInt(events[i].EndTime.split(':', 1));
 
-        if (events[i].StartTime > 12) {
+        if (events[i].StartTime >= 12) {
             events[i].StartTimeDisplay = (events[i].StartTime - 12) + 'pm';
         } else {
             events[i].StartTime = Number(events[i].StartTime).toString();
             events[i].StartTimeDisplay = events[i].StartTime + 'am';
         }
-        if (events[i].EndTime > 12) {
+        if (events[i].EndTime >= 12) {
             events[i].EndTimeDisplay = (events[i].EndTime - 12) + 'pm';
         } else {
             events[i].EndTime = Number(events[i].EndTime).toString();
             events[i].EndTimeDisplay = events[i].EndTime + 'am';
         }
-    }
+    } 
 
     //selects the time sort
     $('#sort-time').prop('checked', true);
@@ -183,7 +183,16 @@ $().ready(function () {
 
         $(eventContainer).remove();
         for (var i = 0; i < array.length; i++) {
-            $(listContainer).append('<div class="col-xs-12 col-md-6 event"><div class="col-xs-4 col-md-2 event-img"><img src="' + 'img/dance.svg"' + 'alt="event" class="img-responsive"></div><div class="col-xs-5 col-md-7 event-title"><h1 class="text-muted event-title">' + array[i].Title + '</h1></div><div class="col-xs-3 col-md-3 event-info"><p class="event-info event-info-highlight"><span class="glyphicon glyphicon-time"></span>' + array[i].StartTimeDisplay + '</p><p class="event-info"><span class="glyphicon glyphicon-usd"></span>' + array[i].Price + '</p><p class="event-info"><span class="glyphicon glyphicon-map-marker"></span>' + '2mi' + '</p></div><div class="col-xs-12 event-description"><span class="glyphicon glyphicon-time"></span><h2 class="event-time text-muted">' + array[i].StartTimeDisplay + ' <span>-</span> ' + array[i].EndTimeDisplay + '</h2><span class="glyphicon glyphicon-map-marker"></span><h2 class="event-location text-muted">' + array[i].Location + '</h2><p>' + array[i].Description + '</div></div>');
+            $(listContainer).append('<div class="col-xs-12 col-md-6 event"><div class="col-xs-4 col-md-2 event-img"><img src="' + array[i].Picture + '"' 
+                    + 'alt="event" class="img-responsive"></div><div class="col-xs-5 col-md-7 event-title"><h1 class="text-muted event-title">' 
+                    + array[i].Title + '</h1></div><div class="col-xs-3 col-md-3 event-info"><p class="event-info event-info-highlight"><span class="glyphicon glyphicon-time"></span>' 
+                    + array[i].StartTimeDisplay + '</p><p class="event-info"><span class="glyphicon glyphicon-usd"></span>' 
+                    + array[i].Price + '</p><p class="event-info"><span class="glyphicon glyphicon-map-marker"></span>' 
+                    + '2mi' + '</p></div><div class="col-xs-12 event-description"><span class="glyphicon glyphicon-time"></span><h2 class="event-time text-muted">' 
+                    + array[i].StartTimeDisplay + ' <span>-</span> ' 
+                    + array[i].EndTimeDisplay + '</h2><span class="glyphicon glyphicon-map-marker"></span><h2 class="event-location text-muted">' 
+                    + array[i].Location + '</h2><p>' 
+                    + array[i].Description + '</div></div>');
         }
     }
 

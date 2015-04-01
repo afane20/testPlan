@@ -24,20 +24,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/js/swiper.jquery.min.js"></script>
         <!--<script src="js/swiper.min.js"></script>-->
         <script src="js/Events.js"></script>
-        <script>
-
-            function myFunction() {
-               var sAddress = "js/Events.js";
-               var oDiv=document.createElement('div');
-               oDiv.innerHTML='<script type="text/javascript" src="'+sAddress+'"><\/script>';
-               alert("Page is loaded"); 
-
-            }        
-        </script>
-
-
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/js/swiper.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/js/swiper.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.0.6/js/swiper.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/js/swiper.jquery.js"></script>
 
