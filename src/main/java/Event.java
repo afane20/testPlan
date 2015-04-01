@@ -133,7 +133,7 @@ public class Event {
 //   String USER = "root";
 //   String PASS = "root";
    //FOR OPENSHIFT
-   String DB_URL = "jdbc:mysql://127.11.189.2:3306/";
+   String DB_URL = "jdbc:mysql://127.11.76.130:3306/";
    String USER = "adminJINwHhB";
    String PASS = "lrUe_5DxE1eK";
    Connection conn = null;
