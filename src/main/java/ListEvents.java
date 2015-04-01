@@ -52,7 +52,7 @@ public class ListEvents extends HttpServlet {
 //   String PASS = "root";
    
    //FOR OPENSHIFT
-   String DB_URL = "jdbc:mysql://127.11.76.130:3306/";
+   String DB_URL = "jdbc:mysql://127.11.76.130/";
    String USER = "adminJINwHhB";
    String PASS = "lrUe_5DxE1eK";
    
