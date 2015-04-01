@@ -37,11 +37,13 @@
 
 
         <header>
-            <div id='nav'>   
-                <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-                </fb:login-button>
-                <div id="status"></div>
-
+            <div id='nav'>
+                <div>
+                    <fb:login-button scope="public_profile,email" class="btn btn-primary" onlogin="checkLoginState();">
+                    </fb:login-button>
+                    
+                    <p> <span id="status"></span> Rexburg, ID</p>
+                </div>
                <!-- <a href="CreateEvent.jsp">Create an Event</a>
                Ashlie's code 
                
@@ -49,9 +51,9 @@
                  <form action="Home" method="post">  
                     <input type="hidden" name="name" id="name" value="response.name">
                     <input type="hidden" name="emailId" id="emailId" value="response.email">
-                    <input type="Submit" value="Manage Events">
+                    <input class="btn btn-primary" type="Submit" value="Manage Events">
                 </form>
-                <p>Rexburg, ID</p>
+                <p></p>
                 <div id='sort-button-container'>
                     <input type='radio' name='sorting-buttons' class='sorting-buttons' id='sort-time'><label for='sort-time' class='glyphicon glyphicon-time sorting-buttons'></label>
                     <input type='radio' name='sorting-buttons' class='sorting-buttons' id='sort-price'><label for='sort-price' class='glyphicon glyphicon-usd sorting-buttons'></label>

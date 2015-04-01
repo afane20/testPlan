@@ -6,7 +6,7 @@ var events = [
 "EndTime": "20:00:00",
 "Date": "2015-04-06",
 "Price": "3.00",
-"Picture": "img/dance.svg",
+"Picture": "img/spiritual.svg",
 "Location": "Your FHE Place",
 "Email": null},
 {
@@ -16,7 +16,7 @@ var events = [
 "EndTime": "11:00:00",
 "Date": "2015-04-06",
 "Price": "5.00",
-"Picture": "img/dance.svg",
+"Picture": "img/performance.svg",
 "Location": "Crossroads",
 "Email": null},
 {
@@ -26,7 +26,7 @@ var events = [
 "EndTime": "20:00:00",
 "Date": "2015-04-07",
 "Price": "0.00",
-"Picture": "img/dance.svg",
+"Picture": "img/fitness.svg",
 "Location": "Hart",
 "Email": null},
 {
@@ -36,7 +36,7 @@ var events = [
 "EndTime": "18:00:00",
 "Date": "2015-04-07",
 "Price": "1.00",
-"Picture": "img/dance.svg",
+"Picture": "img/comedy.svg",
 "Location": "MC Little Theatre",
 "Email": null},
 {
@@ -46,7 +46,7 @@ var events = [
 "EndTime": "23:00:00",
 "Date": "2015-04-07",
 "Price": "3.00",
-"Picture": "img/dance.svg",
+"Picture": "img/outdoors.svg",
 "Location": "null",
 "Email": null},
 {
@@ -56,7 +56,7 @@ var events = [
 "EndTime": "12:00:00",
 "Date": "2015-04-08",
 "Price": "0.00",
-"Picture": "img/dance.svg",
+"Picture": "img/social.svg",
 "Location": "MC Ballroom",
 "Email": null},
 {
@@ -66,17 +66,27 @@ var events = [
 "EndTime": "12:00:00",
 "Date": "2015-04-08",
 "Price": "2.00",
-"Picture": "img/dance.svg",
+"Picture": "img/instruction.svg",
 "Location": "Taylor Cultural Hall",
 "Email": null},
 {
 "Title": "The Swimming Party",
-"Description": "Play around and swim a lot",
+"Description": "Play around and swimming a lot",
 "StartTime": "05:00:00",
 "EndTime": "07:30:00",
 "Date": "2015-04-08",
 "Price": "5.00",
 "Picture": "img/dance.svg",
 "Location": "The swimming pool at the hart",
+"Email": null},
+{
+"Title": "Sing Along with Disney Music",
+"Description": "If you know some disney music or some music that is inspiring,  come and join us to sign with your voice",
+"StartTime": "08:00:00",
+"EndTime": "10:00:00",
+"Date": "2015-04-08",
+"Price": "0.00",
+"Picture": "img/performance.svg",
+"Location": "The Ivy Apartments",
 "Email": null},
 ];

@@ -228,7 +228,7 @@ public class Event {
                      break;
             case "Social"      : picture = "img/social.svg";
                      break;
-            case "Instcruction": picture = "img/instruction.svg";
+            case "Instruction": picture = "img/instruction.svg";
                      break;
             case "Festive"     : picture = "img/festive.svg";
                      break;
