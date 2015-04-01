@@ -40,13 +40,16 @@ public class Categories {
      //   prop = new Propert();
       // String file = prop.getTopicFile(); 
         // OPENSHIFT------------------------------------------------------
-               // String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
-              //  BufferedReader reader = new BufferedReader(new FileReader(dataDirectory + "/categories.txt"));
-        String file = "/Users/Yeah/Documents/NetBeansProjects/JavaComments/src/main/java/categories.txt";
+            String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
+        
+        //String file = "/Users/Yeah/Documents/NetBeansProjects/JavaComments/src/main/java/categories.txt";
         //String file = "/Users/Ashlie/Documents/NetBeansProjects/newtestPlan-master/src/main/java/categories.txt";
         try {
         // For Openshift JUST PLACE COMMENTS AROUND IT    
-        BufferedReader reader = new BufferedReader(new FileReader(file));
+        BufferedReader reader = new BufferedReader(new FileReader(dataDirectory + "/categories.txt"));
+
+        //BufferedReader reader = new BufferedReader(new FileReader(file));
+            
         String line;
         
         while ((line = reader.readLine()) != null) {

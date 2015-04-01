@@ -193,13 +193,14 @@ public class Event {
    
    // Path on Ernesto's computer
    // OPENSHIFT
-               // String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
-                //BufferedReader reader = new BufferedReader(new FileReader(dataDirectory + "/Events.js"));
-   String fileName = "/Users/Yeah/Documents/NetBeansProjects/JavaComments/src/main/webapp/js/Events.js";
+         String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
+   //String fileName = "/Users/Yeah/Documents/NetBeansProjects/JavaComments/src/main/webapp/js/Events.js";
     // Path on Ashlie's computer
    // String fileName = "/Users/Ashlie/Documents/NetBeansProjects/PPP-master/src/main/webapp/js/Events.js";
           try {
-          PrintWriter writer = new PrintWriter (fileName, "UTF-8");
+          BufferedReader reader = new BufferedReader(new FileReader(dataDirectory + "/Events.js"));
+          //dataDirectory + "/user.txt";
+          PrintWriter writer = new PrintWriter (dataDirectory + "/user.txt", "UTF-8");
           int count = 0;
           
           writer.println("var events = [");
