@@ -125,7 +125,7 @@ public class ListEvents extends HttpServlet {
              //  FileWriter file = new FileWriter(dataDirectory + "/user.txt");
           //String fileName = "/Users/Yeah/Documents/NetBeansProjects/JavaComments/src/main/webapp/js/Events.js";
           try {
-          PrintWriter writer = new PrintWriter (dataDirectory + "/Events.js", "UTF-8");
+          PrintWriter writer = new PrintWriter (dataDirectory + "/Events1.js", "UTF-8");
           int count = 0;
           
           writer.println("var events = [");
@@ -145,7 +145,7 @@ public class ListEvents extends HttpServlet {
               writer.println("\"Picture\": \""+ "img\\/BYU-Idaho_Medallion_Logo.png" + "\",");
               writer.println("\"Location\": \""+ items.getLocation() + "\",");
               writer.println("\"Email\": null},");
-              if (count  == 100){
+              if (count  == 200){
               break;
               }
               count++;
