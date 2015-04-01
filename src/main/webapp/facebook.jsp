@@ -77,7 +77,7 @@
                 document.getElementById('name').value =
                         response.name;
                 document.getElementById('emailId').value =
-                        response.email;
+                        response.id;
                // session.setAtribute("email", response.email);
                // session.setAtribute("name", response.name);
         email = response.email;
