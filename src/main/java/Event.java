@@ -195,7 +195,7 @@ public class Event {
    System.out.println("Goodbye!");
    
    // Path on Ernesto's computer
-   // OPENSHIFT
+   // OPENSHIFT watch the names of the files
          String dataDirectory = System.getenv("OPENSHIFT_DATA_DIR");
    //String fileName = "/Users/Yeah/Documents/NetBeansProjects/JavaComments/src/main/webapp/js/Events.js";
     // Path on Ashlie's computer
