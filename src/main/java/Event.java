@@ -205,14 +205,14 @@ public class Event {
          try {
          // BufferedReader reader = new BufferedReader(new FileReader(dataDirectory + "/Events.js"));
           //dataDirectory + "/user.txt";
-          FileWriter file = new FileWriter(dataDirectory + "/Events.js");
-          //PrintWriter writer = new PrintWriter (dataDirectory + "/Events1.js", "UTF-8");
+          //FileWriter file = new FileWriter(dataDirectory + "/Events.js");
+          PrintWriter writer = new PrintWriter (dataDirectory + "/Events.js", "UTF-8");
           int count = 0;
        
-          String writer = "var events = [\n";
+          writer.println("var events = [");
           for (Event items : list){
-              writer += "{";
-              writer += "\"Title\": \"" + items.getTitle() + "\",";
+              writer.println("{");
+              writer.println("\"Title\": \"" + items.getTitle() + "\",");
               
               String description = items.getDescription();
               description = description.trim();
@@ -258,30 +258,22 @@ public class Event {
         }
         System.out.println(picture);
         
-              writer += "\"Description\": \"" + description  + "\",";
-              writer += "\"StartTime\": \""+ items.getStartTime() + "\",";
-              writer += "\"EndTime\": \""+ items.getEndTime() + "\",";
-              writer += "\"Date\": \""+ items.getDate() + "\",";
-              writer += "\"Price\": \""+ items.getPrice() + "\",";
-              writer += "\"Picture\": \""+ picture + "\",";
-              writer += "\"Location\": \""+ items.getLocation() + "\",";
-              writer += "\"Email\": null},";
+             writer.println("\"Description\": \"" + description  + "\",");
+              writer.println("\"StartTime\": \""+ items.getStartTime() + "\",");
+              writer.println("\"EndTime\": \""+ items.getEndTime() + "\",");
+              writer.println("\"Date\": \""+ items.getDate() + "\",");
+              writer.println("\"Price\": \""+ items.getPrice() + "\",");
+              writer.println("\"Picture\": \""+ picture + "\",");
+              writer.println("\"Location\": \""+ items.getLocation() + "\",");
+              writer.println("\"Email\": null},");
               if (count  == 100){
               break;
               }
               count++;
           }
-          writer += "];";
-          try {
-                    file.write(writer); // refer to ashlies code 
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-
-                } 
-                    file.flush();
-                    file.close();
-         // writer.close();
+          writer.println("];");
+          writer.flush();
+          writer.close();
           } catch (Exception e){
             e.printStackTrace();
           }

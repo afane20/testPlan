@@ -125,44 +125,38 @@ public class ListEvents extends HttpServlet {
              //  FileWriter file = new FileWriter(dataDirectory + "/user.txt");
           //String fileName = "/Users/Yeah/Documents/NetBeansProjects/JavaComments/src/main/webapp/js/Events.js";
           try {
-          FileWriter file = new FileWriter(dataDirectory + "/Events.js");
+          //FileWriter file = new FileWriter(dataDirectory + "/Events.js");
 
-          //PrintWriter writer = new PrintWriter (dataDirectory + "/Events1.js", "UTF-8");
+          PrintWriter writer = new PrintWriter (dataDirectory + "/Events.js", "UTF-8");
           int count = 0;
           
-          String writer = "var events = [";
+          writer.println("var events = [");
           for (Event items : list){
-              writer += "{";
-              writer += "\"Title\": \""+ items.getTitle() + "\",";
+              writer.println("{");
+              writer.println("\"Title\": \""+ items.getTitle() + "\",");
               
               String description = items.getDescription();
               description = description.trim();
               description = description.replaceAll("\r?\n|\r/","");
               System.out.print(description);
-              writer += "\"Description\": \"" + description  + "\",";
-              writer += "\"StartTime\": \""+ items.getStartTime() + "\",";
-              writer += "\"EndTime\": \""+ items.getEndTime() + "\",";
-              writer += "\"Date\": \""+ items.getDate() + "\",";
-              writer += "\"Price\": \""+ items.getPrice() + "\",";
-              writer += "\"Picture\": \""+ "img\\/BYU-Idaho_Medallion_Logo.png" + "\",";
-              writer += "\"Location\": \""+ items.getLocation() + "\",";
-              writer += "\"Email\": null},";
+              writer.println("\"Description\": \"" + description  + "\",");
+              writer.println("\"StartTime\": \""+ items.getStartTime() + "\",");
+              writer.println("\"EndTime\": \""+ items.getEndTime() + "\",");
+              writer.println("\"Date\": \""+ items.getDate() + "\",");
+              writer.println("\"Price\": \""+ items.getPrice() + "\",");
+              writer.println("\"Picture\": \""+ "img\\/BYU-Idaho_Medallion_Logo.png" + "\",");
+              writer.println("\"Location\": \""+ items.getLocation() + "\",");
+              writer.println("\"Email\": null},");
               if (count  == 200){
               break;
               }
               count++;
           }
-          writer += "];";
+          writer.println("];");
           //writer.close();
-           try {
-                    file.write(writer); // refer to ashlies code 
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-
-                } 
-                    file.flush();
-                    file.close();
+          
+                    writer.flush();
+                    writer.close();
           
           
           } catch (Exception e){
