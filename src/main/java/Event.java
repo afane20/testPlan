@@ -205,7 +205,7 @@ public class Event {
          try {
          // BufferedReader reader = new BufferedReader(new FileReader(dataDirectory + "/Events.js"));
           //dataDirectory + "/user.txt";
-          FileWriter file = new FileWriter(dataDirectory + "/Events1.js");
+          FileWriter file = new FileWriter(dataDirectory + "/Events.js");
           //PrintWriter writer = new PrintWriter (dataDirectory + "/Events1.js", "UTF-8");
           int count = 0;
        

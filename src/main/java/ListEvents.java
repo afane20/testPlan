@@ -125,7 +125,7 @@ public class ListEvents extends HttpServlet {
              //  FileWriter file = new FileWriter(dataDirectory + "/user.txt");
           //String fileName = "/Users/Yeah/Documents/NetBeansProjects/JavaComments/src/main/webapp/js/Events.js";
           try {
-          FileWriter file = new FileWriter(dataDirectory + "/Events1.js");
+          FileWriter file = new FileWriter(dataDirectory + "/Events.js");
 
           //PrintWriter writer = new PrintWriter (dataDirectory + "/Events1.js", "UTF-8");
           int count = 0;
