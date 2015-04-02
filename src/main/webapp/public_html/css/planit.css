@@ -168,11 +168,6 @@ h2.event-time {
   margin-top: 0;
 }
 
-div.event-description h2 .glyphicon {
-  margin-right: 10px;
-  margin-left:15px;
-}
-
 a.event-location {
   padding-left: 0;
   margin-bottom: 15px;
@@ -182,13 +177,32 @@ a.event-location {
 h2.event-location {
   margin-top: 0;
   text-align: left;
-  color: white;
+  /* color: white; */
 }
 
 div.event-description h2 {
-  font-size: 26px;
+  display: inline-block;
+  width: calc(100% - 50px);
+  font-size: 22px;
+  margin-bottom: 20px;
 }
 
 h2.event-time {
   margin-bottom: 13px;
+}
+
+div.event-description .glyphicon {
+  display: inline-block;
+  font-size: 30px;
+  margin-right: 20px;
+  color: rgb(150,150,150);
+  vertical-align: top;
+}
+
+div.event-description p:first-of-type {
+  margin-top: 10px;
+}
+
+p.event-info .glyphicon {
+  margin-right: 6px;
 }

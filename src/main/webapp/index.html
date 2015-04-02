@@ -1,10 +1,79 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Start Page</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>PLANIT</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="public_html/css/swiper.min.css">
+        <link rel="stylesheet" href="public_html/css/planit.css">
+        <link rel="stylesheet" href="public_html/css/bootstrap.css" type="text/css"/>
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/js/swiper.jquery.min.js"></script>
+        <!--<script src="js/swiper.min.js"></script>-->
+        <script src="public_html/js/EventsSample.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/js/swiper.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.0.6/js/swiper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/js/swiper.jquery.js"></script>
+
+        <script src="public_html/js/planit.js"></script>
+
+
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <script src="path/to/swiper.min.js"></script>
+        <header>
+            <div id='nav'>
+                <p>Rexburg, ID</p>
+                <div id='sort-button-container'>
+                    <input type='radio' name='sorting-buttons' class='sorting-buttons' id='sort-time'><label for='sort-time' class='glyphicon glyphicon-time sorting-buttons'></label>
+                    <input type='radio' name='sorting-buttons' class='sorting-buttons' id='sort-price'><label for='sort-price' class='glyphicon glyphicon-usd sorting-buttons'></label>
+                    <input type='radio' name='sorting-buttons' class='sorting-buttons' id='sort-map'><label for='sort-map' class='glyphicon glyphicon-map-marker sorting-buttons'></label>
+                </div>
+            </div>
+            <div id='date-slider'>
+                <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide text-center">Today<br><span class="date-num">27</span><div class="hidden date-hidden">2015-03-27</div></div>
+                        <div class="swiper-slide text-center">Sun<br><span class="date-num">28</span><div class="hidden date-hidden">2015-03-28</div></div>
+                        <div class="swiper-slide text-center">Mon<br><span class="date-num">29</span><div class="hidden date-hidden">2015-03-29</div></div>
+                        <div class="swiper-slide text-center">Tue<br><span class="date-num">30</span><div class="hidden date-hidden">2015-03-30</div></div>
+                        <div class="swiper-slide text-center">Wed<br><span class="date-num">31</span><div class="hidden date-hidden">2015-03-31</div></div>
+                        <div class="swiper-slide text-center">Thu<br><span class="date-num">1</span><div class="hidden date-hidden">2015-04-01</div></div>
+                        <div class="swiper-slide text-center">Fri<br><span class="date-num">2</span><div class="hidden date-hidden">2015-04-02</div></div>
+                        <div class="swiper-slide text-center">Sat<br><span class="date-num">3</span><div class="hidden date-hidden">2015-04-03</div></div>
+                        <div class="swiper-slide text-center">Sun<br><span class="date-num">4</span><div class="hidden date-hidden">2015-04-04</div></div>
+                        <div class="swiper-slide text-center">Mon<br><span class="date-num">5</span><div class="hidden date-hidden">2015-04-05</div></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                <!-- Initialize Swiper -->
+                <!--                <script type='text/javascript'>
+                                    var swiper = new Swiper('.swiper-container', {
+                                        pagination: '.swiper-pagination',
+                                        slidesPerView: 4,
+                                        centeredSlides: true,
+                                        paginationClickable: false,
+                                        spaceBetween: 15
+                                    });
+                                </script>-->
+            </div>
+        </header>
+        <div class="container-fluid">
+            <main>
+                <div class="row events-container">
+
+                </div>
+            </main>
+        </div>
     </body>
 </html>
