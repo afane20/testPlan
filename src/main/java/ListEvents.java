@@ -113,6 +113,39 @@ public class ListEvents extends HttpServlet {
           for (Event e:list ){
             System.out.println(e.getTitle());
           }
+          String fileName = "/Users/Yeah/Documents/NetBeansProjects/JavaComments/src/main/webapp/js/Events.js";
+          try {
+          PrintWriter writer = new PrintWriter (fileName, "UTF-8");
+          int count = 0;
+          
+          writer.println("var events = [");
+          for (Event items : list){
+              writer.println("{");
+              writer.println("\"Title\": \""+ items.getTitle() + "\",");
+              
+              String description = items.getDescription().trim();
+              description = description.replaceAll("\n","");
+              //items.setDescription(description);
+              System.out.print(description);
+              writer.println("\"Description\": \"" + description  + "\",");
+              writer.println("\"StartTime\": \""+ items.getStartTime() + "\",");
+              writer.println("\"EndTime\": \""+ items.getEndTime() + "\",");
+              writer.println("\"Date\": \""+ items.getDate() + "\",");
+              writer.println("\"Price\": \""+ items.getPrice() + "\",");
+              writer.println("\"Picture\": \""+ "img\\/BYU-Idaho_Medallion_Logo.png" + "\",");
+              writer.println("\"Location\": \""+ items.getLocation() + "\",");
+              writer.println("\"Email\": null},");
+              if (count  == 2){
+              break;
+              }
+              count++;
+          }
+          writer.print("];");
+          writer.close();
+          } catch (Exception e){
+            e.printStackTrace();
+          }
+          
             request.getRequestDispatcher("listEvents.jsp").forward(request,response);
    }
     }
