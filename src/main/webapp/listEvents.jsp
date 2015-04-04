@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,10 +14,14 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
-        <c:forEach items="${list}" var="event">
-            <div><strong>${event.title}</strong></div>
-            <br /><br />
-        </c:forEach>
+        <h1>Hello World!!!!!!!!!</h1>
+       
+          <c:forEach items="${list}" var="review">
+                <div><strong>${review.getTitle()}</strong> <span>${review.getDescription()}</span></div>hello<br /><br />
+                
+            </c:forEach>
+        
+        
+        
     </body>
 </html>

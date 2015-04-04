@@ -110,6 +110,9 @@ public class ListEvents extends HttpServlet {
    
             // Pass a list here, then do a for-each statement in the jsp file
             request.setAttribute("list", list);
+          for (Event e:list ){
+            System.out.println(e.getTitle());
+          }
             request.getRequestDispatcher("listEvents.jsp").forward(request,response);
    }
     }

@@ -17,18 +17,18 @@ import java.util.Date;
  */
 public class Event {
     // Foreign keys //
-    int eventId;
-    int userId;
+    private int eventId;
+    private int userId;
     
     // Others //
-    String contactInfo;
-    String location;
-    String price;
-    String title;
-    String description;
-    String startTime;
-    String endTime;
-    String date;
+    private String contactInfo;
+    private String location;
+    private String price;
+    private String title;
+    private String description;
+    private String startTime;
+    private String endTime;
+    private String date;
     
     Event() {
         
@@ -115,18 +115,5 @@ public class Event {
     public void setDate(String date) {
         this.date = date;
     }
-    
-    
-/*    void getDate() {
-
-        Calendar c = Calendar.getInstance();
-        // http://www.tutorialspoint.com/java/java_date_time.htm
-        // If pm is found && not 12. time + 12;
-        c.set(9, 0);
-        SimpleDateFormat ft = new SimpleDateFormat ("hh:mm a");
-
-       // System.out.println("Current Date: " + ft.format(dNow));
-    }*/
-    // picture
     
 }
