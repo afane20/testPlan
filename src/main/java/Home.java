@@ -1,14 +1,15 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,10 +19,10 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author Ashlie
+ * @author Yeah
  */
-@WebServlet(urlPatterns = {"/CreateEvent"})
-public class CreateEvent extends HttpServlet {
+@WebServlet(urlPatterns = {"/Home"})
+public class Home extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,20 +36,12 @@ public class CreateEvent extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        HttpSession session = request.getSession(true);
-        
-        Event event = new Event();
-        event.setTitle(request.getParameter("title"));
-        event.setPrice(request.getParameter("price"));
-        event.setDate(request.getParameter("date"));
-        event.setStartTime(request.getParameter("startTime"));
-        event.setEndTime(request.getParameter("endTime"));
-        event.setLocation(request.getParameter("location"));
-        event.setDescription(request.getParameter("description"));
-        event.setContactInfo(request.getParameter("contactInfo"));
-      
-      // JDBC driver name and database URL
-   String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
+            HttpSession session = request.getSession(true);
+
+            String name = request.getParameter("name");
+            String emailId = request.getParameter("emailId");
+
+ String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
    String DB_URL = "jdbc:mysql://localhost:3306/planit";
 
    //  Database credentials
@@ -71,28 +64,11 @@ public class CreateEvent extends HttpServlet {
       stmt = conn.createStatement();
       
       // Add price to this!
-      String sql = "INSERT INTO event (Title, Description, StartTime,"
-              + "EndTime, Date, Location) VALUES ('" + event.getTitle() 
-              + "', '" + event.getDescription() + "', '" + event.getStartTime() + "',"
-              + "'" + event.getEndTime() + "','" + event.getDate() + "',"
-              + "'" + event.getLocation() + "')";
+      
+      String sql = "INSERT INTO user (emailId, name) VALUES ('" + emailId + "', '" + name + "')";
       stmt.executeUpdate(sql);
       System.out.println("Inserted records into the table...");
-      
-      String getId = "SELECT eventId FROM event WHERE eventId=last_insert_id()";
-      ResultSet rs = stmt.executeQuery(getId);
 
-      //STEP 5: Extract data from result set
-      String eventId = "";
-      while(rs.next()){
-         //Retrieve by column name
-         eventId = rs.getString("eventId");
-      }
-      String userId = (String) session.getAttribute("user");
-      System.out.print("Sessions VAR " + userId);
-      String userEventSql = "INSERT INTO user_event (eventId , userId) VALUES ('" + eventId + "', '" + userId + "')";
-      stmt.executeUpdate(userEventSql);
-      
    }catch(SQLException se){
       //Handle errors for JDBC
       se.printStackTrace();
@@ -113,9 +89,15 @@ public class CreateEvent extends HttpServlet {
          se.printStackTrace();
       }//end finally try
    }//end try
+   
+  // String user = new String("user");
+   session.setAttribute("user", emailId);
+   
    System.out.println("Goodbye!");
-}//end main
-        
+   response.sendRedirect("index.jsp");
+
+   
+}
     
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

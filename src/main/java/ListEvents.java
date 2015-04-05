@@ -123,9 +123,9 @@ public class ListEvents extends HttpServlet {
               writer.println("{");
               writer.println("\"Title\": \""+ items.getTitle() + "\",");
               
-              String description = items.getDescription().trim();
-              description = description.replaceAll("\n","");
-              //items.setDescription(description);
+              String description = items.getDescription();
+              description = description.trim();
+              description = description.replaceAll("\r?\n|\r/","");
               System.out.print(description);
               writer.println("\"Description\": \"" + description  + "\",");
               writer.println("\"StartTime\": \""+ items.getStartTime() + "\",");
@@ -135,7 +135,7 @@ public class ListEvents extends HttpServlet {
               writer.println("\"Picture\": \""+ "img\\/BYU-Idaho_Medallion_Logo.png" + "\",");
               writer.println("\"Location\": \""+ items.getLocation() + "\",");
               writer.println("\"Email\": null},");
-              if (count  == 2){
+              if (count  == 100){
               break;
               }
               count++;

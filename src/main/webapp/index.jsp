@@ -1,4 +1,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.util.Calendar"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.text.DateFormat"%>
+<%@include file="facebook.jsp" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,7 +23,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/js/swiper.jquery.min.js"></script>
         <!--<script src="js/swiper.min.js"></script>-->
-        <script src="js/EventsSample.js"></script>
+        <script src="js/Events.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/js/swiper.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.0.6/js/swiper.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.x.x/js/swiper.jquery.js"></script>
@@ -30,8 +34,15 @@
     </head>
     <body>
         <script src="path/to/swiper.min.js"></script>
+
+
         <header>
-            <div id='nav'>
+            <div id='nav'>   
+                <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+                </fb:login-button>
+                <div id="status"></div>
+
+                <a href="CreateEvent.jsp">Create an Event</a>
                 <p>Rexburg, ID</p>
                 <div id='sort-button-container'>
                     <input type='radio' name='sorting-buttons' class='sorting-buttons' id='sort-time'><label for='sort-time' class='glyphicon glyphicon-time sorting-buttons'></label>
@@ -43,177 +54,54 @@
                 <!-- Swiper -->
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide text-center">Today<br><span class="date-num">27</span><div class="hidden date-hidden">2015-03-27</div></div>
-                        <div class="swiper-slide text-center">Sun<br><span class="date-num">28</span><div class="hidden date-hidden">2015-03-28</div></div>
-                        <div class="swiper-slide text-center">Mon<br><span class="date-num">29</span><div class="hidden date-hidden">2015-03-29</div></div>
-                        <div class="swiper-slide text-center">Tue<br><span class="date-num">30</span><div class="hidden date-hidden">2015-03-30</div></div>
-                        <div class="swiper-slide text-center">Wed<br><span class="date-num">31</span><div class="hidden date-hidden">2015-03-31</div></div>
-                        <div class="swiper-slide text-center">Thu<br><span class="date-num">1</span><div class="hidden date-hidden">2015-04-01</div></div>
-                        <div class="swiper-slide text-center">Fri<br><span class="date-num">2</span><div class="hidden date-hidden">2015-04-02</div></div>
-                        <div class="swiper-slide text-center">Sat<br><span class="date-num">3</span><div class="hidden date-hidden">2015-04-03</div></div>
-                        <div class="swiper-slide text-center">Sun<br><span class="date-num">4</span><div class="hidden date-hidden">2015-04-04</div></div>
-                        <div class="swiper-slide text-center">Mon<br><span class="date-num">5</span><div class="hidden date-hidden">2015-04-05</div></div>
+                        <!-- put a for loop for this with real values -->
+                         <%
+                                // The date format that is stored as the value
+                                DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                                // The day of the week (separate for the first instance of "Today"
+                                SimpleDateFormat dateFormat2 = new SimpleDateFormat("E");
+                                // The date itself
+                                SimpleDateFormat dateFormat3 = new SimpleDateFormat("dd");
+
+                                Calendar cal = Calendar.getInstance();
+                                boolean first = false;
+
+                                for (int i = 0; i < 14; i++) {
+                                    // Manupulate a, b, and c in the display to get desired results
+                                    String dataBase = (dateFormat.format(cal.getTime()));
+                                    String dayOfWeek = (dateFormat2.format(cal.getTime()));
+                                    String dateNum = (dateFormat3.format(cal.getTime()));                                  
+                                    
+                                    // Format the option tag
+                                    String optionOpen = "<div class=\"swiper-slide text-center\">";
+                                    String optionClose = "<br><span class=\"date-num\">";
+                                    String closingTag = "</span><div class=\"hidden date-hidden\">";
+                                    String end = "</div></div>";
+                                        
+                                    // If it is the first day, write "Today" instead of the day of the week
+                                    if (first == false) {                    
+                                        out.write(optionOpen + "Today" + optionClose + dateNum + closingTag + dataBase + end);
+                                        first = true;
+                                    } else {
+                                        out.write(optionOpen + dayOfWeek + optionClose + dateNum + closingTag + dataBase + end);
+                                    }
+                                        
+                                    // Add to go to the next day
+                                    cal.add(Calendar.DATE, 1);
+                                }
+                            %>
                     </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
                 </div>
-                <!-- Initialize Swiper -->
-                <!--                <script type='text/javascript'>
-                                    var swiper = new Swiper('.swiper-container', {
-                                        pagination: '.swiper-pagination',
-                                        slidesPerView: 4,
-                                        centeredSlides: true,
-                                        paginationClickable: false,
-                                        spaceBetween: 15
-                                    });
-                                </script>-->
+                
             </div>
         </header>
         <div class="container-fluid">
             <main>
                 <div class="row events-container">
 
-
-
-                    <!--                    <div class="col-xs-12 event">
-                                            <div class="col-xs-4 event-img">
-                                                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcStH3Y6MiPBjMPWSlfO8SyNqbDmEHcpWtA_9zPHeM3gh22vhSBveA" alt="event" class="img-responsive">
-                                            </div>
-                                            <div class="col-xs-5 event-title">
-                                                <h1 class="text-muted event-title">Party at the Hart</h1>
-                                            </div>
-                                            <div class="col-xs-3 event-info">
-                                                <p class="event-info event-info-highlight"><span class='glyphicon glyphicon-time'></span> 7:00<span>pm</span></p>
-                                                <p class="event-info"><span class='glyphicon glyphicon-usd'></span> 2.00</p>
-                                                <p class="event-info"><span class='glyphicon glyphicon-map-marker'></span> 2mi</p>
-                                            </div>
-                                            <div class='col-xs-12 event-description'>
-                                                <h2 class='event-time text-muted'><span class='glyphicon glyphicon-time'></span>7:00pm <span>-</span> 11:00pm</h2>
-                                                <a href='#' class='btn btn-block btn-primary event-location'><h2 class='event-location text-muted'><span class='glyphicon glyphicon-map-marker'></span>Hart Building</h2></a>
-                                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore</p>
-                                            </div>
-                                        </div>
-                    
-                                        <div class="col-xs-12 event">
-                                            <div class="col-xs-4 event-img">
-                                                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcStH3Y6MiPBjMPWSlfO8SyNqbDmEHcpWtA_9zPHeM3gh22vhSBveA" alt="event" class="img-responsive">
-                                            </div>
-                                            <div class="col-xs-5 event-title">
-                                                <h1 class="text-muted event-title">Party at the Hart</h1>
-                                            </div>
-                                            <div class="col-xs-3 event-info">
-                                                <p class="event-info event-info-highlight"><span class='glyphicon glyphicon-time'></span> 7:00<span>pm</span></p>
-                                                <p class="event-info"><span class='glyphicon glyphicon-usd'></span> 2.00</p>
-                                                <p class="event-info"><span class='glyphicon glyphicon-map-marker'></span> 2mi</p>
-                                            </div>
-                                            <div class='col-xs-12 event-description'>
-                                                <h2 class='event-time text-muted'><span class='glyphicon glyphicon-time'></span>7:00pm <span>-</span> 11:00pm</h2>
-                                                <a href='#' class='btn btn-block btn-primary event-location'><h2 class='event-location text-muted'><span class='glyphicon glyphicon-map-marker'></span>Hart Building</h2></a>
-                                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore</p>
-                                            </div>
-                                        </div>
-                    
-                                        <div class="col-xs-12 event">
-                                            <div class="col-xs-4 event-img">
-                                                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcStH3Y6MiPBjMPWSlfO8SyNqbDmEHcpWtA_9zPHeM3gh22vhSBveA" alt="event" class="img-responsive">
-                                            </div>
-                                            <div class="col-xs-5 event-title">
-                                                <h1 class="text-muted event-title">Party at the Hart</h1>
-                                            </div>
-                                            <div class="col-xs-3 event-info">
-                                                <p class="event-info event-info-highlight"><span class='glyphicon glyphicon-time'></span> 7:00<span>pm</span></p>
-                                                <p class="event-info"><span class='glyphicon glyphicon-usd'></span> 2.00</p>
-                                                <p class="event-info"><span class='glyphicon glyphicon-map-marker'></span> 2mi</p>
-                                            </div>
-                                            <div class='col-xs-12 event-description'>
-                                                <h2 class='event-time text-muted'><span class='glyphicon glyphicon-time'></span>7:00pm <span>-</span> 11:00pm</h2>
-                                                <a href='#' class='btn btn-block btn-primary event-location'><h2 class='event-location text-muted'><span class='glyphicon glyphicon-map-marker'></span>Hart Building</h2></a>
-                                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore</p>
-                                            </div>
-                                        </div>
-                    
-                                        <div class="col-xs-12 event">
-                                            <div class="col-xs-4 event-img">
-                                                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcStH3Y6MiPBjMPWSlfO8SyNqbDmEHcpWtA_9zPHeM3gh22vhSBveA" alt="event" class="img-responsive">
-                                            </div>
-                                            <div class="col-xs-5 event-title">
-                                                <h1 class="text-muted event-title">Party at the Hart</h1>
-                                            </div>
-                                            <div class="col-xs-3 event-info">
-                                                <p class="event-info event-info-highlight"><span class='glyphicon glyphicon-time'></span> 7:00<span>pm</span></p>
-                                                <p class="event-info"><span class='glyphicon glyphicon-usd'></span> 2.00</p>
-                                                <p class="event-info"><span class='glyphicon glyphicon-map-marker'></span> 2mi</p>
-                                            </div>
-                                            <div class='col-xs-12 event-description'>
-                                                <h2 class='event-time text-muted'><span class='glyphicon glyphicon-time'></span>7:00pm <span>-</span> 11:00pm</h2>
-                                                <a href='#' class='btn btn-block btn-primary event-location'><h2 class='event-location text-muted'><span class='glyphicon glyphicon-map-marker'></span>Hart Building</h2></a>
-                                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore</p>
-                                            </div>
-                                        </div>
-                    
-                                        <div class="col-xs-12 event">
-                                            <div class="col-xs-4 event-img">
-                                                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcStH3Y6MiPBjMPWSlfO8SyNqbDmEHcpWtA_9zPHeM3gh22vhSBveA" alt="event" class="img-responsive">
-                                            </div>
-                                            <div class="col-xs-5 event-title">
-                                                <h1 class="text-muted event-title">Party at the Hart</h1>
-                                            </div>
-                                            <div class="col-xs-3 event-info">
-                                                <p class="event-info event-info-highlight"><span class='glyphicon glyphicon-time'></span> 7:00<span>pm</span></p>
-                                                <p class="event-info"><span class='glyphicon glyphicon-usd'></span> 2.00</p>
-                                                <p class="event-info"><span class='glyphicon glyphicon-map-marker'></span> 2mi</p>
-                                            </div>
-                                            <div class='col-xs-12 event-description'>
-                                                <h2 class='event-time text-muted'><span class='glyphicon glyphicon-time'></span>7:00pm <span>-</span> 11:00pm</h2>
-                                                <a href='#' class='btn btn-block btn-primary event-location'><h2 class='event-location text-muted'><span class='glyphicon glyphicon-map-marker'></span>Hart Building</h2></a>
-                                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore</p>
-                                            </div>
-                                        </div>
-                    
-                                        <div class="col-xs-12 event">
-                                            <div class="col-xs-4 event-img">
-                                                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcStH3Y6MiPBjMPWSlfO8SyNqbDmEHcpWtA_9zPHeM3gh22vhSBveA" alt="event" class="img-responsive">
-                                            </div>
-                                            <div class="col-xs-5 event-title">
-                                                <h1 class="text-muted event-title">Party at the Hart</h1>
-                                            </div>
-                                            <div class="col-xs-3 event-info">
-                                                <p class="event-info event-info-highlight"><span class='glyphicon glyphicon-time'></span> 7:00<span>pm</span></p>
-                                                <p class="event-info"><span class='glyphicon glyphicon-usd'></span> 2.00</p>
-                                                <p class="event-info"><span class='glyphicon glyphicon-map-marker'></span> 2mi</p>
-                                            </div>
-                                            <div class='col-xs-12 event-description'>
-                                                <h2 class='event-time text-muted'><span class='glyphicon glyphicon-time'></span>7:00pm <span>-</span> 11:00pm</h2>
-                                                <a href='#' class='btn btn-block btn-primary event-location'><h2 class='event-location text-muted'><span class='glyphicon glyphicon-map-marker'></span>Hart Building</h2></a>
-                                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore</p>
-                                            </div>
-                                        </div>
-                    
-                                        <div class="col-xs-12 event">
-                                            <div class="col-xs-4 event-img">
-                                                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcStH3Y6MiPBjMPWSlfO8SyNqbDmEHcpWtA_9zPHeM3gh22vhSBveA" alt="event" class="img-responsive">
-                                            </div>
-                                            <div class="col-xs-5 event-title">
-                                                <h1 class="text-muted event-title">Party at the Hart</h1>
-                                            </div>
-                                            <div class="col-xs-3 event-info">
-                                                <p class="event-info event-info-highlight"><span class='glyphicon glyphicon-time'></span> 7:00<span>pm</span></p>
-                                                <p class="event-info"><span class='glyphicon glyphicon-usd'></span> 2.00</p>
-                                                <p class="event-info"><span class='glyphicon glyphicon-map-marker'></span> 2mi</p>
-                                            </div>
-                                            <div class='col-xs-12 event-description'>
-                                                <h2 class='event-time text-muted'><span class='glyphicon glyphicon-time'></span>7:00pm <span>-</span> 11:00pm</h2>
-                                                <a href='#' class='btn btn-block btn-primary event-location'><h2 class='event-location text-muted'><span class='glyphicon glyphicon-map-marker'></span>Hart Building</h2></a>
-                                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore</p>
-                                            </div>
-                                        </div>-->
+                                   
                 </div>
             </main>
         </div>

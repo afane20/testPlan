@@ -1,10 +1,6 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <body>
-    <%@include file="facebook.jsp" %>
-<main>  
     <style>
         .col-xs-4 {
             padding: 4px;
@@ -14,11 +10,8 @@
         <div class="row">
             <div class="col-xs-12">
                 <h1 class="logo">Planit</h1>
-                <div id="status">
-                </div>
                 <p class="text-center logo">Local Events Search</p>
                 <h2>Create Your Event</h2>
-                
                 <form action="CreateEvent" method="post">                  
                     <div class="clearfix"></div>
                        Title:<input class="event-input" name="title"><br>
@@ -32,11 +25,9 @@
                     <br>
                     <input type="submit" class="btn btn-primary" value="Create Event">
                 </form>
-                
             </div>
         </div>
     </div>
 </div>
-</main>
 </body>
 </html>

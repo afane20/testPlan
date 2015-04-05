@@ -1,5 +1,7 @@
   <script>
-        // This is called with the results from from FB.getLoginStatus().
+       var email = "";
+       var name = "";
+        // This is called with the results from FB.getLoginStatus().
         function statusChangeCallback(response) {
             console.log('statusChangeCallback');
             console.log(response);
@@ -7,6 +9,7 @@
             // app know the current login status of the person.
             // Full docs on the response object can be found in the documentation
             // for FB.getLoginStatus().
+            
             if (response.status === 'connected') {
                 // Logged into your app and Facebook.
                 testAPI();
@@ -27,6 +30,7 @@
         function checkLoginState() {
             FB.getLoginStatus(function (response) {
                 statusChangeCallback(response);
+               
             });
         }
         window.fbAsyncInit = function () {
@@ -70,6 +74,15 @@
                 console.log('Successful login for: ' + response.name);
                 document.getElementById('status').innerHTML =
                         response.name + '!';
+                document.getElementById('name').value =
+                        response.name;
+                document.getElementById('emailId').value =
+                        response.email;
+               // session.setAtribute("email", response.email);
+               // session.setAtribute("name", response.name);
+        email = response.email;
+        name = response.name;
+               
             });
         }
         function logout() {
@@ -77,4 +90,6 @@
                 // Person is now logged out
             });
         }
+        
+       
     </script>
