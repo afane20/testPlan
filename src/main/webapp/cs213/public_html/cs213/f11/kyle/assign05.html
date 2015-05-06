@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Kyle's Mortgage Calculator</title>
+  <link rel="stylesheet" type="text/css" href="assign05.css" />
+  <script type="text/javascript" src="assign05.js"></script>
+</head>
+<body onload="formSetup();">
+<h1>Kyle's Mortgage Calculator</h1>
+<div id="content">
+<form onsubmit="return calculate();" onreset="formSetup();">
+  <div>APR (%): <input type="text" name="APR" id="APR"/></div>
+  <div>Loan Term (Yr): <input type="text" name="Term" id="Term"/></div>
+  <div>Loan Amount ($): <input type="text" name="Amount" id="Amount"/></div>
+  <div>Monthly Payment ($): <input type="text" name="Payment" id="Payment"/></div>
+  <input type="submit" value="Calculate" id="Calculate"/>
+  <input type="reset" value="Clear" id="Clear"/>
+</form>
+<div id="hints"></div>
+</div>
+</body>
+</html>

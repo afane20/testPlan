@@ -1,0 +1,12 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<byui>
+   <college>Physical Science and Engineering
+      <department code = "440">Computer Science</department>
+      Dean's Office is in Romney Building 
+   </college>
+   <college>Religion</college>
+   <college>Education</college>
+   <college>Performing and Visual Arts</college>
+   <college>Business and Communications</college>
+   <college>Language and Letters</college>
+</byui>

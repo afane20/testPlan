@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- load.html
+    An example to illustrate the load event 
+    -->
+<html>
+<head>
+<title> The onLoad event handler </title>
+<script type = "text/javascript">
+<!--
+// The onload event handler
+
+function load_greeting () {
+
+   window.document.write("hello");
+   document.write("hi");
+   var window1 =  window.open("", "w1","toolbar=0,menubar=0,resizable=1,left=300,top=200,scroolbars=0,width=400,height=350");
+   window1.document.open();
+   window1.document.write("goodbye");
+   }
+// -->
+</script>
+</head>
+
+<body onload = "load_greeting();">
+
+</body>
+</html>
+
+

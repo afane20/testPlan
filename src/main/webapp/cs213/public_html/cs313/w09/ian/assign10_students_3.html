@@ -1,0 +1,11 @@
+            <select size="20"  style="z-index:-1;font-size: 14px;width:300px;font-family:Courier" 
+             id="StudentList" name="StudentList"
+             onchange="var flds = ['txtStudFirstName', 'txtStudLastName','txtStudBirthDate',
+                                   'txtStudEmail','txtStudAddress','txtStudCity',
+                                   'txtStudZip','txtStudPhone']; 
+                       var colus = [1,2,4,6,7,8,10,11];
+                       tableToFields(gStudents, flds, colus, this.selectedIndex);
+                       selectItem('drpInstrument', gStudents[this.selectedIndex][3]);
+                       selectItem('drpState',getStateIndex(gStudents[this.selectedIndex][9]));
+
+

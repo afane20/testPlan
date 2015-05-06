@@ -1,0 +1,120 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.1 //EN"
+   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmls = "http://www.w3.org/1999/xhtml" >
+<head>
+   <title id = "title">
+   Test Object Element with Video's</title>
+</head>
+<body id = "video">
+<h2>
+This Web pages demonstrates Multi-Media using the XHMTL Object tag
+</h2>
+
+<div> 
+   <!-- Windows Video (.wmv .mpe, .mpg) -- classid uniquely identifies player software to use-->
+   <object width="200" height= "200"
+      classid="clsid:22D6F312-B0F6-11D0-94AB-0080C74C7E95">
+      <param name="FileName" value="helpDesk.wmv" />
+      <param name="autostart" value="false" />
+      <param name="showcontrols" value = "true" />
+   </object>
+
+     <object style = "position:relative; left:20px;"
+      width = "200" height = "200"
+      classid="clsid:22D6F312-B0F6-11D0-94AB-0080C74C7E95">
+      <param name="FileName" value="washingPC.mpe" />
+      <param name="autoplay" value="false" />
+      <param name="showcontrols" value = "true" />
+   </object>
+
+   <object style = "position:relative; left:40px;"
+      width = "100" height = "100"
+      classid="clsid:22D6F312-B0F6-11D0-94AB-0080C74C7E95">
+      <param name="FileName" value="nasa.mpg" />
+      <param name="showcontrols" value="false" />
+   </object>
+
+</div>
+ 
+
+<!-- Apple QuickTime Movie (.mov) -->
+<p> 
+ 
+   <object
+      width="160" height="144"
+      classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"
+      codebase="http://www.apple.com/qtactivex/qtplugin.cab">
+      <param name="src" value="apple.mov"/>
+      <param name="autoplay" value="false"/>
+      <param name="controller" value="true"/>
+      <embed src="apple.mov" 
+          width="160" height="144"
+          autoplay="false" controller="true"
+          pluginspage="http://www.apple.com/quicktime/download/">
+      </embed> 
+   </object>
+
+</p>
+
+<!-- Flash animation (.swf) -->
+<p>
+   <object width="300" height="100"
+      classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+      codebase="http://download.macromedia.com
+            /pub/shockwave/cabs/flash/swflash.cab#4,0,0,0">
+      <param name="SRC" value="sample.swf">
+      <embed src="bookmark.swf" width="300" height="300"></embed>
+   </object>
+</p>
+
+
+<!-- Sound (.wav) -->
+<p> Music Box Dancer - .wav file <br/>
+   <object width="100" height="50"
+      classid="clsid:22D6F312-B0F6-11D0-94AB-0080C74C7E95">
+      <param name="FileName" value="MusicBoxDancer.wav" />
+      <param name="autoplay" value="true"/>
+      <param name="controller" value="false"/>
+   </object>
+
+   <embed width="100" height="50"
+      src="MusicBoxDancer.wav" 
+      autoplay = "false" controller = "true">
+   </embed>
+</p>
+
+
+
+<!-- Real Video (.ram or .rm)
+
+  <object width="320" height="240"
+     classid="clsid:CFCDAA03-8BE4-11cf-B84B-0020AFBBCCFA">
+     <param name="controls" value="ImageWindow" />
+     <param name="autostart" value="true" />
+     <param name="src" value="sample.ram" />
+  </object>
+-->
+
+
+
+<object type="text/html" height="50%" width="50%"
+  data="http://www.w3schools.com">
+</object>
+
+
+<p>
+   <a href="helpDesk.wmv">
+    Click here to run Help Desk video.
+   </a>
+</p>
+
+<p>
+   <a href="washingPC.mpe">
+    Click here to run Washing PC video.
+   </a>
+</p>
+
+</body>
+</html>

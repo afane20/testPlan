@@ -1,0 +1,92 @@
+table.center
+{
+   text-align:left;
+   margin-left:auto;
+   margin-right:auto;
+}
+
+.transaction
+{
+   text-align:left;
+}
+
+.heading
+{
+   font-size:18px;
+   font-family:sans;
+   font-weight:bold;
+   color:#3e96c4;
+   text-align:center;
+}
+
+.signIn
+{
+   font-size:14px;
+   font-family:sans;
+   font-weight:bold;
+   color:black;
+}
+
+.newUserHeader
+{
+   font-size:18px;
+   font-family:sans;
+   font-weight:bold;
+   color:black;
+}
+
+.dropDown
+{
+   font-size: 14px;
+   width:145px;
+   font-family:Courier;
+}
+
+.drpState
+{
+   font-size: 14px;
+   width:80px;
+   font-family:Courier;
+}
+
+.drpDay
+{
+   font-size: 14px;
+   width:40px;
+   font-family:Courier;
+}
+
+.drpMonth
+{
+   font-size: 14px;
+   width:80px;
+   font-family:Courier;
+}
+
+.Menu
+{
+   font-size:24px;
+   font-family:sans;
+   font-weight:bold;
+   color:blue;
+}
+
+.drpYear
+{
+   font-size: 14px;
+   width:60px;
+   font-family:Courier;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+<title> Policical Survey </title>
+</head>
+<body>
+
+<form action = "http://157.201.194.254:8080/cs313/servlet/sseSurvey"  method = "get">
+  <h2> Political Survey </h2>
+  <table border="1">
+  <tr>
+     <td> Is the United States a Democracy or Republic? </td>
+     <td> <input type = "radio"  name = "GovType" value = "dem" />Democracy</td>
+     <td> <input type = "radio"  name = "GovType" value = "rep" />Republic</td>
+  </tr>
+  <tr>
+     <td> Do you know why the Electoral College was<br/>
+          selected as the method for electing our President? </td>
+     <td> <input type = "radio"  name = "ElectoralCollege" value = "y" /> Yes </td>
+     <td> <input type = "radio"  name = "ElectoralCollege" value = "n" /> No </td>
+  </tr>
+  <tr>
+     <td> Would you vote to abolish the Electoral College <br/>
+          in favor of a popular vote? </td>
+     <td> <input type = "radio"  name = "abolish"  value = "y" /> Yes </td>
+     <td> <input type = "radio"  name = "abolish"  value = "n" /> No </td>
+  </tr>
+  </table>
+  <br/>
+  <input type = "submit" name = "submit" value = "Submit Survey"/>
+</form>
+</body>
+</html>
+

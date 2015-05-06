@@ -1,0 +1,49 @@
+#main
+{
+   text-align: center;
+   background: lavender;
+   line-height: 25px;
+   width: 310px;
+   height: 600px;
+   margin: 0 auto;
+   float: none;
+   padding: 5px 10px 10px 10px;
+}
+
+.label
+{
+   float: left;
+}
+
+input.elements
+{
+   float: right;
+}
+
+select
+{
+	float: right;
+}
+
+#purchaseItems
+{
+	width: 280px;
+	border: 2px;
+}
+
+.error 
+{
+	color: red; 
+	font-weight: bold; 
+	display: none; 
+	width:5px;
+	height: 25px;
+	float: right;
+}
+
+#errors {color: red;}
+
+#total {background: indianred;}
+
+#resetButton {float: left; margin-top: 5px; margin-left: 25px;}
+#submitButton {float: right; margin-top: 5px; margin-right: 25px;}

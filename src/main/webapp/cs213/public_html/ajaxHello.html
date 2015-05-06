@@ -1,0 +1,71 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//w3c/DTD XHTML 1.0 Strict //EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+   <title>Java Script</title>
+   <script type = "text/javascript">
+   <!--  
+       var req;			
+       function processReqChange()
+       {
+          // only if req shows "complete"
+          if (req.readyState == 4)
+          {
+             // only if "OK"
+	     if (req.status == 200)
+	     {
+	         var theText = req.responseText;
+                 document.getElementById("hello").innerHTML = theText;
+	     }
+	     else
+            {
+	  	  alert("There was a problem retrieving the XML data:\n" +
+                         req.statusText);
+	     }
+	  }
+       }
+  
+       function loadXMLDoc(url)
+       {
+          // branch for native XMLHttpRequest object
+          if (window.XMLHttpRequest)
+          {   
+    	     req = new XMLHttpRequest(); 
+ 	   }
+ 	   // branch for IE/Windows ActiveX version
+	   else if (window.ActiveXObject)
+	   {
+             req = new ActiveXObject("Microsoft.XMLHTTP");
+          } 
+          if (req != null)
+	   {
+	      req.onreadystatechange = processReqChange;
+             req.open("GET", url, true);
+             req.send(null);
+	   }
+          else 
+          {
+              alert("Brower doesn't support XMLHttp");
+          }
+
+       }
+
+       function getFile()
+       {
+
+	   loadXMLDoc("http://157.201.194.254/~ercanbracks/ajaxHello.xml");
+
+       }
+
+       //-->
+   </script>
+</head>
+
+<body 
+   <h2> Testing ajax request </h2>
+   <div id = "hello">Replace this text</div>
+   <input type="button" value = "ajax request"  onclick = "getFile()"/>
+   <br/>
+</body>
+</html>

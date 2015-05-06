@@ -1,0 +1,56 @@
+
+	<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Chad Hansen's Assignment #15</title>
+  <script type="text/javascript" src="ajax.js"></script>
+  <link rel="stylesheet" href="assign15.css" />
+</head>
+<body onload="getLoadInfo()">
+  <h3>Assignment 15 - Student Data Access</h3>
+  <div id="error">
+  </div>
+  <form action="javascript:queryData();" name="queryForm" id="queryForm" >
+    Students <input type="radio" name="queryType" value="student"/>
+    Majors <input type="radio" name="queryType" value="major"/>
+    Courses <input type="radio" name="queryType" value="course" />
+    <input type="submit" value="Get Info" />
+  </form>
+  <a href="javascript:displayAdd();" id="addLink" >Display Add Student</a>
+  <form action="#" name="addForm" id="addForm">
+    <div id="newLables">
+      First name: <br/>
+      Last name: <br/>
+      Major: <br/>
+      Birth date (YYYY-MM-DD): <br/>
+      Gender (M or F): <br/>
+      City: <br/>
+      State: <br/>
+    </div>
+    <div id="newInputs">
+      <input type="text" id="newFName" maxlength="25" /><br/>
+      <input type="text" id="newLName" maxlength="25" /><br/>
+      <input type="text" id="newMajor" maxlength="3" /><br/>
+      <input type="text" id="newBirthDate" maxlength="10" /><br/>
+      <input type="text" id="newGender" maxlength="1" /><br/>
+      <input type="text" id="newCity" maxlength="25" /><br/>
+      <input type="text" id="newState" maxlength="25" /><br/>
+      <input type="submit" value="Add Student" id="addSubmit"
+        onclick="return addAction();"/>
+    </div>
+  </form>
+  <div id="resultDiv" >
+  </div>
+  <div id="footer">
+     Chad G Hansen - CS 373 - Assignment 15 &copy; 2007
+  </div>
+  <script type="text/javascript">
+  <!--
+    document.getElementById('newBirthDate').onkeypress = dateKeyPress;
+  //-->
+  </script>
+</body>
+</html>

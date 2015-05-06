@@ -1,0 +1,38 @@
+<input type="text" style="visibility:hidden" name="tEval" id="tEval" 
+   value="sendRequest('get&table=students',gStudents);" />
+<input type="text" style="visibility:hidden" name="tEval2" id="tEval2" 
+   value="updateStudents();" />
+
+   <table border="0" class="center">
+   <col width="400" />
+   <col width="400" />
+   <tr>
+      <td style="text-align:center;">
+        <span class="heading">Add or Modify a Student</span>
+        <table> 
+           <col width="160" />
+           <col width="200" />
+           <tr>
+             <td style="text-align:right;">
+               FirstName:
+             </td>
+             <td>
+                <input type="text" name="txtStudFirstName" id="txtStudFirstName" size="20" maxlength="16"
+                   onkeypress="return keypressLettersOnly(event);">
+             </td>
+           </tr>            
+           <tr>
+             <td style="text-align:right;">
+               LastName:
+             </td>
+             <td>
+                <input type="text" name="txtStudLastName" id="txtStudLastName" size="20" maxlength="16"
+                   onkeypress="return keypressLettersOnly(event);">
+             </td>
+           </tr>            
+           <tr>
+             <td style="text-align:right;">
+               Instrument:
+             </td>
+             <td>
+                <select class="dropDown" id="drpInstrument" name="drpInstrument">

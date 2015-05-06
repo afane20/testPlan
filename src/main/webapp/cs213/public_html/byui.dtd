@@ -1,0 +1,15 @@
+<!-- byui.dtd - a document type definition for
+                  the byui.xml document, which specifies
+                  a list byui academics -->
+
+<!ELEMENT byui (college+)>
+<!ELEMENT college (department+, department1*)>
+<!ELEMENT department (#PCDATA)>
+<!ELEMENT department1 (name*, major+)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT major (#PCDATA)>
+
+<!ATTLIST college name CDATA #REQUIRED>
+<!ATTLIST major id CDATA #REQUIRED>
+
+<!ENTITY cse "Computer Science and Engineering">

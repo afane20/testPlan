@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding = "utf-8"?>
+<scoutRecord>
+        <id>3</id>
+        <lastname>Ercanbrack</lastname>
+        <firstname>Scott</firstname>
+        <middlename>S.</middlename>
+        <unit>126</unit>
+        <unitname>Mapleton 2nd</unitname>
+        <district>Hobble Creek</district>
+        <birthdate>0000-00-00</birthdate>
+        <joinedBSA>0000-00-00</joinedBSA>
+        <Tenderfoot>0000-00-00</Tenderfoot>
+        <SecondClass>0000-00-00</SecondClass>
+        <FirstClass>0000-00-00</FirstClass>
+        <Star>06-06-92</Star>
+        <Life>06 Apr 93</Life>
+        <Eagle>04-21-93</Eagle>
+        <Palms>
+            <BronzePalm>06-04-1992</BronzePalm>
+            <GoldPalm>12-03-1990</GoldPalm>
+            <SilverPalm>03-30-1990</SilverPalm>
+        </Palms>
+        <MeritBadges>
+            <MeritBadge dateEarned="06-01-1973" required="Y">Swimming</MeritBadge>
+            <MeritBadge dateEarned="0000-00-00" required="Y">Environmental Science</MeritBadge>
+       </MeritBadges>
+</scoutRecord>

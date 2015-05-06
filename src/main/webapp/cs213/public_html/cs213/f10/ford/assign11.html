@@ -1,0 +1,348 @@
+<?xml version="1.1" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns = "http://www.w3.org/1999/xhtml">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<title> Barrett Ford's Assignment #11</title>
+				<!-- Also inventive title! -->
+				
+		<script language="JavaScript">
+		<!--
+		
+		function calculate()
+		{
+			var totalCost = 0;
+			
+			if (document.calc.milkChocolate.checked == true)
+			{
+				totalCost += parseFloat(document.calc.milkChocolate.value);
+			}
+
+			if (document.calc.orange.checked == true)
+			{
+				totalCost += parseFloat(document.calc.orange.value);
+			}
+				
+			if (document.calc.noisette.checked == true)
+			{
+				totalCost += parseFloat(document.calc.noisette.value);
+			}
+
+			if (document.calc.greenTea.checked == true)
+			{
+				totalCost += parseFloat(document.calc.greenTea.value);
+			}
+
+			if (document.calc.kinako.checked == true)
+			{
+				totalCost += parseFloat(document.calc.kinako.value);
+			}
+
+			if (document.calc.fruitParfait.checked == true)
+			{
+				totalCost += parseFloat(document.calc.fruitParfait.value);
+			}
+			
+			var total = document.getElementById('totalValue');
+			total.innerHTML = "$" + totalCost.toFixed(2);
+			return totalCost.toFixed(2);
+		}
+		
+		function buttonsGood()
+		{
+			var checkedB = false
+			for (var i = 0; i < 3; i++)
+			{
+				if	(document.calc.card[i].checked)
+				{
+					checkedB = true;
+				}
+			}
+			return checkedB;
+		}
+		
+		function checkForm()
+		{
+			var good = true;
+			
+			if (!dateGood())
+			{
+				document.calc.date.style.color = "red";
+				document.calc.date.focus();
+				good = false;
+			}
+			if (!creditGood())
+			{
+				document.calc.credit.style.color = "red";
+				document.calc.credit.focus();
+				good = false;
+			}
+			if (!phoneGood())
+			{
+				document.calc.phone.style.color = "red";
+				document.calc.phone.focus();
+				good = false;
+			}
+			
+			if (!buttonsGood())
+			{
+				alert("Need to supply Card Type!");
+				good = false;
+			}
+			
+			if (calculate() == 0.00)
+			{
+				alert("Need to select at least one KitKat");
+				good = false;
+			}
+			
+			return good;
+		}
+		
+		function phoneGood()
+		{
+			var phoneNum = document.calc.phone.value;
+			
+			if (phoneNum.length == 12)
+			{
+				if (phoneNum[3] != "-" && phoneNum[7] != "-")
+				{
+					alert("hyphen");
+					return false;
+				}
+				
+				for (var i = 0; i < 12; i++)
+				{
+					if (i == 3 || i == 7)
+					{
+						i++;
+					}
+					
+					var num = phoneNum[i];
+					
+					if (num != "1" && num != "2" && num != "3" && num != "4" && num != "5" &&
+						 num != "6" && num != "7" && num != "8" && num != "9" && num != "0")
+					{
+						return false;
+					}
+				}
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		
+		function creditGood()
+		{
+			var creditNum = document.calc.credit.value;
+			
+			
+			if (creditNum.length == 19)
+			{
+				if (creditNum[4] != "-" && creditNum[9] != "-" && creditNum[14] != "-")
+				{
+					return false;
+				}
+				
+				for (var i = 0; i < 9; i++)
+				{
+					if (i == 4 || i == 9 || i == 14)
+					{
+						i++;
+					}
+					
+					var num = creditNum[i];
+					
+					if (num != "1" && num != "2" && num != "3" && num != "4" && num != "5" &&
+						 num != "6" && num != "7" && num != "8" && num != "9" && num != "0")
+					{
+						return false;
+					}
+				}
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+
+		function dateGood()
+		{
+			var dateNum = document.calc.date.value;
+			
+			if (dateNum.length == 5)
+			{
+				if (dateNum[2] != "/")
+				{
+					return false;
+				}
+				
+				for (var i = 0; i < 5; i++)
+				{
+					if (i == 2)
+					{
+						i++;
+					}
+					
+					var num = dateNum[i];
+					
+					if (num != "1" && num != "2" && num != "3" && num != "4" && num != "5" &&
+						 num != "6" && num != "7" && num != "8" && num != "9" && num != "0")
+					{
+						return false;
+					}
+				}
+				
+				var year = dateNum[3] * 10 + dateNum[4] * 1;
+				
+				if (year < 9)
+				{
+					alert("yo");
+					return false;
+				}
+				
+				var month = dateNum[0] * 10 + dateNum[1] * 1;
+				
+				if (month > 12)
+				{
+					alert(month);
+					return false;
+				}
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		
+		function resetErrors()
+		{
+			document.calc.date.style.color = "black";
+			document.calc.phone.style.color = "black";
+			document.calc.credit.style.color = "black";
+			document.calc.firstname.value='';
+			document.calc.firstname.focus();
+			calculate();
+		}
+		
+		// -->
+		</script>
+		
+		<link rel="stylesheet" type="text/css" href="assign06.css" />
+	</head>
+
+
+	<body onload="document.calc.firstname.focus()">
+		<div style="margin: 0 10% 0 10%;" id="order_form">
+			<fieldset>
+				<legend> KitKat&reg Order Form </legend>
+
+				<div>
+					<p>
+						<img src="original.jpg" alt="Tasty!" height="auto" width="300" 
+						name="barImage" style="float: right; border: double"/>
+					</p>
+				</div>
+				
+				<form name="calc" method="post" action="http://157.201.194.254/cgi-bin/ercanbracks/cs213/f10/assign11.pl"
+						onsubmit="return checkForm()"
+						onreset="document.calc.firstname.select(); document.calc.firstname.focus();
+						document.calc.firstname.value=''">
+				
+					<caption>Name:</caption>
+					<input type="text" style="border: double" size="16%" name="firstname" onchange="style.color='black'"
+							 value="" onclick="value=''" onfocus="select()"/>
+					<input type="text" style="border: double" size="16%" name="lastname" onchange="style.color='black'"
+							 value="Last Name" onclick="value=''" onfocus="select()"/>
+					<br>
+					<br>
+					<caption>Address:</caption>
+					<br>
+					<textarea name="address" rows="3" cols="44"
+								 onclick="value=''" style="border: double" 
+								 onfocus="select()" >Enter Address Here.</textarea> 
+					<br>
+					<caption>Phone #</caption>
+					<input type="text" style="border: double" size="16%" name="phone" onchange="style.color='black'"
+							 value="XXX-XXX-XXXX" onclick="value=''" onfocus="select()"/>
+					<br><br>
+					
+					<caption>Choose Payment Method!</caption>
+					<br>
+					
+					<input type="radio" name="card" id="visa" value="Visa" /> 
+						<label for="visa"> Visa </label>
+					<input type="radio" name="card" id="master" value="Master Card" /> 
+						<label for="master" > Master Card </label>
+					<input type="radio" name="card" id="american" value="American Express" /> 
+						<label for="american"> American Express </label>
+					<br>
+					
+					<caption>Card # and Expiration Date:</caption>
+					<input type="text" style="border: double" size="26px" name="credit" onchange="style.color='black'"
+							 value="XXXX-XXXX-XXXX-XXXX" onclick="value=''" onfocus="select()"/>
+					<input type="text" style="border: double" size="5px" name="date"
+							 value="MM/YY" onclick="value=''" onfocus="select()" />
+
+					<br>
+					
+					<table>
+						<tr>
+							<th class="lft">
+								<input type="checkbox" name="milkChocolate" value="1.00" onclick="calculate()"
+								onmouseover="document.images.barImage.src='original.jpg'"/> $1.00 Milk Chocolate
+							</th>
+							<th class="lft">
+								<input type="checkbox" name="orange" value="1.75" onclick="calculate()"
+								onmouseover="document.images.barImage.src='orange.jpg';"/> $1.75 Orange &amp Cream
+							</th>
+						</tr> 
+						<tr>
+							<th class="lft">
+								<input type="checkbox" name="noisette" value="2.00" onclick="calculate()"
+								onmouseover="document.images.barImage.src='noisette.jpg'"/> $2.00 Noisette
+							</th>
+							<th class="lft">
+								<input type="checkbox" name="greenTea" value="2.25" onclick="calculate()"
+								onmouseover="document.images.barImage.src='gtea.jpg'"/> $2.25 Green Tea
+							</th>
+						</tr>
+						<tr>
+							<th class="lft">
+								<input type="checkbox" name="kinako" value="2.75" onclick="calculate()"
+								onmouseover="document.images.barImage.src='kinako.jpg'"/> $2.75 Kinako
+							</th>
+							<th class="lft">
+								<input type="checkbox" name="fruitParfait" value="3.00" onclick="calculate()"
+								onmouseover="document.images.barImage.src='fparfait.jpg'" /> $3.00 Fruit Parfait
+							</th>
+						</tr>
+						<tr>
+							<th class="ctr">
+								<input type="submit" value="Submit Order"
+								onmouseover="style.color='green'" onmouseout="style.color='black'"/>
+							</th>
+							<th class="ctr">
+								<input type="reset" value="Reset Fields" onmouseover="style.color='red'" 
+								onmouseout="style.color='black'" onclick="resetErrors()"/>
+							</th>
+						</tr>
+						
+						<tr>
+							<th class="ctr">
+								Order Total:
+							</th>
+							<th class="ctr" id="totalValue">
+								$0.00
+							</th>
+						</tr>
+					</table>
+				</form>
+			</fieldset>
+		</div>
+	</body>
+</html>

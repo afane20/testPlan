@@ -1,0 +1,49 @@
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="uvmta.css" />
+  <script type="text/javascript">
+    function validate()
+    {
+       var password = document.getElementById('pwd').value;
+       var username = document.getElementById('username').value;
+       if (password == "" || username =="")
+       {
+          document.getElementById('username').focus();
+          return false;
+       }
+       else
+       {
+          return true;
+       }
+    }
+    
+  </script>
+</head>
+
+<body onload = "document.getElementById('username').focus()">
+<div  class = "center" style = "background-color: #dcdcdc" >
+    <div class="heading"><i>CS313 Class Blog</i></div>
+     <br/>
+    <form method="POST" action="http://157.201.194.254:8080/cs313/servlet/login" onsubmit = "return validate()">
+     <table class = "center" border="0">      
+        <h2>Login Screen</h2>
+        <tr>
+           <td>User Name:</td>
+           <td><input type="text" name="username" id="username" size = "20" maxlength = "20"
+                onblur = "document.getElementById('loginError').style.visibility = 'hidden'" />
+           </td>
+        </tr>
+        <tr>
+           <td>Password:</td>
+           <td><input type="password" name="pwd" id="pwd" size = "20" maxlength = "16"/></td>
+        </tr>
+     </table>
+     <p class = "center">
+        <input style = "text-align: center" type="submit" value="Login" />
+     </p>
+   </form>
+   <div id = "loginError" style = "color: red; visibility: visible">Invalid Password!</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head> <title> Festival Registration </title>
+	<base href="http://157.201.194.254/~ercanbracks/cs313/w09/markn/" />
+   <link rel = "stylesheet" type = "text/css" href = "exstyle.css" />
+    <script type = "text/javascript" src = "verification.js"> </script>     
+   </head>
+   <body>
+   	<h1> Welcome to the Piano Festival Login Page </h1>
+   	<div class = "six">
+         <form action = "verification.php" onsubmit = "return checkFields()">
+            <table>
+               <tr>
+                  <td> Username: <input type = "text" name = "username" id = "username" onblur = "checkUsername()"/> <label class = "hidden" id = "hidUser"> Please provide a Username </label> </td>
+               </tr>
+               <tr>
+                  <td> Password: <input type = "text" name = "password" id = "password" onblur = "checkPassword()"/> <label class = "hidden" id = "hidPass"> Please provide a Password </label> </td>
+               </tr>
+               <tr>
+               </tr>
+               <tr>
+                  <td> <input type = "submit" name = "submit" value = "Login"  /> </td>
+               </tr>
+               <tr>
+                  <td> Admin username = johnS password = 123 </td>
+               </tr>
+               <tr>
+                  <td> Teacher username = susanH password = 123 </td>
+               </tr>
+            </table>      	
+         </form>
+      </div>
+ 	</body>
+</html>

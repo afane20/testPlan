@@ -1,0 +1,99 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+   <title> Hello World!
+   </title>
+   <meta http-equiv = "Content-Type" content = "text/html; charset=UTF-8"/>
+   <script type = "text/javascript" language = "javascript">
+      var httpRequest;
+      var tagId;
+      
+      function makeRequest(url, divTagId)
+      {
+         tagId = divTagId;
+         httpRequest = false;
+         if (window.XMLHttpRequest)  // IE 8+, Firefox, Opera, Chrome 
+         {     
+            httpRequest = new XMLHttpRequest(); 
+            if (httpRequest.overrideMimeType)
+	    {
+	       httpRequest.overrideMimeType('text/xml');
+	    }
+         }
+         else if (window.ActiveXObject) // IE older versions
+         {
+            try
+            {
+               httpRequest = new ActiveXObject("Msxm12.XMLHTTP"); 
+            }
+            catch (e)
+            {
+               try
+               {
+                   httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+               }
+               catch (e)
+               {
+		   alert('IE version not supported');
+	       }
+            } 
+         }
+
+         if (!httpRequest)
+         {
+            alert('Error: Your browser does not support XML - HTTP');
+            return false;
+         }
+         else
+         {
+            httpRequest.onreadystatechange = alertContents;
+            httpRequest.open("GET", url, true);
+            httpRequest.send(null);
+         }
+      }
+
+      function alertContents()
+      {
+         if (httpRequest.readyState == 4)
+         {
+            if (httpRequest.status == 200)            
+            {
+                 var myText = httpRequest.responseText;
+                 document.getElementById(tagId).innerHTML = myText;
+            }
+            else
+            {
+               alert('There was a problem with the request.');
+			   alert(httpRequest.status);
+            }       
+         }
+      }
+
+   </script>
+</head>
+<body>
+      <p>
+        <button  onclick = "makeRequest('piano.html', 'data')">Get Piano Skill level</button>
+      </p>
+      <div id = "data" style = "border: 1px solid black; padding: 5px;">
+        <pre>
+           Now is the time
+	   for all good men
+	   to learn to play the piano.
+        </pre>
+       </div>
+      <p> <button  onclick = "makeRequest('popcorn.html', 'data2')">Order Popcorn</button></p>
+      <div id = "data2" style = "border: 3px solid black; padding: 5px;">
+        <pre>
+           I bet your hungry.
+	   Click below to order popcorn!
+        </pre>
+       </div>
+ 
+ 
+</body>
+</html>
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- index.html
+     My home page for cs213
+  -->
+<html lang = "en">
+  <head>
+<!--    <base href="http://localhost:1024/~nicknlsn/assignments/"> -->
+    <meta charset = "utf-8" />
+    <title>Ajax</title>
+    <script type="text/JavaScript" src="assign09.js">
+    </script>
+  </head>
+  <body>
+    
+    <div style="text-align:center;">
+        <h1>Ajax</h1>
+    </div>
+    
+    <div style="background-color:grey;border-style:solid;width:500px;margin: 0 auto;">
+      <h2>Part 1</h2>
+      <form action="" style="text-align:center">
+        <input type="button" name="United States" value="United States" onclick="ajax('usa.txt')"></input>
+        <input type="button" name="Canada" value="Canada" onclick="ajax('canada.txt')"></input>
+        <input type="button" name="Mexico" value="Mexico" onclick="ajax('mexico.txt')"></input>
+        <input type="button" name="Russia" value="Russia" onclick="ajax('russia.txt')"></input>
+      </form>
+      <div>
+        <p id="display"></p>
+      </div>
+      <div>
+        <h2>Part 2</h2>
+        <form action="">
+          <p>Enter a URL: 
+            <input id="url" type="text" name="url"></input>
+            <input type="button" name="searchURL" value="Search" onclick="url3()"></input>
+          </p>
+          <div>
+            <p id="displayPart2"></p>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<!-- radio_click.hmtl
+     An example of the use of the click event with radio buttons,
+     registering the event handler by assignment to the button
+     attributes
+     -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+  <head>
+    <title> Illustrate messages for radio buttons </title>
+    <script type = "text/javascript">
+    <!--
+
+      // The event handler for a radio button collection
+
+      function planeChoice (plane)
+      {
+         switch (plane) {
+          case 152: 
+            alert("A small two-place airplane for flight training");
+            break;
+          case 172: 
+            alert("The smaller of two four-place airplanes");
+            break; 
+           case 182:
+            alert("The larger of two four-place airplanes");
+            break;    
+          case 210:
+            alert("A six-place high-performance airplane");
+            break; 
+          default:
+            alert("Error in JavaScript function planeChoice");
+            break;
+        }
+      }
+      // -->
+    </script>
+  </head>
+
+  <body>
+    <h4> Cessna single-engine airplane descriptions </h4>
+    <form id = "myForm" name = "myform" action = "">
+      <p>
+        <input id = "p152" type = "radio"  name = "planeButton"  value = "152"
+               onclick = "planeChoice(152)" />
+        Model 152
+        <br />
+        <input type = "radio"  name = "planeButton"  value = "172"
+               onclick = "planeChoice(172)" />
+        Model 172 (Skyhawk)
+        <br />
+        <input type = "radio"  name = "planeButton"  value = "182"
+               onclick = "planeChoice(182)" />      
+        Model 182 (Skylane)
+        <br />
+        <input type = "radio"  name = "planeButton"  value = "210"
+               onclick = "planeChoice(parseInt(this.value))" />
+        Model 210 (Centurian)
+      </p>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+/*******************************************************************************
+ * Stylesheet for Assignmnet 15
+ ******************************************************************************/
+
+/* Default style for body, input, and table elements */
+body { font-family: arial, 'lucida console', sans-serif; color: darkblue; background-color: #ffff88; }
+input, textarea, select { background-color: #ccee99; color: darkred; }
+table { border-collapse: collapse; }
+th { text-align: center; background-color: #ffdd66 }
+td { text-align: center; background-color: #ffff99 }
+td.left { text-align: left; }
+td.right { text-align: right; }
+
+/* Default style for hyperlinks */
+a { font-size : 13px; color:maroon; font-weight: bold; background-color : inherit; }
+a:hover { color:red; background-color : inherit; }
+a:visited { color:#556B2F; background-color : inherit; }
+a:visited:hover { color : red; background-color : inherit; }
+
+/* Style for heading elements */
+.heading { font-style : bold; }
+
+/* Centered class */
+.center { text-align: center; }
+/* The End */
+

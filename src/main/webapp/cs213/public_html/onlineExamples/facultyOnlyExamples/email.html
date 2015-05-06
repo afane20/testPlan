@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+     <title>Email Test</title>
+     <style type = "text/css">
+          .absPos {position:absolute; left:75px}
+          .relpos {position:relative; left:400px}
+          textarea.bgcolor {background: beige}
+          div.center {margin-left: auto; margin-right: auto; width: 50%}
+       </style>  
+   </head>
+   <body>
+     <h2>Send An  Email</h2>
+
+        <form action="email.php" method="POST">
+          <h3>To: <input class = "absPos" type="text" name="to" /> </h3>
+          <h3>From: <input class="absPos" type="text" name="from" /></h3>
+          <h3>Subject: <input class="absPos" type="text" name="subject" size="60"/></h3>
+          <h3>Message</h3>
+          <textarea class="bgcolor" name="body" rows="10" cols="80"></textarea>
+          <p><input  type="submit" value="Send E-Mail" /> <input class="relpos" type="reset" value="Reset Form" /></p>
+        </form>
+
+   </body>
+</html>

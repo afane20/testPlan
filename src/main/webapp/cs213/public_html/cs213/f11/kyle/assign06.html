@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Kyle's Internet Yard Sale</title>
+  <link rel="stylesheet" type="text/css" href="assign06.css" />
+  <script type="text/javascript" src="assign06.js"></script>
+</head>
+<body onload="formSetup();">
+<h1>Kyle's Internet Yard Sale</h1>
+<div id="content">
+<table id="photoGrid">
+  <tr>
+    <td>
+      <img src="assign06pencil.png" alt="Pencil"/><br/>
+      Slightly Used Pencil<br/>
+      <input type="checkbox" name="pencil" id="pencil"
+          onclick="addSubtract(this.checked,0.25);" /> $0.25
+    </td>
+    <td>
+      <img src="assign06mech_pencil.png" alt="Mechanical Pencil"/><br/>
+      Used Mechanical Pencil<br/>
+      <input type="checkbox" name="mechPencil" id="mechPencil"
+          onclick="addSubtract(this.checked,0.2);" /> $0.20
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="assign06notebook.png" alt="Notebook"/><br/>
+      Used Notebook<br/>
+      <input type="checkbox" name="notebook" id="notebook"
+          onclick="addSubtract(this.checked,0.1);" /> $0.10
+    </td>
+    <td>
+      <img src="assign06binder.png" alt="Expanding File"/><br/>
+      Used Expanding File Organizer in Good Condition<br/>
+      <input type="checkbox" name="binder" id="binder"
+          onclick="addSubtract(this.checked,0.5);" /> $0.50
+    </td>
+  </tr>
+</table>
+<form onsubmit="return validate(true);" onreset="formSetup();">
+  <div>First Name: <input type="text" name="First" id="First" onchange="validate(false,this);"/></div>
+  <div>Last Name: <input type="text" name="Last" id="Last" onchange="validate(false,this);"/></div>
+  <div>Address: <input type="text" name="Addr" id="Addr" size="30" onchange="validate(false,this);"/></div>
+  <div>City: <input type="text" name="City" id="City" onchange="validate(false,this);"/></div>
+  <div>State:
+    <select name="State" id="State" onchange="validate(false,this);">
+      <option value="AL">AL</option>
+      <option value="AK">AK</option>
+      <option value="AZ">AZ</option>
+      <option value="AR">AR</option>
+      <option value="CA">CA</option>
+      <option value="CO">CO</option>
+      <option value="CT">CT</option>
+      <option value="DE">DE</option>
+      <option value="DC">DC</option>
+      <option value="FL">FL</option>
+      <option value="GA">GA</option>
+      <option value="HI">HI</option>
+      <option value="ID" selected="selected">ID</option>
+      <option value="IL">IL</option>
+      <option value="IN">IN</option>
+      <option value="IA">IA</option>
+      <option value="KS">KS</option>
+      <option value="KY">KY</option>
+      <option value="LA">LA</option>
+      <option value="ME">ME</option>
+      <option value="MD">MD</option>
+      <option value="MA">MA</option>
+      <option value="MI">MI</option>
+      <option value="MN">MN</option>
+      <option value="MS">MS</option>
+      <option value="MO">MO</option>
+      <option value="MT">MT</option>
+      <option value="NE">NE</option>
+      <option value="NV">NV</option>
+      <option value="NH">NH</option>
+      <option value="NJ">NJ</option>
+      <option value="NM">NM</option>
+      <option value="NY">NY</option>
+      <option value="NC">NC</option>
+      <option value="ND">ND</option>
+      <option value="OH">OH</option>
+      <option value="OK">OK</option>
+      <option value="OR">OR</option>
+      <option value="PA">PA</option>
+      <option value="RI">RI</option>
+      <option value="SC">SC</option>
+      <option value="SD">SD</option>
+      <option value="TN">TN</option>
+      <option value="TX">TX</option>
+      <option value="UT">UT</option>
+      <option value="VT">VT</option>
+      <option value="VA">VA</option>
+      <option value="WA">WA</option>
+      <option value="WV">WV</option>
+      <option value="WI">WI</option>
+      <option value="WY">WY</option>
+    </select>
+  </div>
+  <div>Zip Code: <input type="text" name="Zip" id="Zip" maxlength="5" size="5" onchange="validate(false,this);"/></div>
+  <div class="error" id="errorZip">Zip code must be five digits.</div>
+  <div>Phone # (ddd-ddd-dddd): <input type="text" name="Phone" id="Phone" maxlength="12" size="12" onchange="validate(false,this);"/></div>
+  <div class="error" id="errorPhone">Phone number must be of form ddd-ddd-dddd.</div>
+  <div><hr /></div>
+  <div>Total ($): <input type="text" name="Total" id="Total" onfocus="this.blur();" size="5"/></div>
+  <div><hr /></div>
+  <div>
+    <input type="radio" name="cardType" id="VS" onclick="validate(false,this);"/> Visa
+    <input type="radio" name="cardType" id="MC" onclick="validate(false,this);"/> MasterCard
+    <input type="radio" name="cardType" id="AE" onclick="validate(false,this);"/> American Express 
+  </div>
+  <div>Credit Card # (no dashes): <input type="text" name="CardNum" id="CardNum" maxlength="16" size="16" onchange="validate(false,this);"/></div>
+  <div class="error" id="errorCard">Card number must be sixteen digits with no dashes.</div>
+  <div>Expiration Date (mm-yyyy): <input type="text" name="CardDate" id="CardDate" maxlength="7" size="7" onchange="validate(false,this);"/></div>
+  <div class="error" id="errorDate">Card date must be of form mm-yyyy.</div>
+  <div class="error" id="emptyError">The outlined fields must not be left blank.</div>
+  <div class="error" id="amountError">The purchase amount cannot be zero. At least one item must be selected.</div>
+  <input type="submit" value="Submit" id="Submit"/>
+  <input type="reset" value="Reset" id="Reset"/>
+</form>
+</div>
+</body>
+</html>

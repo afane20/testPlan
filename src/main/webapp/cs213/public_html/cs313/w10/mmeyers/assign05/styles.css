@@ -1,0 +1,15 @@
+
+#header, #content {margin:0px auto 0px auto; }
+#content { margin-bottom: 100px; }
+
+#header h1 { padding-top: 75px; vertical-align: bottom; border-bottom: #234C2B 1px solid; 
+            color: #387A46; font-size: 1.6em; font-weight: lighter; text-transform: uppercase;  }
+
+div.error { color: #a70000; }
+div.success { color: #234C2B; }
+table.results { margin-top: 30px; margin-bottom: 30px; border-spacing: 0px; }
+table.results th { font-weight: lighter; font-size: 1em; text-transform: uppercase; padding: 5px 10px; border-bottom: #234C2B 1px solid; }
+table.results td { padding: 5px; border: 1px solid #ccc; margin: 0px; }
+table.rate td { text-align: center; padding: 3px; }
+
+table.rate td.question { text-align: left; padding: 15px 10px; }

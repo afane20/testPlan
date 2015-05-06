@@ -1,0 +1,9 @@
+use uvmta;
+source createTeacherTable.sql;
+source createStudentTable.sql;
+source createResourceTable.sql;
+source createFestivalTable.sql;
+source createTimeSlotTable.sql
+source createRegistrationTable.sql;
+source createBuiltSlotsTable.sql;
+show tables;

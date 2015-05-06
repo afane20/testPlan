@@ -1,0 +1,101 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+  
+<html>
+<head>
+   <title> Hello World!
+   </title>
+   <meta http-equiv = "Content-Type" content = "text/html; charset=UTF-8"/>
+   <script type = "text/javascript" language = "javascript">
+      var httpRequest;
+      function makeRequest(url)
+      {
+         httpRequest = false;
+         if (window.XMLHttpRequest)  // Mozilla
+         {     
+            httpRequest = new XMLHttpRequest(); 
+            if (httpRequest.overrideMimeType)
+	    {
+	       httpRequest.overrideMimeType('text/xml');
+	    }
+         }
+         else if (window.ActiveXObject) // IE
+         {
+            try
+            {
+               httpRequest = new ActiveXObject("Msxm12.XMLHTTP"); 
+            }
+            catch (e)
+            {
+               try
+               {
+                   httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+               }
+               catch (e)
+               {
+		   alert('Here - IE Bad');
+	       }
+            } 
+         }
+
+         if (!httpRequest)
+         {
+            alert('Error: Your browser does not support XML - HTTP');
+            return false;
+         }
+         else
+         {
+            httpRequest.onreadystatechange = alertContents;
+            try
+            {
+
+               httpRequest.open("GET", url, true);
+               httpRequest.send(null);
+            }
+            catch(e)
+            {
+               alert("httpRequest Open failed; Can't send AJAX request"); 
+            }
+
+         }
+      }
+
+      function alertContents()
+      {
+         // alert('Ready State = ' + httpRequest.readyState);
+
+         if (httpRequest.readyState == 4)
+         {
+            alert('httpRequest.status = ' + httpRequest.statusText);
+            if (httpRequest.status == 200)            
+            {
+                 var myText = httpRequest.responseText;
+	         // alert(myText);
+                 document.getElementById("data").innerHTML = myText;
+            }
+            else
+            {
+               alert('There was a problem with the request.');
+			   alert(httpRequest.status);
+            }       
+         }
+      }
+
+   </script>
+</head>
+<body>
+     <a href = "#" onclick = "makeRequest('/servlet/TestJDBC')">Get Class List</a>
+     <pre>
+       <div id = "data" style = "border: 1px solid black; padding: 10px;">
+           Now is the time
+	   for all good men
+	   to come to the aid
+	   of their country! 
+       </div>
+     </pre>
+     <button  onclick = "makeRequest('servlet/johnDoe.johnDoe')">run JohnDoe Servlet</a>
+</body>
+</html>
+

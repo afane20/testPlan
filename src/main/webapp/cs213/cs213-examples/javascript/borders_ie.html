@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- borders.html 
+     An example of a switch statement for table border
+     size selection
+     -->
+<html>
+<head>
+<title> A switch statement </title>
+</head>
+<body>
+<script type = "text/javascript">
+<!--
+var bordersize;
+bordersize = prompt("Select a table border size: \n   " +
+                    "(0 = no border,  1 = 1 pixel border,  " +
+                    "4 = 4 pixel border,  8 = 8 pixel border)","0");
+
+switch (bordersize) {
+case "0": document.write("<table>");
+        break;
+case "1": document.write("<table border = '1'>");
+  break;
+case "4": document.write("<table border = '4'>");
+  break;
+case "8": document.write("<table border = '8'>");
+  break;
+default: document.write("Error - invalid choice: ", 
+              bordersize, "<br />");
+}
+
+document.write("<caption> 2001 NFL Divisional Winners </caption>");
+document.write("<tr>",
+"<th />",
+"<th> American Conference </th>",
+"<th> National Conference </th>",
+"</tr>",
+"<tr>",
+"<th> East </th>",
+"<td> New England Patriots </td>",
+"<td> Philadelphia Eagles </td>",
+"</tr>",
+"<tr>",
+"<th> Central </th>",
+"<td> Pittsburgh Steelers </td>",
+"<td> Chicago Bears </td>",
+"</tr>",
+"<tr>",
+"<th> West </th>",
+"<td> Oakland Raiders </td>",
+"<td> St. Louis Cardinals </td>",
+"</tr>",
+"</table>");
+// -->
+</script>
+</body>
+</html>
+

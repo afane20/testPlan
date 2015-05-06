@@ -1,0 +1,206 @@
+<!--
+	Assignment 05
+	Brother Ercanbrack, CS 373
+	Nick Turley
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Nick Turley's Assignment #5</title>
+<style type="text/css">
+#content label {
+float:left;
+text-align:left;
+width:100px;
+padding-right:10px;
+}
+</style>
+<script type="text/javascript">
+function checkPhoneNumber()
+{
+	var number = document.getElementById("phoneNum");
+	var pos = number.value.search(/^\d{3}-\d{3}-\d{4}$/);
+	if (pos != 0)
+	{
+		alert("The phone number " + number.value + " is not in the correct form." +
+		" \nThe correct form is 555-555-5555\nPlease go back and correct the number");
+		number.focus();
+		number.select();
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+function checkCCNumber()
+{
+	var ccNum = document.getElementById("ccNum");
+	var pos = ccNum.value.search(/^\d{16}$/);
+	if (pos != 0)
+	{
+		alert("Your credit card number is incorrect.\n" +
+			"Your card number should be 16 digits with no dashes\n" + 
+			"Please go back and correct the number");
+			ccNum.focus();
+			ccNum.select();
+			return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+function checkCCMonth()
+{
+	var month = document.getElementById("ccExpMonth");
+	if(month.value < 1 || month.value > 31)
+	{
+		alert("Credit Card expiration month must be between 1 and 31");
+		month.focus();
+		month.select();
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+function checkCCYear()
+{
+	var year = document.getElementById("ccExpYear");
+	if(year.value < 2007)
+	{
+		alert("Your credit card expiration date must be in or after the year 2007");
+		year.focus();
+		year.select();
+		return false;
+	}
+	return true;
+}
+
+var priceArray = new Array(190.00, 109.99, 79.99, 59.99);
+
+function computeTotal()
+{
+	var total = 0;
+	var dom = document.getElementById("orderform");
+	for (index = 0; index < dom.itemgroup.length; index++)
+	{
+		if (dom.itemgroup[index].checked)
+		{
+			total = total + priceArray[index];
+		}
+	}
+	document.getElementById("priceTotal").value = "$" + total;
+}
+
+function checkFields()
+{
+	var fieldArray = new Array("firstName", "lastName", "address", "phoneNum", "ccNum", "ccExpMonth", "ccExpYear");
+	var name;
+	for (index = 0; index < fieldArray.length; index++)
+	{
+		name = document.getElementById(fieldArray[index]);
+		if ((name.value.length==0) || (name.value==null)) 
+		{
+			alert("An empty field (" + fieldArray[index] + ") was detected.\nPlease fill in the empty field.");
+			name.focus();
+			name.select();
+			return false;
+		}
+	}
+	return true;
+}
+</script>
+</head>
+
+<body onload="document.getElementById('firstName').focus();">
+<h2>Nick Turley Assignment #5</h2>
+<form id="orderform" method="post" action="">
+<div id="content">
+  <label for="textfield">First Name:</label>
+  <input type="text" name="firstName" id="firstName" />
+  <br />
+  <label for="label">Last Name:</label>
+  <input type="text" name="lastName" id="lastName" />
+  <br />
+  <label for="textarea">Address:</label>
+  <textarea name="address" cols="40" rows="5" id="address"></textarea>
+  <br />
+  <label for="label2">Phone:</label>
+    <input type="text" name="phoneNum" id="phoneNum" />
+	<hr />
+    <table width="400" border="0">
+      <tr>
+        <td>PCI-X Video Card </td>
+        <td>$190.00</td>
+        <td><input type="checkbox" name="itemgroup" value="checkbox" id="checkbox" /></td>
+      </tr>
+      <tr>
+        <td>100GB Hard Drive </td>
+        <td>$109.99</td>
+        <td><input type="checkbox" name="itemgroup" value="checkbox" id="checkbox2" /></td>
+      </tr>
+      <tr>
+        <td>DVD-RW Drive </td>
+        <td>$79.99</td>
+        <td><input type="checkbox" name="itemgroup" value="checkbox" id="checkbox3" /></td>
+      </tr>
+      <tr>
+        <td>3D Sound Card </td>
+        <td>$59.99</td>
+        <td><input type="checkbox" name="itemgroup" value="checkbox" id="checkbox4" /></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>Total:</td>
+        <td><input type="text" name="priceTotal" id="priceTotal" onfocus="this.blur();" /></td>
+      </tr>
+    </table>
+</div>
+	<hr />
+  <p>Credit Card Type:<br />
+    <input name="radiobutton" type="radio" value="radiobutton" id="visa" />
+    <label for="radiobutton">VISA</label>
+    <br />
+    <input name="radiobutton" type="radio" value="radiobutton" id="mastercard" />
+    <label for="radio">Mastercard</label>
+    <br />
+    <input name="radiobutton" type="radio" value="radiobutton" id="amex" />
+    <label for="radio2">American Express</label>
+  </p>
+  <p>
+    <label for="label4">Credit Card #:</label>
+    <input type="text" name="ccNum" id="ccNum" />
+    <br />
+    <label for="label5">Credit Card Expiration:</label>
+    <input name="ccExpMonth" type="text" id="ccExpMonth" size="2" maxlength="2" />
+    <input name="ccExpYear" type="text" id="ccExpYear" size="4" maxlength="4" />
+  </p>
+  <p>
+    <label for="Submit"></label>
+    <input type="submit" name="Submit" value="Submit Order" id="submit" />
+    <label for="label6"></label>
+    <input type="reset" name="reset" value="Clear Fields" id="reset" />
+  </p>
+</form>
+<script type="text/javascript">
+document.getElementById("phoneNum").onchange = checkPhoneNumber;
+document.getElementById("ccNum").onchange = checkCCNumber;
+document.getElementById("ccExpMonth").onchange = checkCCMonth;
+document.getElementById("ccExpYear").onchange = checkCCYear;
+
+document.getElementById("checkbox").onchange = computeTotal;
+document.getElementById("checkbox2").onchange = computeTotal;
+document.getElementById("checkbox3").onchange = computeTotal;
+document.getElementById("checkbox4").onchange = computeTotal;
+
+document.getElementById("orderform").onsubmit = checkFields;
+</script>
+</body>
+</html>

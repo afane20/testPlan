@@ -1,0 +1,92 @@
+<?xml version = "1.0"?>
+<!--An XML schema for the assign07_xsd.xml-->
+<xsd:schema
+   xmlns:xsd = "http://www.w3.org/2001/XMLSchema"
+   targetNamespace = "http://ercanbracks.byui.edu/bsaSchema"
+   xmlns = "http://ercanbracks.byui.edu/bsaSchema"
+   elementFormDefault = "qualified">
+
+   <xsd:element name = "firstname" type = "xsd:string" />
+   <xsd:element name = "lastname" type = "xsd:string" />
+   <xsd:element name = "phone" type = "xsd:string" />
+   <xsd:element name = "street" type = "xsd:string" />
+   <xsd:element name = "city" type = "xsd:string" />
+   <xsd:element name = "state" type = "xsd:string" />
+ 
+   <xsd:attribute name = "name" type = "xsd:string" />
+   <xsd:attribute name = "troopnumber" type = "xsd:integer" />
+   <xsd:attribute name = "unitname" type = "xsd:string" />
+   <xsd:attribute name = "date-earned" type = "xsd:date" />
+
+
+   <xsd:element name = "address">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element ref = "street" />
+            <xsd:element ref = "city" />
+            <xsd:element ref = "state" />
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   
+   <xsd:element name = "rank">
+      <xsd:complexType>
+         <xsd:simpleContent>
+            <xsd:extension base = "xsd:string">  
+			   <xsd:attribute ref = "date-earned" use = "required"/>
+			</xsd:extension>
+		 </xsd:simpleContent>
+      </xsd:complexType>
+   </xsd:element>
+   
+   <xsd:element name = "meritbadge">
+      <xsd:complexType>
+         <xsd:simpleContent>
+           <xsd:extension base = "xsd:string">  
+               <xsd:attribute ref = "date-earned" use = "required"/>
+		   </xsd:extension>
+         </xsd:simpleContent>
+      </xsd:complexType>
+   </xsd:element>
+   
+
+   <xsd:element name = "bsa">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element ref = "council" minOccurs = "1" maxOccurs = "unbounded" />
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   
+   <xsd:element name = "council">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element ref = "troop" minOccurs = "1" maxOccurs = "unbounded" />
+         </xsd:sequence>
+         <xsd:attribute ref = "name" use = "required"/>
+      </xsd:complexType>
+   </xsd:element>
+   
+   <xsd:element name = "troop">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element ref = "scout" minOccurs = "1" maxOccurs = "unbounded" />
+         </xsd:sequence>
+         <xsd:attribute ref = "troopnumber" use = "required" />
+         <xsd:attribute ref = "unitname" use = "required"/>
+      </xsd:complexType>
+   </xsd:element>
+   
+   <xsd:element name = "scout">
+      <xsd:complexType>
+         <xsd:all>
+            <xsd:element ref = "firstname" />
+            <xsd:element ref = "lastname" />
+            <xsd:element ref = "phone" />
+            <xsd:element ref = "address" />
+            <xsd:element ref = "rank" minOccurs = "0"/>
+            <xsd:element ref = "meritbadge" minOccurs = "0"/>
+         </xsd:all>
+      </xsd:complexType>
+   </xsd:element>
+</xsd:schema>

@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+<title> BYUI Student List </title>
+</head>
+<body>
+
+<form action = "http://157.201.194.254:8080/cs313/servlet/StudentListServlet"  method = "post">
+  <h2> BYU-Idaho Student List </h2>
+  <br/>
+  <input type = "submit" name = "Display" value = "Display"/>
+  <input type = "submit" name = "Display" value = "Modify"/>
+  <input type = "submit" name = "Display" value = "Add"/>
+  <br/><br/><br/>
+  <p>
+   <textarea name = "Query" value = "select * from students" row = "3" cols = "60">select * from students</textarea>
+      <br/><br/>
+    <input type = "submit" name = "Display" value = "Submit Query"/>
+  </p>
+  </form>
+</body>
+</html>
+

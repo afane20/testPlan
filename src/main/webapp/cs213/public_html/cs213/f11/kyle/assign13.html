@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Kyle's Piano Festival Registration</title>
+  <link rel="stylesheet" type="text/css" href="assign13.css" />
+  <script type="text/javascript" src="assign13.js"></script>
+</head>
+<body onload="loadPage();">
+  <h1>Kyle's Piano Festival Registration</h1>
+  <hr/>
+  <div id="content">
+  <form>
+    <div class="formContent">
+      <div>
+        <select name="perfType" id="perfType" onchange="changeType(this.value)">
+          <option value="Solo" selected="selected">Solo</option>
+          <option value="Duet">Duet</option>
+          <option value="Concerto">Concerto</option>
+        </select>
+        Performance Type:
+      </div>
+      <div class="second" style="text-align:center;">First Student:</div>
+      <div><input type="text" name="firstName" id="firstName" onchange="validate(false,this)"/>First Name:</div>
+      <div><input type="text" name="lastName" id="lastName" onchange="validate(false,this)"/>Last Name:</div>
+      <div>
+        <input type="text" name="studentID" id="studentID" maxlength="9" size="9" onchange="validate(false,this)"/>
+        Student ID (no dashes):
+      </div>
+      <div class="hiddenDiv error" id="errorID1">Student ID must be nine digits.</div>
+
+      <!-- Second Student (for duets) -->
+      <div class="second" style="text-align:center;">Second Student:</div>
+      <div class="second"><input type="text" name="firstName2" id="firstName2" onchange="validate(false,this)"/>First Name:</div>
+      <div class="second"><input type="text" name="lastName2" id="lastName2" onchange="validate(false,this)"/>Last Name:</div>
+      <div class="second">
+        <input type="text" name="studentID2" id="studentID2" maxlength="9" size="9" onchange="validate(false,this)"/>
+        Student ID (no dashes):
+      </div>
+      <div class="hiddenDiv error" id="errorID2">Student ID must be nine digits.</div>
+    </div>
+
+    <div class="formContent" id="rightContent">
+      <div><br/>
+        <select name="skill" id="skill">
+          <option value="Beginner" selected="selected">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Pre-Advanced">Pre-Advanced</option>
+          <option value="Advanced">Advanced</option>
+        </select>
+        Skill Level:
+      </div>
+      <div>Instrument(s):</div>
+      <div>
+        <div class="boxes"><input type="checkbox" name="instrument" value="Piano" id="piano"/>Piano</div>
+        <div class="boxes"><input type="checkbox" name="instrument" value="Organ" id="organ"/>Organ</div>
+        <div class="boxes"><input type="checkbox" name="instrument" value="String" id="string"/>String</div>
+        <div class="boxes"><input type="checkbox" name="instrument" value="Voice" id="voice"/>Voice</div>
+        <div class="boxes"><input type="checkbox" name="instrument" value="Other" id="other"/>Other</div>
+      </div>
+      <div class="hiddenDiv error" id="errorInst">At least one instrument must be chosen.</div>
+      <div><input type="text" name="location" id="location" onchange="validate(false,this)"/>Location (ie Kirkham):</div>
+      <div><input type="text" name="room" id="room" maxlength="4" size="4" onchange="validate(false,this)"/>Room #:</div>
+      <div class="hiddenDiv error" id="errorRoom">Room number must be three digits and may be followed by one letter.</div>
+      <div>
+        <input type="text" name="time" id="time" maxlength="7" size="7" onchange="validate(false,this)"/>
+        Time Slot (hh:mmAM or hh:mmPM):
+      </div>
+      <div class="hiddenDiv error" id="errorTime">The time must be of the form "hh:mmAM" or "hh:mmPM".</div>
+      <div class="hiddenDiv error" id="errorEmpty">The outlined fields must not be left blank.</div>
+      <div>
+        <input type="reset" value="Clear Form" id="clear" onclick="clearPage()"/>
+        <input type="button" value="Register" id="register" onclick="send()" disabled="disabled"/>
+      </div>
+    </div>
+  </form>
+  <div id="listing"></div>
+  <div id="errorCode" class="error"></div>
+</div>
+</body>
+</html>

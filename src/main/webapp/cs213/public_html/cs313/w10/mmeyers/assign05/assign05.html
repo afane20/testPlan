@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+    <head>
+        <base href="http://157.201.194.254/~mmeyers3/assign5/" />
+        <title>Assignment 5</title>
+        <link href="styles.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="prototype.js"></script>
+        <script type="text/javascript" src="scriptaculous.js"></script>
+        <script type="text/javascript" src="effects.js"></script>
+        <script type="text/javascript" src="controls.js"></script>
+        <script type="text/javascript">
+
+         text_col_names = ['first_name', 'last_name', 'i_number', 'city', 'state', 'birthday'];
+         select_col_names = ['gender', 'major'];
+         base_url = 'http://157.201.194.254/~ercanbracks/cs313/w10/mmeyers/assign5/';
+         function get_data(page)
+         {
+         alert("hello1");  
+         new Ajax.Request(base_url+'assign05.php', {
+                  parameters: { action: 'select', table: 'student', page: page},
+                  onSuccess: function(transport)
+                  {
+                   
+                     $('results').innerHTML = transport.responseText;
+                    
+                     for (var col = 0; col < text_col_names.length; col++)
+                     {
+                        var fields = $('results').select('[class='+text_col_names[col]+']');
+                        //for (var i = 0; i < fields.length; i++)
+                        for (var i = 0; i < fields.length; i++)
+                        {
+                           make_text_editor(text_col_names[col], fields[i].id);
+                        }
+                     }
+
+                     for (var col = 0; col < select_col_names.length; col++)
+                     {
+                        var fields = $('results').select('[class='+select_col_names[col]+']');
+                        //for (var i = 0; i < fields.length; i++)
+                        for (var i = 0; i < fields.length; i++)
+                        {
+                           make_collection_editor(select_col_names[col], fields[i].id);
+                        }
+                     }
+                  }
+                
+                  });
+         alert("hello");  
+                  
+         }
+         
+         function make_collection_editor(field, id)
+         {
+            var student_id = extract_student_id(id);
+            
+            new Ajax.Request(base_url+'assign05.php', {
+               method: 'post',
+               parameters: { action: 'get_options', field: field},
+               onSuccess: function (transport)
+               {
+                  var options = Array();
+                  var rows = transport.responseText.split(',');
+                  for (var i = 0; i < rows.length; i++)
+                  {
+                     var parts = rows[i].split('=>');
+                     options[options.length] = [parts[0], parts[1]];
+                     //alert(rows[i]);
+                  }
+                  //alert(options);
+                  new Ajax.InPlaceCollectionEditor( id, base_url+'assign05.php', {
+                     callback: function(form, value) { return 'action=update&field='+field+'&value=' + encodeURIComponent(value) +'&student_id='+student_id; }, 
+                     collection: options
+                  });
+               }
+            });
+         }
+         
+         function make_text_editor(field, id)
+         {
+            var student_id = extract_student_id(id);
+            new Ajax.InPlaceEditor(id, base_url+'assign05.php', {
+               callback: function(form, value) { return 'action=update&field='+field+'&value=' + encodeURIComponent(value) +'&student_id='+student_id; }
+            });
+         }
+         
+         function delete_student(id)
+         {
+            if (confirm('Are you sure you want to delete that student?', 'Really?'))
+            {
+               new Ajax.Request(base_url+'assign05.php', {
+                  method: 'post',
+                  parameters: { action: 'delete', student_id: id },
+                  onSuccess: function(transport)
+                  {
+                     new Effect.Fade('student_'+id);
+                  }
+               });
+            }
+         }
+         
+         function add_student()
+         {
+            new Ajax.Request(base_url+'assign05.php', {
+                  method: 'post',
+                  parameters: { action: 'add' },
+                  onSuccess: function(transport)
+                  {
+                     var student_id = transport.responseText;
+                     var row = document.createElement("tr");
+                     row.id = "student_"+student_id;
+                     
+                     var col_delete = document.createElement("td");
+                     var col_id = document.createElement("td");
+                     var col_inumber = document.createElement("td");
+                     var col_first = document.createElement("td");
+                     var col_last = document.createElement("td");
+                     var col_birthday = document.createElement("td");
+                     var col_gender = document.createElement("td");
+                     var col_city = document.createElement("td");
+                     var col_state = document.createElement("td");
+                     var col_major = document.createElement("td");
+                     
+                     col_delete.innerHTML = '<img src="delete.gif" onclick="delete_student('+student_id+')" />';
+                     col_id.innerHTML = student_id; 
+                     col_inumber.innerHTML = '<div class="i_number" id="i_number_'+student_id+'">Not chosen</div>';
+                     col_first.innerHTML = '<div class="first_name" id="first_name_'+student_id+'">Not chosen</div>';
+                     col_last.innerHTML = '<div class="last_name" id="last_name_'+student_id+'">Not chosen</div>';
+                     col_birthday.innerHTML = '<div class="birthday" id="birthday_'+student_id+'">Not chosen</div>';
+                     col_gender.innerHTML = '<div class="gender" id="gender_'+student_id+'">Not chosen</div>';
+                     col_city.innerHTML = '<div class="city" id="city_'+student_id+'">Not chosen</div>';
+                     col_state.innerHTML = '<div class="state" id="state_'+student_id+'">Not chosen</div>';
+                     col_major.innerHTML = '<div class="major" id="major_'+student_id+'">Not chosen</div>';
+                     
+                     row.appendChild(col_delete);
+                     row.appendChild(col_id);
+                     row.appendChild(col_inumber);
+                     row.appendChild(col_first);
+                     row.appendChild(col_last);
+                     row.appendChild(col_birthday);
+                     row.appendChild(col_gender);
+                     row.appendChild(col_city);
+                     row.appendChild(col_state);
+                     row.appendChild(col_major);
+                     
+                     $('students').appendChild(row);
+                     
+                     for (var col = 0; col < text_col_names.length; col++)
+                     {
+                        make_text_editor(text_col_names[col], text_col_names[col]+'_'+student_id);
+                     }
+                     
+                     for (var col = 0; col < select_col_names.length; col++)
+                     {
+                        make_collection_editor(select_col_names[col], select_col_names[col]+'_'+student_id);
+                     }
+                  }
+               });
+         }
+         
+         function extract_student_id(id)
+         {
+            var student_id_pos = id.lastIndexOf("_")+1;
+            var student_id = id.substring(student_id_pos);
+            return student_id;
+         }
+
+        </script>
+    </head>
+    <body onload="get_data()">
+        <div id="header">
+            <h1>Student Manager</h1>
+        </div>
+        <div id="content">
+            <p>Hover over a field.  When it turns yellow, click on it to edit it.</p>
+            <div id="results"></div>
+            <a href="javascript:add_student()">Add Student</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//w3c/DTD XHTML 1.0 Strict //EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+   <title>Java Script</title>
+   <script type = "text/javascript">
+       var req;			
+       function processReqChange()
+       {
+          // only if req shows "complete"
+          if (req.readyState == 4)
+          {
+             // only if "OK"
+	     if (req.status == 200)
+	     {
+	         var theText = req.responseText;
+                 document.getElementById("hello").innerHTML = theText;
+	     }
+	     else
+            {
+	  	  alert("There was a problem retrieving the XML data:\n" +
+                         req.statusText);
+	     }
+	  }
+       }
+  
+       function loadXMLDoc(url)
+       {
+          // branch for native XMLHttpRequest object
+          if (window.XMLHttpRequest)
+          {   
+    	     req = new XMLHttpRequest(); 
+ 	   }
+ 	   // branch for IE/Windows ActiveX version
+	   else if (window.ActiveXObject)
+	   {
+             req = new ActiveXObject("Microsoft.XMLHTTP");
+          } 
+          if (req != null)
+	   {
+	      req.onreadystatechange = processReqChange;
+             req.open("GET", url, true);
+             req.send(null);
+	   }
+          else 
+          {
+              alert("Brower doesn't support XMLHttp");
+          }
+
+       }
+
+       function getFile()
+       {
+
+	   loadXMLDoc("ajaxHello.xml");
+
+       }
+
+   </script>
+</head>
+<body>
+  <p>
+    <h2>Hello CS313 Online Student</h2>
+   <h3>This html file will test an Ajax Request</h3>
+   <p style = "text-align">
+     The red text below will be replaced with data from an XML file
+     <br/> when you click the button below!
+   </p>
+   <br/>
+   <div id = "hello"><span style = "color: red">This text will be replaced!</span></div>
+   <br/><br/>
+   <input type="button" value = "Click to Replace Text"  onclick = "getFile()"/>
+   <br/>
+</body>
+</html>

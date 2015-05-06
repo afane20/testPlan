@@ -1,0 +1,82 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<!-- radio_click2.hmtl
+     An example of the use of the click event with radio buttons,
+     registering the event handler by assigning an event
+     property
+     -->
+
+<html xmlns = "http://www.w3.org/1999/xhtml">
+  <head>
+    <title> Illustrate messages for radio buttons </title>
+    <script type = "text/javascript">
+    <!--
+
+      function planeChoice (plane)
+      {
+         var dom = document.getElementById("myForm");
+
+         // Determine which button was pressed
+         for (var index = 0; index < dom.planeButton.length; index++)
+         {
+           if (dom.planeButton[index].checked)
+           {
+              plane = dom.planeButton[index].value;
+              break;
+           }
+         }
+
+         switch (plane)
+         {
+           case "152": 
+              alert("A small two-place airplane for flight training");
+              break;
+           case "172": 
+              alert("The smaller of two four-place airplanes");
+              break; 
+           case "182":
+              alert("The larger of two four-place airplanes");
+              break;    
+           case "210":
+              alert("A six-place high-performance airplane");
+              break; 
+           default:
+              alert("Error in JavaScript function planeChoice");
+              break;
+         }
+      }
+    // -->
+    </script>
+  </head>
+
+  <body>
+    <h4> Cessna single-engine airplane descriptions </h4>
+    <form id = "myForm"  action = "handler">
+      <p>
+        <input type = "radio"  name = "planeButton"  value = "152" /> 
+        Model 152
+        <br />
+        <input type = "radio"  name = "planeButton"  value = "172" />
+        Model 172 (Skyhawk)
+        <br />
+        <input type = "radio"  id = "r3" name = "planeButton"  value = "182" /> 
+        Model 182 (Skylane)
+        <br />
+        <input type = "radio"  id = "r4" name = "planeButton"  value = "210" /> 
+        Model 210 (Centurian)
+      </p>
+    </form>
+
+    <script type = "text/javascript">
+      <!--
+      var dom = document.getElementById("myForm");
+      dom.elements[0].onclick = planeChoice;
+      dom.elements[1].onclick = planeChoice;
+      dom.r3.onclick = planeChoice;
+      document.getElementById("r4").onclick = planeChoice;
+      // -->
+    </script>
+  </body>
+</html>

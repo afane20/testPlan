@@ -1,0 +1,62 @@
+.required{background-color: blue}
+
+
+.border {border-style: solid;
+         border-width: 2px;
+         border-color: black;}
+
+.center {margin-left: auto;
+         margin-right: auto;
+         text-align: center;}
+
+.heading {border-bottom-style:solid;
+          bolder-bottom-style:black;
+          border-width: 1px;
+          color: black; font-family: "arial, helvetica, sans-serif";
+          text-align: center; background-color: lightCyan;
+          font-size: 24px}
+
+
+
+.hidden { display: none;}   /* hide but don't take space */
+
+.on     {visibility:visible}
+.off    {visibility:hidden}
+
+
+body {background-color: white; text-align: center}
+
+div.fullscreen {text-align: left; background-color: #EFEFF0;
+            margin-top: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            border: thin black; border-style: solid}
+
+div.content {text-align: left; background-color: #EFEFF0; width: 850px;
+            margin-top: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            border: thin black; border-style: solid}
+
+
+
+p {font-family:arial, helvetica, sans-serif; font-size:12px; text-align:left}
+
+img   {border:none;}
+
+
+
+
+/*HEADER STYLES*/
+/*
+h1      {font-family:arial, helvetica, sans-serif; font-size:20px; color:#450087}
+h2      {font-family:arial, helvetica, sans-serif; font-size:18px; color:#8247D1}
+h3      {font-family:arial, helvetica, sans-serif; font-size:16px; color:#450087}
+h4      {font-family:arial, helvetica, sans-serif; font-size:14px; color:#8247D1}
+*/
+
+
+/*EMPHASIS STYLES*/
+em      {color:#450087; font-style:normal; font-weight:bold;}
+strong  {color:#8247D1; font-style:italic; font-size:14px;}
+

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+	<head>
+    
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+
+    <script type="text/javascript">
+    
+        function calculateLoanAmount()
+        {        
+        
+            var interestRate = document.getElementById("apr").value;
+            var loanTerm = document.getElementById("loanTerm").value;
+            var loanAmount = document.getElementById("loanAmount").value;
+                    
+
+            if (interestRate == "" || loanTerm == "" || loanAmount == "")
+            {
+                return "error";
+            }
+                                    
+            //Calculate number of payments
+            var finalNumberOfPayments = loanTerm * 12;
+          
+            //Change interest rate to monthly basis
+            interestRate /= 100;
+            interestRate /= 12;
+          
+            //Calculate payment amount from formula
+            var singlePaymentAmount = (interestRate * loanAmount * Math.pow((1 + interestRate), finalNumberOfPayments)) / 
+                   (Math.pow((1 + interestRate), finalNumberOfPayments) - 1);
+            
+            return singlePaymentAmount;
+            
+        }
+        
+        function checkValid(elementName)
+        {
+            var value = document.getElementById(elementName).value;
+        
+            if (value == "" || isNaN(value))
+            {
+
+                document.getElementById(elementName + "Error").style.display = "inline";
+
+                document.getElementById(elementName + "Error").style.color = "white";
+                document.getElementById(elementName + "Error").style.background-color = "red";
+                 document.getElementById(elementName + "Error").innerHTML = "Invalid";
+                document.getElementById(elementName + "ErrorImage").style.display = "inline";
+                document.getElementById(elementName + "ErrorImage").src = 'red_x.png';
+                               
+                document.getElementById(elementName).focus();
+                document.getElementById(elementName).select();
+                
+                return true;
+            }
+            else
+            {
+                document.getElementById(elementName + "Error").setAttribute('style', 'display: inline; background-color: green; color: white;');
+                document.getElementById(elementName + "Error").innerHTML = "Valid";
+                
+                document.getElementById(elementName + "ErrorImage").setAttribute('style', 'display: inline;');
+                document.getElementById(elementName + "ErrorImage").setAttribute('src', 'green_checkmark.jpg');
+                
+                return false;
+            }
+        }
+        
+        function updateLoanDisplay()
+        {
+            var amount = calculateLoanAmount();
+            
+            if (amount == "error" || isNaN(amount)){
+                document.getElementById("monthlyPayment").innerHTML = '<br />';
+            }
+            else
+            {
+                document.getElementById("monthlyPayment").innerHTML = "$" + amount.toFixed(2);
+            }
+        }
+        
+        function setDefaultFocus()
+        {
+            document.getElementById("apr").focus();
+            document.getElementById("apr").select();
+            
+            var elementNames = ['apr', 'loanTerm', 'loanAmount'];
+            
+            //Hide all the validation images and text
+            for (var i = 0; i < elementNames.length; i++)
+            {
+                document.getElementById(elementNames[i] + "Error").setAttribute('style', 'display: none;');                
+                document.getElementById(elementNames[i] + "ErrorImage").setAttribute('style', 'display: none;');
+            }
+            
+            document.getElementById("monthlyPayment").innerHTML = '<br />';
+            
+        }
+
+    </script>
+		
+		<title>Kalen Hansen's Fancy-Dancy Mortgage Calculator</title>
+		
+	</head>
+
+	<body onload="setDefaultFocus()">
+	
+    <h1 id="header">Fancy-Dancy Mortgage Calculator</h1>
+    
+    <div id="formStyling">
+        <form action="" onreset="setDefaultFocus()">
+        
+            <table>
+                <tr>
+                    <td>
+                        <label>APR (%): </label>
+                    </td>
+                    <td>
+                        <input type="text" id="apr" onchange="updateLoanDisplay()" onblur="checkValid(this.id)" />
+                    </td>
+                    <td>
+                        <img src="" id="aprErrorImage" width="10" height="10" style="display: none;" alt="errorImage" />
+                    </td>
+                    <td>
+                        <div id="aprError" style="display: none;">
+                        </div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <label>Loan Term (years): </label>
+                    </td>
+                    <td>
+                        <input type="text" id="loanTerm"  onchange="updateLoanDisplay()" onblur="checkValid(this.id)" />
+                    </td>
+                    <td>
+                        <img src="" id="loanTermErrorImage" width="10" height="10" style="display: none;" alt="errorImage" />
+                    </td>
+                    <td>
+                        <div id="loanTermError" style="display: none;">
+                        </div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <label>Loan Amount (dollars): </label>
+                    </td>
+                    <td>
+                        <input type="text" id="loanAmount"  onchange="updateLoanDisplay()" onblur="checkValid(this.id)" />
+                    </td>
+                    <td>
+                        <img src="" id="loanAmountErrorImage" width="10" height="10" style="display: none;" alt="errorImage" />
+                    </td>
+                    <td>
+                        <div id="loanAmountError" style="display: none;">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        
+            <p><br /></p>
+        
+            <div id="output">
+                <label>Monthly Payment</label><div id="monthlyPayment"><br /></div>
+            </div>
+            
+            <p><br /></p>
+            
+            <div id="submission">
+                <input type="button" value="Calculate Payment" onclick="updateLoanDisplay()" />
+                <input type="reset" value="Clear Form" />
+            </div>
+        </form>
+        
+        <p id="credits">by: Kalen Hansen</p>
+    </div>
+    
+	</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//w3c/DTD XHTML 1.0 Strict //EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+   <title>Quick Link Builder
+   </title>
+   
+   <script type = "text/javascript">
+   <!--
+       var req;			
+       function processReqChange()
+       {
+          // only if req shows "complete"
+          if (req.readyState == 4)
+          {
+             // only if "OK"
+	     if (req.status == 200)
+	     {
+	         // ...processing statements go here...
+                 var theText = req.responseText;
+                 // alert(theText);
+                 document.getElementById("fileList").innerHTML =  theText;
+             }
+	     else
+             {
+	  	  alert("There was a problem retrieving the XML data:\n" + req.statusText + " " + req.status);
+                  document.getElementById("fileList").innerHTML = "Server Error";
+             }
+	  }
+       }
+
+       function getData(url)
+       {
+          // branch for native XMLHttpRequest object
+          if (window.XMLHttpRequest)
+          {   
+    	     req = new XMLHttpRequest(); 
+ 	  }
+ 	  // branch for IE/Windows ActiveX version
+	  else if (window.ActiveXObject)
+	  {
+             req = new ActiveXObject("Microsoft.XMLHTTP");
+          } 
+          if (req != null)
+	  {
+	     req.onreadystatechange = processReqChange;
+             req.open("GET", url, true);
+             req.send(null);
+	  }
+          else 
+          {
+              alert("Brower doesn't support XMLHttp");
+          }      
+          setFocus();
+       }
+       
+       function setFocus()
+       {
+          document.getElementById("subdir").focus();
+       }
+
+       function buildRequest()
+       {
+          $Url = "http://157.201.194.254/cgi-bin/ercanbracks/getDir.pl";
+          $QueryString = "?netid=" + document.getElementById("netid").value
+                         + "&base=" + document.getElementById("base").value
+                         + "&sub=" + document.getElementById("subdir").value
+                         + "&newWindow="  + document.getElementById("window").value
+                         + "&email=" + document.getElementById("email").value;                    
+          getData($Url + $QueryString);
+       }  
+       
+   //-->
+   </script>
+   
+</head>
+
+<body  onload = "setFocus()">
+   <h2>
+    Quick Link Builder </h2>
+   <p style = "background: beige;">
+      Quick Link Builder makes an AJAX request to run a perl program.
+      The perl program makes a list of links to all files in the specified directory.
+   </p>  
+   <p>
+      Display Pages in
+         <select id = "window" size = "1" name = "window" onchange = "buildRequest()">
+             <option value = "1" selected = "selected">new window</option>
+             <option value ="0">current window</option>
+         </select>
+   </p>
+   <p>
+      NetId:
+         <input id = "netid" type = "text" name = "netid" value = "ercanbracks"  onchange = "buildRequest();" />
+   </p>
+   <p>
+      E-mail Address:
+         <input id = "email" type = "text" name = "email" value = "ercanbracks"  onchange = "buildRequest();" />
+   </p>
+
+      <p>Base directory:
+         <select id = "base" size = "1" name = "directory" onchange = "buildRequest();">
+             <option value = "public_html" selected = "selected">public_html</option>
+             <option value ="cgi-bin">cgi-bin</option>
+         </select>
+   </p>
+   <p>
+      Sub directory:
+         <input id = "subdir" type = "text" name = "directory" value = "cs213" style = "background:#ffffcc"
+              onchange = "buildRequest();" />
+   </p>
+     <input type = "button" value = "Build Links"  onclick = "buildRequest();" />
+   </p>
+        
+   <div id = "fileList">
+     <p></p>
+   </div>
+   
+</body>
+</html>

@@ -1,0 +1,115 @@
+                </select>
+             </td>
+           </tr>     
+        </table>
+           <input type="button" value="Add" 
+              onclick="var request ='addevent&cat=' + document.getElementById('drpCategory').value +
+                             '&type=' + document.getElementById('drpPerformanceType').value +
+                             '&level=' + document.getElementById('drpLevel').value +  
+                             '&studentone=' + document.getElementById('drpStudentOne').value; 
+                             request += document.getElementById('drpPerformanceType').value == 2 ?  
+                             '&studenttwo=' + document.getElementById('drpStudentTwo').value : '';
+                             sendRequest(request, gEvents);
+                      "/>   
+           <input type="button" value="Save Modification" 
+              onclick="if(document.getElementById('EventList').selectedIndex >= 0)
+                       {
+                          var request = 'modifyevent';
+                          if(document.getElementById('drpCategory').value != 
+                          gEvents[document.getElementById('EventList').selectedIndex][1])
+                          {
+                             request += '&cat=' + document.getElementById('drpCategory').value; 
+                          }
+                          if(document.getElementById('drpPerformanceType').value != 
+                          gEvents[document.getElementById('EventList').selectedIndex][5])
+                          {
+                             request += '&type=' + document.getElementById('drpPerformanceType').value; 
+                          }
+                          if(document.getElementById('drpLevel').value != 
+                          gEvents[document.getElementById('EventList').selectedIndex][3])
+                          {
+                             request += '&level=' + document.getElementById('drpLevel').value; 
+                          }
+                          if(document.getElementById('drpStudentOne').value != 
+                          gEvents[document.getElementById('EventList').selectedIndex][7])
+                          {
+                             request += '&studentone=' + document.getElementById('drpStudentOne').value; 
+                          }
+                          if(document.getElementById('drpPerformanceType').value == 2)
+                          {
+                             if(document.getElementById('drpStudentTwo').value != 
+                             gEvents[document.getElementById('EventList').selectedIndex][8])
+                             {
+                                request += '&studenttwo=' + document.getElementById('drpStudentTwo').value; 
+                             }
+                          }
+                          if(request != 'modifyevent')
+                          { 
+                             if(confirm('Save modification to this event?'))
+                             {
+                                request += '&eventid=' + gEvents[document.getElementById('EventList').selectedIndex][0];
+                                //alert(request);
+                                sendRequest(request, gEvents);                             
+                             }
+                          }
+                          else
+                          {
+                             alert('Nothing changed.');
+                          }
+                       }
+                       else
+                       {
+                          alert('Please select an event to modify');
+                       }
+                      "/>        
+      </td>
+      <td>
+         <div style="text-align:center"
+             <span class="heading">List of Performances</span>
+            <select size="20"  style="font-size: 14px;width:350px;font-family:Courier" 
+             id="EventList" name="EventList"
+             onchange="selectItem('drpCategory', gEvents[this.selectedIndex][1] - 1);
+                       selectItem('drpPerformanceType', gEvents[this.selectedIndex][5] - 1);
+                       selectItem('drpLevel', gEvents[this.selectedIndex][3] - 1);
+                       var studOne = document.getElementById('drpStudentOne');
+                       var studTwo = document.getElementById('drpStudentTwo');
+                       if(gEvents[this.selectedIndex][8] > 0)
+                       {
+                          studTwo.disabled = false;
+                       }
+                       else
+                       {
+                          studTwo.disabled = true;
+                       }
+                       for(var i = 0; i < studOne.length; i++)
+                       {
+                          if(studOne.options[i].value == gEvents[this.selectedIndex][7])
+                          {
+                             studOne.selectedIndex = i;
+                          }
+                          if(studOne.options[i].value == gEvents[this.selectedIndex][8])
+                          {
+                             studTwo.selectedIndex = i;
+                          }
+                       }
+                      ">
+            </select>
+            <input type="button" value="Remove Perfomance" 
+             onclick = "  if(document.getElementById('EventList').selectedIndex >= 0)
+                          {
+                             if(confirm('Do you want to remove this event?'))
+                             {
+                                sendRequest('removeevent&eventid=' + gEvents[document.getElementById('EventList').selectedIndex][0], gEvents); 
+                             }
+                          }
+                          else
+                          {
+                             alert('You must select an event to remove.');
+                          }
+                       "/> 
+            <input type="button" value="Pay Fees" disabled />
+         </div>
+      </td>
+   </tr>
+
+</table>

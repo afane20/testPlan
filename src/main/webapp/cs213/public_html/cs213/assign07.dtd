@@ -1,0 +1,26 @@
+<!--
+   Assignment 07
+   Brother Ercanbrack, CS 213
+-->
+<!-- assign07.dtd -->
+
+<!ELEMENT bsa (council+)>
+<!ELEMENT council (troop+)>
+<!ELEMENT troop (scout+)>
+<!ELEMENT scout (first, last, phone, address, rank*, meritbadge*)>
+<!ELEMENT first (#PCDATA)>
+<!ELEMENT last (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT address (street, city, state)>
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT state (#PCDATA)>
+<!ELEMENT rank (#PCDATA)>
+<!ELEMENT meritbadge (#PCDATA)>
+
+<!ATTLIST council name CDATA #REQUIRED>
+<!ATTLIST troop number CDATA #REQUIRED>
+<!ATTLIST troop unit_name CDATA #REQUIRED>
+<!ATTLIST meritbadge date-earned CDATA #REQUIRED>
+<!ATTLIST rank date-earned CDATA #REQUIRED>
+

@@ -1,0 +1,45 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+<title> Policical Survey </title>
+<style type = "text/css">
+  div          { background-color: lightCyan; border: 2px solid; text-align: center; width: 500px; margin: auto}
+  table.bgGrey {background-color: #f0f0f0; text-align: left}
+        
+</style>
+</head>
+<body>
+<div>
+<form action = "surveyError.php"  method = "post">
+  <h2> Political Survey </h2>
+  <table class = "bgGrey" border="1">
+  <tr>
+     <td> Is the United States a Democracy or Republic? </td>
+     <td> <input type = "radio"  name = "GovType" value = "dem" />Democracy</td>
+     <td> <input type = "radio"  name = "GovType" value = "rep" />Republic</td>
+  </tr>
+  <tr>
+     <td> Do you know why the Electoral College was<br/>
+          selected as the method for electing our President? </td>
+     <td> <input type = "radio"  name = "ElectoralCollege" value = "y" /> Yes </td>
+     <td> <input type = "radio"  name = "ElectoralCollege" value = "n" /> No </td>
+  </tr>
+  <tr>
+     <td> Would you vote to abolish the Electoral College <br/>
+          in favor of a popular vote? </td>
+     <td> <input type = "radio"  name = "abolish"  value = "y" /> Yes </td>
+     <td> <input type = "radio"  name = "abolish"  value = "n" /> No </td>
+  </tr>
+  </table>
+  <br/>
+  <input type = "submit" name = "submit" value = "Submit Survey"/>
+  <br/><br/>
+  <input type = "submit" name = "view" value = "View Results" />
+</form>
+</div>
+</body>
+</html>
+

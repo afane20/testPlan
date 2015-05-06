@@ -1,0 +1,116 @@
+body
+{
+  font-family:arial;
+  background-color:#ddeeff;  /*Light Blue*/
+  width:auto;
+  padding:0px 15px;
+}
+
+h1
+{
+  width:auto;
+  text-align:center;
+  background-color:#3344aa;  /*Dark Blue*/
+  font-family:Serif;
+  padding:15px 5px;
+  color:#ddeeff;  /*Light Blue*/
+  border-radius:15px;
+  margin:0px 0px 10px 0px;
+}
+
+h2
+{
+  width:auto;
+  text-align:center;
+}
+
+table
+{
+  border-collapse:collapse;
+  width:100%;
+  text-align:center;
+}
+
+th,td
+{
+  border:1px solid black;
+  padding:0px 5px;
+}
+
+#content
+{
+  width:900px;
+  margin:auto;
+}
+
+#content > form
+{
+  float:left;
+}
+
+.formContent
+{
+  width:440px;
+  float:left;
+}
+
+.formContent > div
+{
+  width:100%;
+  float:left;
+  margin:5px 0px;
+}
+
+#rightContent
+{
+  border-left:1px solid #223388;  /*Dark Blue*/
+  margin-left:9px;
+  padding-left:9px;
+}
+
+#listing
+{
+  float:left;
+  width:100%;
+  border:1px solid #223388;  /*Dark Blue*/
+  margin:15px 0px;
+  background-color:#ddeeff;  /*Very Light Blue*/
+}
+
+ul
+{
+  width:100px;
+  margin:auto;
+}
+
+input[type=text],select,input[type=reset]
+{
+  float:right;
+}
+
+.boxes
+{
+  float:left;
+  width:32%;
+}
+
+.second
+{
+  display:none;
+}
+
+.odd
+{
+  background-color:#bbccff;  /*Light Blue*/
+}
+
+.error
+{
+  color:red;
+}
+
+.hiddenDiv
+{
+  display:none;
+}
+

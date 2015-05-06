@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="assign08.xsl"?>
+<bsa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.byui.edu/assign07 assign07.xsd">
+  <council name="Ore-Ida">
+    <troop number="213" name="Nampa North">
+      <scout>
+        <firstName>Tommy</firstName>
+        <lastName>Tootles</lastName>
+        <phone>208-123-4567</phone>
+        <address>
+          <street>653 11th Street</street>
+          <city>Nampa</city>
+          <state>Idaho</state>
+        </address>
+        <rank date-earned="2010-06-25">Tenderfoot</rank>
+        <rank date-earned="2011-03-20">2nd Class</rank>
+        <rank date-earned="2011-09-30">1st Class</rank>
+        <meritbadge date-earned="2011-09-15">First Aid</meritbadge>
+        <meritbadge date-earned="2011-09-10">Swimming</meritbadge>
+        <meritbadge date-earned="2011-09-17">Archery</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Slightly</firstName>
+        <lastName>Soiled</lastName>
+        <phone>208-123-7654</phone>
+        <address>
+          <street>312 13th Street</street>
+          <city>Nampa</city>
+          <state>Idaho</state>
+        </address>
+        <rank date-earned="2011-10-20">Tenderfoot</rank>
+      </scout>
+      <scout>
+        <firstName>Peter</firstName>
+        <lastName>Panning</lastName>
+        <phone>208-123-5678</phone>
+        <address>
+          <street>3 Star Road</street>
+          <city>Nampa</city>
+          <state>Idaho</state>
+        </address>
+        <rank date-earned="2009-05-03">Tenderfoot</rank>
+        <rank date-earned="2009-09-23">2nd Class</rank>
+        <rank date-earned="2010-01-11">1st Class</rank>
+        <rank date-earned="2010-07-29">Star</rank>
+        <rank date-earned="2011-02-13">Life</rank>
+        <rank date-earned="2011-10-20">Eagle</rank>
+        <meritbadge date-earned="2011-08-29">Astronomy</meritbadge>
+        <meritbadge date-earned="2011-08-29">Aviation</meritbadge>
+        <meritbadge date-earned="2011-09-18">Bird Study</meritbadge>
+        <meritbadge date-earned="2011-09-06">Camping</meritbadge>
+        <meritbadge date-earned="2011-09-09">Indian Lore</meritbadge>
+        <meritbadge date-earned="2011-09-09">Music</meritbadge>
+        <meritbadge date-earned="2011-09-18">Orienteering</meritbadge>
+        <meritbadge date-earned="2011-09-06">Small-Boat Sailing</meritbadge>
+        <meritbadge date-earned="2011-09-07">Sports</meritbadge>
+        <meritbadge date-earned="2011-09-07">Swimming</meritbadge>
+        <meritbadge date-earned="2011-09-07">Water Sports</meritbadge>
+        <meritbadge date-earned="2011-09-08">Wilderness Survival</meritbadge>
+        <meritbadge date-earned="2011-10-13">Wood Carving</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Jimmy</firstName>
+        <lastName>Hooke</lastName>
+        <phone>208-123-8765</phone>
+        <address>
+          <street>7 Cove Street</street>
+          <city>Nampa</city>
+          <state>Idaho</state>
+        </address>
+        <meritbadge date-earned="2011-09-29">Astronomy</meritbadge>
+        <meritbadge date-earned="2011-09-29">Disabilities Awareness</meritbadge>
+        <meritbadge date-earned="2011-08-18">Chemistry</meritbadge>
+        <meritbadge date-earned="2011-09-06">Collections</meritbadge>
+        <meritbadge date-earned="2011-09-09">Indian Lore</meritbadge>
+        <meritbadge date-earned="2011-08-09">Law</meritbadge>
+        <meritbadge date-earned="2011-09-13">Metalwork</meritbadge>
+        <meritbadge date-earned="2011-09-13">Model Design and Building</meritbadge>
+        <meritbadge date-earned="2011-10-07">Rowing</meritbadge>
+        <meritbadge date-earned="2011-10-06">Small-Boat Sailing</meritbadge>
+        <meritbadge date-earned="2011-10-07">Shotgun Shooting</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Alan</firstName>
+        <lastName>Gatur</lastName>
+        <phone>208-123-6789</phone>
+        <address>
+          <street>15 River Road</street>
+          <city>Nampa</city>
+          <state>Idaho</state>
+        </address>
+        <meritbadge date-earned="2011-09-27">Communications</meritbadge>
+        <meritbadge date-earned="2011-09-29">Crime Prevention</meritbadge>
+        <meritbadge date-earned="2011-08-13">Dentistry</meritbadge>
+        <meritbadge date-earned="2011-10-03">Fishing</meritbadge>
+        <meritbadge date-earned="2011-09-09">Mammal Study</meritbadge>
+        <meritbadge date-earned="2011-08-09">Music</meritbadge>
+        <meritbadge date-earned="2011-09-13">Nature</meritbadge>
+        <meritbadge date-earned="2011-09-13">Pets</meritbadge>
+        <meritbadge date-earned="2011-10-07">Reptile and Amphibian Study</meritbadge>
+        <meritbadge date-earned="2011-10-06">Swimming</meritbadge>
+        <meritbadge date-earned="2011-10-07">Water Sports</meritbadge>
+      </scout>
+    </troop>
+    <troop number="145" name="Caldwell East">
+      <scout>
+        <firstName>Buzz</firstName>
+        <lastName>Lightly</lastName>
+        <phone>208-234-1928</phone>
+        <address>
+          <street>834 Infinity Lane</street>
+          <city>Caldwell</city>
+          <state>Idaho</state>
+        </address>
+        <rank date-earned="2010-06-28">Tenderfoot</rank>
+        <rank date-earned="2010-09-21">2nd Class</rank>
+        <rank date-earned="2011-03-30">1st Class</rank>
+        <rank date-earned="2011-10-13">Star</rank>
+        <meritbadge date-earned="2011-09-15">Astronomy</meritbadge>
+        <meritbadge date-earned="2011-09-10">Aviation</meritbadge>
+        <meritbadge date-earned="2011-09-17">Crime Prevention</meritbadge>
+        <meritbadge date-earned="2011-09-17">Space Exploration</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Woody</firstName>
+        <lastName>Ranger</lastName>
+        <phone>208-234-8291</phone>
+        <address>
+          <street>14 Dusty Way</street>
+          <city>Caldwell</city>
+          <state>Idaho</state>
+        </address>
+        <rank date-earned="2011-10-20">Tenderfoot</rank>
+        <meritbadge date-earned="2011-08-19">Horsemanship</meritbadge>
+        <meritbadge date-earned="2011-09-11">Law</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Doug</firstName>
+        <lastName>Slink</lastName>
+        <phone>208-234-2837</phone>
+        <address>
+          <street>20 Spring Street</street>
+          <city>Caldwell</city>
+          <state>Idaho</state>
+        </address>
+        <rank date-earned="2011-04-17">Tenderfoot</rank>
+        <rank date-earned="2011-10-13">2nd Class</rank>
+        <meritbadge date-earned="2011-03-19">Dog Care</meritbadge>
+        <meritbadge date-earned="2011-10-27">Pets</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Henry</firstName>
+        <lastName>Hamm</lastName>
+        <phone>208-234-7382</phone>
+        <address>
+          <street>312 Bank Ave</street>
+          <city>Caldwell</city>
+          <state>Idaho</state>
+        </address>
+        <meritbadge date-earned="2011-08-19">American Business</meritbadge>
+        <meritbadge date-earned="2011-10-21">Chess</meritbadge>
+        <meritbadge date-earned="2011-08-28">Coin Collecting</meritbadge>
+        <meritbadge date-earned="2011-09-10">Entrepreneurship</meritbadge>
+        <meritbadge date-earned="2011-09-19">Personal Management</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Tim</firstName>
+        <lastName>Rexton</lastName>
+        <phone>208-234-3645</phone>
+        <address>
+          <street>32 Spine Road</street>
+          <city>Caldwell</city>
+          <state>Idaho</state>
+        </address>
+        <meritbadge date-earned="2011-06-10">Archaeology</meritbadge>
+        <meritbadge date-earned="2011-07-16">Computers</meritbadge>
+        <meritbadge date-earned="2011-10-04">Reptile and Amphibian Study</meritbadge>
+      </scout>
+    </troop>
+    <troop number="337" name="Weiser South">
+      <scout>
+        <firstName>Phineas</firstName>
+        <lastName>Flynn</lastName>
+        <phone>208-321-7654</phone>
+        <address>
+          <street>543 Summer Street</street>
+          <city>Weiser</city>
+          <state>Idaho</state>
+        </address>
+        <rank date-earned="2011-06-01">Tenderfoot</rank>
+        <meritbadge date-earned="2011-06-02">Architecture</meritbadge>
+        <meritbadge date-earned="2011-06-04">Chemistry</meritbadge>
+        <meritbadge date-earned="2011-06-06">Nuclear Science</meritbadge>
+        <meritbadge date-earned="2011-06-08">Inventing</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Ferb</firstName>
+        <lastName>Fletcher</lastName>
+        <phone>208-321-7654</phone>
+        <address>
+          <street>543 Summer Street</street>
+          <city>Weiser</city>
+          <state>Idaho</state>
+        </address>
+        <rank date-earned="2011-06-01">Tenderfoot</rank>
+        <meritbadge date-earned="2011-06-03">Engineering</meritbadge>
+        <meritbadge date-earned="2011-06-05">Electronics</meritbadge>
+        <meritbadge date-earned="2011-06-07">Metalwork</meritbadge>
+        <meritbadge date-earned="2011-06-09">Space Exploration</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Perry</firstName>
+        <lastName>Plately</lastName>
+        <phone>208-321-4567</phone>
+        <address>
+          <street>545 Summer Street</street>
+          <city>Weiser</city>
+          <state>Idaho</state>
+        </address>
+        <rank date-earned="2011-05-19">Tenderfoot</rank>
+        <meritbadge date-earned="2011-05-29">Crime Prevention</meritbadge>
+        <meritbadge date-earned="2011-06-08">Emergency Preparedness</meritbadge>
+        <meritbadge date-earned="2011-06-02">Law</meritbadge>
+        <meritbadge date-earned="2011-06-05">Lifesaving</meritbadge>
+        <meritbadge date-earned="2011-05-23">Pets</meritbadge>
+        <meritbadge date-earned="2011-06-19">Truck Transportation</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Heinz</firstName>
+        <lastName>Doofenshmirtz</lastName>
+        <phone>208-321-3663</phone>
+        <address>
+          <street>634 Evil Street</street>
+          <city>Weiser</city>
+          <state>Idaho</state>
+        </address>
+        <meritbadge date-earned="2011-06-05">Basketry</meritbadge>
+        <meritbadge date-earned="2011-06-09">Coin Collecting</meritbadge>
+        <meritbadge date-earned="2011-06-11">Collections</meritbadge>
+        <meritbadge date-earned="2011-03-05">Gardening</meritbadge>
+        <meritbadge date-earned="2011-06-13">Inventing</meritbadge>
+        <meritbadge date-earned="2011-05-29">Model Design and Building</meritbadge>
+        <meritbadge date-earned="2011-06-05">Robotics</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Buford</firstName>
+        <lastName>van Stomm</lastName>
+        <phone>208-321-8395</phone>
+        <address>
+          <street>2 Fist Lane</street>
+          <city>Weiser</city>
+          <state>Idaho</state>
+        </address>
+        <meritbadge date-earned="2011-06-05">Bugling</meritbadge>
+        <meritbadge date-earned="2011-06-09">Collections</meritbadge>
+        <meritbadge date-earned="2011-03-05">Dentistry</meritbadge>
+        <meritbadge date-earned="2011-06-13">Law</meritbadge>
+        <meritbadge date-earned="2011-05-29">Pets</meritbadge>
+        <meritbadge date-earned="2011-06-05">Snow Sports</meritbadge>
+      </scout>
+    </troop>
+  </council>
+  <council name="Snake River">
+    <troop number="117" name="Burley Center">
+      <scout>
+        <firstName>Kuzco</firstName>
+        <lastName>Llamas</lastName>
+        <phone>208-343-0001</phone>
+        <address>
+          <street>1 Palace Ave</street>
+          <city>Burley</city>
+          <state>Idaho</state>
+        </address>
+        <rank date-earned="2009-05-24">Tenderfoot</rank>
+        <rank date-earned="2009-08-13">2nd Class</rank>
+        <rank date-earned="2009-12-22">1st Class</rank>
+        <rank date-earned="2010-06-29">Star</rank>
+        <rank date-earned="2011-01-12">Life</rank>
+        <rank date-earned="2011-08-05">Eagle</rank>
+        <meritbadge date-earned="2009-06-20">Citizenship in the Community</meritbadge>
+        <meritbadge date-earned="2009-06-21">Citizenship in the Nation</meritbadge>
+        <meritbadge date-earned="2009-06-22">Citizenship in the World</meritbadge>
+        <meritbadge date-earned="2010-07-03">Mammal Study</meritbadge>
+        <meritbadge date-earned="2010-06-15">Public Speaking</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Pacha</firstName>
+        <lastName>Farmer</lastName>
+        <phone>208-343-0593</phone>
+        <address>
+          <street>31 Village Way</street>
+          <city>Burley</city>
+          <state>Idaho</state>
+        </address>
+        <rank date-earned="2010-05-30">Tenderfoot</rank>
+        <rank date-earned="2010-08-04">2nd Class</rank>
+        <rank date-earned="2010-12-13">1st Class</rank>
+        <meritbadge date-earned="2009-06-20">Animal Science</meritbadge>
+        <meritbadge date-earned="2009-06-21">Farm Mechanics</meritbadge>
+        <meritbadge date-earned="2009-06-22">Soil and Water Conservation</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Kronk</firstName>
+        <lastName>Pepikrankenitz</lastName>
+        <phone>208-343-1840</phone>
+        <address>
+          <street>25 Chef Road</street>
+          <city>Burley</city>
+          <state>Idaho</state>
+        </address>
+        <rank date-earned="2010-02-23">Tenderfoot</rank>
+        <rank date-earned="2010-05-04">2nd Class</rank>
+        <rank date-earned="2010-07-21">1st Class</rank>
+        <rank date-earned="2011-02-28">Star</rank>
+        <rank date-earned="2011-09-13">Life</rank>
+        <meritbadge date-earned="2009-05-14">Animal Science</meritbadge>
+        <meritbadge date-earned="2009-06-05">Athletics</meritbadge>
+        <meritbadge date-earned="2009-06-07">Backpacking</meritbadge>
+        <meritbadge date-earned="2009-06-07">Bird Study</meritbadge>
+        <meritbadge date-earned="2009-06-08">Camping</meritbadge>
+        <meritbadge date-earned="2009-06-10">Climbing</meritbadge>
+        <meritbadge date-earned="2009-06-04">Collections</meritbadge>
+        <meritbadge date-earned="2009-06-03">Communications</meritbadge>
+        <meritbadge date-earned="2009-05-20">Cooking</meritbadge>
+        <meritbadge date-earned="2009-06-12">Forestry</meritbadge>
+        <meritbadge date-earned="2009-06-05">Hiking</meritbadge>
+        <meritbadge date-earned="2009-06-08">Insect Study</meritbadge>
+        <meritbadge date-earned="2009-06-07">Mammal Study</meritbadge>
+        <meritbadge date-earned="2009-06-07">Nature</meritbadge>
+        <meritbadge date-earned="2009-06-07">Personal Fitness</meritbadge>
+        <meritbadge date-earned="2009-06-07">Plant Science</meritbadge>
+        <meritbadge date-earned="2009-06-07">Reptile and Amphibian Study</meritbadge>
+        <meritbadge date-earned="2009-06-07">Sports</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Tipo</firstName>
+        <lastName>Farmer</lastName>
+        <phone>208-343-0593</phone>
+        <address>
+          <street>31 Village Way</street>
+          <city>Burley</city>
+          <state>Idaho</state>
+        </address>
+        <meritbadge date-earned="2009-05-14">Animal Science</meritbadge>
+        <meritbadge date-earned="2009-06-10">Climbing</meritbadge>
+        <meritbadge date-earned="2009-06-07">Personal Fitness</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Rudy</firstName>
+        <lastName>Falls</lastName>
+        <phone>208-343-8123</phone>
+        <address>
+          <street>49 Groove Street</street>
+          <city>Burley</city>
+          <state>Idaho</state>
+        </address>
+        <rank date-earned="2010-02-23">Tenderfoot</rank>
+        <meritbadge date-earned="2011-06-20">Citizenship in the Community</meritbadge>
+      </scout>
+    </troop>
+    <troop number="315" name="Jerome West">
+      <scout>
+        <firstName>Pinocchio</firstName>
+        <lastName>Woods</lastName>
+        <phone>208-524-7295</phone>
+        <address>
+          <street>4 String Street</street>
+          <city>Jerome</city>
+          <state>Idaho</state>
+        </address>
+        <rank date-earned="2011-06-30">Tenderfoot</rank>
+        <meritbadge date-earned="2011-07-30">Citizenship in the Community</meritbadge>
+        <meritbadge date-earned="2010-06-13">Mammal Study</meritbadge>
+        <meritbadge date-earned="2010-08-20">Public Speaking</meritbadge>
+        <meritbadge date-earned="2010-09-21">Theater</meritbadge>
+      </scout>
+      <scout>
+        <firstName>George</firstName>
+        <lastName>Geppetto</lastName>
+        <phone>208-524-7529</phone>
+        <address>
+          <street>119 Carver Ave</street>
+          <city>Jerome</city>
+          <state>Idaho</state>
+        </address>
+        <meritbadge date-earned="2010-06-12">Painting</meritbadge>
+        <meritbadge date-earned="2011-04-30">Wood Carving</meritbadge>
+        <meritbadge date-earned="2010-05-23">Woodwork</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Jimmy</firstName>
+        <lastName>Crickets</lastName>
+        <phone>208-524-2169</phone>
+        <address>
+          <street>2 Duright Road</street>
+          <city>Jerome</city>
+          <state>Idaho</state>
+        </address>
+        <meritbadge date-earned="2009-11-12">Insect Study</meritbadge>
+        <meritbadge date-earned="2010-07-01">Safety</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Steven</firstName>
+        <lastName>Stromboli</lastName>
+        <phone>208-524-8236</phone>
+        <address>
+          <street>76 String Street</street>
+          <city>Jerome</city>
+          <state>Idaho</state>
+        </address>
+        <rank date-earned="2011-07-02">Tenderfoot</rank>
+        <meritbadge date-earned="2011-05-03">Music</meritbadge>
+        <meritbadge date-earned="2011-04-25">Personal Management</meritbadge>
+        <meritbadge date-earned="2011-03-16">Theater</meritbadge>
+      </scout>
+      <scout>
+        <firstName>John</firstName>
+        <lastName>Foulfellow</lastName>
+        <phone>208-524-9238</phone>
+        <address>
+          <street>5 Crooked Way</street>
+          <city>Jerome</city>
+          <state>Idaho</state>
+        </address>
+        <meritbadge date-earned="2011-02-08">Communications</meritbadge>
+        <meritbadge date-earned="2011-08-10">Entrepreneurship</meritbadge>
+        <meritbadge date-earned="2010-05-30">Public Speaking</meritbadge>
+      </scout>
+    </troop>
+    <troop number="364" name="Twin Falls Center">
+      <scout>
+        <firstName>Remus</firstName>
+        <lastName>Story</lastName>
+        <phone>208-371-0592</phone>
+        <address>
+          <street>101 Story Circle</street>
+          <city>Twin Falls</city>
+          <state>Idaho</state>
+        </address>
+        <rank date-earned="2009-02-21">Tenderfoot</rank>
+        <rank date-earned="2009-07-23">2nd Class</rank>
+        <rank date-earned="2009-11-30">1st Class</rank>
+        <rank date-earned="2010-06-03">Star</rank>
+        <rank date-earned="2011-01-29">Life</rank>
+        <meritbadge date-earned="2009-02-09">American Labor</meritbadge>
+        <meritbadge date-earned="2009-01-23">Citizenship in the Community</meritbadge>
+        <meritbadge date-earned="2010-09-01">Mammal Study</meritbadge>
+        <meritbadge date-earned="2010-06-13">Public Speaking</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Brian</firstName>
+        <lastName>Rabbit</lastName>
+        <phone>208-371-5533</phone>
+        <address>
+          <street>777 Lucky Street</street>
+          <city>Twin Falls</city>
+          <state>Idaho</state>
+        </address>
+        <rank date-earned="2009-05-21">Tenderfoot</rank>
+        <rank date-earned="2009-10-14">2nd Class</rank>
+        <rank date-earned="2010-11-28">1st Class</rank>
+        <meritbadge date-earned="2010-11-29">Athletics</meritbadge>
+        <meritbadge date-earned="2011-08-03">Mammal Study</meritbadge>
+        <meritbadge date-earned="2010-07-18">Wilderness Survival</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Brian</firstName>
+        <lastName>Fox</lastName>
+        <phone>208-371-7766</phone>
+        <address>
+          <street>823 Sneak Street</street>
+          <city>Twin Falls</city>
+          <state>Idaho</state>
+        </address>
+        <rank date-earned="2011-01-05">Tenderfoot</rank>
+        <meritbadge date-earned="2011-04-12">Art</meritbadge>
+        <meritbadge date-earned="2011-06-07">Cooking</meritbadge>
+        <meritbadge date-earned="2011-07-23">Sculpture</meritbadge>
+      </scout>
+      <scout>
+        <firstName>Brian</firstName>
+        <lastName>Bear</lastName>
+        <phone>208-371-9348</phone>
+        <address>
+          <street>34 Club Road</street>
+          <city>Twin Falls</city>
+          <state>Idaho</state>
+        </address>
+      </scout>
+      <scout>
+        <firstName>Taro</firstName>
+        <lastName>Baby</lastName>
+        <phone>208-371-0987</phone>
+        <address>
+          <street>24 Sticky Street</street>
+          <city>Twin Falls</city>
+          <state>Idaho</state>
+        </address>
+      </scout>
+    </troop>
+  </council>
+</bsa>

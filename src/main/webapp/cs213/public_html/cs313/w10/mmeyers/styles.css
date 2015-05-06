@@ -1,0 +1,87 @@
+
+body { background-image: url('piano.png'); background-position: top right; background-repeat: no-repeat; }
+
+#header, #content { width: 100%; }
+
+#header h1 { padding-top: 30px; vertical-align: bottom; border-bottom: #234C2B 1px solid; 
+            color: #387A46; font-size: 1.6em; font-weight: lighter; text-transform: uppercase;  }
+div {font-size: 1em;}
+#left_panel, #right_panel { float: left; }
+#left_panel { text-align:right; width: 200px; }
+
+a { color: #387A46; }
+
+ul { list-style-type: none; }
+#students ul li { width: 150px; border: 1px solid #ddd; border-left: 0px solid white; text-align: right; }
+#students ul li a, #students ul li a:visited, #students ul li a:hover { background-image: url('link_background.png'); background-position: top right; background-repeat: repeat-y; width: 150px; text-align: right; padding-right: 15px; padding-top: 5px; padding-bottom: 5px; color: #333; font-size: .8em; }
+
+#students ul li a:hover { background-image: none; background-position: top right; background-repeat: no-repeat; width: 150px; text-align: right; padding-right: 15px; padding-top: 5px; padding-bottom: 5px; color: #2370FF; font-size: .8em; }
+
+#class_schedule, #available_classes { padding-left: 30px; }
+#available_classes { padding-top: 50px; }
+#class_schedule h1, #available_classes h1 { padding-top: 0px; color: #387A46; font-size: 1.2em; font-weight: lighter; text-transform: uppercase;  }
+
+.button { background-image: url('images/button_back.png'); color: white; height: 26px; padding: 0px 5px; text-decoration: none; font-size: 10pt; font-family: Arial,Helvetica,sans-serif; cursor:url; }
+
+.button:before { background-image: url('images/botton_left.png'); width: 1px; height: 26px; }
+.button:after { background-image: url('images/botton_right.png'); width: 1px; height: 26px; }
+
+#popup_message { position:fixed; left:0px; top:0px; margin: 0px auto 0px auto; height: 25px; width: 100%; background-color:#F0F0F0; border: 1px solid #CBCBCB; text-align: center; padding-top: 10px; padding-bottom: 5px; font-size: 16pt;}
+
+input.login { padding: 5px; font-size: 14pt; background-color: #C4CDE0; }
+
+table.list th { font-weight: bold; }
+table.list td { padding: 2px 5px; }
+table.list { margin-bottom: 20px; }
+
+h2 { font-size: 16pt; font-weight: bold; }
+
+#container { margin: 0 auto 0 auto; width: 800px;}
+div.panel h2 { text-decoration: underline;}
+
+.error { background-color: #F8DBDB; border: 1px solid #E77776; padding: 5px 10px; }
+
+.panel {
+	clear: both;
+	display: none;
+	padding: 1em;
+}
+
+fieldset {
+	padding: 2em;
+}
+
+.panel.active-tab-body {
+	display: block;
+}
+.bar {
+	padding: 5px;
+	background-color: #3e3e3e;
+}
+
+#tabs {
+	position: absolute;
+	top: 55px;
+	height: 28px;
+	list-style: none;
+}
+
+#tabs li {
+	float: left;
+}
+
+#tabs a {
+	float: left;
+	padding: 5px 8px;
+	margin-left: 6px;
+	background-color: #617AAC;
+	text-decoration: none;
+	color: white;
+}
+
+#tabs a.active-tab {
+	background-color: white;
+	border-top: 3px solid #666;
+	padding-top: 3px;
+	color: #617AAC;
+}

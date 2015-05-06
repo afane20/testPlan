@@ -1,0 +1,130 @@
+body
+{
+font-family: verdana;
+font-size: 13px;
+text-align: center;
+margin: 0 auto;
+margin-top: 15px;
+margin-left: 15px;
+}
+
+h3, p
+{
+margin: 0;
+}
+
+#headerDiv
+{
+width: 300px;
+border-bottom: solid 3px;
+margin: 0 auto;
+margin-bottom: 0;
+text-align: left;
+}
+
+#mainContentDiv
+{
+margin-top: 0;
+clear: both;
+width: 300px;
+margin: 0 auto;
+text-align: left;
+}
+
+
+.questionDiv
+{
+margin: 5px
+}
+
+.question
+{
+font-size: 12px;
+font-weight: bold;
+}
+
+.answer
+{
+font-size: 11px;
+margin-bottom: 15px;
+}
+
+#submit{margin-left: 10px; margin-bottom: 5px;}
+#reset{margin-right: 20px; margin-bottom: 5px;}
+a{margin-left: 65px;}
+
+/* For the rounded corners */
+
+.content 
+{
+   background-color: #99ccff;
+   border-left: 1px solid; 
+   border-right: 1px solid;
+   padding: 5px;
+   text-align: left;
+}
+
+.top 
+{
+   display: block; 
+   background-color: transparent; 
+   font-size: 1px;
+}
+
+.bottom 
+{
+   display: block; 
+   background-color: transparent;
+   font-size: 1px; 
+}
+
+.b1, .b2, .b3, .b4 
+{
+   display: block; 
+}
+
+.b1, .b2, .b3 
+{
+   height: 1px;
+}
+
+.b2, .b3, .b4 
+{
+   border-left: 1px solid; 
+   border-right: 1px solid;
+}
+
+.top .b2, .top .b3, .top .b4
+{
+ background-color: #99ccff;
+}
+
+.bottom .b2, .bottom .b3, .bottom .b4 
+{
+ background-color: #99ccff;
+}
+
+.b1 
+{
+   margin: 0 5px;
+   background-color: #000000;
+}
+
+.b2 
+{
+   margin: 0 3px;
+   border-width: 0 2px;
+}
+
+.b3 
+{
+   margin: 0 2px;
+}
+
+.b4 
+{
+   height: 2px;
+   margin:0 1px;
+}
+
+

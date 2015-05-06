@@ -1,0 +1,23 @@
+#main
+{
+   background: lavender;
+}
+
+#centerHeading
+{
+   color: darkblue;
+}
+
+#aboutMeBody
+{
+   width: 500px;
+   margin: 0 auto;
+}
+
+#footer
+{
+   font-family: courier;
+   font-size: 10pt;
+   margin-bottom: 5px;
+}
+

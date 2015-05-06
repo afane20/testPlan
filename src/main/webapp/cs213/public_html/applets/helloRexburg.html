@@ -1,0 +1,34 @@
+<!--
+ Assignment 06
+ Brother Ercanback, CS 373
+ S. Scott Ercanbrack
+-->
+
+<html>
+<head>
+<title>Scott's Applet Page</title>
+</head>
+<body>
+   <h2> This HTML page accesses a Java applet 3 ways.</h2>
+   <h3>Using the &lt;applet&gt; tag older versions for all browsers</h3><br/>
+   <applet code="helloRexburg.class" width = "250" height = "250">
+   </applet>
+   <br/>
+
+   <h3>Using the &lt;object&gt; tag using "code" for Internet Explorer</h3><br/>       
+    <object codetype = "application/java"
+          code = "helloRexburg.class"
+	  width = "250"
+	  height = "250">
+   </object>  
+   <br/>
+
+   <h3>Using the &lt;object&gt; tag with "classid" (xhtml 1.0) Netscape & other browsers</h3>
+   <br/>
+   <object codetype = "application/java"
+          classid = "java:helloRexburg.class"
+	  width = "250"
+	  height = "250">
+   </object>  
+</body>
+</html>

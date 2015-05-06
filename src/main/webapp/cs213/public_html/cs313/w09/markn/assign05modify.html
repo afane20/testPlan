@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head> <title> Survey </title>
+	   <base href="http://157.201.194.254/~ercanbracks/cs313/w09/markn/" />
+      <link rel = "stylesheet" type = "text/css" href = "exstyle.css" /> 
+      <script type = "text/javascript" src = "assign05.js"> </script>          
+   </head>
+  <body onload = "updateDisplay()">
+      <div id="menu">
+        <ul>
+        <li><a href="assign05add.html">Add Page</a></li>        
+        <li><a href="assign05modify.html">Modify Page</a></li>
+        <li><a href="assign05delete.html">Delete Page</a></li>
+        </ul>
+      </div>
+     <p class = "center">
+       </br> </br> </br>
+       <h3 class = "center"> Information </h3>       
+     </p>
+      <div class = "four">
+         <form action = "http://157.201.194.254/~ercanbracks/cs313/w09/markn/assign05.php" method = "post">         
+            <table>
+               <tr>
+                  <td> Student ID <input type = "text" name = "studId" id = "studId" onblur = "popById()" /> </td>
+                  <td> &nbsp; First Name <input type = "text" name = "firstName" id = "firstName" /> </td>
+                  <td> &nbsp; Last Name <input type = "text" name = "lastName" id = "lastName" /> </td>
+                  <td> &nbsp; Major <input type = "text" name = "major" id = "major" /> </td>
+               </tr>
+               <tr>
+                  <td> Birthdate &nbsp;  <input type = "text" name = "birthdate" id = "birthdate" onblur = "checkBirthday()" maxlength="8" /> </td>
+                  <td> &nbsp; Gender &nbsp; &nbsp; &nbsp; <input type = "text" name = "gender" id = "gender" maxlength="1" onblur = "genCheck()" /> </td>
+                  <td> &nbsp; City &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type = "text" name = "city" id = "city" /> </td>
+                  <td> &nbsp; State &nbsp;&nbsp;<input type = "text" name = "state" id = "state" maxlength="2" /> </td>
+               </tr>
+            </table>
+            </br> 
+            <p class = "fRight">      
+               <input type = "button" name = "add" value = "Modify this record" onclick = "modifyStudent()"  /> &nbsp;
+            </p>
+            <p class = "fLeft">
+               <label class = "hidden" id = "birthError" align = "left"> &nbsp; Birthdate should be in mm/dd/yy format. </label>
+               <label class = "hidden" id = "genError" align = "left"> &nbsp; Gender shoud be M or F. </label>
+            </p>
+         </form>  
+      </div>         
+       </br>
+    <p class = "center">
+       <h3 class = "center"> Current Data </h2>
+    </p>
+   
+    <div class = "scroll" id = "dbResponse">
+    </div>
+ </body>
+</html>
+

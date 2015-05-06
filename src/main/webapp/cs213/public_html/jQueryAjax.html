@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//w3c/DTD XHTML 1.0 Strict //EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!--
+ Assignment 06
+ Brother Ercanback, CS 373
+ S. Scott Ercanbrack
+-->
+
+<html>
+<head>
+   <title>Java Script</title>
+   <script src="jquery-1.9.1.min.js"></script>
+   <script type = "text/javascript">
+
+   <!--  
+ 
+       function getCity()
+       {
+             var country = $("#nation").val();
+ 
+    	     if (country == 1)
+	     {         
+                $("#cityNames").load("http://157.201.194.254/~ercanbracks/usa.txt");
+             }
+	     else if (country == "2")
+	     {
+                $("#cityNames").load("http://157.201.194.254/~ercanbracks/canada.txt");
+	     }
+	     else if (country == "3")
+	     {
+                $("#cityNames").load("http://157.201.194.254/~ercanbracks/mexico.txt");
+             }
+	     else if (country == 4)
+	     {
+                $("#cityNames").load("http://157.201.194.254/~ercanbracks/russia.txt");
+	     }
+             else
+             {
+                $("#error").html("This is a bad error");
+             }
+       }
+
+       function setLoadFocus()
+       {
+          document.getElementById("nation").focus();
+	    getCity();
+       }
+       //-->
+   </script>
+</head>
+
+<body onload = "setLoadFocus()">
+  <h3>Select a country to list it's ten largest cities.</h3>
+    <select id = "nation" name = "country1" onchange = "getCity();">
+      <option value = "1" selected = "selected" >US</option>
+      <option value = "2" >Canada</option>
+      <option value = "3" >Mexico</option>
+      <option value = "4" >Russia</option>
+    </select>
+    <table border = "1">
+        <caption style="font-size: 16pt">Ten Largest Cities</caption>
+	<tr>
+	  <td style = "background-color: lightgrey">City
+	     <span style="position: relative; left: 136px">Population</span>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+             <textarea style = "background-color: yellow" id = "cityNames" rows = "12" cols = "35"></textarea>     	   
+        </tr>  
+    </table>
+   <div id = "error" ></div>
+
+</body>
+</html>

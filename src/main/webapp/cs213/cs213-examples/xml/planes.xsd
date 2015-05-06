@@ -1,0 +1,40 @@
+<?xml version = "1.0"?>
+
+<!-- planes.xsd
+     A simple schema for planes.xml
+     -->
+
+<xsd:schema 
+    xmlns:xsd = "http://www.w3.org/2001/XMLSchema"
+    targetNamespace = "http://cs.uccs.edu/planeSchema"
+    xmlns = "http://cs.uccs.edu/planeSchema"
+    elementFormDefault = "qualified">
+
+    <xsd:element name = "planes">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element name = "make"
+                             type = "xsd:string"
+                             minOccurs = "1" 
+                             maxOccurs = "unbounded" />
+            </xsd:all>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
+
+<?xml version = "1.0"?>
+
+<!-- planes.xml
+     A simple XML document for illustrating a schema
+     The schema is in planes.xsd
+     -->
+<planes
+  xmlns = "http://cs.uccs.edu/planeSchema"
+  xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation = "http://cs.uccs.edu/planeSchema
+                        planes.xsd">
+    <make> Cessna </make>
+    <make> Piper </make>
+    <make> Beechcraft </make>
+</planes>
+

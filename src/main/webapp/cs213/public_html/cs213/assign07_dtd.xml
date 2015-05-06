@@ -1,0 +1,220 @@
+<?xml version = "1.0"?>
+<!--
+   Assignment 07
+   Brother Ercanbrack, CS 213
+-->
+<!-- assign07_dtd.xml -->
+<!DOCTYPE bsa SYSTEM "assign07.dtd">
+<bsa>
+  <council name="Teton Peaks">
+    <troop number="354" unit_name="Sugar 3rd Ward">
+      <scout>
+        <first>Lance</first>
+	<last>Ercanbrack</last>
+	<phone>208-313-2665</phone>
+	<address>
+	  <street>480 S. 1st West</street>
+	  <city>Rexburg</city>
+	  <state>ID</state>
+	</address>
+	<rank date-earned="2001-02-07">Tenderfoot</rank>
+	<rank date-earned="2001-06-12">2nd Class</rank>
+	<rank date-earned="2001-08-25">1st Class</rank>
+	<rank date-earned="2002-02-15">Star</rank>
+	<rank date-earned="2002-10-05">Life</rank>
+	<rank date-earned="2004-06-28">Eagle</rank>
+	<meritbadge date-earned="2001-02-01">Swimming</meritbadge>
+	<meritbadge date-earned="2001-03-06">Camping</meritbadge>
+	<meritbadge date-earned="2001-12-22">Life Saving</meritbadge>
+	<meritbadge date-earned="2001-01-15">First Aid</meritbadge>
+	<meritbadge date-earned="2001-06-17">Safety</meritbadge>
+	<meritbadge date-earned="2002-06-19">Rifle Shooting</meritbadge>
+	<meritbadge date-earned="2002-06-10">Cooking</meritbadge>
+	<meritbadge date-earned="2002-06-14">Hiking</meritbadge>
+	<meritbadge date-earned="2002-08-18">Orienteering</meritbadge>
+	<meritbadge date-earned="2002-08-27">Personal Fitness</meritbadge>
+	<meritbadge date-earned="2002-10-12">Cycling</meritbadge>
+	<meritbadge date-earned="2003-02-05">Emergency Prepardness</meritbadge>
+	<meritbadge date-earned="2003-04-05">Archery</meritbadge>
+	<meritbadge date-earned="2003-04-18">Chemistry</meritbadge>
+	<meritbadge date-earned="2003-04-12">Shotgun Shooting</meritbadge>
+	<meritbadge date-earned="2003-08-11">Family Life</meritbadge>
+	<meritbadge date-earned="2003-08-17">Pioneering</meritbadge>
+	<meritbadge date-earned="2004-03-22">Citizenship in the Nation</meritbadge>
+	<meritbadge date-earned="2004-03-26">Citizenship in the Community</meritbadge>
+	<meritbadge date-earned="2004-05-01">Citizenship in the World</meritbadge>
+	<meritbadge date-earned="2004-05-03">Environmental Science</meritbadge>
+
+      </scout>
+      <scout>
+        <first>Dilbert</first>
+	<last>Adams</last>
+	<phone>123-456-7891</phone>
+	<address>
+	  <street>Elm</street>
+	  <city>SpringDale</city>
+	  <state>WI</state>
+	</address>
+	<rank date-earned="2005-02-17">Tenderfoot</rank>
+	<rank date-earned="2005-02-17">2nd Class</rank>
+	<rank date-earned="2005-02-17">1st Class</rank>
+	<meritbadge date-earned="2005-02-17">Orienteering</meritbadge>
+      </scout>
+      <scout>
+        <first>Jason</first>
+	<last>Ricks</last>
+	<phone>555-867-5309</phone>
+	<address>
+	  <street>1994 17th Street</street>
+	  <city>Metropolis</city>
+	  <state>IO</state>
+	</address>
+	<rank date-earned="2001-02-17">Tenderfoot</rank>
+	<rank date-earned="2001-02-17">2nd Class</rank>
+	<rank date-earned="2001-06-17">1st Class</rank>
+	<rank date-earned="2002-06-17">Star</rank>
+	<meritbadge date-earned="2001-01-15">First Aid</meritbadge>
+	<meritbadge date-earned="2001-06-17">Safety</meritbadge>
+	<meritbadge date-earned="2002-06-19">Rifle Shooting</meritbadge>
+	<meritbadge date-earned="2002-06-10">Cooking</meritbadge>
+	<meritbadge date-earned="2002-06-14">Hiking</meritbadge>
+	<meritbadge date-earned="2002-08-18">Orienteering</meritbadge>
+      </scout>
+      <scout>
+        <first>Bob</first>
+	<last>Dillon</last>
+	<phone>555-666-7777</phone>
+	<address>
+	  <street>600 W. Center</street>
+	  <city>Detroit</city>
+	  <state>MI</state>
+	</address>
+	<rank date-earned="2005-02-17">Tenderfoot</rank>
+      </scout>
+      <scout>
+        <first>Daper</first>
+	<last>Dan</last>
+	<phone>789-456-1234</phone>
+	<address>
+	  <street>1832 W. 1st</street>
+	  <city>Boise</city>
+	  <state>ID</state>
+	</address>
+	<rank date-earned="2005-02-17">Tenderfoot</rank>
+	<rank date-earned="2005-08-17">2nd Class</rank>
+	<meritbadge date-earned="2005-05-17">Tracking</meritbadge>
+	<meritbadge date-earned="2005-07-17">Orienteering</meritbadge>
+	<meritbadge date-earned="2005-08-17">Snacking</meritbadge>
+      </scout>
+      <scout>
+        <first>Charlie</first>
+	<last>Brown</last>
+	<phone>456-789-1235</phone>
+	<address>
+	  <street>123 D street</street>
+	  <city>Beagle Town</city>
+	  <state>CA</state>
+	</address>
+	<rank date-earned="2004-08-17">Tenderfoot</rank>
+	<rank date-earned="2005-02-17">2nd Class</rank>
+	<rank date-earned="2005-07-17">1st Class</rank>
+	<meritbadge date-earned="2005-02-17">Orienteering</meritbadge>
+     </scout>
+    </troop>
+    <troop number="55" unit_name="Beavers">
+      <scout>
+        <first>Dan</first>
+	<last>Marino</last>
+	<phone>789-456-1231</phone>
+	<address>
+	  <street>125 F. Street</street>
+	  <city>Pica</city>
+	  <state>NM</state>
+	</address>
+	<rank date-earned="2005-02-17">Tenderfoot</rank>
+	<rank date-earned="2005-02-17">2nd Class</rank>
+	<rank date-earned="2005-02-17">1st Class</rank>
+	<meritbadge date-earned="2005-02-17">Rifle Shooting</meritbadge>
+	<meritbadge date-earned="2005-02-17">Orienteering</meritbadge>
+     </scout>
+      <scout>
+        <first>Marty</first>
+	<last>McFly</last>
+	<phone>789-456-1235</phone>
+	<address>
+	  <street>145 Future Street</street>
+	  <city>Winsor</city>
+	  <state>MA</state>
+	</address>
+	<rank date-earned="2004-02-17">Tenderfoot</rank>
+	<rank date-earned="2004-09-17">2nd Class</rank>
+	<rank date-earned="2005-02-17">1st Class</rank>
+	<rank date-earned="2005-10-17">Star</rank>
+	<meritbadge date-earned="2005-02-17">Swimming</meritbadge>
+	<meritbadge date-earned="2005-02-17">Camping</meritbadge>
+	<meritbadge date-earned="2005-02-17">Life Saving</meritbadge>
+	<meritbadge date-earned="2005-02-17">First Aid</meritbadge>
+	<meritbadge date-earned="2005-02-17">Safety</meritbadge>
+	<meritbadge date-earned="2005-02-17">Rifle Shooting</meritbadge>
+      </scout>
+      <scout>
+        <first>Matthew</first>
+	<last>Elliott</last>
+	<phone>456-369-8521</phone>
+	<address>
+	  <street>6879 Lost Street</street>
+	  <city>Salt Lake City</city>
+	  <state>UT</state>
+	</address>
+	<rank date-earned="2001-02-17">Tenderfoot</rank>
+	<rank date-earned="2001-08-17">2nd Class</rank>
+	<rank date-earned="2002-04-17">1st Class</rank>
+	<rank date-earned="2003-02-17">Star</rank>
+	<rank date-earned="2004-02-17">Life</rank>
+	<meritbadge date-earned="2001-02-01">Swimming</meritbadge>
+	<meritbadge date-earned="2001-03-06">Camping</meritbadge>
+	<meritbadge date-earned="2001-12-22">Life Saving</meritbadge>
+	<meritbadge date-earned="2001-01-15">First Aid</meritbadge>
+	<meritbadge date-earned="2002-06-17">Safety</meritbadge>
+	<meritbadge date-earned="2002-06-19">Rifle Shooting</meritbadge>
+	<meritbadge date-earned="2002-06-10">Cooking</meritbadge>
+	<meritbadge date-earned="2002-06-14">Hiking</meritbadge>
+	<meritbadge date-earned="2002-08-18">Orienteering</meritbadge>
+	<meritbadge date-earned="2002-08-27">Personal Fitness</meritbadge>
+	<meritbadge date-earned="2002-10-12">Cycling</meritbadge>
+	<meritbadge date-earned="2003-02-05">Emergency Prepardness</meritbadge>
+	<meritbadge date-earned="2003-04-05">Archery</meritbadge>
+      </scout>
+      <scout>
+        <first>Keith</first>
+	<last>Urban</last>
+	<phone>456-123-5465</phone>
+	<address>
+	  <street>1459 Downunder Street</street>
+	  <city>Melborne</city>
+	  <state>AU</state>
+	</address>
+      </scout>
+      <scout>
+        <first>Mike</first>
+	<last>Connors</last>
+	<phone>123-546-7896</phone>
+	<address>
+	  <street>480 S. 1st West</street>
+	  <city>Rexburg</city>
+	  <state>ID</state>
+	</address>
+      </scout>
+      <scout>
+        <first>Biff</first>
+	<last>Jones</last>
+	<phone>456-123-2585</phone>
+	<address>
+	  <street>500 S. 550 W.</street>
+	  <city>Burley</city>
+	  <state>ID</state>
+	</address>
+      </scout>
+    </troop>
+  </council>
+</bsa>

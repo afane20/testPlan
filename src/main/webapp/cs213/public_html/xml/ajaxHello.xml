@@ -1,0 +1,5 @@
+<div style = "background: cyan; margin-left:25%; width: 50% "  >
+<h2> Web Engineering I
+</h2>
+<p> This is a successful <span style = "color:blue">AJAX</span> request </p>
+</div>

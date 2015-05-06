@@ -1,0 +1,102 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+   <title> Hello World!
+   </title>
+   <meta http-equiv = "Content-Type" content = "text/html; charset=UTF-8"/>
+   <script type = "text/javascript" language = "javascript">
+      var httpRequest;
+      
+      function makeRequest(url)
+      {
+         httpRequest = false;
+         if (window.XMLHttpRequest)  // Mozilla
+         {     
+            httpRequest = new XMLHttpRequest(); 
+            if (httpRequest.overrideMimeType)
+	    {
+	       httpRequest.overrideMimeType('text/xml');
+	    }
+         }
+         else if (window.ActiveXObject) // IE
+         {
+            try
+            {
+               httpRequest = new ActiveXObject("Msxm12.XMLHTTP"); 
+            }
+            catch (e)
+            {
+               try
+               {
+                   httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+               }
+               catch (e)
+               {
+		   alert('Here - IE Bad');
+	       }
+            } 
+         }
+
+         if (!httpRequest)
+         {
+            alert('Error: Your browser does not support XML - HTTP');
+            return false;
+         }
+         else
+         {
+            httpRequest.onreadystatechange = alertContents;
+            httpRequest.open("POST", url, true);
+
+
+            httpRequest.setRequestHeader("Content-Type", "text/xml")
+             var request = '<?xml version="1.0"?>' +
+                           '<soap:Envelope' +
+                             'xmlns:soap="http://www.w3.org/2001/12/soap-envelope"' +
+                             'soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">' +
+                             '<soap:Body xmlns:m="http://www.stock.org/stock">' +
+                                 '<m:GetStockPrice>' +
+                                 '<m:StockName>IBM</m:StockName>' +
+                                 '</m:GetStockPrice>' +
+                              '</soap:Body>' +
+                           '</soap:Envelope>'
+                        
+            httpRequest.send(request);
+         }
+      }
+
+      function alertContents()
+      {
+
+         if (httpRequest.readyState == 4)
+         {
+            if (httpRequest.status == 200)            
+            {
+                 var myText = httpRequest.responseText;
+	         document.getElementById("data").innerHTML = "myText";
+            }
+            else
+            {
+               alert('There was a problem with the request.');
+			   alert(httpRequest.status);
+            }       
+         }
+      }
+
+   </script>
+</head>
+<body>
+     <a href = "#" onclick = "makeRequest('http://www.stock.org/stock')">Get Stock Quote</a>
+     <pre>
+       <div id = "data" style = "border: 1px solid black; padding: 10px;">
+         Now is the time
+	 for all good men
+	 to come to the aid
+	 of their country! 
+       </div>
+     </pre>
+</body>
+</html>
+

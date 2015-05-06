@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+     <title>
+     Checkbox Test</title>
+   </head>
+   <body>
+     <h2>Click on items to purchase
+     </h2>
+     <form action="checkboxes.php" method="GET">
+       Car <input type="checkbox" name="purchase[]" value = "car"/>
+       <br />
+       Bike <input type="checkbox" name="purchase[]" value = "bike"/>
+       <br />
+       Horse <input type="checkbox" name="purchase[]" value = "horse" />
+       <br />
+       Camel <input type="checkbox" name="purchase[]" value = "camel" />
+       <br /><br />
+
+       <input type="submit" value="Send" />
+     </form>
+   </body>
+</html>

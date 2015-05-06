@@ -1,0 +1,116 @@
+.subheading
+{
+   font-size:12px;
+   font-family:sans;
+   text-align:center;
+}
+
+.white
+{
+   background-color:white;
+}
+
+.red
+{
+   background-color:red;
+}
+
+.killButton
+{
+   height:15px;
+   width:14px;
+   font-size:8px;
+   font-family:sans;
+   color:red;
+   font-weight:bold;
+   color:red;
+}
+
+.errorMsg
+{
+   font-size:18px;
+   font-family:sans;
+   color:red;
+   font-weight:bold;
+   color:red;
+   text-align:center;
+   display:none;
+}
+
+.commandButton
+{
+   width:80px;
+   font-size:14px;
+   font-family:sans;
+   font-weight:bold;
+   word-wrap: break-word; 
+}
+
+table
+{
+  padding: 0px;
+}
+
+.colOne
+{
+  width:50px;
+}
+
+.colTwo
+{
+  width:95px;
+}
+
+.colThree
+{
+  width:95px;
+}
+
+.colFour
+{
+  width:40px;
+}
+
+.colFive
+{
+  width:95px;
+}
+
+.colSix
+{
+  width:30px;
+}
+
+.colSeven
+{
+  width:100px;
+}
+
+.colEight
+{
+  width:70px;
+}
+
+.colNine
+{
+  width:80px;
+  font-size:16px;
+}
+
+.colTen
+{
+  width:190px;
+  font-size:16px;
+}
+
+.colEleven
+{
+  width:50px;
+  font-size:16px;
+}
+
+
+tr
+{
+   height:20px;
+}

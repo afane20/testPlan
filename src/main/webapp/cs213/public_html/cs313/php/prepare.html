@@ -1,0 +1,352 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.1 //EN"
+   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<!--
+ Assignment xx
+ Brother Ercanback, CS 213
+ S. Scott Ercanbrack
+-->
+
+<html>
+<head>
+   <title>
+    Register Students
+   </title>
+   <script type = "text/javascript">
+   <!--
+      var fname;
+      var lname;
+      var studentId;
+      var major;
+      var birthday;
+      var gender;
+      var city;
+      var state;
+
+ 
+      function setLoadFocus()
+      {
+         document.getElementById("studentid").focus();
+      }
+
+
+      <!-- This function will build the query string an make the ajax request to execute the add resource function -->
+      function buildHTTPQueryString()
+      {
+       	queryString = "?fname=" + fname +
+		      "&lname=" + lname +
+		      "&studentid=" + studentId +
+		      "&major=" + major +
+                      "&birthday=" + birthday +
+                      "&gender=" + gender +
+                      "&city=" + city +
+                      "&state=" + state; 
+        return queryString;
+      }
+	
+      // This function will make the ajax request to send the data to the url with the corresponding query string
+
+      function saveFormDataToPHP()
+      {
+        studentId = document.getElementById("studentid").value;
+        fname = document.getElementById("fname").value;
+        lname = document.getElementById("lname").value;
+        major = document.getElementById("major").value;
+        birthday = document.getElementById("birthday").value;
+        gender = document.getElementById("gender").value;
+        city = document.getElementById("city").value;              
+        state = document.getElementById("state").value;
+      }
+
+      function clearError()
+      {
+         document.getElementById("error").innerHTML = "";
+      }
+      
+      function clearFields()
+      {
+        document.getElementById("studentid").value = "";
+      	document.getElementById("fname").value = "";
+	document.getElementById("lname").value = "";
+        document.getElementById("major").value = "";
+        document.getElementById("birthday").value = "";
+        document.getElementById("gender").value = "";
+        document.getElementById("city").value = "";
+        document.getElementById("state").value = "";
+      }
+
+ 
+      function selectVisibility()
+      {
+	 if (document.getElementById("select").checked)
+         {
+             document.getElementById("studentid").style.visibility = "visible";
+             document.getElementById("fname").style.visibility = "visible";
+             document.getElementById("lname").style.visibility = "visible";
+             document.getElementById("major").style.visibility = "visible";
+             document.getElementById("birthday").style.visibility = "visible";
+             document.getElementById("gender").style.visibility = "visible";
+             document.getElementById("city").style.visibility = "visible";
+             document.getElementById("state").style.visibility = "visible";
+         }
+      }
+      function deleteVisibility()
+      {
+	 if (document.getElementById("delete").checked)
+         {
+             document.getElementById("studentid").style.visibility = "visible";
+             document.getElementById("fname").style.visibility = "hidden";
+             document.getElementById("lname").style.visibility = "hidden";
+             document.getElementById("major").style.visibility = "hidden";
+             document.getElementById("birthday").style.visibility = "hidden";
+             document.getElementById("gender").style.visibility = "hidden";
+             document.getElementById("city").style.visibility = "hidden";
+             document.getElementById("state").style.visibility = "hidden";
+             clearFields();
+             document.getElementById("studentid").focus();
+        }
+      }
+
+      var req;			
+      function processReqChange()
+      {
+          // only if req shows "complete"
+          if (req.readyState == 4)
+          {
+             // only if "OK"
+	     if (req.status == 200)
+	     {
+	         // ...processing statements go here...
+                 var theText = req.responseText;
+                 var found = theText.search(/<error>/);  // any text with "<error>" will go into the error paragraph.
+                 if (found < 0)
+                 {
+                    document.getElementById("studentlist").innerHTML = theText;
+                 }
+                 else
+                 {
+                    document.getElementById("error").innerHTML = theText;
+                 }
+	     }
+	     else
+             {
+	  	  alert("There was a problem retrieving the DataBase request:\n" + req.statusText + " " + req.status);
+                  document.getElementById("error").innerHTML = "Server Error";
+             }
+	  }
+      }
+  
+      function ajaxRequest(url)
+      {
+          // branch for native XMLHttpRequest object
+          if (window.XMLHttpRequest)
+          {   
+    	     req = new XMLHttpRequest(); 
+ 	  }
+ 	  // branch for IE/Windows ActiveX version
+	  else if (window.ActiveXObject)
+	  {
+             req = new ActiveXObject("Microsoft.XMLHTTP");
+          } 
+          if (req != null)
+	  {
+             req.onreadystatechange = processReqChange;
+             req.open("GET", url, true);
+             req.send(null);
+	  }
+          else 
+          {
+              alert("Brower doesn't support XMLHttp");
+          }
+
+      }
+
+      function buildSelectQuery()
+      {
+         var query;
+         query = "select * from students where studentId = '" + document.getElementById("studentid").value + "'";
+         processQuery(query);        
+      }
+
+      function buildModifyQuery()
+      {
+         var query;
+         saveFormDataToPHP();       // get form data to php variables
+         query = "update students set Major = " + major + ", FirstName = '"
+                  + fname + "', LastName = '"
+                  + lname + "', BirthDate = '"
+                  + birthday + "', Gender = '"
+                  + gender + "',City = '"
+                  + city + "', State = '"
+                  + state + "' where studentId = " + document.getElementById("studentid").value;
+         processQuery(query);
+         getAllStudents();                       
+      }
+      
+      function buildInsertQuery()
+      {
+         var query;
+         query = "insert into students " +         
+         saveFormDataToPHP();       // get form data to php variables
+         var query = "insert into students values ( "
+             + studentId + "," 
+             + major + ",'"
+             + fname + "','"
+             + lname + "','"
+             + birthday + "','"
+             + gender + "','"
+             + city + "','"
+             + state + "')";
+
+         processQuery(query);
+         getAllStudents();               
+      }
+      
+      function buildDeleteModifyQuery()
+      {
+      
+         buildDeleteQuery();
+         saveFormDataToPHP();       // get form data to php variables
+         var query = "insert into students values ( "
+             + studentId + "," 
+             + major + ",'"
+             + fname + "','"
+             + lname + "','"
+             + birthday + "','"
+             + gender + "','"
+             + city + "','"
+             + state + "')";
+         processQuery(query);
+         getAllStudents();        
+      }
+      
+      function buildDeleteQuery()
+      {
+           
+         var query = "delete from students where StudentId = '" + document.getElementById("studentid").value + "'";
+
+         processQuery(query);
+         getAllStudents();       
+      }
+      
+      function getAllStudents()
+      {
+         processQuery("select * from students order by studentId");
+      }
+      
+      function processQuery(query)
+      {
+         clearError();               
+         ajaxRequest("http://157.201.194.254/~ercanbracks/cs313/php/assign05Query.php" + "?query=" + query);
+      }
+                             
+      function selectData()
+      {
+         saveFormDataToPHP();
+         qString = buildHTTPQueryString();
+         qString = "http://157.201.194.254/~ercanbracks/cs313/php/assign05Query.php" + qString;
+         alert(qString);         
+         ajaxRequest(qString);
+      }
+                             
+                             
+   //-->
+   </script>
+</head>
+
+    
+<body  onload = "getAllStudents();">
+
+  <h2>
+     Student List
+  </h2>
+   <pre style = "font-size: 10pt; font-family: Arial">
+            User instructions go here!!  
+   </pre>
+
+  <!--  This version is needed for FireFox
+    <form id = "resource" action = "" onsubmit = " return checkForm();">
+  -->
+    <form id = "resource" action="">
+          <p>
+             <!--
+             Modification Type:
+             <input type="radio" id = "select" name = "querytype" value = "select" checked = "checked" onclick = "selectVisibility()"/> select
+             <input type="radio" id = "modify" name = "querytype" value = "modify" onclick = "selectVisibility()"/> modify
+             <input type="radio" id = "insert" name = "querytype" value = "insert" onclick = "selectVisibility()" /> insert
+	     <input type="radio" id = "delete" name = "queryType" value = "delete" onclick = "deleteVisibility()"/> delete
+             -->
+             <br/><br/>
+          </p>
+	        <table>
+                       <tr align = "center">
+          		   <td>Student Id</td>                
+                           <td>First Name</td>
+                           <td>Last Name</td>
+			   <td>Major</td>
+			   <td>Birthdate</td>
+			   <td>Gender</td>
+			   <td>City</td>                           
+			   <td>State</td>
+                        </tr>                       
+                        <tr>
+   			   <td> 
+			      <input type = "text" id = "studentid" name = "studentid" size = "10"  maxsize = "10" />
+			   </td>		
+       			   <td>
+			       <input type="text" id = "fname" name = "fname" size = "20" maxsize = "20" />
+			   </td>	
+			   <td> 
+			       <input type="text" id = "lname" name = "lname" size = "20" maxsize = "20" /> 
+			   </td>
+       			   <td>
+			       <input type="text" id = "major" name = "major" size = "10" maxsize = "20" />
+			   </td>	
+       			   <td>
+			       <input type="text" id = "birthday" name = "birthday" size = "12" maxsize = "12" />
+			   </td>	
+       			   <td>
+			       <input type="text" id = "gender" name = "gender" size = "1" maxsize = "1" />
+			   </td>	
+       			   <td>
+			       <input type="text" id = "city" name = "city" size = "20" maxsize = "20" />
+			   </td>	
+       			   <td>
+			       <input type="text" id = "state" name = "state" size = "20" maxsize = "20" />
+			   </td>	
+	   		</tr>
+		</table>
+
+ 	        <br/><br/>
+		<input type="button" id = "select" name = "select" 
+                        onclick = "selectData();" value = "select"/>
+		<input type="button" id = "modify" name = "modify" 
+                        onclick = "buildModifyQuery();" value = "modify"/>
+		<input type="button" id = "insert" name = "insert" 
+                        onclick = "buildInsertQuery();" value = "insert"/>
+		<input type="button" id = "delete" name = "delete" 
+                        onclick = "buildDeleteQuery();" value = "delete"/>
+                <input type="button" id = "selectAll" name = "selectAll" 
+                        onclick = "getAllStudents();" value = "Display Students"/>
+                                                		 
+		<input style = "position: relative; left: 40px"
+		       type="reset" value ="clear form" onclick = "clearError();"/>
+      
+  </form>
+
+  <hr/>
+  <div>
+    <p id = "error" style = "color: red"> </p>
+  </div>
+     
+  <div  style = "border: medium solid thin; font-size: 10pt; background-color: yellow; ">
+     <p id = "studentlist" >  </p>
+  </div>
+           
+  <!-- This format for registering event handlers doesn't work with FireFox -->
+  <script type = "text/javascript">
+     document.getElementById("resource").onreset = setLoadFocus;
+  </script>	
+</body>
+</html>

@@ -1,0 +1,64 @@
+<?xml version = "1.0"?>
+<!DOCTYPE byui SYSTEM "byui.dtd">
+<?xml-stylesheet type="text/xsl" href = "byui.xsl"?>
+
+<byui>
+	<college name = "Physical Sciences and Engineering" >
+		<department>Architecture and Construction</department>
+		<department>Automotive</department>
+		<department>Chemistry</department>
+		<department>&cse;</department>
+		<department>Geology</department>
+		<department>Mathematics</department>
+		<department>Mechanical Engineering and Technology</department>
+		<department>Physics</department>
+		<department1>
+		   <name>&cse; (1)</name>
+		   <major id="440">Computer Science</major>
+	           <major id="450">Computer Engineering</major>
+		</department1>
+  	</college>
+	<college name = "Education">
+		<department>Child and Family Studies</department>
+		<department>Home and Family Education</department>
+		<department>Physical Education</department>
+		<department>Teacher Education</department>
+	</college>
+	<college name = "Performing and Visual Arts">
+		<department>Art</department>
+		<department>Dance</department>
+		<department>Interior Design</department>
+		<department>Music</department>
+		<department>Theatre</department>
+	</college>
+	<college name = "Agriculture and Life Sciences">
+		<department>Agronomy and Ag Business</department>
+		<department>Animal Science</department>
+		<department>Biology</department>
+		<department>Health Science</department>
+		<department>Horticulture</department>
+		<department>Nursing</department>
+	</college>
+	<college name = "Business and Communications">
+		<department>Accounting</department>
+		<department>Business Management</department>
+		<department>Communications</department>
+		<department>Economics</department>
+		<department>Information Systems</department>
+		<department>Recreation Leadership</department>
+	</college>
+	<college name = "Religion and Social Science">
+		<department>Geography</department>
+		<department>History</department>
+		<department>Political Science</department>
+		<department>Psychology</department>
+		<department>Religious Education</department>
+		<department>Sociology and Social Work</department>
+	</college>
+	<college name = "Language and Letters">
+		<department>Academic Learning</department>
+		<department>English</department>
+		<department>Foreign Languages and Literatures</department>
+		<department>Humanities and Philosophy</department>
+	</college>
+</byui>

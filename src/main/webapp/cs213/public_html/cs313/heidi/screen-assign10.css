@@ -1,0 +1,546 @@
+/* 
+    Document   : screen-assign10
+    Created on : Mar 25, 2013, 10:32:24 PM
+    Author     : Heidi Hulbert
+    Description:
+        Purpose of the stylesheet follows.
+
+
+
+back ground main: fffdfb or ffe1ce
+background side /  words: 2a1b14
+nav: 816755
+*/
+
+body {
+    background-color: #2a1b14;
+}
+
+#wrapper {
+    width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    min-height: 700px;
+    background-color: #fffdfb;
+    font-family: Helvetica;
+    padding-bottom: 40px;
+}
+
+#wrapper header {
+    position: relative;
+    margin-bottom: -10px;
+}
+
+#wrapper header h1 {
+    position: absolute;
+    top: 20px;
+    color: #ffe1ce;
+    left: 30px;
+    font-size: 50px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+#wrapper .red {
+    color: #992200 !important;
+}
+
+/* ============ NAV ====================*/
+
+#wrapper nav {
+    background-color: #816755;
+    height: 50px;
+    display: table-cell;
+    vertical-align: middle;
+    width: 1000px;
+    margin-top: -10;
+    padding-top: 0
+}
+
+#wrapper nav ul li {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    
+    
+}
+
+#wrapper nav ul li a {
+    color: #ffe1ce;
+    text-decoration: none;
+}
+
+#wrapper nav li>ul {
+    opacity: 0;
+    position: absolute;
+    left: 5px;
+    width: auto;
+    background-color: #816755;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 0 0 5px 5px;
+    -moz-transition: all 1s;
+    -webkit-transform: all 1s;
+    -o-transition: all 1s;
+    z-index: 10;
+}
+
+#wrapper nav li:hover>ul {
+    opacity: 1;
+    border-top: none;
+}
+
+#wrapper nav li:hover>ul>li {
+    height: 30px;
+    line-height: 30px;
+    padding-left: 5px;
+    width: 11em;
+    font-size: .7em;
+    display: block;
+}
+
+#wrapper nav .nav-teacher {
+    left: 330px;
+}
+
+#wrapper nav .nav-admin {
+    left: 425px;
+}
+
+#wrapper nav .welcome-name {
+    width: 300px;
+    text-align: left;
+}
+
+#update-note {
+    position: absolute;
+}
+
+/* ============ END NAV ====================*/
+
+.button {
+   border-top: 1px solid #816755;
+   background: #816755;
+   background: -webkit-gradient(linear, left top, left bottom, from(#2a1b14), to(#816755));
+   background: -webkit-linear-gradient(top, #2a1b14, #816755);
+   background: -moz-linear-gradient(top, #2a1b14, #816755);
+   background: -ms-linear-gradient(top, #2a1b14, #816755);
+   background: -o-linear-gradient(top, #2a1b14, #816755);
+   padding: 7.5px 15px;
+   -webkit-border-radius: 15px;
+   -moz-border-radius: 15px;
+   border-radius: 15px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #ffe1ce;
+   font-size: 11px;
+   font-family: Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #ffe1ce;
+   background: #ffe1ce;
+   color: #2a1b14;
+   }
+.button:active {
+   border-top-color: #816755;
+   background: #816755;
+   }
+
+fieldset {
+    border: none;
+}   
+   
+#content {
+    margin-top: 50px;
+    width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* ===========LOGIN / REGISTRATION / UPDATE PROFILE ======================*/
+
+#login_form, #register_form {
+    margin-top: 40px;
+    margin-left: -12px;
+}
+
+#register_form .button {
+    margin-top: 20px
+}
+
+#login_form .button {
+    margin-left: 12px;
+    margin-top: 20px
+}
+
+#login_form input, #register_form input {
+    margin-bottom: 10px;
+}
+
+#register_form p {
+    margin-left: 12px;
+}
+
+#profile_update_form input {
+    margin-bottom: 10px;
+}
+
+#profile_update_form {
+    padding-bottom: 50px;
+}
+/*================TABLE===================*/
+
+table {
+
+border-collapse:collapse;
+
+}
+table,th, td {
+border: 1px solid black;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 5px;
+padding-right: 5px;
+}
+
+th {
+text-align:left;
+}
+
+#wrapper #table {
+    padding-bottom: 30px;
+}
+
+
+#table
+{
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+width:100%;
+border-collapse:collapse;
+}
+#table td, #table th 
+{
+font-size:1.2em;
+border:1px solid #816755;
+padding:3px 7px 2px 7px;
+}
+#table th 
+{
+font-size:1.4em;
+text-align:left;
+padding-top:5px;
+padding-bottom:4px;
+background-color:#2a1b14;
+color:#fff;
+}
+#table tr.alt td 
+{
+color:#000;
+background-color:#EAF2D3;
+}
+
+#table-register-timeslot tr.alt td, #table-registered tr.alt td  
+{
+background-color:#fffdfb;
+}
+
+
+#table-register-timeslot tr td, #table-registered tr td 
+{
+background-color:#FFCCCC;
+}
+
+#wrapper #table-register-timeslot, #wrapper #table-registered  {
+    margin-left: -20px;
+    margin-bottom: 40px;
+}
+/*================END TABLE===================*/
+
+
+/*================TEACHER'S STUDENT===================*/
+
+#addStudent-div {
+    border: solid;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    background-color: #40E0D0;
+    color: #2a1b14;
+    margin-bottom: 20px
+}
+
+#addStudent-div input {
+    height: 15px;
+    margin-bottom: 10px
+}
+
+#addStudent-div button {
+    margin-left: 20px;
+}
+
+/*================END TEACHER'S STUDENT===================*/
+
+
+
+/*============DATE PICKER===============================*/
+
+
+
+input.DatePicker{
+	display: block;
+	width: 150px;
+	padding: 3px 3px 3px 24px;
+	border: 1px solid #0070bf;
+	font-size: 13px;
+	background: #fff url(date.gif) no-repeat top left;
+	cursor: pointer;
+}
+input:focus.DatePicker{
+	background: #fffce9 url(datefocus.gif) no-repeat top left;
+}
+.dp_container{
+	position: relative;
+	padding: 0;
+	z-index: 500;
+	color: #2a1b14;
+}
+.dp_cal{
+	background-color: #fff;
+	border: 1px solid #0070bf;
+	position: absolute;
+	width: 177px;
+	top: 24px;
+	left: 0;
+	margin: 0px 0px 3px 0px;
+}
+.dp_cal table{
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.dp_cal select{
+	margin: 2px 3px;
+	font-size: 11px;
+}
+.dp_cal select option{
+	padding: 1px 3px;
+}
+.dp_cal th,
+.dp_cal td{
+	width: 14.2857%;
+	text-align: center;
+	font-size: 11px;
+	padding: 2px 0;
+}
+.dp_cal th{
+	border: solid #aad4f2;
+	border-width: 1px 0;
+	color: #797774;
+	background: #daf2e6;
+	font-weight: bold;
+}
+.dp_cal td{
+	cursor: pointer;
+}
+.dp_cal thead th{
+	background: #d9eefc;
+}
+.dp_cal td.dp_roll{
+	color: #000;
+	background: #fff6bf;
+}
+/* must have this for the IE6 select box hiding */
+.dp_hide{
+	visibility: hidden;
+}
+.dp_empty{
+	background: #eee;
+}
+.dp_today{
+	background: #daf2e6;
+}
+.dp_selected{
+	color: #fff;
+	background: #328dcf;
+}
+
+
+/*============END DATE PICKER===============================*/
+
+/*============ADMIN'S TEACHER PAGE===============================*/
+#change>div>div {
+    width: 790px;
+    margin: auto;
+    padding-top: 20px;
+    padding-left: 30px;
+    
+}
+
+#change input{
+    margin-bottom: 14px
+}
+#search-add {
+    background-color: #40E0D0;
+    width: 750px;
+    margin-top: 40px;
+    padding-bottom: 50px;
+    padding-top: -10px;
+    position: relative;
+}
+
+#search-add ul {
+    position: absolute;
+    top: -41px;
+    left: -40px;
+    width: 400px;
+}
+
+#search-add ul li{
+    display: block;
+    float: left;
+    width: 90px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    border-radius: 15px 15px 0px 0px;
+    cursor: pointer;
+}
+
+#search {
+    background-color: #40E0D0;
+}
+
+#update {
+    background-color: #FFB6C1;
+}
+
+#add {
+    background-color: #50A6C2;
+}
+
+#wrapper .admin-teacher-table
+{
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+width:100%;
+border-collapse:collapse;
+margin-top: 50px;
+}
+#wrapper .admin-teacher-table td, #wrapper .admin-teacher-table th 
+{
+font-size: .8em;
+border:1px solid #816755;
+padding:3px 7px 2px 7px;
+}
+#wrapper .admin-teacher-table th 
+{
+font-size:1em;
+text-align:left;
+padding-top:5px;
+padding-bottom:4px;
+background-color:#2a1b14;
+color:#fff;
+
+}
+
+#table tr.alt td 
+{
+color:#000;
+background-color:#FFCCCC;
+}
+
+
+/*==============END ADMIN'S TEACHER PAGE===============================*/
+
+/*==============ADMIN'S FESTIVAL PAGE===============================*/
+
+#festivals-div-right, #festivals-div-left {
+    width: 300px;
+    float: left;
+    
+}
+#add-update-festivals-div #search-add>div>div {
+    overflow: hidden
+}
+
+#wrapper #content #add-update-festivals-div .button {
+    clear: both;
+
+}
+#wrapper .admin-festival-table
+{
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+width:100%;
+border-collapse:collapse;
+margin-top: 50px;
+}
+#wrapper .admin-festival-table td, #wrapper .admin-festival-table th 
+{
+font-size: .8em;
+border:1px solid #816755;
+padding:3px 7px 2px 7px;
+}
+#wrapper .admin-festival-table th 
+{
+font-size:1em;
+text-align:left;
+padding-top:5px;
+padding-bottom:4px;
+background-color:#2a1b14;
+color:#fff;
+
+}
+/*==============END ADMIN'S FESTIVAL PAGE===============================*/
+
+
+
+/*==============STUDENT REGISTRATION SECTION===================================*/
+
+#register-student-div {
+    display: none;
+    border: #2a1b14 solid;
+    padding-top: 10px;
+    padding-left: 40px;
+    min-height: 200px;
+    background-color:#50A6C2;
+    width: 855px;
+    margin-bottom: 40px;
+    padding-bottom: 0px;
+}
+
+#register-student-div .button {
+    margin-top: 15px;
+}
+
+.blue {
+    color: #00868B !important;
+}
+/*==============END STUDENT REGISTRATION SECTION===============================*/
+
+
+
+/*==============HOME===============================*/
+#img-left {
+    float: left;
+}
+
+#div-right {
+    float: left;
+    margin-left: 50px;
+    width: 400px;
+}
+
+#content-sample{
+    overflow: hidden;
+}
+
+#content-sample h1{
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+/*==============END HOME===============================*/

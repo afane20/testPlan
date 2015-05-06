@@ -1,0 +1,58 @@
+<?xml version = "1.0"?>
+<html>
+<head>
+   <title>XML DTD Validator!</title>
+   <script type = "text/javascript">
+
+     function validateXML()
+     {
+        var errorText = "No Validation Errors!";
+        var fileName = document.getElementById("fileName").value;
+        var xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+        xmlDoc.async="false";
+        xmlDoc.validateOnParse="true"
+        xmlDoc.load(fileName);
+ 
+        if (xmlDoc.parseError.errorCode == "0")
+        {
+            errorText = "No validation Errors!";
+        }
+        else if (xmlDoc.parseError.errorCode == "-2146697210")
+        {
+	    errorText = "File not found: " + fileName;
+        }
+        else
+        {      
+           
+           errorText = "Error Code: "
+                        + xmlDoc.parseError.errorCode + "<br>";
+            
+           errorText = errorText + "Error Desc: &nbsp;"
+                        + xmlDoc.parseError.reason
+                        + "<br>Error Line: &nbsp;"
+                        + xmlDoc.parseError.line
+                        + "<br>";
+        }
+
+        document.getElementById("error").innerHTML = errorText; 
+     }
+
+ 
+     function clearError()
+     {
+        document.getElementById("error").innerHTML = "";
+     }
+
+   </script> 
+</head>
+
+<body onload = 'document.getElementById("fileName").focus()' >
+
+   <h2> Validate your XML file against it's DTD - (doesn't work for schema's) </h2>
+   <p>Enter XML file to validate:</p>
+   <input type="text" id = "fileName" onfocus = "clearError()" maxlength = "60" size = "40"/>
+   <input type = "button" value = "validate" onclick = "validateXML() "/>
+   <p id = "error"> </p>
+
+</body>
+</html>

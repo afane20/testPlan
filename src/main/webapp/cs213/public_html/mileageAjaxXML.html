@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//w3c/DTD XHTML 1.0 Strict //EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!--
+ Assignment xx
+ Brother Ercanback, CS 213
+ S. Scott Ercanbrack
+-->
+
+<html>
+<head>
+   <title>Assignment 9</title>
+   <script type = "text/javascript">
+   <!--
+     
+      function checkForm()
+      {
+         var result = false;
+         if(document.getElementById("startCity").value == "")
+         {
+	    alert("Start city required");
+	    document.getElementById("startCity").focus();
+	 }
+       	 else if(document.getElementById("startState").value == "")
+	 {
+	    alert("State Required");
+	    document.getElementById("startState").focus();
+	 }
+	 else if(document.getElementById("endCity").value == "")
+	 {
+	    alert("End City Required");
+	    document.getElementById("endCity").focus();
+	 }
+	 else if(document.getElementById("endState").value == "")
+	 {
+	    alert("State Required");
+	    document.getElementById("endState").focus();
+	 }
+	 else
+	 {
+            var queryString = "?startCity=" + document.getElementById("startCity").value +
+                              "&startState=" + document.getElementById("startState").value +
+                              "&endCity=" + document.getElementById("endCity").value +
+                              "&endState=" + document.getElementById("endState").value;
+
+            getMileage(queryString);
+       	    result = true;
+         }
+	 return result;
+      }
+     
+      function setLoadFocus()
+      {
+         document.getElementById("startCity").focus();
+      }
+
+
+      var req;			
+      function processReqChange()
+      {
+          // only if req shows "complete"
+          if (req.readyState == 4)
+          {
+             // only if "OK"
+	     if (req.status == 200)
+	     {
+	         // ...processing statements go here...
+                 var xml = req.responseXML;
+                 var xmlDoc = xml.documentElement;   // get to the xml document level
+                 var sCity = xmlDoc.getElementsByTagName("startcity")[0].firstChild.nodeValue;
+                 var sState = xmlDoc.getElementsByTagName("startstate")[0].firstChild.nodeValue;
+                 var eCity = xmlDoc.getElementsByTagName("endcity")[0].firstChild.nodeValue;
+                 var eState = xmlDoc.getElementsByTagName("endstate")[0].firstChild.nodeValue;
+                 var miles = xmlDoc.getElementsByTagName("miles")[0].firstChild.nodeValue;
+                 var modes = xmlDoc.getElementsByTagName("tmode");
+                 outText = "Distance between " + sCity + ", " + sState + " and " + eCity + ", " + eState + " is " + miles
+                 if (miles != "Unknown")
+                 {
+                    outText += " miles. <br />";
+                 }
+                 else
+                 {
+                    outText += ". <br />";
+                 }
+                 
+                 var tModesText = "Available transportation modes: ";
+                 for (i=0; i < modes.length; i++)
+                 {
+                   tModesText = tModesText + modes[i].firstChild.nodeValue + " ";
+                 }
+                 tModesText = tModesText + "<br />";
+                 document.getElementById("mileage").innerHTML =  outText;
+                 document.getElementById("tModes").innerHTML =  tModesText;             }
+	     else
+             {
+	  	  alert("There was a problem retrieving the XML data:\n" + req.statusText + " " + req.status);
+                  document.getElementById("mileage").innerHTML = "Server Error";
+             }
+	  }
+      }
+  
+      function getMiles(url)
+      {
+          // branch for native XMLHttpRequest object
+          if (window.XMLHttpRequest)
+          {   
+    	     req = new XMLHttpRequest(); 
+ 	  }
+ 	  // branch for IE/Windows ActiveX version
+	  else if (window.ActiveXObject)
+	  {
+             req = new ActiveXObject("Microsoft.XMLHTTP");
+          } 
+          if (req != null)
+	  {
+	     req.onreadystatechange = processReqChange;
+             req.open("GET", url, true);
+             req.send(null);
+	  }
+          else 
+          {
+              alert("Brower doesn't support XMLHttp");
+          }
+
+       }
+
+       function getMileage(queryString)
+       {
+       	  getMiles("http://157.201.194.254/cgi-bin/ercanbracks/mileage/mileageAjaxXML" + queryString);
+       }
+
+       function setLoadFocus()
+       {
+	  document.getElementById("startCity").focus();
+       }
+     
+      function setLoadFocus()
+      {
+         document.getElementById("startCity").focus();
+      }
+   //-->
+   </script>
+</head>
+
+<body onload = "setLoadFocus();">
+     <form action="">
+     <table border = "1" style="font-size: 12pt" cellpadding = "10px">
+        <caption style="font-size: 16pt">Mileage Calculator</caption>
+      	<tr>
+	   <td>Start City:
+	   </td> 
+	   <td>
+                 <input type="text" name = "startCity" id = "startCity" size = "20" maxlength = "20"/>
+	   </td>	
+	   <td>State:
+	   </td> 
+	   <td>
+                 <input type="text" name = "startState" id = "startState" size = "2" maxlength = "2"/>
+	   </td>	
+         </tr>
+	<tr>
+	   <td>End City:</td> 
+	   <td> 
+		 <input type="text" name = "endCity" id = "endCity" size = "20" maxlength = "20"/> 
+	   </td>
+	   <td>State:
+	   </td> 
+	   <td>
+                 <input type="text" name = "endState" id = "endState" size = "2" maxlength = "2"/>
+	   </td>	
+       	</tr>
+     </table>
+     <hr/>
+     <input type="button" onclick = "checkForm()" value = "Calculate Mileage" />
+     <input style = "position: relative; left: 40px" type="reset" value ="clear form"/>
+     <hr />
+     </form>
+    <div style = "border-style:solid; border-width:2px; width:700px; font-size:18pt; background-color: lightGrey">
+      <span id = "mileage" style = "font-size: 18pt; color: red"></span>
+      <span id = "tModes"  style = "font-size: 14pt;"></span>
+    </div>                                
+</body>
+</html>

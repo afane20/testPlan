@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+   <base href = "http://157.201.194.254/~afane/assign9/"> 
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <title>Ernesto Afane's Assignment #9</title>
+
+<script type = "text/javascript">
+   	var http;
+       
+function loadhttp()
+{
+	if (http.readyState == 4 && http.status == 200)
+	{
+        var text = http.responseText;
+        document.getElementById("newPage").innerHTML = text;
+	}
+}
+
+function loadCities()
+{
+	if (http.readyState === 4 && http.status === 200)
+	{
+                 var text = http.responseText;
+                 text = "<pre>" + text + "</pre>";
+
+                 document.getElementById("cityNames").innerHTML = text;
+	}
+
+}
+          
+function loadXMLDoc(url)
+{
+    // code for firefox, Safari, Crome and other websites
+    if (window.XMLHttpRequest)
+    {   
+    	http = new XMLHttpRequest(); 
+ 	}
+ 	
+	// for internet Explorer for windows 
+	else
+	{
+        http = new ActiveXObject("Microsoft.XMLHTTP");
+    } 
+    
+    if (http != null)
+	{
+	     http.onreadystatechange = loadCities;
+             http.open("GET", url, true);
+             http.send();
+	}
+    
+}
+       
+function htmlUrl(url)
+{
+	// This is for Safari, FireFox, Crome and other web browsers
+	if (window.XMLHttpRequest)
+	{   
+    	     http = new XMLHttpRequest(); 
+ 	}
+ 	
+ 	// this is for Internet Explorer for windows
+	else if (window.ActiveXObject)
+	{
+        http = new ActiveXObject("Microsoft.XMLHTTP");
+    } 
+   
+    // If we have what we want
+    if (http != null)
+	  {
+	     http.onreadystatechange = loadhttp;
+             http.open("GET", url, true);
+             http.send();
+	  }
+}
+
+
+function getCity()
+{
+    var country = document.getElementById("nation").value;
+	  
+	if (country == "1")
+	{
+	loadXMLDoc("http://157.201.194.254/~ercanbracks/usa.txt");
+	}
+	else if (country == "2")
+	{
+	loadXMLDoc("http://157.201.194.254/~ercanbracks/canada.txt");
+	}
+	else if (country == "3")
+	{
+	loadXMLDoc("http://157.201.194.254/~ercanbracks/mexico.txt");
+	}
+	else if (country == 4)
+	{
+	loadXMLDoc("http://157.201.194.254/~ercanbracks/russia.txt");
+	}
+}
+
+function focus()
+{
+	document.getElementById("nation").focus();
+	getCity();
+}
+</script>
+</head>
+
+<body style="margin:0px;color:#18D2A9; font-family:'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif;
+ background-color: #EFF5F8;" onload = "focus();">
+
+<div id="wrapper" style="background-color:#FFFFFF; width:100%; min-width:700px; max-width: 1000px; margin-left:auto; margin-right:auto;">
+    <header id="top">
+        <h1 style="font-size:72px; color: rgba(25,190,55,0.70);text-align:center;font-weight:500;">AJAX</h1>
+
+        
+        </br>
+        
+      <nav id="mainnav">
+            <ul style="list-style-type:none; margin:0px;padding:0px">
+                <li><a href="../index.html" style="width:20%;display:block;float:left;background-color:#4D4D4D;
+                 text-align:center;color:#FFFFFF;text-transform:uppercase;padding-top:6px;padding-bottom: 6px;">Home</a></li>
+               
+                <li><a href="http:www.byui.edu/" style="width:20%;display:block;float:left;background-color:#4D4D4D;
+                 text-align:center;color:#FFFFFF;text-transform:uppercase;padding-top:6px;padding-bottom: 6px;">BYU-I</a></li>
+               
+                <li><a href="../assign02.html" style="width:20%;display:block;float:left;background-color:#4D4D4D;
+                 text-align:center;color:#FFFFFF;text-transform:uppercase;padding-top:6px;padding-bottom: 6px;">CS 213 Assignments</a></li>
+                <li><a href="https://byui.brainhoney.com/" style="width:20%;display:block;float:left;background-color:#4D4D4D;
+                 text-align:center;color:#FFFFFF;text-transform:uppercase;padding-top:6px;padding-bottom: 6px;">I-Learn</a></li>
+                <li><a href="https://pod51034.outlook.com/" style="width:20%;display:block;float:left;background-color:#4D4D4D;
+                 text-align:center;color:#FFFFFF;text-transform:uppercase;padding-top:6px;padding-bottom: 6px;">BYU-I email</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    
+    </br>
+
+ <h3>Select a country to list it's ten largest cities.</h3>
+    <select id = "nation" name = "country1" onchange = "getCity();">
+      <option value = "1" selected = "selected" >US</option>
+      <option value = "2" >Canada</option>
+      <option value = "3" >Mexico</option>
+      <option value = "4" >Russia</option>
+    </select>
+    
+    </br>
+        </br>
+    </br>
+
+    <table style = "border:1px; margin: auto;">
+        <tr>
+           <th style="font-size: 16pt">Ten Largest Cities</th>
+           </tr>
+	<tr>
+            <td style ="background-color:white;text-align: left;">City &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Population</td>
+	 	 
+	</tr>
+	<tr>
+	  <td>
+	  <div id = "cityNames"> 
+	  </div>
+	  </td>
+        </tr>  
+    </table>
+    <p>
+       <input type = "button"  onclick = "htmlUrl(document.getElementById('url').value)"  value = "Get URL"/>
+       <span style = "position: relative; left: 20px"> URL :
+          <input  id = "url" type = "text" size = "60" maxsize = "80" placeholder = "Insert a URL here" />
+       </span> 
+    </p>                                                            
+       
+          <div id = "newPage" style = "padding: 10px; text-align:left; word-wrap: break-word;">
+            
+          </div>
+       
+
+</div>
+</body>
+</html>

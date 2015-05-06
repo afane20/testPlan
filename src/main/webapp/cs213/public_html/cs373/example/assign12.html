@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Survey</title>
+	<script type="text/javascript">
+	<!--
+	function formValidation()
+	{
+	   var blocks = document.surveyForm.blocks;
+	   var radioChecked = false;
+	   
+	   for (i = 0; i < blocks.length; i++)
+	   {
+	      if (blocks[i].checked)
+	      {
+	         radioChecked = true;
+		 break;
+	      }
+	   }
+		
+	   if (!radioChecked)
+	   {
+	      document.getElementById('error').innerHTML =
+	         "All questions must be answered.";
+	      document.getElementById('error').style.display = 'block';
+	      return false;
+	   }
+	   else
+	   {
+	      document.getElementById('error').style.display = "none";
+	   }
+
+	   
+	   var drive = document.surveyForm.drive;
+	   radioChecked = false;
+	   
+	   for (i = 0; i < drive.length; i++)
+	   {
+	      if (drive[i].checked)
+	      {
+	         radioChecked = true;
+		 break;
+	      }
+	   }
+		
+	   if (!radioChecked)
+	   {
+	      document.getElementById('error').innerHTML =
+	         "All questions must be answered.";
+	      document.getElementById('error').style.display = 'block';
+	      return false;
+	   }
+	   else
+	   {
+	      document.getElementById('error').style.display = "none";
+	   }
+
+   	   var permit = document.surveyForm.permit;
+	   radioChecked = false;
+	   
+	   for (i = 0; i < permit.length; i++)
+	   {
+	      if (permit[i].checked)
+	      {
+	         radioChecked = true;
+		 break;
+	      }
+	   }
+		
+	   if (!radioChecked)
+	   {
+	      document.getElementById('error').innerHTML =
+	         "All questions must be answered.";
+	      document.getElementById('error').style.display = 'block';
+	      return false;
+	   }
+	   else
+	   {
+	      document.getElementById('error').style.display = "none";
+	   }
+
+   	   var trouble = document.surveyForm.trouble;
+	   radioChecked = false;
+	   
+	   for (i = 0; i < trouble.length; i++)
+	   {
+	      if (trouble[i].checked)
+	      {
+	         radioChecked = true;
+		 break;
+	      }
+	   }
+		
+	   if (!radioChecked)
+	   {
+	      document.getElementById('error').innerHTML =
+	         "All questions must be answered.";
+	      document.getElementById('error').style.display = 'block';
+	      return false;
+	   }
+	   else
+	   {
+	      document.getElementById('error').style.display = "none";
+	   }
+
+   	   var policy = document.surveyForm.policy;
+	   radioChecked = false;
+	   
+	   for (i = 0; i < policy.length; i++)
+	   {
+	      if (policy[i].checked)
+	      {
+	         radioChecked = true;
+		 break;
+	      }
+	   }
+		
+	   if (!radioChecked)
+	   {
+	      document.getElementById('error').innerHTML =
+	         "All questions must be answered.";
+	      document.getElementById('error').style.display = 'block';
+	      return false;
+	   }
+	   else
+	   {
+	      document.getElementById('error').style.display = "none";
+	   }
+	   return true;
+	}		
+	//-->
+	</script>
+	<link rel="stylesheet" type="text/css" href="assign12.css" />
+  </head>
+  <body>
+	<div id="headerDiv">
+	  <b class="top">
+	    <b class="b1"></b>
+	    <b class="b2"></b>
+	    <b class="b3"></b>
+	    <b class="b4"></b>
+	  </b>
+	  <div class="content">
+	    <h3>Survey</h3>
+	    <p>
+	    The survey below is to help BYU-I determine what would be
+	    the best use of parking permits. Please don't try to take
+	    this survey more than once.
+	    </p>
+	    <div id="error" style="display: none; color: red">
+	    </div>
+	  </div>
+	</div>
+	<div id="surveyDiv">
+	  <div class="content">
+	    <form
+	    action="http://157.201.194.254:8080/cs373/servlet/w07.chansen4.han03053"
+	    method="post" name="surveyForm" id="surveyForm"
+	    onsubmit="return formValidation();">
+	    <div class="questionDiv">
+	    <span class="question">
+	      How far away from campus do you live?
+	    </span>
+		<br/>
+		<div class="answer">
+		&gt;= 2 blocks<input type="radio" value="2" name="blocks" />
+		3-5 blocks<input type="radio" value="4" name="blocks" />
+		&lt;= 6 blocks<input type="radio" value="6" name="blocks" />
+		</div>
+	    </div>
+	    <div class="questionDiv">
+	    <span class="question">
+	      Do you drive a car to school?
+	    </span>
+		<br/>
+		<div class="answer">
+		Yes<input type="radio" value="Y" name="drive" />
+		No<input type="radio" value="N" name="drive" />
+		</div>
+	    </div>
+	    <div class="questionDiv">
+	    <span class="question">
+	      Do you have a parking permit?
+	    </span>
+		<br/>
+		<div class="answer">
+		Yes<input type="radio" value="Y" name="permit" />
+		No<input type="radio" value="N" name="permit" />
+		N/A<input type="radio" value="NA" name="permit" />
+		</div>
+	    </div>
+	    <div class="questionDiv">
+	    <span class="question">
+	      Do you have trouble finding a parking spot?
+	    </span>
+		<br/>
+		<div class="answer">
+		Yes<input type="radio" value="Y" name="trouble" />
+		No<input type="radio" value="N" name="trouble" />
+		N/A<input type="radio" value="NA" name="trouble" />
+		</div>
+	    </div>
+	    <div class="questionDiv">
+	    <span class="question">
+	      Would you agree/disagree with the school only giving 
+		  permits to students that live more than 2 blocks away
+		  from campus?
+	    </span>
+		<br/>
+		<div class="answer">
+		Agree<input type="radio" value="A" name="policy" />
+		Disagree<input type="radio" value="D" name="policy" />
+		No Comment<input type="radio" value="NC" name="policy" />
+		</div>
+	    </div>
+	    <div id="buttons">
+	      <input type="submit" value="Submit Survey" id="submit" />
+	      <input type="reset" value="Reset Survey" id="reset" />
+	    </div>
+	    <a
+	      href="http://157.201.194.254:8080/cs373/servlet/w07.chansen4.han03053?view=true">
+	      view survey results</a>
+	    </form>
+	  </div>
+	  <b class="bottom">
+	    <b class="b4"></b>
+	    <b class="b3"></b>
+	    <b class="b2"></b>
+	    <b class="b1"></b>
+	  </b>
+	</div>
+  </body>
+</html>

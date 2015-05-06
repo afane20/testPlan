@@ -1,0 +1,74 @@
+body
+{
+  font-family:arial;
+  background-color:#ddeeff;  /*Light Blue*/
+  width:auto;
+  padding:15px;
+}
+
+h1
+{
+  width:auto;
+  text-align:center;
+  background-color:#3344aa;  /*Dark Blue*/
+  font-family:Serif;
+  padding:15px 5px;
+  color:#ddeeff;  /*Light Blue*/
+  border-radius:15px;
+  margin:0px 0px 10px 0px;
+}
+
+#content
+{
+  width:auto;
+  margin-left:15%;
+  margin-right:15%;
+}
+
+form
+{
+  width:350px;
+  float:left;
+  margin:15px 10px;
+}
+
+form > div
+{
+  width:100%;
+  float:left;
+  margin:5px 0px;
+}
+
+input[value=Reset],input[value=Submit]
+{
+  margin-top:10px;
+}
+
+input[type=text],select,input[value=Calculate]
+{
+  float:right;
+}
+
+#Payment
+{
+  color:black;
+}
+
+#photoGrid
+{
+  width:300px;
+  float:left;
+  margin:15px 10px;
+}
+
+.error
+{
+  color:red;
+  font-weight:bold;
+  display:none;
+}
+
+.empty
+{
+  border:1px solid red;
+}

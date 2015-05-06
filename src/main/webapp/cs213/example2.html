@@ -1,0 +1,41 @@
+
+ <script>
+     function choose()
+     {
+        var type = document.getElementById("GovType").value;
+        var ec = document.getElementById("ec").value;
+        var abolish = document.getElementById("abolish").value;
+        if (type == "dem" && ec == "n" || abolish == "y")
+          alert("You must a Democrate!");
+        if (type == "rep" && ec == "y" || abolish == "n")
+          alert("You must a Republican!");
+        else
+          alert("You need to study your history");     
+     }
+  </script>
+  <h2> Political Survey </h2>
+  <table border="1">  
+  <tr>
+     <td> Is the United States a Democracy or Republic? </td>
+     <td> <input type = "radio"  id = "GovType" name = "GovType" value = "dem" />Democracy</td>
+     <td> <input type = "radio"  name = "GovType" value = "rep" />Republic</td>
+  </tr>
+  <tr>
+     <td> Do you know why the Electoral College was selected as the method for electing our President? </td>
+     <td> <input type = "radio"  id = "ec" name = "ElectoralCollege" value = "y" /> Yes </td>
+     <td> <input type = "radio"  name = "ElectoralCollege" value = "n" /> No </td>
+  </tr>
+  <tr>
+     <td> Would you vote to abolish the Electoral College in favor of a popular vote? </td>
+     <td> <input type = "radio" id = "abolish" name = "abolish"  value = "y" /> Yes </td>
+     <td> <input type = "radio"  name = "abolish"  value = "n" /> No </td>
+  </tr>
+  </table>
+  <br/>
+  <input type = "submit" name = "submit" onclick = "
+         if (document.getElementById('GovType').checked)
+          alert('You must a Democrate!');
+        else if (document.getElementById('abolish').checked)
+          alert('You must a Democrate!');
+        else
+          alert('You must be a Republican');"  value = "Submit Survey"/>

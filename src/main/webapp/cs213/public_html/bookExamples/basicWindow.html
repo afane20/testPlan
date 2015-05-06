@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>
+     Merit Badge List
+  </title>
+  <script type="text/javascript">
+     function OpenWindow()
+     {
+       windowvar1 = window.open("", "w1","toolbar=0,menubar=0,resizable=1,left=300,top=200,scroolbars=0,width=400,height=350");
+       windowvar1.document.open();
+       windowvar1.document.fgColor="white";
+       windowvar1.document.write("<html>");
+       windowvar1.document.write("<title>Mapleton</title>");
+       windowvar1.document.write("<body style = \"background: url(happyProgrammer.jpg)\">");
+       windowvar1.document.write("Maple Mountain 2002");
+       windowvar1.document.write("</body>");
+       windowvar1.document.write("</html>");
+       windowvar1.document.close();
+      }
+     function AlertsClose()
+     {
+         windowvar1.close();
+     }
+  </script>
+</head>
+<body bgColor="gray" text="white" onload = "OpenWindow()" onunload="AlertsClose()">
+   <p> These buttons change the window </p>
+   <button onClick="AlertsClose()">Close Window</Button>
+   <button onClick="OpenWindow()">Open window </Button>
+</body>
+</html>

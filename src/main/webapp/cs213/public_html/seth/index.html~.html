@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>UtahGuns</title>
+<link rel="stylesheet" type="text/css" href="utahguns.css" />
+<script type="text/javascript" src = "ajax.js"></script>
+<script language="JavaScript" src="countdown.js"></script>
+<script language="JavaScript">
+  TargetDate = "6/6/2011 8:00 AM";
+  BackColor = "blue";
+  ForeColor = "white";
+  CountActive = true;
+  CountStepper = -1;
+  LeadingZero = true;
+  DisplayFormat = "%%D%% Days, %%H%% Hours, %%M%% Minutes, %%S%% Seconds.";
+  FinishMessage = "It is finally here!";
+</script>
+<script type="text/javascript">
+
+function counter()
+{
+    var queryString = "";
+    ajaxRequest("hitCount.php",queryString,"visitors",1);
+}
+function showVisitors()
+{
+   document.getElementById("visitors").style.visibility = "visible";
+}
+function hideVisitors()
+{
+   document.getElementById("visitors").style.visibility = "hidden";
+}
+
+</script>
+</head>
+
+
+
+<body onload = "countDownClock();counter()">
+  <div class = "center">
+    <img src = "utahgunslogo.jpg">
+  </div>
+  <div class = "center">
+     <h1> Local Free Classifieds </h1>
+     <h1 onmousedown = "showVisitors();" onmouseup="hideVisitors();"> Coming Soon!</h1>
+     <span id = "visitors" style = "visibility: hidden">visitors: </span>
+  </div>
+  <div style = "text-align: center">
+    <span id = "cntdwn"  style = "font-size: 20pt"> Clock Goes Here </span>
+  </div>
+</body>
+
+</html>

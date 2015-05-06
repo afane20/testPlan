@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!--  forms_check.html 
+      A function tst_phone_num is defined and tested.
+      This function checks the validity of phone
+      number input from a form 
+      -->
+
+<html>
+<head> <title> Phone number tester </title>
+<script type = "text/javascript">
+<!--
+/* Function tst_phone_num
+    Parameter: A string
+    Result: Returns true if the parameter has the form of a legal 
+   seven-digit phone number (3 digits, a dash, 4 digits)
+     */
+
+function tst_phone_num(num) {
+
+// Use a simple pattern to check the number of digits and the dash
+
+var ok = num.search(/\d{3}-\d{4}/);
+
+if (ok == 0) 
+    return true;
+else 
+    return false;
+
+}  // end of function tst_phone_num
+// -->
+</script>
+</head>
+<body>
+<script type = "text/javascript">
+<!--
+/* A script to test tst_phone_num */
+
+var tst = tst_phone_num("444-5432");
+
+if (tst) 
+  document.write("444-5432 is a legal phone number <br />");
+else 
+  document.write("Error in tst_phone_num <br />");
+
+tst = tst_phone_num("444-r432");
+
+if (tst) 
+  document.write("Error in tst_phone_num <br />");
+else
+  document.write("444-r432 is not a legal phone number <br />");
+
+tst = tst_phone_num("44-1234");
+
+if (tst)
+  document.write("Error in tst_phone_num <br />");
+else
+  document.write("44-1234 is not a legal phone number <br /");
+// -->
+</script>
+</body>
+</html>
+

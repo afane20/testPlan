@@ -1,0 +1,64 @@
+body
+{
+  font-family:arial;
+  background-color:#ddeeff;  /*Light Blue*/
+  width:auto;
+  padding:15px;
+}
+
+h1
+{
+  width:auto;
+  text-align:center;
+  background-color:#3344aa;  /*Dark Blue*/
+  font-family:Serif;
+  padding:15px 5px;
+  color:#ddeeff;  /*Light Blue*/
+  border-radius:15px;
+  margin:0px 0px 10px 0px;
+}
+
+#content
+{
+  width:400px;
+  margin:auto;
+}
+
+#content > div
+{
+  margin:10px 0px;
+}
+
+form
+{
+  width:100%;
+}
+
+form > div
+{
+  width:100%;
+  float:left;
+  margin:5px 0px;
+}
+
+input[value=Clear],input[value=Calculate]
+{
+  margin-top:10px;
+}
+
+input[type=text],input[value=Calculate]
+{
+  float:right;
+}
+
+.error
+{
+  color:red;
+  font-weight:bold;
+  display:none;
+}
+
+.empty
+{
+  border:1px solid red;
+}

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>
+        How to Tunnel on OS X using Fugu
+    </title>
+    <style>
+        #titleHeading
+        {
+            font:bold 20px Arial;
+            width:100%;
+            text-align:center;
+        }
+        #FuguPic
+        {
+            width:200px;
+            height:200px;
+            background-color:red;
+        }
+        .red
+        {
+            color:red;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="pageContent">
+        <div id="titleHeading">
+            How to Tunnel on OS X using Fugu
+        </div>
+        <div id="instructions">
+            <table>
+                <tr>
+                    <td colspan="2">
+                        1. <a href="http://download.cnet.com/Fugu/3000-2155_4-26526.html">Download Fugu</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        2. Extract contents of the .dmg
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        3. Launch Fugu
+                    </td>
+                    <td>
+                        <img src="fuguLaunch.jpg"></img>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        4. Start a new SSH Tunnel by hitting command-T or select it from the "SSH" menu
+                    </td>
+                    <td>
+                        <img src="newSSHTunnel.jpg"></img>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Enter the information as you see it in the picture.
+                        <ul>
+                            <li>
+                                Create Tunnel to: <span class="red">157.201.194.254</span>
+                            </li>
+                            <li>
+                                Service or Port: <span class="red">80</span>
+                            </li>
+                            <li>
+                                Tunnel host can be <span class="red">157.201.194.201 - 157.201.194.231</span>
+                            </li>
+                            <li>
+                                Username: <span class="red">Your NetID</span>
+                            </li>
+                            <li>
+                                Port: <span class="red">215</span>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <img src="newSSHTunnelCreds.jpg"></img>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">5. Hit Enter or click "Start Tunnel"</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div style="min-width: 400px;">
+                            You should now be tunneled in.  You can access anything on the Jordan server as if you were on Campus.  
+                    <br/>
+                    <br/>
+                    You can access your public_html directory by entering 
+                    <span style="text-decoration:underline; color:blue;">
+                        http://localhost:1024/~yourNetID/
+                    </span> 
+                        <br/>on the URL line
+                        </div>
+                    </td>
+                    <td><img src="sshTunnelSummary.jpg" ></img></td>
+                </tr>
+                
+            </table>
+        </div>
+    </div>
+</body>
+</html>

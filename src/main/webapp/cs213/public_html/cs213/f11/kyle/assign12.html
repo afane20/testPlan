@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Kyle's Mileage Calculator</title>
+  <link rel="stylesheet" type="text/css" href="assign12.css" />
+  <script type="text/javascript">
+    var xmlhttp;
+    function getDist()
+    {
+      if ((document.getElementById("startCity").value == "") ||
+          (document.getElementById("endCity").value == ""))
+      {
+        var error = "Must enter two cities";
+        document.getElementById("output").innerHTML = error;
+        return;
+      }
+
+      if (window.XMLHttpRequest)    // Handle new and old browsers
+        xmlhttp = new XMLHttpRequest();
+      else
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+
+      // What to do with the returned data
+      xmlhttp.onreadystatechange=function()
+      {
+        if (xmlhttp.readyState==4)
+        {
+          if (xmlhttp.status==200)
+          {
+            var sCity = xmlhttp.responseXML.documentElement.getElementsByTagName("startcity");
+            var sState = xmlhttp.responseXML.documentElement.getElementsByTagName("startstate");
+            var eCity = xmlhttp.responseXML.documentElement.getElementsByTagName("endcity");
+            var eState = xmlhttp.responseXML.documentElement.getElementsByTagName("endstate");
+            var miles = xmlhttp.responseXML.documentElement.getElementsByTagName("miles");
+            var output = "";
+
+            output+="<b>Origin:</b><div>"+sCity[0].firstChild.nodeValue;
+            output+=", "+sState[0].firstChild.nodeValue+"</div><br/>\n";
+            output+="<b>Destination:</b><div>"+eCity[0].firstChild.nodeValue;
+            output+=", "+eState[0].firstChild.nodeValue+"</div><br/>\n";
+            if (miles[0].firstChild.nodeValue != "Unknown")
+              miles[0].firstChild.nodeValue += " miles";
+            output+="<b>Distance:</b><div>"+miles[0].firstChild.nodeValue+"</div>";
+
+            var modes=xmlhttp.responseXML.documentElement.getElementsByTagName("tmode");
+            if (modes.length > 0)
+            {
+              output+="<br/>\n<h2>Available Transportation Methods</h2>\n<ul>\n";
+              for (var i = 0; i < modes.length; i++)
+              {
+                output+="<li>"+modes[i].firstChild.nodeValue+"</li>\n";
+              }
+              output+="</ul>";
+            }
+
+            document.getElementById("output").innerHTML = output;
+          }
+          else
+          {
+            var error = "ERROR: Failed to retrieve data from server.";
+            document.getElementById("output").innerHTML = error;
+          }
+        }
+      }
+
+      var queryStr="?startCity="+document.getElementById("startCity").value;
+      queryStr+="&startState="+document.getElementById("startState").value;
+      queryStr+="&endCity="+document.getElementById("endCity").value;
+      queryStr+="&endState="+document.getElementById("endState").value;
+
+      queryStr=queryStr.replace(/ /g,"%20");
+      var url="http://157.201.194.254/cgi-bin/ercanbracks/mileage/mileageAjaxXML"+queryStr;
+
+      document.getElementById("output").innerHTML="";
+      xmlhttp.open("GET",url,true);
+      xmlhttp.send(null);
+    }
+  </script>
+</head>
+<body>
+  <h1>Kyle's Mileage Calculator</h1>
+  <hr/>
+  <div id="content">
+  <form>
+    <div id="formData">
+      <div>Start City: <input type="text" name="startCity" id="startCity" /></div>
+      <div>Start State:
+        <select name="startState" id="startState">
+          <option value="AL">AL</option>
+          <option value="AK">AK</option>
+          <option value="AZ">AZ</option>
+          <option value="AR">AR</option>
+          <option value="CA">CA</option>
+          <option value="CO">CO</option>
+          <option value="CT">CT</option>
+          <option value="DE">DE</option>
+          <option value="DC">DC</option>
+          <option value="FL">FL</option>
+          <option value="GA">GA</option>
+          <option value="HI">HI</option>
+          <option value="ID" selected="selected">ID</option>
+          <option value="IL">IL</option>
+          <option value="IN">IN</option>
+          <option value="IA">IA</option>
+          <option value="KS">KS</option>
+          <option value="KY">KY</option>
+          <option value="LA">LA</option>
+          <option value="ME">ME</option>
+          <option value="MD">MD</option>
+          <option value="MA">MA</option>
+          <option value="MI">MI</option>
+          <option value="MN">MN</option>
+          <option value="MS">MS</option>
+          <option value="MO">MO</option>
+          <option value="MT">MT</option>
+          <option value="NE">NE</option>
+          <option value="NV">NV</option>
+          <option value="NH">NH</option>
+          <option value="NJ">NJ</option>
+          <option value="NM">NM</option>
+          <option value="NY">NY</option>
+          <option value="NC">NC</option>
+          <option value="ND">ND</option>
+          <option value="OH">OH</option>
+          <option value="OK">OK</option>
+          <option value="OR">OR</option>
+          <option value="PA">PA</option>
+          <option value="RI">RI</option>
+          <option value="SC">SC</option>
+          <option value="SD">SD</option>
+          <option value="TN">TN</option>
+          <option value="TX">TX</option>
+          <option value="UT">UT</option>
+          <option value="VT">VT</option>
+          <option value="VA">VA</option>
+          <option value="WA">WA</option>
+          <option value="WV">WV</option>
+          <option value="WI">WI</option>
+          <option value="WY">WY</option>
+        </select>
+      </div>
+      <div>End City: <input type="text" name="endCity" id="endCity"/></div>
+      <div>End State:
+        <select name="endState" id="endState">
+          <option value="AL">AL</option>
+          <option value="AK">AK</option>
+          <option value="AZ">AZ</option>
+          <option value="AR">AR</option>
+          <option value="CA">CA</option>
+          <option value="CO">CO</option>
+          <option value="CT">CT</option>
+          <option value="DE">DE</option>
+          <option value="DC">DC</option>
+          <option value="FL">FL</option>
+          <option value="GA">GA</option>
+          <option value="HI">HI</option>
+          <option value="ID" selected="selected">ID</option>
+          <option value="IL">IL</option>
+          <option value="IN">IN</option>
+          <option value="IA">IA</option>
+          <option value="KS">KS</option>
+          <option value="KY">KY</option>
+          <option value="LA">LA</option>
+          <option value="ME">ME</option>
+          <option value="MD">MD</option>
+          <option value="MA">MA</option>
+          <option value="MI">MI</option>
+          <option value="MN">MN</option>
+          <option value="MS">MS</option>
+          <option value="MO">MO</option>
+          <option value="MT">MT</option>
+          <option value="NE">NE</option>
+          <option value="NV">NV</option>
+          <option value="NH">NH</option>
+          <option value="NJ">NJ</option>
+          <option value="NM">NM</option>
+          <option value="NY">NY</option>
+          <option value="NC">NC</option>
+          <option value="ND">ND</option>
+          <option value="OH">OH</option>
+          <option value="OK">OK</option>
+          <option value="OR">OR</option>
+          <option value="PA">PA</option>
+          <option value="RI">RI</option>
+          <option value="SC">SC</option>
+          <option value="SD">SD</option>
+          <option value="TN">TN</option>
+          <option value="TX">TX</option>
+          <option value="UT">UT</option>
+          <option value="VT">VT</option>
+          <option value="VA">VA</option>
+          <option value="WA">WA</option>
+          <option value="WV">WV</option>
+          <option value="WI">WI</option>
+          <option value="WY">WY</option>
+        </select>
+      </div>
+      <input type="button" value="Calculate Distance" id="calculate" onclick="getDist()"/>
+    </div>
+  </form>
+  <hr/>
+  <div id="output"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Kyle Atkinson's Assignment #2</title>
+  <!-- Left blank because IE does not support relative base paths and
+    absolute paths are impractical for these assignments. -->
+  <base href="http://157.201.194.254/~ercanbracks/cs213/f11/kyle
+/" />
+  <style>
+  li {
+    margin:10px 0px;
+  }
+  </style>
+</head>
+<body style="font-family:arial;background-color:#ddeeff;width:1000px;">
+<h1 style="width:auto;text-align:center;background-color:#3344aa;
+  font-family:Serif;padding:15px 5px;color:#bbccff;border-radius:15px;
+  margin:0px 0px 10px 0px;">
+  CS 213 Assignments</h1>
+  <div style="width:100%;text-align:center;">
+  <a href="index.html" style="font-size:X-large;font-weight:bold;">
+    Back to the Home Page</a>
+</div>
+<hr/>
+<ul style="margin-left:250px;font-size:x-large;">
+  <li><a href="assign03.html">Assignment #3 - Enhanced Home Page</a></li>
+  <li><a href="assign04.html">Assignment #4 - Style Sheets</a></li>
+  <li><a href="assign05.html">Assignment #5 - Javascript Mortgage
+    Calculator</a></li>
+  <li><a href="assign06.html">Assignment #6 - Javascript Form Validation</a></li>
+  <li><a href="assign07.html">Assignment #7 - XML</a></li>
+  <li><a href="assign08.html">Assignment #8 - XSL/XSLT</a></li>
+  <li><a href="assign09.html">Assignment #9 - AJAX</a></li>
+  <li><a href="assign10.html">Assignment #10 - CGI (C++ and Perl)</a></li>
+  <li><a href="assign11.html">Assignment #11 - CGI Form Processing</a></li>
+  <li><a href="assign12.html">Assignment #12 - More CGI, XML, and AJAX</a></li>
+  <li><a href="assign13.html">Assignment #13 - Dynamic XHTML using AJAX and
+    Perl</a></li>
+</ul>
+</body>
+</html>

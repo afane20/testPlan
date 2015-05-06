@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Assignment 9</title>
+   <script type = "text/javascript">
+       var req;
+       
+function processReqChange()
+{
+	if (req.readyState == 4 && req.status == 200)
+	{
+                 var theText = req.responseText;
+                 document.getElementById("cityNames").value = theText;
+                 //   alternate, to store in innerHTML vs <textArea>, put a <pre> tag around the text data to keep formatting
+                 theText = "<pre>" + theText + "</pre>";
+                 document.getElementById("newPage").innerHTML = theText;
+	}
+
+	else
+    {
+	alert("There was a problem retrieving the text file:\n" + req.statusText);
+	}
+}
+       
+
+function processHtmlReq()
+{
+if (req.readyState == 4 && req.status == 200)
+	{
+        var theText = req.responseText;
+        document.getElementById("newPage").innerHTML = theText;
+	}
+	
+	else
+    {
+	  	alert("There was a problem retrieving the HTML page:\n" + req.statusText);
+	}
+}
+       
+function loadXMLDoc(url)
+{
+          // branch for native XMLHttpRequest object
+          // code for firefoxß
+    if (window.XMLHttpRequest)
+    {   
+    	req = new XMLHttpRequest(); 
+ 	}
+ 	  // branch for IE/Windows ActiveX version
+	else if (window.ActiveXObject)
+	{
+        req = new ActiveXObject("Microsoft.XMLHTTP");
+    } 
+    
+    if (req != null)
+	{
+	     req.onreadystatechange = processReqChange;
+             req.open("GET", url, true);
+             req.send(null);
+	}
+    
+    else 
+    {
+        alert("Brower doesn't support XMLHttp");
+    }
+
+}
+       
+function htmlUrl(url)
+{
+	// This is for Safari, FireFox, Crome and other web browsers
+	if (window.XMLHttpRequest)
+	{   
+    	     req = new XMLHttpRequest(); 
+ 	}
+ 	
+ 	// this is for Internet Explorer for windows
+	else if (window.ActiveXObject)
+	{
+        req = new ActiveXObject("Microsoft.XMLHTTP");
+    } 
+   
+    // If we have what we want
+    if (req != null)
+	  {
+	     req.onreadystatechange = processHtmlReq;
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+             req.open("GET", url, true);
+             req.send(null);
+	  }
+          else 
+          {
+              alert("Brower doesn't support XMLHttp");
+          }
+
+       }
+
+
+function getCity()
+{
+    var country = document.getElementById("nation").value;
+	  
+	if (country == "1")
+	{
+	loadXMLDoc("http://157.201.194.254/~ercanbracks/usa.txt");
+	}
+	else if (country == "2")
+	{
+	loadXMLDoc("http://157.201.194.254/~ercanbracks/canada.txt");
+	}
+	else if (country == "3")
+	{
+	loadXMLDoc("http://157.201.194.254/~ercanbracks/mexico.txt");
+	}
+	else if (country == 4)
+	{
+	loadXMLDoc("http://157.201.194.254/~ercanbracks/russia.txt");
+	}
+}
+
+function focus()
+{
+	document.getElementById("nation").focus();
+	getCity();
+}
+   </script>
+</head>
+
+<body onload = "focus();">
+  <h3>Select a country to list it's ten largest cities.</h3>
+    <select id = "nation" name = "country1" onchange = "getCity();">
+      <option value = "1" selected = "selected" >US</option>
+      <option value = "2" >Canada</option>
+      <option value = "3" >Mexico</option>
+      <option value = "4" >Russia</option>
+    </select>
+    <table border = "1">
+        <caption style="font-size: 16pt">Ten Largest Cities</caption>
+	<tr>
+	  <td style = "background-color: lightgrey">City
+	     <span style="position: relative; left: 136px">Population</span>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	      <textarea style = "background-color: yellow" id = "cityNames" rows = "12" cols = "35"></textarea>
+	  </td>
+        </tr>  
+    </table>
+    <p>
+       <input type = "button"  onclick = "htmlUrl(document.getElementById('url').value)"  value = " Get URL"/>
+       <span style = "position: relative; left: 20px"> URL:
+          <input  id = "url" type = "text" size = "60" maxsize = "80" value = "assign02.html" />
+       </span> 
+    </p>                                                            
+       <pre>
+          <div id = "newPage" style = "border: 1px solid black; padding: 10px;">
+             Now is the time
+             for all good men
+             to come to the aid
+             of their country!
+          </div>
+       </pre>
+    </body>
+</html>

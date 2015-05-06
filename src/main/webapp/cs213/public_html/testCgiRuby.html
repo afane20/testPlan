@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//w3c/DTD XHTML 1.0 Strict //EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!--
+ Testing a ruby form
+ Brother Ercanback, cs213
+ S. Scott Ercanbrack
+-->
+
+<html>
+<head>
+   <title>Assignment 9</title>
+   
+   <script type = "text/javascript">
+   <!--
+     
+      function checkForm()
+      {
+         var result = false;
+         if(document.getElementById("apr").value == "")
+         {
+	    alert("APR required");
+	    document.getElementById("apr").focus();
+	 }
+	 else if(document.getElementById("term").value == "")
+	 {
+	    alert("Loan term required");
+	    document.getElementById("term").focus();
+	 }
+	 else if(document.getElementById("loanAmount").value == "")
+	 {
+	    alert("Loan amount required");
+	    document.getElementById("loanAmount").focus();
+	 }
+	 else
+	 {
+	    result = true;
+         }
+	 return result;
+      }
+     
+      function setLoadFocus()
+      {
+         document.getElementById("apr").focus();
+      }
+   //-->
+   </script>
+</head>
+
+<body onload = "setLoadFocus();">
+  <form id = "mortgage" method = "get" onsubmit = "return checkForm()"
+        action="http://157.201.194.254/cgi-bin/ercanbracks/CgiGetFormData.rb" >
+     <table border = "1" style="font-size: 12pt" cellpadding = "10px">
+        <caption style="font-size: 16pt">Mortgage Calculator</caption>
+      	<tr>
+	   <td>APR:
+	   </td> 
+	   <td>
+                 <input type="text" name = "apr" id = "apr" size = "10" maxlength = "5"/>
+	   </td>	
+	</tr>
+	<tr>
+	   <td>Term (yrs):</td> 
+	   <td> 
+		 <input type="text" name = "term" id = "term" size = "10" maxlength = "2"/> 
+	   </td>
+	</tr>
+	<tr>
+	   <td>Loan Amount:</td>
+   	   <td>
+		 <input type="text" name = "amount" id = "loanAmount" size = "10" maxlength = "10"/>
+	   </td>
+	</tr>
+     </table>
+     <hr/>
+     <input type="submit" id = "submit" name = "submit"  value = "Calculate Payment" />
+     <input style = "position: relative; left: 40px" type="reset" value ="clear form"/>     
+  </form>
+</body>
+</html>

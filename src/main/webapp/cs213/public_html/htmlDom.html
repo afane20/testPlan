@@ -1,0 +1,58 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.1 //EN"
+   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml" >
+
+<head>
+ <title>Scott's DOM Page</title>
+
+  <script type = "text/javascript">
+     var windowVar1;
+     var windowVar2;
+
+     function newLocation()
+     {
+        windowVar1.location = "http://www.w3schools.com";
+     }
+
+     function window1()
+     {
+         windowVar1 = window.open("http://www.byui.edu", "w1","toolbar=0,menubar=0,resizable=1,left=300,top=200,scroolbars=0,width=400,height=350");     
+       
+      }
+
+     function window2()
+     {
+         windowVar2 = window.open("http://www.cnn.com", "w2","toolbar=0,menubar=0,resizable=1,left=300,top=200,scroolbars=2,width=400,height=350");     
+         
+    }
+
+     function displayLocation()
+    {
+          document.getElementById("para").innerHTML = location;
+    }
+
+    function closeWindows()
+    {
+        windowVar1.close();
+        windowVar2.close();
+    }
+
+   </script>
+
+
+
+</head>
+<body>
+   <h1>Test window object and Location object</h1>
+   <input type = "button" onclick = "window1()" value = "Window 1" />
+   <input type = "button" onclick = "window2()" value = "Window 2" />
+   <input type = "button" onclick = "displayLocation()" value = "Display Window 1 location" />
+   <input type = "button" onclick = "newLocation()" value = "new location for window 1" />
+   <input type = "button" onclick = "closeWindows()" value = "Close Windows" />
+    <p id = "para">Original Location </p>
+
+</body>
+</html>

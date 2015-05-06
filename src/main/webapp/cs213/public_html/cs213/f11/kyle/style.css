@@ -1,0 +1,80 @@
+body
+{
+  font-family:Arial, Helvetica, sans-serif;
+  background-color:#ddeeff;  /*Light Blue*/
+  width:1000px;
+  font-size:large;
+  margin:5px auto;
+}
+
+#header
+{
+  background:#3344aa url('TitleGradient.png') repeat-x left top;
+}
+
+#footer
+{
+  width:auto;
+  text-align:center;
+  color:#ddeeff;  /*Light Blue*/
+  background-color:#3344aa;  /*Dark Blue*/
+  padding:5px;
+  border-radius:20px;
+  margin:10px 0px 0px 0px;
+}
+
+#footer > a
+{
+  color:#88ffbb;  /*Light Green*/
+}
+
+.codeShark
+{
+  font-family:'Comic Sans MS',cursive;
+  color:#88ffbb;  /*Light Green*/
+}
+
+h1
+{
+  width:auto;
+  text-align:center;
+  color:#ddeeff;  /*Light Blue*/
+  background-color:#3344aa;  /*Dark Blue*/
+  font-family:'Courier New', Courier, monospace;
+  padding:15px 5px;
+  border-radius:10px;
+  margin:0px 0px 10px 0px;
+}
+
+h2
+{
+  text-align:center;
+  color:#3344aa;  /*Dark Blue*/
+  font-family:Georgia, serif;
+}
+
+h3
+{
+  font-weight:bold;
+  color:#3344aa;  /*Dark Blue*/
+  font-family:Georgia, serif;
+  margin-bottom:10px;
+}
+
+p
+{
+  line-height:150%;
+  text-align:justify;
+}
+
+.right
+{
+  float:right;
+  margin-left:15px;
+}
+
+#content
+{
+  width:90%;
+  margin:auto;
+}

@@ -1,0 +1,161 @@
+</td>
+   </tr>            
+   <tr>
+     <td style="text-align:right;">
+       Mailing Address:
+     </td>
+     <td>
+       <textarea name="txtAddress" id="txtAddress" rows="4" cols="15"></textarea>
+     </td>
+   </tr>            
+   <tr>
+     <td style="text-align:right;">
+       City:
+     </td>
+     <td>
+       <input type="text" name="txtCity" id="txtCity" size="20" maxlength="16"
+          onkeypress="return keypressLettersOnly(event);">
+     </td>
+   </tr>            
+   <tr>
+     <td style="text-align:right;">
+       State:
+     </td>
+     <td>
+        <select class="drpState" id="drpState" name="drpState">
+           <option value = "NONE">STATE</option>
+           <option value = "AK">AK</option>
+           <option value = "AL">AL</option>
+           <option value = "AR">AR</option>
+           <option value = "AZ">AZ</option>
+           <option value = "CA">CA</option>
+           <option value = "CO">CO</option>
+           <option value = "CT">CT</option>
+           <option value = "DE">DE</option>
+           <option value = "FL">FL</option>
+           <option value = "GA">GA</option>
+           <option value = "HI">HI</option>
+           <option value = "IA">IA</option>
+           <option value = "ID">ID</option>
+           <option value = "IL">IL</option>
+           <option value = "IN">IN</option>
+           <option value = "KS">KS</option>
+           <option value = "KY">KY</option>
+           <option value = "LA">LA</option>
+           <option value = "MA">MA</option>
+           <option value = "MD">MD</option>
+           <option value = "ME">ME</option>
+           <option value = "MI">MI</option>
+           <option value = "MN">MN</option>
+           <option value = "MO">MO</option>
+           <option value = "MS">MS</option>
+           <option value = "MT">MT</option>
+           <option value = "NC">NC</option>
+           <option value = "ND">ND</option>
+           <option value = "NE">NE</option>
+           <option value = "NH">NH</option>
+           <option value = "NJ">NJ</option>
+           <option value = "NM">NM</option>
+           <option value = "NV">NV</option>
+           <option value = "NY">NY</option>
+           <option value = "OH">OH</option>
+           <option value = "OK">OK</option>
+           <option value = "OR">OR</option>
+           <option value = "PA">PA</option>
+           <option value = "RI">RI</option>
+           <option value = "SC">SC</option>
+           <option value = "SD">SD</option>
+           <option value = "TN">TN</option>
+           <option value = "TX">TX</option>
+           <option value = "UT">UT</option>
+           <option value = "VA">VA</option>
+           <option value = "VI">VI</option>
+           <option value = "VT">VT</option>
+           <option value = "WA">WA</option>
+           <option value = "WI">WI</option>
+           <option value = "WV">WV</option>
+           <option value = "WY">WY</option>
+        </select>
+     </td>
+   </tr>            
+   <tr>
+     <td style="text-align:right;">
+       Zip:
+     </td>
+     <td>
+       <input type="text" name="txtZip" id="txtZip" size="20" maxlength="5"
+        onkeypress="return keypressNumbersOnly(event);">
+     </td>
+   </tr>            
+   <tr>
+     <td style="text-align:right;">
+       Phone Number:
+     </td>
+     <td>
+       <input type="text" name="txtPhone" id="txtPhone" size="20" maxlength="10"
+        onkeypress="return keypressNumbersOnly(event);">
+     </td>
+   </tr>
+   <tr>
+      <td>
+         Password:
+      </td>
+      <td>
+         <input type="password" name="txtPassword" id="txtPhone" size="20" maxlength="32">
+      </td>
+   </tr>
+   <tr>
+      <td>
+         Confirm Password:
+      </td>
+      <td>
+         <input type="password" name="txtConfirm" id="txtPhone" size="20" maxlength="32">
+      </td>
+   </tr>
+
+   <tr>
+      <td colspan="2" style="text-align:center">
+        <input type="button" value="Register" 
+           onclick="if(validateForm(new Array('txtFirstName','txtLastName','txtEmail',
+                          'txtAddress','txtCity','txtZip','txtPhone', 'txtPassword', 'txtConfirm'),  
+                          new Array('First Name', 'Last Name', 'Email Address', 'Mailing Address', 
+                          'City', 'Zip Code', 'PhoneNumber','Password', 'Confirmed Password')))
+                   {
+                      if(document.getElementById('drpState').selectedIndex > 0)
+                      {
+                         if(document.getElementById('txtPassword').value == 
+                            document.getElementById('txtConfirm').value)
+                         {
+                            if(confirm('Submit Registration?'))
+                            {
+                               sendCommand('register&firstname=' + document.getElementById('txtFirstName').value +
+                               '&lastname=' + document.getElementById('txtLastName').value +
+                               '&birthdate=' + document.getElementById('drpYear').value + '-' +
+                               document.getElementById('drpMonth').value + '-' +
+                               document.getElementById('drpDay').value + 
+                               '&gender=' + (document.getElementById('rdoMale').checked == true ? 'm' : 'f') +     
+                               '&email=' + document.getElementById('txtEmail').value +
+                               '&address=' + document.getElementById('txtAddress').value +
+                               '&city=' + document.getElementById('txtCity').value +
+                               '&state=' + document.getElementById('drpState').value +
+                               '&zip=' + document.getElementById('txtZip').value +
+                               '&phone=' + document.getElementById('txtPhone').value +
+                               '&pass=' + document.getElementById('txtPassword').value, 'Main'); 
+                            }
+                         }
+                         else
+                         {
+                            alert('Passwords do not match.');
+                            document.getElementById('txtPassword').value = '';
+                            document.getElementById('txtConfirm').value = '';
+                         }
+                      }
+                      else
+                      {
+                         alert('You must select a state.');
+                      }            
+                   }"> 
+
+      </td>
+   </tr>       
+</table>

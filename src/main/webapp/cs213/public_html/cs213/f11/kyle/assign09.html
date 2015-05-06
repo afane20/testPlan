@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Kyle Atkinson's AJAX Demo</title>
+  <style type="text/css">
+    body
+    {
+      font-family:arial;
+      background-color:#ddeeff;
+      width:1000px;
+    }
+    h1
+    {
+      width:auto;
+      text-align:center;
+      background-color:#3344aa;
+      font-family:Serif;
+      padding:15px 5px;
+      color:#bbccff;
+      border-radius:15px;
+      margin:0px 0px 10px 0px;
+    }
+    #div1
+    {
+      width:300px;
+      margin:auto;
+    }
+    #div2
+    {
+      width:100%;
+      margin-top:5px;
+    }
+    #cityList
+    {
+      margin-top:5px;
+      padding:5px;
+      width:100%;
+      border:1px solid black;
+      min-height:200px;
+      background-color:white;
+    }
+    #cityList > table
+    {
+      width:100%;
+    }
+    .num
+    {
+      text-align:right;
+    }
+  </style>
+  <script type="text/javascript">
+    var xmlhttp;
+    function getList(textFile)
+    {
+      if (window.XMLHttpRequest)    // Handle new and old browsers
+        xmlhttp = new XMLHttpRequest();
+      else
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+
+      // What to do with the returned data
+      xmlhttp.onreadystatechange=function()
+      {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+          var cityList = xmlhttp.responseText.replace(/\n/g,"</td></tr>\n<tr><td>");
+          cityList = "<table><tr><td>"+cityList+"</td></tr></table>";
+          
+          var pos = cityList.search(/[A-z]\s+[0-9]/);
+          while (pos >= 0)
+          {
+            // Parse the names and numbers
+            cityList = cityList.substr(0,pos+1)+"</td><td class='num'>"+cityList.substr(pos+2);
+            pos = cityList.search(/[A-z]\s+[0-9]/);
+          }
+          document.getElementById("cityList").innerHTML=cityList;
+        }
+      }
+
+      xmlhttp.open("GET","http://157.201.194.254/~ercanbracks/"+textFile,true);
+      document.getElementById("cityList").innerHTML="";
+      xmlhttp.send();
+    }
+
+    function loadPage()
+    {
+      if (window.XMLHttpRequest)    // Handle new and old browsers
+        xmlhttp = new XMLHttpRequest();
+      else
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+
+      // What to do with the returned data
+      xmlhttp.onreadystatechange=function()
+      {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+          document.getElementById("div2").innerHTML=xmlhttp.responseText;
+        }
+      }
+
+      xmlhttp.open("GET",document.getElementById("address").value,true);
+      document.getElementById("div2").innerHTML="";
+      xmlhttp.send();
+    }
+  </script>
+</head>
+<body onload="getList(document.getElementById('countryList').value);">
+  <h1>Kyle Atkinson's AJAX Demo</h1>
+  <hr/>
+  <div id="div1">The largest cities in:
+    <select id="countryList" onchange="getList(this.value);">
+      <option value="canada.txt">Canada</option>
+      <option value="mexico.txt">Mexico</option>
+      <option value="russia.txt">Russia</option>
+      <option value="usa.txt" selected="selected">The United States</option>
+    </select>
+    <div id="cityList"></div>
+  </div>
+  <hr/>
+  <form onsubmit="loadPage();return false;">
+    Enter a URL to load below:
+    <input type="text" id="address" size="70"></input>
+    <input type="submit" value="Load Page"></input>
+  </form>
+  <div id="div2">
+  </div>
+</body>
+</html>

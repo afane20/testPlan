@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='iso-8859-1' ?>
+<?xml-stylesheet type='text/xsl' href='assign11.xsl' ?>
+<surveyStats>
+	<count>12</count>
+	<question1>
+		<answer1>10</answer1>
+		<answer2>1</answer2>
+		<answer3>1</answer3>
+	</question1>
+	<question2>
+		<answer1>8</answer1>
+		<answer2>4</answer2>
+	</question2>
+	<question3>
+		<answer1>10</answer1>
+		<answer2>0</answer2>
+		<answer3>2</answer3>
+	</question3>
+	<question4>
+		<answer1>10</answer1>
+		<answer2>0</answer2>
+		<answer3>2</answer3>
+	</question4>
+	<question5>
+		<answer1>8</answer1>
+		<answer2>4</answer2>
+		<answer3>0</answer3>
+	</question5>
+</surveyStats>

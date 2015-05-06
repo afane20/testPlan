@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="assign08.xsl" ?>
+<bsa>
+	<council name="Grand Teton">
+		<troop troopNum="300" unitName="Evergreen">
+			<scout>
+				<firstName>Sam</firstName>
+				<lastName>Owen</lastName>
+				<phone>555-1212</phone>
+				<address>
+					<street>312 N. 12th E</street>
+					<city>Rexburg</city>
+					<state>ID</state>
+				</address>
+				<rank date-earned="2/1/2007">
+				Tenderfoot
+				</rank>
+				<meritbadge date-earned="2/1/2007">
+				First Aid
+				</meritbadge>
+				<meritbadge date-earned="2/15/2007">
+				Snowboarding
+				</meritbadge>
+				<meritbadge date-earned="1/20/2007">
+				Computer Programming
+				</meritbadge>
+			</scout>
+				<firstName>Frank</firstName>
+				<lastName>Piplinski</lastName>
+				<phone>867-5309</phone>
+				<address>
+					<street>12 S. 3 W</street>
+					<city>Rexburg</city>
+					<state>ID</state>
+				</address>
+			<scout>
+				<firstName>Fred</firstName>
+				<lastName>Flintstone</lastName>
+				<phone>555-5555</phone>
+				<address>
+					<street>555 S. 2nd E</street>
+					<city>Rexburg</city>
+					<state>ID</state>
+				</address>
+				<rank date-earned="9/24/2006" >
+				Eagle
+				</rank>
+				<meritbadge date-earned="2/1/2007">
+				First Aid
+				</meritbadge>
+				<meritbadge date-earned="2/15/2007">
+				Snowboarding
+				</meritbadge>
+			</scout>
+			<scout>
+				<firstName>Joe</firstName>
+				<lastName>Smith</lastName>
+				<phone>none</phone>
+				<address>
+					<street>middle of no where</street>
+					<city>Hibberd</city>
+					<state>ID</state>
+				</address>
+				<meritbadge date-earned="1/1/2006">
+				Swimming
+				</meritbadge>
+				<meritbadge date-earned="2/15/2007">
+				Snowboarding
+				</meritbadge>
+			</scout>
+			<scout>
+				<firstName>Jimmy</firstName>
+				<lastName>Corn</lastName>
+				<phone>444-4444</phone>
+				<address>
+					<street>44 N. 5 W. #4</street>
+					<city>Rexburg</city>
+					<state>ID</state>
+				</address>
+				<meritbadge date-earned="2/1/2007">
+				First Aid
+				</meritbadge>
+				<meritbadge date-earned="2/15/2007">
+				Snowboarding
+				</meritbadge>
+			</scout>
+		</troop>
+		<troop troopNum="275" unitName="Monteview">
+			<scout>
+				<firstName>Chad</firstName>
+				<lastName>Hansen</lastName>
+				<phone>111-1111</phone>
+				<address>
+					<street>44 Maple st.</street>
+					<city>Monteview</city>
+					<state>ID</state>
+				</address>
+				<rank date-earned="4/21/1998">
+				Life
+				</rank>
+				<meritbadge date-earned="8/12/2007">
+				Camping
+				</meritbadge>
+				<meritbadge date-earned="2/15/2007">
+				Climbing
+				</meritbadge>
+			</scout>
+			<scout>
+				<firstName>Chuck</firstName>
+				<lastName>Jones</lastName>
+				<phone>222-2222</phone>
+				<address>
+					<street>2 Elm St.</street>
+					<city>Monteview</city>
+					<state>ID</state>
+				</address>
+				<meritbadge date-earned="8/12/2007">
+				Camping
+				</meritbadge>
+			</scout>
+			<scout>
+				<firstName>Frank</firstName>
+				<lastName>Holdaway</lastName>
+				<phone>333-3333</phone>
+				<address>
+					<street>5 steven st.</street>
+					<city>Monteview</city>
+					<state>ID</state>
+				</address>
+				<meritbadge date-earned="2/15/2007">
+				Climbing
+				</meritbadge>
+			</scout>
+			<scout>
+				<firstName>Kodi</firstName>
+				<lastName>Jones</lastName>
+				<phone>888-8888</phone>
+				<address>
+					<street>5 5th street</street>
+					<city>Monteview</city>
+					<state>ID</state>
+				</address>
+				<rank date-earned="11/5/2006" >
+				Eagle
+				</rank>
+				<meritbadge date-earned="8/12/2007">
+				Camping
+				</meritbadge>
+				<meritbadge date-earned="2/15/2007">
+				Climbing
+				</meritbadge>
+			</scout>
+			<scout>
+				<firstName>Cody</firstName>
+				<lastName>Allen</lastName>
+				<phone>999-9999</phone>
+				<address>
+					<street>6 6th st.</street>
+					<city>Monteview</city>
+					<state>ID</state>
+				</address>
+				<rank date-earned="2/12/2007" >
+				Eagle
+				</rank>
+				<rank date-earned="12/1/2006" >
+				Life
+				</rank>
+				<meritbadge date-earned="3/1/2006">
+				First Aid
+				</meritbadge>
+				<meritbadge date-earned="12/15/2006">
+				Snowboarding
+				</meritbadge>
+				<meritbadge date-earned="8/12/2007">
+				Camping
+				</meritbadge>
+				<meritbadge date-earned="2/15/2007">
+				Climbing
+				</meritbadge>
+			</scout>
+		</troop>
+	</council>
+</bsa>

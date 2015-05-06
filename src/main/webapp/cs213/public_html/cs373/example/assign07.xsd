@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		  targetNamespace="assign07"
+		  xmlns="assign07"
+		  elementFormDefault="qualified">
+	
+	<xs:attribute name="date-earned" type="xs:date" />
+	
+	<xs:element name="address">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="street" type="xs:string" />
+				<xs:element name="city" type="xs:string" />
+				<xs:element name="state" type="xs:string" />
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="scout">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="firstName" type="xs:string" />
+				<xs:element name="lastName" type="xs:string" />
+				<xs:element name="phone" type="xs:string" />
+				<xs:element ref="address" />
+				<xs:element name="rank" type="xs:string" minOccurs="0" maxOccurs="unbounded" >
+					<xs:complexType>
+						<xs:attribute ref="date-earned" use="required" />
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="meritbadge" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute ref="date-earned" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="troop" >
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="scout" maxOccurs="unbounded" />
+			</xs:sequence>
+			<xs:attribute name="troopNum" type="xs:integer" use="required" />
+			<xs:attribute name="unitName" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="council">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="troop" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="bsa">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="council" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,236 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml">
+  <head>
+    <title> Ian Karlinsey's Assignment #5: Mortgage Calculator 
+    </title>
+    <base href="http://157.201.194.254/~ercanbracks/cs313/w09/ian/" />    
+    <link rel = "stylesheet" type = "text/css"  href="assign05.css" />
+
+    <script type="text/javascript" src="assign05.js">
+    </script>
+  </head>
+
+  <body onload="sendCommand('update');">
+   <div style="text-align:left">
+
+   <table border="0">
+     <colgroup>
+       <col class="colOne" />
+       <col class="colTwo" />
+       <col width="55" />
+       <col class="colFour" />
+       <col class="colFive" />
+       <col class="colSix" />
+       <col class="colSeven" />
+       <col class="colEight" />
+       <col class="colNine" />
+       <col class="colTen" />
+       <col class="colEleven" />
+
+
+
+     </colgroup>
+
+   <tr>
+      <td>
+        <input class="colOne" type="button" value="ID" 
+           onClick="sortByColumn('0');" />
+      </td>
+      <td>
+        <input class="colTwo" type="button" value="First Name"
+           onClick="sortByColumn('1');" />
+      </td>
+      <td>
+        <input class="colThree" type="button" value="Last Name"  
+           onClick="sortByColumn('2');" />
+      </td>
+      <td>
+        <input class="colFour" type="button" value="Major" 
+           onClick="sortByColumn('3');" />          
+      </td>
+      <td>
+        <input class="colFive" type="button" value="BirthDate" 
+           onClick="sortByColumn('4');" />
+      </td>         
+      <td>
+        <input class="colSix" type="button" value="Gender" 
+           onClick="sortByColumn('5');" />
+      </td>
+      <td>
+        <input class="colSeven" type="button" value="City" 
+           onClick="sortByColumn('6');" />
+      </td>
+      <td>
+        <input class="colEight" type="button" value="State" 
+           onClick="sortByColumn('7');" /> 
+      </td>
+   </tr>
+   <tr>
+     <td rowspan="13" colspan="8"> 
+      <select size="25"  style="font-size: 14px;width:640px;font-family:Courier" id="TableList" name="TableList"
+        onChange="getColumns();">
+      </select>
+     </td>
+   </tr>
+   <tr>
+     <td style="text-align:right">
+       First Name:
+     </td>
+     <td> 
+       <input type="text" name="txtFirstName" id="txtFirstName" size="20" maxlength="20"
+           class="white" onkeypress="this.className='white'; return keypressLettersSpaceOnly(event);">
+     </td>
+     <td> 
+       <input class="killButton" type="button" value="X" onClick="clearTB('txtFirstName');" />
+     </td> 
+
+   </tr>
+   <tr>
+     <td style="text-align:right">
+       Last Name:
+     </td>
+     <td> 
+       <input type="text" name="txtLastName" id="txtLastName" size="20" maxlength="20"
+           class="white" onkeypress="this.className='white'; return keypressLettersSpaceOnly(event);" >
+     </td>
+     <td>
+        <input class="killButton" type="button" value="X" onClick="clearTB('txtLastName');" />
+     </td> 
+
+   </tr>
+   <tr>
+     <td style="text-align:right">
+       Major:
+     </td>
+     <td> 
+       <input type="text" name="txtMajor" id="txtMajor" size="3"
+          class="white" onkeypress="this.className='white'; return keypressNumbersOnly(event);" maxlength="3"
+          onkeyup="autoTabBackward(event, 'txtLastName');"
+          onkeydown="autoTabForward(event, 'txtBirthMonth');" />
+
+     </td>
+     <td>
+        <input class="killButton" type="button" value="X" onClick="clearTB('txtMajor');" />
+     </td> 
+   </tr>
+   <tr>
+     <td style="text-align:right">
+       BirthDate:         
+     </td>
+     <td> 
+       <input type="text" name="txtBirthMonth" id="txtBirthMonth" size="2" maxlength="2"
+          class="white" onkeypress="this.className='white'; return keypressNumbersOnly(event);" 
+          onkeyup="autoTabBackward(event, 'txtMajor');"
+          onkeydown="autoTabForward(event, 'txtBirthDay');" />/
+
+       <input type="text" name="txtBirthDay" id="txtBirthDay" size="2" maxlength="2"
+          class="white" 
+          onkeypress="this.className='white'; return keypressNumbersOnly(event);" 
+          onkeyup="autoTabBackward(event, 'txtBirthMonth');"
+          onkeydown="autoTabForward(event, 'txtBirthYear');" 
+       />/
+       <input type="text" name="txtBirthYear" id="txtBirthYear" size="4" maxlength="4"
+          class="white" onkeypress="this.className='white'; return keypressNumbersOnly(event);"
+          onkeyup="autoTabBackward(event, 'txtBirthDay');"
+          onkeydown="autoTabForward(event, 'txtGender');" />
+     </td>
+     <td>
+     </td> 
+   </tr>
+   <tr>
+     <td />
+     <td class="subheading">
+     mm / dd / yyyy
+     </td>
+
+   </tr>
+   <tr>
+     <td style="text-align:right">
+       Gender:
+     </td>
+     <td> 
+       <input type="text" name="txtGender" id="txtGender" maxlength="1"
+       class="white" onkeypress="this.className='white'; return keypressGender(event);" size="2" 
+          onkeyup="autoTabBackward(event, 'txtBirthYear');"
+          onkeydown="autoTabForward(event, 'txtCity');" />
+     </td>
+     <td>
+        <input class="killButton" type="button" value="X" onClick="clearTB('txtGender');" />
+     </td> 
+   </tr>
+   <tr>
+     <td style="text-align:right">
+       Home City:
+     </td>
+     <td> 
+       <input type="text" name="txtCity" id="txtCity" size="20" maxlength="20"
+          class="white" onkeypress="this.className='white'; return keypressLettersSpaceOnly(event);">
+     </td>
+     <td>
+        <input class="killButton" type="button" value="X" onClick="clearTB('txtCity');" />
+     </td> 
+   </tr>
+   <tr>
+     <td style="text-align:right">
+       Home State:
+     </td>
+     <td> 
+       <input type="text" name="txtState" id="txtState" size="2" maxlength="2"
+          class="white" onkeypress="this.className='white'; return keypressLettersOnly(event);" >
+     </td>
+     <td>
+        <input class="killButton" type="button" value="X" onClick="clearTB('txtState');" />
+     </td> 
+   </tr>
+
+   <tr>
+      <td>
+        <input class="commandButton" type="button" value="Update" 
+           onclick="sendCommand('update'); clearAllTB();" 
+           id="btnUpdate" name="btnUpdate" />
+
+      </td>
+      <td>
+        <input class="commandButton" type="button" value="Clear" 
+        onclick="clearFields();" id="btnClear" name="btnClear" />
+        <input class="commandButton" type="button" value="Remove" 
+           name="btnRemove" id="btnRemove" onclick="removeRow();" />
+      </td>
+   </tr>
+   <tr>
+      <td>
+        <input class="commandButton" type="button" value="Add"  
+           id="btnAdd" name="btnAdd" onclick="insertRow();" />
+      </td>
+      <td>
+        <input class="commandButton" type="button" value="Modify"  
+           id="btnModify" name="btnModify" onclick="modifyRow();" />
+        <input class="colNine" type="button" value="Search" id="btnSearch" 
+           name="btnSearch" onclick="search();" disabled />
+      </td>
+   </tr>
+   <tr>
+     <td colspan = "3">
+        <p id="errorMsg" name="errorMsg" class="errorMsg">
+           Please fill in all fields!
+        </p>
+     </td>
+   </tr>
+   <tr>
+     <td />
+   </tr>
+   <tr>
+     <td />
+   </tr>
+  
+   <tr>
+      <td />
+
+      </tr>
+   </table>    
+     
+   </div>
+  </body>
+</html>

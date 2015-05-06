@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteBase /~ercanbracks/www-mvc
+RewriteRule ^([^\.]*)$ index.php [QSA]

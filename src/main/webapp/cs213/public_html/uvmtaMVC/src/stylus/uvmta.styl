@@ -1,0 +1,404 @@
+reset-link()
+
+html
+   margin 0px
+   padding 0px
+   box-sizing border-box
+
+*
+   box-sizing: inherit;
+
+body
+   min-width 400px
+
+
+@font-face 
+    font-family: 'HelveticaNeueThin';
+    src: url('helveticaneuethin-webfont.eot');
+    src: url('helveticaneuethin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('helveticaneuethin-webfont.woff2') format('woff2'),
+         url('helveticaneuethin-webfont.woff') format('woff'),
+         url('helveticaneuethin-webfont.ttf') format('truetype'),
+         url('helveticaneuethin-webfont.svg#helvetica_neuethin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+body
+   font-family HelveticaNeueThin
+   cf()
+   margin 0
+
+button, input[type='button'], input[type='submit']
+   button(accent)
+
+a:link
+a:visited
+a:hover
+a:active
+   text-decoration none;
+   
+.center
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+
+.login
+   width 220px
+   margin-left 110px
+   input[type='submit']
+      float right
+#header
+   height 102px
+#topbar
+   fs(120%)
+   color white
+   bold()
+   background accent
+   border-bottom 1px solid darken(bgcolor,60)
+   group()
+   +below(smallScreen)
+      height:auto
+   section
+      background accent
+      padding 5px 20px
+      height 34px
+      group()
+      +below(smallScreen)
+         text-align center
+         stack()
+   #pageTitle
+      span(2/5)
+      +below(smallScreen)
+         text-align center
+         stack()
+   #profile
+      +below(smallScreen)
+         stack()
+         text-align center
+      span(3/5)
+      italic()
+      fs(90%)
+      text-align right
+      a
+         fs(90%)
+         color white
+         padding 0 10px
+         border 2px solid white
+         border-radius 5px
+         text-align center
+         &:hover
+            background orange
+
+#search
+   span(2/8)
+   input
+      padding 0 20px
+      height 25px
+      border 1px solid lighten(accent, 20)
+      border-top-left-radius 5px
+      border-bottom-left-radius 5px
+      width 100%
+      margin-top 10px      
+     
+#menu
+   a
+      span(1/7, cycle:7)
+      fs(75%)
+      padding-top 10px
+      height 40px
+      border-top brdr
+      border-bottom brdr
+      border-right brdr
+      text-align center
+      background bgcolor
+      background linear-gradient(bgcolor, white, bgcolor)
+      +below(smallScreen)
+         bold()
+         fs(120%)
+         height 80px
+         span(1/3, cycle:3)
+         text-align center
+         
+   a:first-child
+      border-left brdr
+      +below(smallScreen)
+         border-top brdr
+   a:last-child
+      +below(smallScreen)
+         border-right brdr
+.testDrag
+   width 100px
+   height 100px
+   background pink
+.editBox
+   cursor: url(https://mail.google.com/mail/images/2/openhand.cur) 8 8, move;
+   z-index 2
+   display none
+   background accent
+   position fixed
+   top 100px
+   padding 20px 20px
+   padding-top 10px
+   border-radius 15px
+   border brdr
+   margin auto
+   box-shadow 5px 5px 5px 5px darken(bgcolor, 50)
+   width 500px
+   height auto
+   text-align left
+   group()
+   &:active
+      cursor: url(https://mail.google.com/mail/images/2/closedhand.cur) 8 8, move;
+   .container
+      group()
+   h2
+      margin 0
+      color white
+      background none
+      cursor: inherit
+   hr
+      margin 10 0
+      width 100%
+      cursor: inherit
+   label
+      bold()
+      color white
+      display inline-block
+      text-align left
+      cursor: inherit
+   label, input, select, textarea, button
+      col(1/2, cycle:2, gutter:2)
+   option
+       padding 0px 83px 0px 1px
+   button, input[type='button']
+      button(white)
+      margin-top 20px
+      text-align center
+   img
+      cursor: pointer
+      position absolute
+      top 10px
+      right 10px
+      width 20px
+      
+.menuSelected
+   background accent !important
+   color white !important
+   font-weight bold !important 
+   border 0 !important
+   border-radius 0 !important
+
+#hideDiv
+   display: none
+   
+.flex
+   display: -webkit-flex;
+   display: -ms-flexbox;
+   display: flex;
+   width 100%
+   +below(smallScreen)
+      stack()
+
+.tableData
+   width 100%
+   border-spacing 0
+   boarder-collapse collapse
+   text-align center
+   tbody, thead
+      display block
+      width 100%
+   tbody
+      overflow-y auto !important
+   td, tr
+      &:hover
+         background lighten(accent, 20)
+   tr
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      cursor: pointer;
+   tr > * {
+      width: 20%;
+      display: block; } 
+   td
+      padding-top 5px
+      padding-bottom 5px
+      text-align center
+   th
+      padding 10px 0
+      border-right brdr
+      transition .1s
+      background: accent
+      bold()
+      color white
+      &:hover
+         background lighten(accent,20)
+      &:active
+         border 0
+         position relative
+         top 1px
+         background accent
+         box-shadow inset 0 0 5px #000000
+
+.altRow
+   background hdcolor
+   
+#addStudent
+   max-width 80%
+   margin-left auto
+   margin-right auto
+   
+hr 
+   margin-top 40px
+   margin-bottom 40px
+   
+label
+   width 130px
+   display inline-block
+
+.smallTd
+   width:50px !important
+     
+.tile
+   margin 30px
+   width 425px
+   height 365px
+   float left
+   text-align center
+   background darken(bgcolor,20)
+   padding 10px
+   
+   group()
+   button
+      button(white)
+      width 177px
+      margin 5px 0 
+      float left 
+   header
+      margin 0
+      width 100%
+      padding 25px
+      background accent
+      color white
+      hr
+         padding 0px
+         margin 0px
+      h2
+         margin 0
+         padding 0
+         color white
+         background 0
+   section
+      span(1/2)
+      text-align center
+      background bgcolor
+      padding-top 10px
+   footer
+      group()
+      margin-top 20px
+      background white
+      margin-bottom 5px
+   img
+      width 25px
+      float right
+      position relative
+      top 5px
+      right 20px
+      
+#myProfile
+   border 1px solid black
+   width 360px
+   margin-left auto
+   margin-right auto
+   background hdcolor
+   box-shadow 0px 0px 8px #444
+   border-radius 5px
+   padding 0
+   margin-top 0
+   header
+      height 40px
+      margin 0
+      padding-left 10px
+      background accent
+      color white
+      h2
+         margin 0
+   label
+      bold()
+      color accent
+      float left
+   section
+      padding 10px
+      span
+         color accent
+         bold()
+   footer
+      height 30px
+      background #444
+      span
+         padding 2px 5px
+         color white
+         border-left brdr
+         float right
+      
+.resourceHeader
+   ul
+      li
+         span(1/9) !important
+      
+.active
+   header
+      background green !important
+
+.activeTag
+   bold()
+   margin 0
+   padding 0
+   float right
+   background lighten(green, 20)
+
+.regFee
+   position absolute
+   top 100px
+   right 0
+   left 0
+
+.clickable
+   cursor pointer
+   
+.scrollable
+   overflow auto !important
+   
+#pwdForm
+   background hdcolor
+   box-shadow 5px 5px 5px 5px darken(bgcolor, 50)
+   border-radius 10px
+   padding 20px
+   width 400px
+   border brdr
+   position fixed
+   z-index 3
+   display none
+   
+.alertUser
+   text-align center
+   z-index 5
+   position fixed
+   width 400px
+   height 150px
+   top 200px
+   margin auto
+   background white
+   fs(120%)
+   border 2px solid red
+   italic()
+   bottom 0
+   left 0
+   right 0
+   border-radius 10px
+   box-shadow 5px 5px 5px 5px darken(bgcolor, 50)
+   button
+      button(accent, large);
+      margin 20px
+   

@@ -1,0 +1,177 @@
+1,,Unknown,,,,,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,unknown,N,0.00,0.00,N,N
+2,Stephen,Allen,A10,164 Rosewood Dr.,Rexburg,,83440,356-5671,allens@byui.edu,33a54ef6bcc4f915f47564dbac47a2f13cd40217,stephena,Y,0.00,0.00,N,N
+3,Susan,Allen,A4,646 Dell Dr.,Rexburg,,83440,201-4599,suzandjosha@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,susana,Y,0.00,0.00,N,N
+4,Yvonne,Allen,A1,389 Jupiter Hills Dr.,Idaho Falls, I,83401,552-5200,yvo2503@yahoo.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,yvonnea,Y,0.00,0.00,N,N
+5,Janis,Allison,A12,405 W. 4th S.,Rexburg, I,83440,356-0884,melodicjd@live.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,janisa,Y,0.00,0.00,N,N
+6,Kerri,Andersen,A3,439 S. 3rd E.,Rexburg, I,83440,359-1611,theandersen8@msn.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,Kerria,Y,0.00,0.00,N,N
+7,Kerry,Anderson,A15,4519 Cedar Butte,Rexburg, I,83440,356-5955,kerry.badgermom@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,Kerrya,Y,0.00,0.00,N,N
+8,Annie,Bailey,B27,44 S 2nd E #24,Rexburg, I,83440,806-787-9957,anniebailey7@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,annieb,Y,0.00,0.00,N,N
+9,Ann,Barnes,B14,2112 W. 3800 S.,Rexburg, I,83440,356-8495,barnes.annb@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,annb,Y,0.00,0.00,N,N
+10,Karen,Beagley,B35,1809 Morning View Dr.,Rexburg, I,83440,656-9903,beagleyhome@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,karenb,Y,0.00,0.00,N,N
+11,Gaylynn,Bean,B15,3041 N. Cottonwood ,Rexburg, I,83440,356-9321,beanga@byui.edu,33a54ef6bcc4f915f47564dbac47a2f13cd40217,gaylynnb,Y,0.00,0.00,N,N
+12,Vanessa,Beard,B16,1867 Salem Pines Ln.,Rexburg, I,83440,201-2228,vanessajan@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,venessab,Y,0.00,0.00,N,N
+13,Bethene,Birch,B17,4072 E. 356 N.,Rigby, I,83442,745-6445,kelbybeth@msn.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,betheneb,Y,0.00,0.00,N,N
+14,Andra,Bitter,B30,2215 N. 800 E.,Monteview,ID,83435,2604-4641,andra.bitter@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,andrab,Y,0.00,0.00,N,N
+15,Marsha,Bjornn,B7,540 Gemini,Rexburg, I,83440,356-9350,marshabjornn@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,marshab,Y,0.00,0.00,N,N
+16,Janita,Black,B8,936 W 14th N,Rexburg, I,83440,356-4106,kimandjan@hotmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,janb,Y,0.00,0.00,N,N
+17,Kristi,Blackham,B38,4584 Juniper Ave,Rexburg, I,83440,390-0580,kristi7lynn@hotmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,kristib,Y,0.00,0.00,N,N
+18,Carol,Blanchard,B41,3855 W. Mnt. View,Rexburg, I,83440,356-3439,blanchardpack@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,carolb,Y,0.00,0.00,N,N
+19,Vonnie Lue,Broulim,B10,451 N. 3900 E.,Rigby, I,83442,745-6789,vlbroulim@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,vonnieb,Y,0.00,0.00,N,N
+20,Nori,Brower,B42,1384 N 4000 W,Rexburg,,83440,359-2133,browern@byui.edu,33a54ef6bcc4f915f47564dbac47a2f13cd40217,norib,Y,0.00,0.00,N,N
+21,Annie,Brown,B40,520 East 4th South,Rexburg,ID,83440,403-9168,dellmail@cableone.net,33a54ef6bcc4f915f47564dbac47a2f13cd40217,anniebr,Y,0.00,0.00,N,N
+22,Lindsey,Brown,B18,310 Mark Ave.,Rexburg, I,83440,220-1257,lindsey514@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,lindseyb,Y,0.00,0.00,N,N
+23,Susan,Brown,B9,4141 N. 6000 W.,Rexburg, I,83440,356-4550,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,susanb,Y,0.00,0.00,N,N
+24,Kathryn,Butikofer,B44,3070 N. 135 E.,Rexburg, I,83440,356-4126,reesbutikofer@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,kathrynb,Y,0.00,0.00,N,N
+25,Amy,Christean,C8,1204 N 3000 E,Sugar City, I,83448,\N,achristean@hotmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,amyc,Y,0.00,0.00,N,N
+26,Lindsay,Clark,C9,1799 W. 4200 N.,Rexburg,,83440,403-5399,clarlin5@isu.edu,33a54ef6bcc4f915f47564dbac47a2f13cd40217,lindsayc,Y,0.00,0.00,N,N
+27,Paula,Clark,C15,1799 W. 4200 N.,Rexburg, I,83440,356-8221,clarkp@byui.edu,33a54ef6bcc4f915f47564dbac47a2f13cd40217,paulac,Y,0.00,0.00,N,N
+28,Chantal,Cobia,C11,P.O. Box 264,Sugar City, I,83448,359-1442,chantal.cobia@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,chantalc,Y,0.00,0.00,N,N
+29,Bonnie,Cochran,C10,522 Linden Ave.,Rexburg, I,83440,709-6927,bonnie.cochran@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,bonniec,Y,0.00,0.00,N,N
+30,Amber,Coglianese,,,,,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,amberc,Y,0.00,0.00,N,N
+31,Cynthia,Coletti,C2,313 Tall Ave.,Rigby, I,83442,520-5056,singingcindy@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,cynthiac,Y,0.00,0.00,N,N
+32,Kristi,Conover,C12,175 N 3400 E,Rigby,,83442,313-0552,dkconoverfamily@yahoo.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,kristic,Y,0.00,0.00,N,N
+33,Jody,Cottle,C1,4180 E. 600 N.,Rigby, I,83442,745-9001,jjjalc9001@yahoo.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,jodyc,Y,0.00,0.00,N,N
+34,Susan,Crandall,C50,3612 S Butte Rd,Menan, I,83434,754-8536,crandalls.domicile@yahoo.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,susanc,Y,0.00,0.00,N,N
+35,Toni,Crapo,C4,275 N. 7th E.,St. Anthony, I,83445,624-7879,tonicrapo@msn.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,tonic,Y,0.00,0.00,N,N
+36,Tammee,Davenport,D3,425 N. 1st W. ,St. Anthony, I,83445,624-4326 c:3,delrayd@fretel.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,tammeed,Y,0.00,0.00,N,N
+37,Ann,Dexter,D2,150 S. 12th W.,Rexburg, I,83440,356-7710,dexterfam@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,annd,Y,0.00,0.00,N,N
+38,Chelsea,Dexter,D8,150 S. 12th W.,Rexburg,,83440,356-7710,chelseadexter1@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,chelsead,Y,0.00,0.00,N,N
+39,Heidi,Dexter,D7,150 S. 12th W.,Rexburg, I,83440,356-7710,heidi.dexter007@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,heidid,Y,0.00,0.00,N,N
+40,Jennifer,Dorman,D15,653 Autumn Dr.,Rexburg,,83440,356-6221,dormanators@yahoo.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,jeffiferd,Y,0.00,0.00,N,N
+41,Emily,Durfee,D18,578 S. Golden Willow Dr.,Rexburg, I,83440,656-0922,randedurfee@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,emilyd,Y,0.00,0.00,N,N
+42,Debbie,Ellsworth,E8,599 N. 3400 E. ,Lewisville, I,83431,754-4266,debsoaps@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,debbiee,Y,0.00,0.00,N,N
+43,Gaye Ann,Ercanbrack,E4,117 E. Stoddard Ln.,Sugar City,ID,83448,356-6998,gayeercanbrack@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,gayee,Y,0.00,0.00,Y,Y
+44,Cheme,Erickson,E1,316 Jill Dr.,Rexburg,,83440,317-2376,cheme.erickson@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,chemee,Y,0.00,0.00,N,N
+45,Elvira,Erickson,E2,5852 S. 2000 W.,Rexburg, I,83440,356-6425,bentnailranch@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,elvirae,Y,0.00,0.00,N,N
+46,Susan,Erickson,E6,181 E. 8000 S.,Rexburg, I,83440,932-5802,normerickson@q.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,susane,Y,0.00,0.00,N,N
+47,KaraLyn,Furgeson,F12,545 Maple Drive,Rexburg,ID,83404,359-6126,karalyn@mountainsandstrings.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,karalynf,Y,0.00,0.00,N,N
+48,Tammy,Furness,F5,1302 N. 1400 E.,Terreton,,83450,663-4617,tamfurness@yahoo.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,tammyf,Y,0.00,0.00,N,N
+49,Vicky,Furness,F4,P.O. Box 33,Sugar City, I,83448,356-3970,dewey.furness@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,vickyf,Y,0.00,0.00,N,N
+50,Trish,Gannaway,G12,2479 N. 4000 W.,Rexburg, I,83440,356-3671,trishgann@msn.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,trishg,Y,0.00,0.00,N,N
+51,Alicia,Garcia,G20,451 boulder street,Rigby,ID,83442,916-799-9897,harpbyalicia@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,aliciag,Y,0.00,0.00,N,N
+52,Marilyn,Gee,G1,2252 E. Hwy 33,Sugar City, I,83448,359-1583,geej@byui.edu,33a54ef6bcc4f915f47564dbac47a2f13cd40217,marilyng,Y,0.00,0.00,N,N
+53,Sally,Geisler,G4,484 N. 4154 E.,Rigby, I,83442,745-6798,ksgeisler@msn.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,sallyg,Y,0.00,0.00,N,N
+54,Julie,Gneiting,G8,566 N. 3400 E.,Lewisville, I,83431,754-4150,juliegneiting@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,julieg,Y,0.00,0.00,N,N
+55,Nannette,Hall,H19,1802 E 1500 N,Terreton, I,83450,589-5690,kaidhall@hotmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,nannetteh,Y,0.00,0.00,N,N
+56,Cheryl,Hansen,H3,430 Terra Vista Dr.,Rexburg, I,83440,356-5084,rhansen@cableone.net,33a54ef6bcc4f915f47564dbac47a2f13cd40217,cherylh,Y,0.00,0.00,N,N
+57,Jessica,Hansen,H9,575 Countryside Ave.,Rexburg, I,83440,356-3851,jessw91788@hotmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,jessicah,Y,0.00,0.00,N,N
+58,Lisa,Hardyman,H44,134 S. 3rd W,Rigby, I,83442,745-1221,hardymanlmnop@cableone.net,33a54ef6bcc4f915f47564dbac47a2f13cd40217,lisah,Y,0.00,0.00,N,N
+59,Michele,Harmon,H35,3836 E. 392 N.,Rigby, I,83442,745-6872,momfiredude@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,micheleh,Y,0.00,0.00,N,N
+60,Diana,Hibbard,H5,1865 W 5350 S,Rexburg, I,83440,656-0382,dianahibbard@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,dianah,Y,0.00,0.00,N,N
+61,Jeri,Hill,H8,2336 W. 5200 S.,Rexburg, I,83440,356-9562,jerihill6@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,jerih,Y,0.00,0.00,N,N
+62,Charlotte,Hillam,H7,1342 N. 3650 E.,Ashton, I,83420,652-3605,dchillam@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,charlotteh,Y,0.00,0.00,N,N
+63,Brittany,Hilton,H23,486 E 1st N,Rexburg,,83440,412-209-8503,summerdawn88@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,brittanyh,Y,0.00,0.00,N,N
+64,Julie Ann,Hinck,H33,291 Randy Dr.,Rexburg, I,83440,356-6807,djhinck@yahoo.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,julieh,Y,0.00,0.00,N,N
+65,Kelsey,Hirschi,H34,1763 N 3000 W,Rexburg,,83440,206-4578,kmhirschi@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,kelseyh,Y,0.00,0.00,N,N
+66,Monica,Hobley,H22,4098 E. 400 N.,Rigby,ID,83442,705-6860,mamahobbs@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,monicah,Y,0.00,0.00,N,N
+67,Karlee,Hokanson,H2,311 N. 2nd W,Rexburg, I,83440,356-6650,khhokanson@cableone.net,33a54ef6bcc4f915f47564dbac47a2f13cd40217,karleeh,Y,0.00,0.00,N,N
+68,Lori,Holden,H6,5930 E. Middlefork Rd.,Ammon, I,83406,542-6585,lgirlscrapnrun@yahoo.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,lorih,Y,0.00,0.00,N,N
+69,Rosemary,Jenkins,J10,4429 E. 336 North,Rigby, I,83442,351-4222,rjhappymom@yahoo.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,rosemaryj,Y,0.00,0.00,N,N
+70,Shellie,Jenkins,J5,1175 S. 5th W.,Rexburg, I,83440,313-1484,shelliejenkins@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,shelliej,Y,0.00,0.00,N,N
+71,Joyce,Jensen,J3,2240 S. HWY 191,Rexburg, I,83440,356-8195,madaboutmusic3@msn.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,joycej,Y,0.00,0.00,N,N
+72,Nida,Jensen,,73 Highway 28,Salmon,ID,83467,,nidabird@hotmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,nidaj,Y,0.00,0.00,N,N
+73,Steffanie,Jensen,J98,3821 South 3300 West,Rexburg, I,83440,356-4593,gt2lvit@msn.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,steffaniej,Y,0.00,0.00,N,N
+74,Jann,Johnson,J12,449 Rolling Hills Dr.,Rexburg, I,83440,359-9432,jann.david@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,jannj,Y,0.00,0.00,N,N
+75,Lauri,Johnson,J15,491 N 4154 E,Rigby,,83442,745-5959,lauripjohnson@bbbuilders.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,laurij,Y,0.00,0.00,N,N
+76,Paula,Johnson,J4,23760 N Oasis Blvd,Florence,AZ,85132,709-2756,princesspaula68@yahoo.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,paulaj,Y,0.00,0.00,N,N
+77,Brent,Jones,J2,930 Hillview Dr.,Rexburg, I,83440,356-7486,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,brentj,Y,0.00,0.00,N,N
+78,Marybeth,Jones,J7,930 Hillview Dr.,Rexburg, I,83440,356-7486,marybeth.r.jones@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,marybethj,Y,0.00,0.00,N,N
+79,Kenna,Kearsley,K6,P.O. Box 341,Victor, I,83455,787-2256,dlkearsley@silverstar.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,kennak,Y,0.00,0.00,N,N
+80,Michele,Kennedy,K9,2335 Ptarmigan Way,Idaho Falls,,83401,552-5661,michelekennedy@cableone.net,33a54ef6bcc4f915f47564dbac47a2f13cd40217,michelek,Y,0.00,0.00,N,N
+81,Eunice,Kilpatrick,K1,5568 S. 2000 W.,Rexburg, I,83440,356-6758,ekilpatrick@ririeschools.org,33a54ef6bcc4f915f47564dbac47a2f13cd40217,enuicek,Y,0.00,0.00,N,N
+82,Kimberly,Kincaid,K10,P.O. Box 336,Victor,,83455,787-2090,rks@ida.net,33a54ef6bcc4f915f47564dbac47a2f13cd40217,kimberlyk,Y,0.00,0.00,N,N
+83,Karna,Kunz,K7,827 Ensign Dr.,Idaho Falls, I,83406,201-8798,karnabkunz@hotmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,karnak,Y,0.00,0.00,N,N
+84,Susie,Lacy,L10,227 Marianne Dr.,Rexburg,,83440,356-4763,psalm60v4@juno.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,susiel,Y,0.00,0.00,N,N
+85,Denae,Love,L15,80 N. 5th W.,Rexburg,ID,83440,503-910-7307,denaemarielove@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,danael,Y,0.00,0.00,N,N
+86,David,Love ,L11,80 N. 5th W.,Rexburg, I,83440,270-0446,davidmatthewlove@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,davidl,Y,0.00,0.00,N,N
+87,Reta,Luke,L2,P.O. Box 183,Teton, I,83451,458-4169,tmlukefamily@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,retal,Y,0.00,0.00,N,N
+88,Julie,Lundin,L1,395 N. 3000 W.,Rexburg, I,83440,356-3880,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,juliel,Y,0.00,0.00,N,N
+89,Melanie,Malm,M1,323 E 2nd N,Rexburg, I,83440,604-1579,melaniemalm@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,melaniema,Y,0.00,0.00,N,N
+90,Kathryn,Mclain,M97,113 N. 3800 E.,Rigby, I,83442,745-6412,mclakath@isu.edu,33a54ef6bcc4f915f47564dbac47a2f13cd40217,kathrynm,Y,0.00,0.00,N,N
+91,Bonnie,Messinger,M35,1287 N 1130 E.,Shelley,ID,83274,346-3035,\N,33a54ef6bcc4f915f47564dbac47a2f13cd40217,bonniem,Y,0.00,0.00,N,N
+92,Brooke,Miller,M26,131 E. Main--Parker,St. Anthony, I,83445,624-1211,brooky000@juno.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,brookem,Y,0.00,0.00,N,N
+93,Holly,Miller,M7,935 S 7th E,Sugar City, I,83448,359-0762,sugarite@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,hollym,Y,0.00,0.00,N,N
+94,Kerri,Mills,M12,5298 W. 3800 S.,Rexburg, I,83440,390-7037,kerrimills@yahoo.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,kerrim,Y,0.00,0.00,N,N
+95,Lisa,Miyasaki,M5,544 W. Main,Rexburg, I,83440,709-7651,ikasayim@juno.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,lisami,Y,0.00,0.00,N,N
+96,Marinda,Morgan,M16,1117 Newgate Drive,Idaho Falls,,83406,419-7955,marinda_morgan@ymail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,marindam,Y,0.00,0.00,N,N
+97,LoriAnn,Morris,M3,P.O. Box 563,Sugar City, I,83448,356-9208,morrisl@byui.edu,33a54ef6bcc4f915f47564dbac47a2f13cd40217,loriannm,Y,0.00,0.00,N,N
+98,Natalie,Morris,M8,PO Box 563,Sugar City, I,83448,403-6017,xxpianoluverxx@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,nataliem,Y,0.00,0.00,N,N
+99,Verla,Moss,M18,P.O. Box 356,Sugar City, I,83448,356-6432,verla_moss@q.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,verlam,Y,0.00,0.00,N,N
+100,Jessica,Murdock,M30,390 Pevero Dr.,Idaho Falls,ID,83401,970-673-5359,jessimurdock@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,jessicam,Y,0.00,0.00,N,N
+101,Julie,Murri,M6,510 N. 2600 E.,St. Anthony, I,83445,201-6353,murribr@byui.edu,33a54ef6bcc4f915f47564dbac47a2f13cd40217,juliem,Y,0.00,0.00,N,N
+102,Jodee,Nelson,N5,509 W. 7800 S. ,Rexburg,,83440,359-8125, jasjodnelson@q.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,jodeen,Y,0.00,0.00,N,N
+103,Kathleen,Nelson,N2,52 Ash Ave,Rexburg, I,83440,356-0997,nelson_theatre@netzero.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,kathleenn,Y,0.00,0.00,N,N
+104,Nicole,Nielson,N7,191 N 3806 E,Rigby, I,83442,540-1263,nix_4ever@hotmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,nicolen,Y,0.00,0.00,N,N
+105,Jean,Oakley,O3,PO Box 229,Driggs, I,83422,787-1632/705,sagespots@ida.net,33a54ef6bcc4f915f47564dbac47a2f13cd40217,jeano,Y,0.00,0.00,N,N
+106,Lisa,Orme,O4,344 E 3rd N,St. Anthony, I,83440,569-5459,LisaOrme@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,lisao,Y,0.00,0.00,Y,Y
+107,Shari,Pack,P1,424 S 5th E,Rexburg, I,83440,356-4779,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,sharip,Y,0.00,0.00,N,N
+108,Shannon,Packer,P10,552 Harvest Dr.,Rexburg, I,83440,356-3112,shannon@rexburgfamily.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,shannonp,Y,0.00,0.00,N,N
+110,Virginia,Porter,P61,4232 W. 1000 N.,Rexburg, I,83440,356-6632,virginia@craigporter.net,33a54ef6bcc4f915f47564dbac47a2f13cd40217,virginiap,Y,0.00,0.00,N,N
+111,Crystal,Powell,P20,444 Maple,Rexburg, I,83440,356-4136,crystaltpowell@yahoo.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,crystalp,Y,0.00,0.00,N,N
+112,Kyris,Powell,P15,117 Webster Ave.,Rexburg, I,83440,569-8668,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,kyrisp,Y,0.00,0.00,N,N
+113,Hallie,Proksch,P7,823 Union Ave,Salmon, I,83467,756-2252,jprox@centurytel.net,33a54ef6bcc4f915f47564dbac47a2f13cd40217,halliep,Y,0.00,0.00,N,N
+114,Katie,Rane,,281 Mark Dr.,Rexburg, I,83440,656-0854,katierane@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,katier,Y,0.00,0.00,N,N
+115,Cheri,Raymond,R1,3352 E. 750 N.,Menan, I,83434,754-4733,cheriraymond@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,cherir,Y,0.00,0.00,N,N
+116,Annette,Ricks,R10,577 E 5th S,Rexburg, I,83440,313-5597,ricksna@juno.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,annetter,Y,0.00,0.00,N,N
+117,Michele,Rigby,R93,4434 N. 3000 W.,Rexburg, I,83440,356-6808,moosic07@msn.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,micheler,Y,0.00,0.00,N,N
+118,Elizabeth,Rowley,R15,119 W 4th N,St. Anthony, I,83445,419-6786,elizabeth@esrowley.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,elizabethr,Y,0.00,0.00,N,N
+119,Clarice,Sauer,S10,945 E 2100 N,Terreton,,83450,716-0858,claricesauer@yahoo.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,clarices,Y,0.00,0.00,N,N
+120,Holly,Schley,S3,3385 E 200 N,Rigby, I,83442,754-4457,hschley63@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,hollys,Y,0.00,0.00,N,N
+121,Jacque,Shaw,S20,1987 E. 183 N.,Rexburg, I,83440,716-2016,jacks0114@yahoo.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,jacques,Y,0.00,0.00,N,N
+122,Marta,Smith,S15,410 Terra Vista Dr.,Rexburg,,83440,419-3423,martamfsmith@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,martas,Y,0.00,0.00,N,N
+123,Leann,Stephens,S13,443 N. 3950 E. ,Rigby, I,83442,745-7987,stephens@srv.net,33a54ef6bcc4f915f47564dbac47a2f13cd40217,leanns,Y,0.00,0.00,N,N
+124,Annie,Stoddard,S22,249 Millhollow Rd.,Rexburg,ID,83440,403-2655,annielyn1994@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,anies,Y,0.00,0.00,N,N
+125,Meg  ,Stoddard,S14,249 Millhollow Rd.,Rexburg, I,83440,356-6824,megstodd@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,megs,Y,0.00,0.00,N,N
+126,Darla,Stucki,S11,1020 Westwood Dr.,Rexburg, I,83440,356-8372,kdstucki@msn.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,darlas,Y,0.00,0.00,N,N
+127,Vicky,Sweet,S29,2459 E 400 N,St. Anthony,,83445,624-0204,sweet@ida.net,33a54ef6bcc4f915f47564dbac47a2f13cd40217,vickys,Y,0.00,0.00,N,N
+128,Stephen,Thomas,T10,239 Mohawk Ave,Rexburg, I,83440,496-4961,thomasst@byui.edu,33a54ef6bcc4f915f47564dbac47a2f13cd40217,stephent,Y,0.00,0.00,N,N
+129,Michelle,Tietjen,T8,146 N. 4th W.,Rexburg, I,83440,356-9211,michelle@rexburg.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,michellet,Y,0.00,0.00,N,N
+130,Susan,Tietjen,T7,3066 Paradise Ave.,Rexburg, I,83440,656-0306,mommymaniac@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,susant,Y,0.00,0.00,N,N
+131,Justine,Turcotte,T3,532 Linden Ave.,Rexburg, I,83440,656-0558,turcottej@centurylink.net,33a54ef6bcc4f915f47564dbac47a2f13cd40217,justinet,Y,0.00,0.00,N,N
+132,Elsie,Wach,W3,P.O. Box 764,Driggs,,83422,,pms@ida.net,33a54ef6bcc4f915f47564dbac47a2f13cd40217,elsiew,Y,0.00,0.00,N,N
+133,Lori,Wach,W999,416 Violet St.,Rexburg,,83440,881-4295,mLwach@msn.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,loriw,Y,0.00,0.00,N,N
+134,Katie,Walker,W8,910 Twin Butte Road,Menan,,83434,206-0556,katieswalker7@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,katiew,Y,0.00,0.00,N,N
+135,Sylvia,Walker,W9,1143 Barney Dairy Rd.,Rexburg, I,83440,356-3194,sylvia_ebeth_walker@hotmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,sylviaw,Y,0.00,0.00,N,N
+136,Jennifer,Webster,W18,730 Sand Creek Rd,St. Anthony, I,83445,624-3160,sandcreek@myidahomail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,jenniferw,Y,0.00,0.00,N,N
+137,Ikuko,Weller,W7,P.O. Box 278,Sugar City, I,83448,356-8672,ikukoweller_organut@msn.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,ikukow,Y,0.00,0.00,N,N
+138,Janice,Wilcox,W19,1659 N. 1800 E.,Hamer, I,83425,663-4255,reissespieces1@yahoo.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,janicew,Y,0.00,0.00,N,N
+139,Shari,Wilcox,W1,1659 W. 8200 S.,Rexburg, I,83440,356-0527,bswilcox7@msn.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,shariw,Y,0.00,0.00,N,N
+140,Nina,Wilkins,W4,257 W. 3rd S.,Rexburg, I,83440,356-6776,wilkins1kay@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,ninaw,Y,0.00,0.00,N,N
+141,Sharlie,Winder,W22,221 S. 3rd W. #3,Rigby, I,83442,317-8673,sharliewinder@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,sharliew,Y,0.00,0.00,N,N
+142,Julie,Wolford,W6,4 N. Millhollow Rd. ,Rexburg, I,83440,356-3915,lauddie@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,juliew,Y,0.00,0.00,N,N
+143,Garth,Woodland,,2147 Ross Ave.,Ammon,ID,83406,932-3541,gbwoodland@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,garthw,Y,0.00,0.00,N,N
+144,Beth ,Wright,W25,P.O. Box 737,Ashton, I,83420,206-5657,ewnme@ewnme.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,bethw,Y,0.00,0.00,Y,Y
+145,Mary ,Young,Y1,4732 E 200 N,Rigby,,83442,538-7764,amyoung7@ida.net,33a54ef6bcc4f915f47564dbac47a2f13cd40217,maryy,Y,0.00,0.00,N,N
+146,Scott,Ercanbrack,,,,ID,,357-6998,scott@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,scotte,Y,0.00,30.00,Y,N
+159,Julann,Blake,B11,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,julannB,N,0.00,0.00,N,N
+160,Blackburn,Natalie,B12,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,natalieb,N,0.00,0.00,N,N
+155,Josh,Kennelly,JK4,202 S Teton Ave,Sugar City,ID,83448,656-0092,ken09001@byui.edu,33a54ef6bcc4f915f47564dbac47a2f13cd40217,joshk,Y,0.00,0.00,Y,N
+157,Jenni,Allred,A5,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,jennia,Y,0.00,0.00,N,N
+158,Shay,Phister,P24,709 Johnson St,Rexburg,ID,83440,359-0655,sphister@gmail.com,33a54ef6bcc4f915f47564dbac47a2f13cd40217,shayp,Y,0.00,0.00,N,N
+161,Lauren,Brower,B19,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,laurenb,N,0.00,0.00,N,N
+162,Sandra,Belnap,B33,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,sandrab,N,0.00,0.00,N,N
+163,Brandon,Bascom,B4,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,brandonb,N,0.00,0.00,N,N
+164,Taryn,Cordero,C3,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,tayrnc,N,0.00,0.00,N,N
+165,Elizabeth,Cutler,C30,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,elizabethc,N,0.00,0.00,N,N
+166,Marie,Christensen,C6,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,mariec,N,0.00,0.00,N,N
+167,Stacie,Day,D5,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,stacied,N,0.00,0.00,N,N
+168,Janae,Finch,F7,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,janaef,N,0.00,0.00,N,N
+169,Kali,Galbraith,G2,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,kalig,N,0.00,0.00,N,N
+170,Sherri,Helm,H10,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,sherrih,N,0.00,0.00,N,N
+171,Megan,Hicks,H12,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,meganh,N,0.00,0.00,N,N
+172,Desarie,Hill,H14,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,desarieh,N,0.00,0.00,N,N
+173,Halsey,Holt,H16,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,halseyh,N,0.00,0.00,N,N
+174,Bryant,Hansen,H17,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,bryanth,N,0.00,0.00,N,N
+176,Christine,Klingler,K5,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,christinek,N,0.00,0.00,N,N
+177,Ariel,Loveland,L5,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,ariell,N,0.00,0.00,N,N
+178,Melanie,McDonald,M20,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,melaniemc,N,0.00,0.00,N,N
+179,Lisa,McNiven,M22,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,lisamc,N,0.00,0.00,N,N
+180,Melanie,Moulton,M27,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,melaniemo,N,0.00,0.00,N,N
+181,Carolyn,Moulton,M32,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,carolynm,N,0.00,0.00,N,N
+182,Cheryl,Nelson,N6,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,cheryln,N,0.00,0.00,N,N
+183,Greg,Peters,P25,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,gregp,Y,0.00,0.00,N,N
+184,Julie,Richards,R8,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,julier,N,0.00,0.00,N,N
+185,Berverly,Solomn,S28,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,beverlys,N,0.00,0.00,N,N
+186,Charissa,Vandersloot,V1,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,charissav,N,0.00,0.00,N,N
+187,Celeste,Walker,W11,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,celestew,N,0.00,0.00,N,N
+188,Brenda,Williams,W15,,,ID,,,,33a54ef6bcc4f915f47564dbac47a2f13cd40217,brendaw,N,0.00,0.00,N,N

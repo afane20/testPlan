@@ -1,0 +1,42 @@
+    body{
+        background-color: black;
+    }
+
+    table{
+        padding-left: 60px;
+    }
+
+    #formStyling{
+        background-color: pink;
+        border-style: solid;
+        border-width: 2px;
+        border-color: white;
+        width: 500px;
+        margin: auto;
+        font-family: Helvetica;
+    }
+    
+    #output{
+        width: 200px;
+        margin: auto;
+        text-align: center;
+        font-size: large;
+        background-color: white;
+    }
+    
+    #submission{
+        text-align: center;
+    }
+    
+    #header{
+        text-align: center;
+        font-family: Helvetica;
+        color: white;
+    }
+    
+    #credits{
+        text-align: right;
+        font-family: Helvetica;
+        font-size: small;
+        color: white;
+    }

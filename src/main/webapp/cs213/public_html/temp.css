@@ -1,0 +1,24 @@
+<!-- 
+   Assignment 04 , Style Sheets
+   Brother Ercanbrack, CS 373
+   Brother Ercanbrack
+-->
+
+caption { color: green} 
+
+input.bgcolored {background:#ffffcc}
+textarea {background:#ffffcc}
+select.bgcolor {background:white}
+
+<!-- table row background color -->
+tr.bgcolored {background: #e0e0e0}
+
+<!-- set link colors -->
+a:link {color: blue}
+a:visited {color: red}
+a:hover {background: cyan}
+
+<!-- paragraph styles -->
+p.italic{font-style: italic}
+p.capital { text-transform: capitalize; } 
+p.upper { text-transform: uppercase; } 

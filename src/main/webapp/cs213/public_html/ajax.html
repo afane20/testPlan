@@ -1,0 +1,119 @@
+<?xml version = "1.0"?>
+<!DOCTYPE html PUBLIC "-//w3c/DTD XHTML 1.0 Strict //EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!--
+ Assignment 06
+ Brother Ercanback, CS 373
+ S. Scott Ercanbrack
+-->
+
+<html>
+<head>
+   <title>Java Script</title>
+   <script type = "text/javascript">
+   <!--  
+       var req;			
+       function processReqChange()
+       {
+          // only if req shows "complete"
+          // alert(req.readyState);
+           if (req.readyState == 4)
+          {
+             // only if "OK"
+	     if (req.status == 200)
+	     {
+	         // ...processing statements go here...
+                 var theText = req.responseText;
+
+                 // If assigning plain text to a <textarea> and you use .innerHTML instead of .value, I.E. will treat the
+                 // data as "html" and remove spaces and newlines. FireFox still assumes text even if you use .innerHTML
+                 // with a <textarea>.  For compatibility it's best use .value with a <textarea>. 
+                 document.getElementById("cityNames").value = theText;
+	     }
+	     else
+             {
+	  	  alert("There was a problem retrieving the XML data:\n" + req.statusText);
+	     }
+	  }
+       }
+  
+       function loadXMLDoc(url)
+       {
+          // branch for native XMLHttpRequest object
+          if (window.XMLHttpRequest)
+          {   
+    	     req = new XMLHttpRequest(); 
+ 	  }
+ 	  // branch for IE/Windows ActiveX version
+	  else if (window.ActiveXObject)
+	  {
+             req = new ActiveXObject("Microsoft.XMLHTTP");
+          } 
+          if (req != null)
+	  {
+	     req.onreadystatechange = processReqChange;
+             req.open("GET", url, true);
+             req.send(null);
+	  }
+          else 
+          {
+              alert("Brower doesn't support XMLHttp");
+          }
+
+       }
+
+       function getCity()
+       {
+
+          var country = document.getElementById("nation").value;
+	  if (country == "1")
+	  {
+	    loadXMLDoc("http://157.201.194.254/~ercanbracks/usa.txt");
+	  }
+	  else if (country == "2")
+	  {
+	    loadXMLDoc("http://157.201.194.254/~ercanbracks/canada.txt");
+	  }
+	  else if (country == "3")
+	  {
+	    loadXMLDoc("http://157.201.194.254/~ercanbracks/mexico.txt");
+	  }
+	  else if (country == 4)
+	  {
+	    loadXMLDoc("http://157.201.194.254/~ercanbracks/russia.txt");
+	  }
+       }
+
+       function setLoadFocus()
+       {
+	  document.getElementById("nation").focus();
+	  getCity();
+       }
+       //-->
+   </script>
+</head>
+
+<body onload = "setLoadFocus();">
+  <h3 id = "nation1">Select a country to list it's ten largest cities.</h3>
+    <select id = "nation" name = "country1" multiple = "multiple" onchange = "getCity();">
+      <option value = "1" selected = "selected" >US</option>
+      <option value = "2" >Canada</option>
+      <option value = "3" >Mexico</option>
+      <option value = "4" >Russia</option>
+    </select>
+    <table border = "1">
+        <caption style="font-size: 16pt">Ten Largest Cities</caption>
+	<tr>
+	  <td style = "background-color: lightgrey">City
+	     <span style="position: relative; left: 136px">Population</span>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	      <textarea style = "background-color: yellow" id = "cityNames" rows = "12" cols = "35"></textarea>
+	  </td>
+        </tr>  
+    </table>
+</body>
+</html>

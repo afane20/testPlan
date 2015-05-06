@@ -1,0 +1,54 @@
+/* exstyle.css - an external syle sheet
+*/
+#menu ul {float:left; list-style-type:none; margin:0px; padding:0px; width:1200px; background:#DED5D6;}
+#menu ul li {float:left;background:url('start.gif') no-repeat;margin-right:10px;}
+#menu ul li a {float:left;background:url('end.gif') no-repeat;background-position: 100% 0%;padding-left:10px;padding-right:10px;font:12px Arial;text-decoration:none;font-weight:bold;color:#FFFFFF;line-height:30px;}
+#menu ul li a:hover {text-decoration:underline;}
+
+h1 {font-size: 25pt; font-style: italic;
+   }
+h1.left{font-size: 25pt; font-style: italic; text-align: left;
+   }
+h3 {font-family: 'Courier New'; font-size: 18pt;
+   }
+body { background-color: skyblue; background-image:url('comp.JPG'); background-repeat:repeat; background-attachment:fixed;
+     }
+div.one {margin-left:auto; margin-right:auto; width: 800px; text-align: center; background-color: lightgrey;
+       border:2px solid black}
+div.two {margin-left:auto; margin-right:auto; width: 500px; text-align: center; background-color: lightblue;
+       border:2px solid black}
+div.three {margin-left:auto; margin-right:auto; width: 1000px; text-align: center; background-color: lightgrey;
+       border:2px solid black}
+div.four {margin-left:auto; margin-right:auto; width: 930px; height: 110px; text-align: center; background-color: lightblue;
+       border:2px solid black} 
+div.five {margin-left:auto; margin-right:auto; width: 300px; text-align: left; background-color: lightgrey;
+       border:2px solid black} 
+div.six {margin-left:auto; margin-right:auto; width: 400px; text-align: left; background-color: lightgrey;
+       border:2px solid black}
+div.scroll {margin-left:auto; margin-right:auto; width: 930px; height: 550px; text-align: center; background-color: lightgrey; overflow: auto; border:2px solid black;}
+div.scrollHidden {margin-left:auto; margin-right:auto; width: 500px; text-align: center; background-color: lightgrey; 
+        border:2px solid black; visibility: hidden}    
+div.hiddenDiv {margin-left:auto; margin-right:auto; width: 800px; text-align: center; background-color: lightgrey; border:2px solid black; }
+div.scrollResources{margin-left:auto; margin-right:auto; width: 660px; height: 500px; text-align: center; background-color: lightgrey; overflow: auto; border:2px solid black;}
+
+div.scrollStudents{margin-left:auto; margin-right:auto; width: 830px; height: 300px; text-align: center; background-color: lightgrey; overflow: auto; border:2px solid black;}
+div.scrollHiddenTeachers{margin-left:auto; margin-right:auto; width: 1022px; height: 400px; text-align: center; background-color: lightgrey; overflow: auto; border:2px solid black; }
+div.scrollHiddenStudents{margin-left:auto; margin-right:auto; width: 830px; height: 400px; text-align: center; background-color: lightgrey; overflow: auto; border:2px solid black}
+div.scrollHiddenResources{margin-left:auto; margin-right:auto; width: 700px; height: 400px; text-align: center; background-color: lightgrey; overflow: auto; border:2px solid black}
+
+h1 {text-align: center;}
+h2 {text-align: center;}
+h3.center {text-align: center;}
+h4.center {text-align: center;}
+/*visibility:hidden;*/
+label.hidden {color: red; visibility: hidden}
+label.hidden2{visibility:hidden}
+
+p.center {text-align: center;}
+p.left {text-align: left;}
+p.right {text-align: right;}
+p.fRight{text-align: right; float: right;}
+p.fLeft{text-align: left; float: left;}
+blockquote {text-align: left;}
+table.one {text-align: center; width: 300px;}
+table.two {text-align: left;}

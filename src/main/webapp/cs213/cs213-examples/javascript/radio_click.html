@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- radio_click.hmtl
+     An example of the use of the click event with radio buttons
+     -->
+<html>
+<head>
+<title> Illustrate messages for radio buttons </title>
+<script type = "text/javascript">
+<!--
+// The event handler for a radio button collection
+
+function planeChoice () {
+    var plane;
+
+// Put the DOM address of the elements array in a local variable
+
+    var radioElement = document.getElementById("myForm").elements;
+
+// Determine which button was pressed
+
+    for (var index = 0; index < radioElement.length; index++) {
+        if (radioElement[index].checked) {
+            plane = radioElement[index].value;
+            break;
+        }
+    }
+
+// Produce an alert message about the chosen airplane
+
+    switch (plane) {
+        case "152": 
+            alert("A small two-place-airplane for flight training");
+            break;
+        case "172": 
+            alert("The smaller of two four-place airplanes");
+            break; 
+         case "182":
+            alert("The larger of two four-place airplanes");
+            break;    
+        case "210":
+            alert("A six-place high-performance airplane");
+            break; 
+        default:
+            alert("Error in JavaScript function planeChoice");
+            break;
+    }
+}
+// -->
+</script>
+</head>
+
+<body>
+<h4> Cessna single-engine airplane descriptions </h4>
+<form id = "myForm"  action = "">
+    <p>
+    <input type = "radio"  name = "planeButton"  value = "152"
+           onclick = "planeChoice()" />
+       Model 152
+    <br />
+      <input type = "radio"  name = "planeButton"  value = "172"
+             onclick = "planeChoice()" />
+       Model 172 (Skyhawk)
+    <br />
+      <input type = "radio"  name = "planeButton"  value = "182"
+             onclick = "planeChoice()" />      
+       Model 182 (Skylane)
+    <br />
+    <input type = "radio"  name = "planeButton"  value = "210"
+           onclick = "planeChoice()" />
+       Model 210 (Centurian)
+    </p>
+</form>
+</body>
+</html>
+

@@ -1,0 +1,281 @@
+<!--
+   Assignment 05, JavaScript
+   Brother Ercanbrack, CS 373
+   Krista Butler
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel = stylesheet type = "text/css" href = "http://157.201.194.254/~kristamb/style2.css">
+<title>Krista's Book Bontique</title>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function check(variable, varMessage, element)
+{
+   if (variable == "" || variable == null)
+	 {
+	   var message = "You must enter a" + varMessage + ".";
+		 alert(message);
+		 
+		 document.getElementById(element).focus();
+		 
+		 return false; 
+	 }
+	 
+	 return true;
+}
+
+function displaySummary()
+{
+  var bookNames = new Array("The Blue Sword", "Ender's Game", "Pride and Prejudice",
+	                          "The Last Command", "The Castle of Llyr", "Ravenwood");
+														 
+  var message = "Thank-you for shopping at Krista's Book Bontique\n\nORDER SUMMARY:\n\n";
+	
+	for(var count = 1; count < 7; count++)
+	{
+	   if (document.getElementById(count).checked )
+		 {
+		    message += bookNames[count - 1] + "\n";
+		 }
+	}
+	
+	message += "\nTotal: $" + document.getElementById('total').value; 
+	
+	alert(message);
+}
+
+function validate()
+{	 
+   var isError = false;
+	 
+   var firstname = document.getElementById('firstname').value;
+	 var lastname = document.getElementById('lastname').value;
+	 var address = document.getElementById('address').value;
+	 var phone = document.getElementById('phone').value;
+	 var cardnumber = document.getElementById('cardnumber').value;
+	 var carddate = document.getElementById('carddate').value;
+	 var total = parseInt(document.getElementById('total').value);
+	 
+	 if (check(firstname, " first name", "firstname")
+	     && check(lastname, " last name", "lastname")
+	     && check(address, "n address", "address")
+	     && check(phone, " phone number", "phone")
+	     && check(cardnumber, " credit card number", "cardnumber")
+	     && check(carddate, " credit card expiration date", "carddate"))
+	 {
+	    if (total == 0)
+	    {
+	       alert("You did not select any books to order.");
+			   isError = true;
+	    }
+	 }
+	 else 
+	 {
+	    isError = true;
+            validatePhoneNumber();
+            validateCardNumber();
+	    validateCardDate();
+	 }
+	
+	 if (isError == true)
+	 {
+	    return false;
+	 }
+	 
+	 displaySummary();
+}
+
+function sum(num, check)
+{
+   var total = parseInt(document.getElementById('total').value);
+	 
+	 if (check == true)
+	 {
+	    var newTotal = total + num;
+	 }
+	 else
+	 {
+	    var newTotal = total - num;
+	 }
+	 
+   document.getElementById('total').value = newTotal + '.00';
+	 document.getElementById('total').focus();
+}
+
+function displayError()
+{
+  alert('You cannot change the total!');
+	document.orderForm.reset();
+}
+
+function validatePhoneNumber()
+{
+  var phoneNumber = document.getElementById('phone').value;
+	var check = phoneNumber.search(/^\d{3}-\d{3}-\d{4}$/);
+	
+	if (check == -1)
+	{
+	  alert("Phone Number incorrectly formated.\n(###) ###-####");
+		document.getElementById('phone').focus();
+		document.getElementById('phone').select();
+		return false; 
+	}
+}
+
+function validateCardNumber()
+{
+   var cardNumber = document.getElementById('cardnumber').value;
+	 var check = cardNumber.search(/^\d{4}-\d{4}-\d{4}-\d{4}$/);
+	 
+	 if (check == -1)
+	 {
+	    alert("Credit Card Number incorrectly formated.\n####-####-####-####");
+			document.getElementById('cardnumber').focus();
+			document.getElementById('cardnumber').select();
+			return false;
+	 }
+}
+
+function validateCardDate()
+{
+   var isError = false;
+	 
+   var cardDate = document.getElementById('carddate').value;
+	 var check = cardDate.search(/^\d{2}\/\d{4}$/);
+	 
+	 if (check == -1)
+	 {
+	    alert("Credit Card Expiration Date incorrectly formatted.\n##/####");
+		  isError = true;
+	 }
+	 else
+	 {
+	    var month = parseInt(cardDate.substring(0, 2));
+			var year = parseInt(cardDate.substring(3));
+			
+			if (month > 12 || month < 1)
+			{
+			   alert("Invalid month.");
+         isError = true;
+			}
+			
+			if (year < 2004)
+			{
+			   alert("Card is expired.");
+				 isError = true;
+			}
+			
+			if (isError == true)
+			{
+			   document.getElementById('carddate').focus();
+         document.getElementById('carddate').select();
+				 return false;
+			}
+	 }
+	 
+	 
+}
+//-->
+</script>
+
+</head>
+
+<body onload="document.getElementById('firstname').focus();" link="purple" vlink="gray">
+<h1 align="center"><u>Krista's Book Bontique</u></h1>
+<p>Welcome to <i>Krista's Book Bontique</i> the only place to shop
+for only six books!<br/>
+If we do not have what you are looking for - 
+try <a href="http://www.amazon.com">The Best Place to Buy Books</a>.</p>
+
+<form action="" onreset="document.getElementById('firstname').focus();" onsubmit="return validate();"
+   name="orderForm">
+<p>First Name: <input type="text" id="firstname" style="background-color:pink"/></p>
+<p>Last Name: <input type="text" id="lastname" style="background-color:pink"/></p>
+<p>Address:<br/>
+<textarea cols="30" rows="8" id="address"></textarea></p>
+<br/>
+<p>Phone Number: <input type="text" id="phone" style="background-color:pink"
+                  onblur="validatePhoneNumber();"/><br/>
+<i>(Example: 555-555-5555)</i></p>
+<br/>
+
+<p>Which books would you like to buy?</br>
+<table class="different" border="border">
+   <tr>
+	    <th width="10%"></th>
+	    <th width="35%"><b>Title</b></th>
+			<th width="35%"><b>Author</b></th>
+			<th width="20%"><b>Price</b></th>
+	 </tr>
+	 <tr>
+     <td><input type="checkbox" value="true" name="book1" id="1" 
+		    onclick="sum(9, document.orderForm.book1.checked);"/></td>
+     <td><i>The Blue Sword</i></td>
+		 <td>Robin McKinley</td>
+		 <td><b>$9.00</b></td>
+	 </tr>
+	 <tr>
+     <td><input type="checkbox" value="true" name="book2" id="2"
+		    onclick="sum(7, document.orderForm.book2.checked);"/></td>
+     <td><i>Ender's Game</i></td>
+		 <td>Orsen Scott Card</td>
+		 <td><b>$7.00</b></td>
+   </tr>
+   <tr>
+     <td><input type="checkbox" value="true" name="book3" id="3" 
+		    onclick="sum(9, document.orderForm.book3.checked);"/></td>
+		 <td><i>Pride and Prejudice</i></td>
+		 <td>Jane Austin</td>
+		 <td><b>$9.00</b></td>
+   </tr>
+	 <tr>
+     <td><input type="checkbox" value="true" name="book4" id="4"
+		    onclick="sum(7, document.orderForm.book4.checked);"/></td>
+     <td><i>The Last Command</i></td>
+		 <td>Timothy Zhan</td>
+		 <td><b>$7.00</b></td>
+   </tr>
+   <tr>
+     <td><input type="checkbox" value="true" name="book5" id="5"
+		    onclick="sum(9, document.orderForm.book5.checked);"/></td>
+		 <td><i>Castle of Llyr</i></td>
+		 <td>Lloyd Alexander</td>
+		 <td><b>$9.00</b></td>
+   </tr>
+	 <tr>
+     <td><input type="checkbox" value="true" name="book6" id="6"
+		    onclick="sum(7, document.orderForm.book6.checked);"/></td>
+     <td><i>Ravenwood</i></td>
+		 <td>Jannette Oakes</td>
+		 <td><b>$7.00</b></td>
+   </tr>
+   <tr>
+      <td></td>
+	    <td></td>
+      <td style="text-align:right">Total: $</td>
+      <td><input type="text" value="0" size="15" id="total"
+			   onchange="displayError();"/></td>
+   </tr>
+</table>
+</p>
+
+<p>Credit Card Type: <input type="radio" name="cardtype" checked="checked"/>Visa
+   <input type="radio" name="cardtype"/>MasterCard
+   <input type="radio" name="cardtype"/>American Express</p>
+
+<p>Credit Card Number: <input type="text" id="cardnumber" style="background-color:pink"
+                        onblur="validateCardNumber();"/><br/>
+<i>(Example: 1234-4567-7890-4321)</i></p>
+
+<p>Experiation Date (month/year): <input type="text" id="carddate" style="background-color:pink"
+                      onblur="validateCardDate();"/><br/>
+<i>(Example: 01/2006)</i></p>
+
+<input type="submit" value="Place Order" style="color:pink; background-color:purple"/>
+<input type="reset" value="Reset Form" style="color:pink; background-color:purple"/>
+
+</form>
+</body>
+</html>

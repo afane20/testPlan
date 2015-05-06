@@ -1,0 +1,204 @@
+@import "fonts";
+@import "colors";
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "HelveticaNeue-Thin", helvetica, arial, sans-serif;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+.sortButtons {
+	fill: rgba(0, 0, 0, 0.5);
+}
+
+.hide {
+	display: none;
+}
+
+main {
+	width: 100%;
+	border: 1px solid $borders;
+		
+	section {
+		width: 100%;
+		 
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			border: none;
+			
+			thead {
+				display: block;
+				width: 100%;
+				
+				tr {
+					border-bottom: 1px solid $borders;
+				}
+			}
+			
+			tbody {
+				height: 600px;
+				width: 100%;
+				display: block;
+				overflow: auto;
+				background: $contentPanel;
+				
+				tr:last-child {
+					box-shadow: 0px 6px 8px $contentPanel - rgb(20, 20, 20);
+				}
+			}
+			
+			tr {
+				display: flex;
+				width: 100%;
+				cursor: pointer;
+				border-bottom: 1px solid $contentBorders;
+				
+				&:nth-child(odd) td {
+					background-color: $oddRow;
+				}
+				
+				&:nth-child(even) td {
+					background-color: $evenRow;
+				}
+				
+				&.selected td {
+					background-color: $selectedRow;
+				}
+								
+				& > * {
+					width: 20%;
+					display: block;
+					
+					&.small {
+						width: 140px;
+					}
+				}
+			}
+			
+			th {
+				padding: 12px;
+				font-size: 12px;
+				text-transform: uppercase;
+				text-align: center;
+				font-weight: normal;
+				border-right: 1px solid $borders;
+				position: relative;
+				cursor: pointer;
+				color: $headerTXT;
+				background-color: $headerBG;
+				
+				&:last-child {
+					border-right: none;
+					cursor: default;
+				}
+				
+				&.selected {
+					color: $headerSTXT;
+					background-color: $headerSBG;
+					
+					.sortButtons {
+						fill: $headerSTXT;
+						stroke: $headerSTXT;
+					}
+					
+					&.ascending #descending {
+						fill: transparent;
+						stroke-width: 6px;
+					}
+					
+					&.descending #ascending {
+						fill: transparent;
+						stroke-width: 6px;
+					}
+				}
+				
+				.sortButtons {
+					height: 15px;
+					position: absolute;
+					right: 8px;
+					top: 12px;
+					fill: $headerTXT;
+				}
+			}
+			
+			td {
+				color: $contentTXT;
+				text-align: center;
+				padding: 6px;
+				
+				img {
+					height: 18px;
+					opacity: 0.2;
+					
+					&:hover {
+						opacity: 0.5;
+					}
+				}
+			}
+		}
+	}
+}
+	
+footer {
+	color: $footerTXT;
+	background: $footerBG;
+	position: relative;
+	
+	form {
+		position: absolute;
+		left: 0;
+		top: 0;
+		padding: 12px;
+		
+		input[type=search] {
+			font-size: 13px;
+			width: 150px !important;
+			color: rgb(255, 255, 255);
+			background-color: rgba(200, 200, 200, 0.4);
+			border: 1px solid $borders;
+			border-radius: 10px;
+			-webkit-appearance: none;
+				 -moz-appearance: none;
+							appearance: none;
+							
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+				
+	ul {
+		display: flex;
+		justify-content: flex-end;
+		list-style: none;
+		text-align: right;
+						
+		li {
+			color: $footerTXT;
+			border-left: 1px solid $footerBorders;
+			padding: 12px;
+			cursor: pointer;
+			
+			&:hover {
+				background-color: rgba(255, 255, 255, 0.1);
+			}
+			
+			&:active {
+				box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.2);
+			}
+		}
+	}
+}
+
+@import "card";
+@import "dialog";

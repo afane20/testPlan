@@ -1,0 +1,25 @@
+                       if(gStudents[this.selectedIndex][5] == 'm')
+                       {
+                          document.getElementById('rdoMale').checked = true;
+                       }
+                       else
+                       {
+                          document.getElementById('rdoFemale').checked = true;
+                       }" >
+            </select>
+
+            <input type="button" value="Remove Student" 
+             onclick="var stdList = document.getElementById('StudentList');
+                      if (stdList.selectedIndex >= 0)
+                      {  
+                         if (confirm('Remove ' + document.getElementById('txtStudFirstName').value + ' ' +
+                                           document.getElementById('txtStudLastName').value + ' from your list of students?'))
+                         {
+                            sendRequest('removestudent&studentid=' + gStudents[stdList.selectedIndex][0], gStudents);
+                         }
+                      }"/> 
+         </div>
+      </td>
+   </tr>
+</table>
+

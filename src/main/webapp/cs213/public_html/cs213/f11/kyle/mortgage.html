@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Kyle's Mortgage Calculator</title>
+  <link rel="stylesheet" type="text/css" href="mortgage.css" />
+  <script type="text/javascript" src="mortgage.js"></script>
+</head>
+<body onload="formSetup();">
+<h1>Kyle's Mortgage Calculator</h1>
+<div id="content">
+  <form action="http://157.201.194.254/cgi-bin/ercanbracks/cs213/f11/kyle/assign10"
+      onsubmit="return validate(true);" onreset="formSetup();">
+    <div>APR (%): <input type="text" name="APR" id="APR" onchange="validate(false,this);"/></div>
+    <div class="error" id="errorAPR">Error: APR input must be a number greater than zero!</div>
+    <div>Loan Term (Yr): <input type="text" name="Term" id="Term" onchange="validate(false,this);"/></div>
+    <div class="error" id="errorTerm">Error: Loan Term input must be a number greater than zero!</div>
+    <div>Loan Amount ($): <input type="text" name="Amount" id="Amount" onchange="validate(false,this);"/></div>
+    <div class="error" id="errorAmount">Error: Loan Amount input must be a number greater than or equal to zero!</div>
+    <div class="error" id="emptyError">The outlined fields must not be left blank.</div>
+    <input type="submit" value="Calculate" id="Calculate"/>
+    <input type="reset" value="Clear" id="Clear"/>
+  </form>
+</div>
+</body>
+</html>

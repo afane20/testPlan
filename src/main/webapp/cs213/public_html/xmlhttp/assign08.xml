@@ -1,0 +1,55 @@
+<?xml version = "1.0"?>
+<!DOCTYPE BSA SYSTEM "assign07.dtd">
+<?xml-stylesheet type="text/xsl" href = "assign08.xsl"?>
+
+<bsa>
+  <council> Teton Peaks Council </council>
+  <troop unitNo = "354"> Sugar City 3rd Ward </troop>
+
+  <scout>
+    <first> Conner </first>
+    <last> Kershaw </last>
+    <address> 125 E. 200 N. Sugar City, ID </address>
+    <phone> 356-0922 </phone>
+    <rank dateEarned = "10/7/04"> Tenderfoot </rank>
+    <meritbadge date="1/6/05"> Electricity </meritbadge>
+  </scout>
+
+  <scout>
+    <first> Thomas </first>
+    <last> Fleming </last>
+    <address> 2000 S. Teton Ave, Sugar City </address>
+    <phone> 496-2334 </phone>
+    <rank> 2nd Class </rank>
+    <meritbadge date="1/6/04"> rifling </meritbadge>
+  </scout>
+
+  <scout>
+    <first> Matthew </first>
+    <last> Montgomery </last>
+    <address> Rexburg Idaho </address>
+    <phone> 356-0014 </phone>
+    <rank> &s; </rank>
+    <meritbadge date="1/6/04"> electronics </meritbadge>
+    <meritbadge date="1/6/04"> computers </meritbadge>
+    <meritbadge date="3/22/04"> first aid </meritbadge>
+    <meritbadge date="3/22/04"> citizenship in the community </meritbadge>
+    <meritbadge date="5/29/04"> fitness </meritbadge>
+    <meritbadge date="5/29/04"> lifesaving </meritbadge>
+  </scout>
+
+  <scout>
+    <first> Matthew </first>
+    <last> Montgomery </last>
+    <address> Rexburg Idaho </address>
+    <phone> 356-0014 </phone>
+    <rank> &s; </rank>
+    <meritbadge date="1/6/04"> electronics </meritbadge>
+    <meritbadge date="1/6/04"> computers </meritbadge>
+    <meritbadge date="3/22/04"> first aid </meritbadge>
+    <meritbadge date="3/22/04"> citizenship in the community </meritbadge>
+    <meritbadge date="5/29/04"> fitness </meritbadge>
+    <meritbadge date="5/29/04"> lifesaving </meritbadge>
+  </scout>
+</bsa>
+

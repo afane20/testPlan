@@ -1,0 +1,65 @@
+/* This is my CSS page that will hold the styles for Assignment 04 */
+
+a 
+{
+	color: darkblue;
+}
+
+.ctr
+{
+	text-align: center;
+}
+
+.rgt
+{
+	text-align: right;
+}
+
+.lft
+{
+	text-align: left;
+}
+
+.calc
+{
+	color: grey;
+	border: double
+	font-size: larger;
+	font-family: Century Gothic, sans-serif;
+}
+
+legend
+{
+	color: #CC0000;
+	font-family: Century Gothic, sans-serif;
+}
+
+table
+{
+	margin-left: 10px;
+	margin-right: auto
+}
+
+
+th
+{
+	padding: 3px;
+	background-color: #663300;
+	color: #CC9966;
+}
+
+td
+{
+	background-color: #6699FF;
+	color: azure;
+}
+
+.spanish
+{
+	color: skyblue;
+}
+
+span
+{
+	color: green;
+}

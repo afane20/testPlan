@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace = "http://wiley.book.com/bookSchema"
+    xmlns = "http://wiley.book.com/bookSchema"
+    elementFormDefault = "qualified">
+    
+	<xsd:element name="name" type="xsd:string"/>
+	<xsd:element name="qualification" type="xsd:string"/>
+	<xsd:element name="born" type="xsd:date"/>
+	<xsd:element name="dead" type="xsd:date"/>
+	<xsd:element name="isbn" type="xsd:integer"/>
+	
+	<xsd:attribute name="id" type="xsd:ID"/>
+	<xsd:attribute name="available" type="xsd:boolean"/>
+	<xsd:attribute name="lang" type="xsd:language"/>
+	
+	<xsd:element name="title">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+					<xsd:attribute ref="lang"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="library">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="book" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="author">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="name"/>
+				<xsd:element ref="born"/>
+				<xsd:element ref="dead" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attribute ref="id"/>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="book">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="isbn"/>
+				<xsd:element ref="title"/>
+				<xsd:element ref="author" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="character" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute ref="id"/>
+			<xsd:attribute ref="available"/>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="character">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="name"/>
+				<xsd:element ref="born"/>
+				<xsd:element ref="qualification"/>
+			</xsd:sequence>
+			<xsd:attribute ref="id"/>
+		</xsd:complexType>
+	</xsd:element>
+	
+</xsd:schema>

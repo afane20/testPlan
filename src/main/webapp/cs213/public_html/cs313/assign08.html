@@ -1,0 +1,93 @@
+<html>
+<head>
+<script type="text/javascript">
+<!--
+function update(command, classId)
+{
+
+   var xmlhttp;
+   if (window.XMLHttpRequest)
+   {
+      // code for IE7+, Firefox, Chrome, Opera, Safari
+      xmlhttp=new XMLHttpRequest();
+   }
+   else if (window.ActiveXObject)
+   {
+      // code for IE6, IE5
+      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+   }
+   else
+   {
+      alert("Your browser does not support XMLHTTP!");
+      return;
+   }
+
+   xmlhttp.onreadystatechange=function()
+   {
+      if(xmlhttp.readyState == 4)
+      {
+         if(xmlhttp.status == 200)
+         {
+            document.getElementById("result").innerHTML =
+               xmlhttp.responseText;
+         }
+         else
+         {
+            document.getElementById("result").innerHTML =
+               "<p>Error in the http request</p>";
+         }
+      }
+   }
+
+   var params = "";
+   if (command != "load")
+   {
+      var studentList = document.getElementById("studentList")
+
+      if (studentList.selectedIndex > 0)
+      {
+         params = "?studentId=" + studentList.options[studentList.selectedIndex].value;
+      }
+
+      if (command == "add" || command == "remove")
+      {
+         if (params.length > 0)
+         {
+            params = params + "&command=" + command;
+         }
+         else
+         {
+            params = "?command=" + command;
+         }
+      }
+
+      if(command == "add")
+      {
+         var classList = document.getElementById("classList");
+         if(classList.selectedIndex == 0)
+         {
+            alert ("No class Selected.");
+            return;
+         }
+         else
+         {
+            params = params + "&classId=" + classList.options[classList.selectedIndex].value;
+         }
+      }
+      else
+      {
+         params = params + "&classId=" + classId;
+      }
+
+   }
+   xmlhttp.open("POST", "http://157.201.194.254:8080/cs313/servlet/s09.dhandy.assign08" + params, true);
+   xmlhttp.send(null);
+}
+-->
+</script>
+<title>Class Registration</title>
+</head>
+<body onload="update('load')">
+  <h2 style = "text-align:center;background-color:darkred;color:gold">Class Registration</h2>
+  <div id="result"></div>
+</body>

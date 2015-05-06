@@ -1,0 +1,138 @@
+body
+{
+background: #ccffcc;
+}
+
+h3
+{
+margin-left: 65px;
+font-size: 25px;
+font-family: courier;
+}
+
+#error
+{
+color: red;
+width: 400px;
+margin-left: 100px;
+}
+
+#newLables
+{
+float: left;
+line-height: 1.60em;
+text-align: right;
+}
+
+#newInputs
+{
+float: left;
+}
+
+#addForm
+{
+margin-left: 25px;
+margin-top: 10px;
+display: none;
+width: 700px;
+font-size: 14px;
+float: left;
+}
+
+#addSubmit
+{
+margin-top: 5px;
+margin-left: 5px;
+}
+
+#queryForm
+{
+margin-left: 25px;
+margin-top: 10px;
+}
+
+#response
+{
+width: 700px;
+float: left;
+}
+
+#resultHeader
+{
+font-weight: bold;
+}
+
+#resultHeader .element
+{
+text-align: center;
+float: left;
+width: 100px;
+height: 25px;
+border: solid 1px;
+margin: 3px;
+}
+
+.student .fname, .lname, .major, .courses, .modify
+{
+padding-left: 3px;
+float: left;
+width: 100px;
+margin: 3px;
+}
+
+.student
+{
+float: left;
+lear: both;
+width: 625px;
+border: solid 1px;
+}
+
+.hiddenInfo
+{
+border: solid 1px;
+display: none;
+float: left;
+padding-left: 3px;
+padding-right: 3px;
+margin-top: 5px;
+}
+
+.modify
+{
+width: 160px;
+padding: 0;
+}
+
+ul
+{
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+#resultDiv
+{
+float: left;
+margin-top: 20px;
+margin-left: 15px;
+border-left: solid 2px;
+border-top: solid 2px;
+padding-top: 10px;
+padding-left: 15px;
+}
+
+#footer
+{
+float: left;
+clear: both;
+font-family: verdana;
+font-size: 11px;
+margin-top: 55px;
+margin-left: 15px;
+}
+
+#addLink
+{
+margin-left: 25px;
+}

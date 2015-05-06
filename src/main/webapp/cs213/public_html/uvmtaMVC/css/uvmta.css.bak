@@ -1,0 +1,232 @@
+@font-face {
+  font-family: 'HelveticaNeueThin';
+  src: url("helveticaneuethin-webfont.eot");
+  src: url("helveticaneuethin-webfont.eot?#iefix") format('embedded-opentype'), url("helveticaneuethin-webfont.woff2") format('woff2'), url("helveticaneuethin-webfont.woff") format('woff'), url("helveticaneuethin-webfont.ttf") format('truetype'), url("helveticaneuethin-webfont.svg#helvetica_neuethin") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+.center {
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+}
+
+div {
+  padding: 0;
+  margin: 0;
+  *zoom: 1;
+}
+div:before,
+div:after {
+  content: '';
+  display: table;
+}
+div:after {
+  clear: both;
+}
+html {
+  margin: 0px;
+  padding: 0px;
+  background: #fff;
+}
+body {
+  *zoom: 1;
+  width: auto;
+  max-width: 960px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  background: #eee;
+  font-family: HelveticaNeueThin;
+  *zoom: 1;
+  margin-top: 0px;
+}
+body:before,
+body:after {
+  content: '';
+  display: table;
+}
+body:after {
+  clear: both;
+}
+body:before,
+body:after {
+  content: '';
+  display: table;
+}
+body:after {
+  clear: both;
+}
+#master {
+  *zoom: 1;
+  background: #fff;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+}
+#master:before,
+#master:after {
+  content: '';
+  display: table;
+}
+#master:after {
+  clear: both;
+}
+.editBox {
+  display: none;
+  background: #4285f4;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 50px;
+  padding-top: 20px;
+  border-radius: 15px;
+  border: solid 5px #bbb;
+  height: 300px;
+  margin: auto;
+  box-shadow: 5px 5px 5px 5px #6e6e6e;
+  width: 400px;
+}
+.editBox h2 {
+  color: #fff;
+  background: none;
+}
+.editBox label {
+  font-weight: bold;
+  color: #fff;
+  height: 30px;
+  display: inline-block;
+}
+/*
+.editBox input {
+  float: right;
+}
+*/
+.editBox option {
+  padding: 0px 83px 0px 1px;
+}
+
+.editBox button {
+  float: right;
+}
+.editBox span {
+  color: #bbb;
+  float: right;
+  text-align: right;
+}
+.editBox img {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  width: 40px;
+}
+#menu a {
+  padding: 10px 20px 10px 20px;
+  text-align: center;
+  background: #f8f8f8;
+  color: #272727 !important;
+  border-right: 2px solid #c5c5c5;
+  border-top: 2px solid #c5c5c5;
+  border-bottom: 2px solid #c5c5c5;
+}
+#menu #miFestivals {
+  border-left: 2px solid #c5c5c5;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+#menu #miReport {
+  border-right: 2px solid #c5c5c5;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+#theMenu {
+  background: #fff;
+}
+#menuHeader {
+  height: 35px;
+  background: #4285f4;
+  padding: 10px;
+}
+#menuHeader a {
+  color: #fff;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  box-shadow: 2px 0px 0px 0px #eee;
+}
+#menuHeader a:hover {
+  background: #f2a34f;
+}
+.menuSelected {
+  background: #4285f4 !important;
+  color: #fff !important;
+  font-weight: bold !important;
+  border: none !important;
+}
+#hideDiv {
+  display: none;
+}
+#navbar {
+  padding-left: 40px;
+  position: relative;
+  top: -25px;
+}
+.tableData {
+  border: 3px solid #bbb;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  width: 100%;
+  border-spacing: 0;
+  boarder-collapse: collapse;
+  text-align: center;
+  font-size: 90%;
+  max-height: 600px;
+  overflow: auto;
+}
+.tableData td,
+.tableData tr {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.tableData th {
+  border: 1px solid #d2d2d2;
+  background: #dfdfdf;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.tableData td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.altRow {
+  background: #f8f8f8;
+}
+#addStudent {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+hr {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+label {
+  width: 100px;
+  display: inline-block;
+}

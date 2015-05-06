@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//w3c/DTD XHTML 1.0 Strict //EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!--
+ Assignment 05
+ Brother Ercanback, CS 373
+ S. Scott Ercanbrack
+-->
+
+<html>
+<head>
+   <title>Java Script</title>
+   <script type = "text/javascript">
+   <!--
+	   
+       var req;
+										
+       function processReqChange()
+       {
+          // only if req shows "complete"
+          if (req.readyState == 4)
+          {
+             // only if "OK"
+	     if (req.status == 200)
+	     {
+	         // ...processing statements go here...
+                 var theText = req.responseText;
+	         document.getElementById("address").value = theText;
+	     }
+	     else
+             {
+	  	  alert("There was a problem retrieving the XML data:\n" + req.statusText);
+	     }
+	  }
+       }
+  
+       function loadXMLDoc(url)
+       {
+          // branch for native XMLHttpRequest object
+          if (window.XMLHttpRequest)
+          {
+	     req = new XMLHttpRequest();
+	     req.onreadystatechange = processReqChange;
+	     req.open("GET", url, true);
+	     req.send(null);
+	     // branch for IE/Windows ActiveX version
+	  }
+	  else if (window.ActiveXObject)
+	  {
+	     req = new ActiveXObject("Microsoft.XMLHTTP");
+	     if (req)
+	     {
+	        req.onreadystatechange = processReqChange;
+                req.open("GET", url, true);
+                req.send();
+	     }
+          } 
+      }
+
+	 function displayHelp()
+	 {
+		return false;
+	 }
+	 
+         var totalPurchase = 0;
+
+         function computeTotal()
+	 {
+		var total = 0;
+		if (document.getElementById("saddleItem").checked)
+		{
+			total = total + document.getElementById("saddleItem").value * 1;
+		}
+		if (document.getElementById("tvItem").checked)
+		{
+			total =  total + document.getElementById("tvItem").value * 1;
+		}
+		if (document.getElementById("carItem").checked)
+		{
+			total =  total + document.getElementById("carItem").value * 1;
+		}
+		if (document.getElementById("microwaveItem").checked)
+		{
+			total =  total + document.getElementById("microwaveItem").value * 1;
+		}
+		totalPurchase = total;
+	 }
+
+	 function displayTotal()
+	 {
+	    computeTotal()
+	    document.getElementById("total").value = "$" + totalPurchase;
+	 }
+
+	 function checkCCNum()
+	 {
+		var ccNumber = document.getElementById("ccNum").value;
+		if (ccNumber.length > 0 && ccNumber.length < 16)
+		{	
+			alert("Invalid Credit Card #");
+			document.getElementById("ccNum").focus();
+			document.getElementById("ccNum").select();	
+		}
+	 }
+
+	 function checkExpDate()
+	 {
+		var ccDate = document.getElementById("ccDate").value;
+		if (ccDate.length > 0)
+		{	
+			var pos = ccDate.search(/^\d{2}\/\d{2}$/);
+			if (pos != 0)
+			{
+				alert("Invalid Expiration Date - Correct form is: mm/yy");
+				document.getElementById("phone").focus();	
+			}
+			var year = ccDate.substring(3,5)
+			if (year < "04")
+			{
+				alert("Invalid Expiration Date - yy must be 04 or greater");
+				document.getElementById("ccDate").focus();	
+				document.getElementById("ccDate").select();	
+			}
+		}
+	 }
+ 
+
+	 function checkPhone()
+	 {
+
+		var phoneNum = document.getElementById("phone").value;
+		if (phoneNum.length > 0)
+		{
+			var pos = phoneNum.search(/^\d{3}-\d{3}-\d{4}$/);
+			if (pos != 0)
+			{
+				alert("Invalid Phone Number - Correct form is: ddd-ddd-dddd");
+				document.getElementById("phone").focus();	
+				document.getElementById("phone").select();
+			}
+		}
+	 }
+ 
+	 function checkForm()
+	 {
+		if(document.getElementById("fname").value == "")
+		{
+			alert("Firstname required");
+			document.getElementById("fname").focus();
+		}
+		else if(document.getElementById("lname").value == "")
+		{
+			alert("Lastname required");
+			document.getElementById("lname").focus();
+		}
+		else if(document.getElementById("address").value == "")
+		{
+  			// alert("Address required");
+			// document.getElementById("address").focus();
+                        //loadXMLDoc("http://157.201.194.254/cgi-bin/ercanbracks/hello1.pl");
+                        loadXMLDoc("http://157.201.194.254/~ercanbracks/address.txt");
+
+		}
+		else if(document.getElementById("phone").value == "")
+		{
+			alert("phone required");
+			document.getElementById("phone").focus();
+		}
+		else if(document.getElementById("ccNum").value == "")
+		{
+			alert("Credit Card # required");
+			document.getElementById("ccNum").focus();
+		}
+		else if(document.getElementById("ccDate").value == "")
+		{
+			alert("Expiration date required");
+			document.getElementById("ccDate").focus();
+		}
+		else
+		{
+		   computeTotal();
+		   if(confirm("Submitting Purchase - Total Price = $" + totalPurchase))
+		   {
+			 return true;
+		   }
+		}
+		return false;
+	 }
+
+	 function setLoadFocus()
+	 {
+		document.getElementById("fname").focus();
+	 }
+   //-->
+   </script>
+</head>
+
+<!-- <body onload = 'document.getElementById("fname").focus()'> -->
+
+<body onload = "setLoadFocus();">
+  <h3>Fill out the billing information below <br/> and select the items you wish to purchase.</h3>
+   
+  <form id = "purchase" action="" >
+	   <table>
+    	  <caption style="font-size: 16pt">Billing Information</caption>
+			<tr>
+			   <td>
+			       First name:
+			   </td> 
+			   <td>
+			      <input type="text" id = "fname" /> <br/>
+			   </td>	
+			</tr>
+			<tr>
+			   <td> 
+				  Last name:
+			   </td> 
+			   <td> 
+				  <input type="text" id = "lname" /> <br/> 
+			   </td>
+			</tr>
+			<tr>
+			   <td>
+			      Address:
+			   </td>
+   			   <td> 
+			      <textarea id = "address" rows = "3" cols = "25"></textarea>
+			   </td>
+			</tr>	
+			<tr>
+			   <td>
+			     Phone: 
+			   </td> 
+			   <td> 
+			      <input type="text" id = "phone" /> <br/>
+			   </td>
+			</tr>
+		</table>
+	    <hr/>
+		<table border ="1">
+		  <caption style="font-size: 16pt">Items for Purchase </caption>
+		  <tr>
+			<td colspan = "50" align="center">Ford Mustang </td>
+			<td align="right">25000.00</td>
+			<td>
+			   <input type="checkbox" id = "carItem" name = "items" value = "25000.00" />
+			</td>
+		  </tr> 
+		  <tr>
+			<td colspan = "50" align="center">Saddle</td>
+			<td align="right">500.25</td>
+			<td align="center">
+			   <input type="checkbox" id = "saddleItem" name = "items" value = "500.25" />
+			</td>
+		  </tr> 
+		  <tr>
+			<td colspan = "50" align="center">TV</td>
+			<td align="right">435.00</td>
+			<td align="center">
+			   <input type="checkbox" id = "tvItem" name = "items" value = "435.00" />
+			</td>
+		  </tr>
+
+		  <tr>
+			<td colspan = "50" align="center">MicroWave</td>
+			<td align="right">235.00</td>
+			<td align="center">
+			   <input type="checkbox" id = "microwaveItem" name = "items" value = "235.00" />
+			</td>
+		  </tr> 
+		</table>
+		<table>
+		  <tr>
+			 <td colspan = "67" align="right" style = "color: red">
+			   	Total:
+			 </td>
+		     <td>
+			   <input type="text" id = "total" size="10" name = "total" readonly = "readonly" value = "0.0"/>
+			 </td>
+		  </tr>
+		</table>
+	
+
+		<hr/>
+		<h3>Credit Card Information</h3> 
+		<input type="radio" name = "CreditCard" value = "f" checked = "checked"/> Visa
+		<input type="radio" name = "CreditCard" value = "w" /> MasterCard
+		<input type="radio" name = "CreditCard" value = "s" /> American Express
+		<br/>
+        <p>Credit Card #
+ 	 	   <input type="text" id = "ccNum" maxlength = "16" size = "16"  name ="ccNumber" /> 
+		   <span style = "position: relative; left: 10px" >Exp Date (i.e 04/05)
+		      <input type="text" id = "ccDate" name = "expDate" maxlength = "5" size = "5"/>
+		   </span> 
+		</p>
+		<br/>
+		<hr/>
+		<br/>
+	
+		<input type="submit" id = "submit" name = "submit"  onsubmit = "checkForm()" value ="Purchase Items"/>
+		 
+		<input style = "position: relative; left: 40px"
+		       type="reset" value ="clear form"/>
+      
+  </form>
+  <script type = "text/javascript">
+     document.getElementById("ccDate").onblur = checkExpDate;
+	 document.getElementById("carItem").onclick = displayTotal;
+	 document.getElementById("saddleItem").onclick = displayTotal;
+	 document.getElementById("tvItem").onclick = displayTotal;
+	 document.getElementById("microwaveitem").onclick = displayTotal;
+	 document.getElementById("ccNum").onblur = checkCCNum;
+	 document.getElementById("phone").onblur = checkPhone;
+	 document.getElementById("purchase").onsubmit = checkForm;
+	 document.getElementById("purchase").onreset = setLoadFocus;
+  </script>	
+</body>
+</html>

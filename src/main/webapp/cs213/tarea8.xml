@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="assign8style.xsl" type="text/xsl" ?>
+
+<bsa>
+    <council name="LightPower">
+        <troop number="37268" unitName="unit1">
+            <scout>
+                <firstName>Manuel</firstName>
+                <lastName>Black</lastName>
+                <phoneNumber>333-222-1111</phoneNumber>
+                <address>
+                    <street>3195 River road</street>
+                    <city>Montgomery</city>
+                    <state>Alabama</state>
+                </address>
+                <rank dateEarn = "2014-5-30">Eagle</rank>
+            	<meritBadge dateEarn = "2013-3-28">Fishing</meritBadge>
+				<meritBadge dateEarn = "2013-3-28">Swimming</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Corageous</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Leader</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Communicator</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Enthusiastic</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Peter</firstName>
+                <lastName>Cone</lastName>
+                <phoneNumber>567-879-3344</phoneNumber>
+                <address>
+                    <street>9980 7th street</street>
+                    <city>Orlando</city>
+                    <state>Florida</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Cooking</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Swimming</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Corageous</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Leader</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Communicator</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Enthusiastic</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Eater</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Fishing</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Recueter</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">crafting</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Magus</firstName>
+                <lastName>Falcon</lastName>
+                <phoneNumber>765-677-8990</phoneNumber>
+                <address>
+                    <street>319 S 234 N</street>
+                    <city>Provo</city>
+                    <state>Utah</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Dictator</rank>
+                <meritBadge dateEarn = "2013-3-28">Cooking</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Swimming</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Corageous</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Leader</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Communicator</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Enthusiastic</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Eater</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Fishing</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Recueter</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Destroyer</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Adam</firstName>
+                <lastName>Walls</lastName>
+                <phoneNumber>321-444-4534</phoneNumber>
+                <address>
+                    <street>3195 Harrison st</street>
+                    <city>Orem</city>
+                    <state>Alaska</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Communicator</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Enthusiastic</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Eater</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Fishing</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Recueter</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Bernard</firstName>
+                <lastName>Archer</lastName>
+                <phoneNumber>444-657-1112</phoneNumber>
+                <address>
+                    <street>4738 River ln</street>
+                    <city>Cocoa</city>
+                    <state>Florida</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-12-30">Corageous</meritBadge>
+                <meritBadge dateEarn = "2011-11-29">Leader</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Enthusiastic</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Eater</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Fishing</meritBadge>
+                
+            </scout>
+        </troop>
+        <troop number="34" unitName="Pegasus">
+            <scout>
+                <firstName>Joseph</firstName>
+                <lastName>Alford</lastName>
+                <phoneNumber>678-888-9009</phoneNumber>
+                <address>
+                    <street>234 Walmart st</street>
+                    <city>Orlando</city>
+                    <state>Florida</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Enthusiastic</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Eater</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Fishing</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Recueter</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Chris</firstName>
+                <lastName>Brant</lastName>
+                <phoneNumber>600-899-2034</phoneNumber>
+                <address>
+                    <street>Safary st</street>
+                    <city>Orem</city>
+                    <state>Utah</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+             	<meritBadge dateEarn = "2013-3-28">Fishing</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Enthusiastic</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Eater</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Recueter</meritBadge>
+            </scout>
+            <scout>
+                <firstName>James</firstName>
+                <lastName>Berry</lastName>
+                <phoneNumber>132-445-6789</phoneNumber>
+                <address>
+                    <street>3195 Elizabeth Road</street>
+                    <city>Sacramento</city>
+                    <state>California</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Enthusiastic</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Eater</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Fishing</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Enrique</firstName>
+                <lastName>Corey</lastName>
+                <phoneNumber>555-879-2343</phoneNumber>
+                <address>
+                    <street>324 S 330 W</street>
+                    <city>Salt Lake</city>
+                    <state>Utah</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Cooking</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Enthusiastic</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Eater</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Fishing</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Cusco</firstName>
+                <lastName>Aron</lastName>
+                <phoneNumber>709-896-4278</phoneNumber>
+                <address>
+                    <street>La fella st</street>
+                    <city>Tampa</city>
+                    <state>Florida</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Life Saving</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Enthusiastic</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Eater</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Fishing</meritBadge>
+            </scout>
+            
+        </troop>
+    </council>
+    <council name="Power of Zeus">
+        <troop number="666" unitName="Ades">
+            <scout>
+                <firstName>William</firstName>
+                <lastName>Hale</lastName>
+                <phoneNumber>456-776-1234</phoneNumber>
+                <address>
+                    <street>3195 The Farmer Rd</street>
+                    <city>Miami</city>
+                    <state>Florida</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Enviromental Science</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Fishing</meritBadge>
+
+            </scout>
+            <scout>
+                <firstName>Adam</firstName>
+                <lastName>Holmes</lastName>
+                <phoneNumber>765-789-2345</phoneNumber>
+                <address>
+                    <street>El Limbo</street>
+                    <city>Atlanta</city>
+                    <state>Georgia</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Sleeping</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Enthusiastic</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Eater</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Fishing</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Alexander</firstName>
+                <lastName>Kay</lastName>
+                <phoneNumber>456-234-1643</phoneNumber>
+                <address>
+                    <street>3195 Rain Drive</street>
+                    <city>Melbourne</city>
+                    <state>Florida</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Destructor</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Enthusiastic</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Eater</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Fishing</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Carlos</firstName>
+                <lastName>Kolb</lastName>
+                <phoneNumber>450-780-6780</phoneNumber>
+                <address>
+                    <street>345 E 220 N</street>
+                    <city>Lehi</city>
+                    <state>Utah</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Dancer</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Enthusiastic</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Eater</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Fishing</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Goku</firstName>
+                <lastName>Oakes</lastName>
+                <phoneNumber>333-222-1111</phoneNumber>
+                <address>
+                    <street>455 W 500 N</street>
+                    <city>Cedar City</city>
+                    <state>Utah</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Leader</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Enthusiastic</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Eater</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Fishing</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Enthusiastic</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Eater</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Fishing</meritBadge>
+            </scout>
+        </troop>
+        <troop number="12" unitName="Atlethic">
+            <scout>
+                <firstName>Jacob</firstName>
+                <lastName>Rader</lastName>
+                <phoneNumber>500-800-9876</phoneNumber>
+                <address>
+                    <street>3195 White Heavens</street>
+                    <city>Rexburg</city>
+                    <state>Idaho</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Shooter</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Enthusiastic</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Eater</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Fishing</meritBadge>
+                <meritBadge dateEarn = "2014-2-3">Swimming</meritBadge>
+                <meritBadge dateEarn = "2013-12-30">Corageous</meritBadge>
+                <meritBadge dateEarn = "2011-11-29">Leader</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Joseph</firstName>
+                <lastName>Smith</lastName>
+                <phoneNumber>234-564-6667</phoneNumber>
+                <address>
+                    <street>450 Orange Blvd</street>
+                    <city>Pocatello</city>
+                    <state>Idaho</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Sword Fighting</meritBadge>
+                <meritBadge dateEarn = "2014-2-3">Swimming</meritBadge>
+                <meritBadge dateEarn = "2013-12-30">Corageous</meritBadge>
+                <meritBadge dateEarn = "2011-11-29">Leader</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Noah</firstName>
+                <lastName>Trent</lastName>
+                <phoneNumber>600-900-8000</phoneNumber>
+                <address>
+                    <street>3195 The Arc Drive</street>
+                    <city>Near Eden</city>
+                    <state>Texas</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2014-2-3">Swimming</meritBadge>
+                <meritBadge dateEarn = "2013-12-30">Corageous</meritBadge>
+                <meritBadge dateEarn = "2011-11-29">Leader</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Enoch</firstName>
+                <lastName>Black</lastName>
+                <phoneNumber>333-222-1111</phoneNumber>
+                <address>
+                    <street>409 White Road</street>
+                    <city>Zion</city>
+                    <state>Heavens</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Cooking</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Halo</firstName>
+                <lastName>Farr</lastName>
+                <phoneNumber>333-222-1111</phoneNumber>
+                <address>
+                    <street>Galaxy Road</street>
+                    <city>Ship 470</city>
+                    <state>Andromeda</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2014-6-12">Pokemon Trainer</meritBadge>
+                <meritBadge dateEarn = "2014-2-3">Swimming</meritBadge>
+                <meritBadge dateEarn = "2013-12-30">Corageous</meritBadge>
+                <meritBadge dateEarn = "2011-11-29">Leader</meritBadge>
+            </scout>
+            
+        </troop>
+    </council>
+</bsa>

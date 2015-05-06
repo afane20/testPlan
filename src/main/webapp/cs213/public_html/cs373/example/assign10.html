@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Chad Hansen's Assignment #10</title>
+  <base href="http://157.201.194.254/~ercanbracks/cs373/example/" />
+  <link rel="stylesheet" type="text/css" href="assign05Style.css" />
+  <script type="text/javascript">
+  <!--
+	// form default for loading or resetting.
+	function loading()
+	{
+		document.getElementById('firstName').focus();
+		document.getElementById('total').value = "0.00";
+	}
+	
+	// Automatic insertion of the '-' in the telephone number feild.
+    function phoneNumber(e)
+    {
+		var phone = document.getElementById('phone');
+		var thisKey;
+		
+		e = e || window.event;
+	
+		if (typeof e.charCode != "undefined")
+		{
+			thisKey = e.charCode;
+		}
+		else if (e.which)
+		{
+			thisKey = e.which;
+		}
+		else
+		{
+			thisKey = e.keyCode;
+		}
+		
+		var charKey = String.fromCharCode(thisKey);
+		
+		if (/[0-9]/.test(charKey))
+		{
+			if (phone.value.length == 3)
+			{
+				phone.value = phone.value + "-";
+			}
+			else if (phone.value.length == 7)
+			{
+				phone.value = phone.value + "-";
+			}
+		}
+    }
+	
+	// Updates the total field everytime a checkbox is checked or 
+	// unchecked.
+	function updateTotal(id)
+	{
+		var item = document.getElementById(id);
+		var total = document.getElementById('total');
+		
+		var numTotal = total.value * 1.0;
+		var numItem = item.value * 1.0;
+		
+		//document.getElementById('errors').innerHTML = numItem;
+		
+		if (item.checked == true)
+		{
+			numTotal += numItem;
+		}
+		else
+		{
+			numTotal -= numItem;
+		}
+		
+		numTotal = Math.round(numTotal * 100);
+		numTotal /= 100;
+		
+		if (numTotal == 0)
+		{
+			numTotal = "0.00";
+		}
+		
+		total.value = numTotal;
+	}
+	
+	// Final validation of the form before submittion
+	function validateForm()
+	{
+		// This functions validates that the required fields have 
+		// valid entries.
+		
+		var firstField = "";
+		
+		// First Name
+		if (document.getElementById('firstName').value == "")
+		{
+			firstField = "firstName";
+			document.getElementById('firstNameValidation').style.display = "block";
+		}
+		else
+		{
+			document.getElementById('firstNameValidation').style.display = "none";
+		}
+		
+		// Last Name
+		if (document.getElementById('lastName').value == "")
+		{
+			if (firstField == "")
+			{
+				firstField = "lastName";
+			}
+			document.getElementById('lastNameValidation').style.display = "block";
+		}
+		else
+		{
+			document.getElementById('lastNameValidation').style.display = "none";
+		}
+		
+		// Street Address
+		if (document.getElementById('streetAddress').value == "")
+		{
+			if(firstField == "")
+			{
+				firstField = "streetAddress";
+			}
+			document.getElementById('streetAddressValidation').style.display = "block";
+		}
+		else
+		{
+			document.getElementById('streetAddressValidation').style.display = "none";
+		}
+		
+		// City
+		if (document.getElementById('city').value == "")
+		{
+			if (firstField == "")
+			{
+				firstField = "city";
+			}
+			document.getElementById('cityValidation').style.display = "block";
+		}
+		else
+		{
+			document.getElementById('cityValidation').style.display = "none";
+		}
+		
+		// State
+		var state = document.getElementById('state');
+		var string = state.value;
+		
+		if (state.value == "")
+		{
+			if (firstField == "")
+			{
+				firstField = "state";
+			}
+			document.getElementById('stateValidation').style.display = "block";
+		}
+		else if (string.search(/^[A-Za-z]{2}$/) != 0)
+		{
+			if (firstField == "")
+			{
+				firstField = "state";
+			}
+			document.getElementById('stateValidation').style.display = "block";
+		}
+		else
+		{
+			document.getElementById('stateValidation').style.display = "none";
+		}
+		
+		//zip Code
+		var zip = document.getElementById('zip');
+		if (zip.value == "")
+		{
+			if (firstField == "")
+			{
+				firstField = "zip";
+			}
+			document.getElementById('zipValidation').style.display = "block";
+		}
+		else if (!zipCode())
+		{
+			if (firstField == "")
+			{
+				firstField = "zip";
+			}
+			document.getElementById('zipValidation').style.display = "block";
+			
+		}
+		else
+		{
+			document.getElementById('zipValidation').style.display = "none";
+		}
+		
+		//Phone
+		var phone = document.getElementById('phone');
+		if (phone.value == "")
+		{
+			if (firstField == "")
+			{
+				firstField = "phone";
+			}
+			document.getElementById('phoneValidation').style.display = "block";
+		}
+		else if (phone.value.search(/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/) != 0)
+		{
+			if (firstField == "")
+			{
+				firstField = "phone";
+			}
+			document.getElementById('phoneValidation').style.display = "block";
+		}
+		else
+		{
+			document.getElementById('phoneValidation').style.display = "none";
+		}
+		
+		//Order
+		var total = document.getElementById('total').value;
+		if (total == "0.00")
+		{
+			if (firstField == "")
+			{
+				firstField = "purchaseItems";
+			}
+			document.getElementById('totalValidation').style.display = "block";
+		}
+		else
+		{
+			document.getElementById('totalValidation').style.display = "none";
+		}
+		
+		//Credit Card Type
+		var card = document.javascriptForm.card;
+		var radioChecked = false;
+		for (i = 0; i < card.length; i++)
+		{
+			if (card[i].checked)
+			{
+				radioChecked = true;
+				break;
+			}
+		}
+		
+		if (!radioChecked)
+		{
+			if (firstField == "")
+			{
+				firstField = "card";
+			}
+			document.getElementById('cardValidation').style.display = "block";
+		}
+		else
+		{
+			document.getElementById('cardValidation').style.display = "none";
+		}
+		
+		//Credit Card Number
+		var num = document.getElementById('cardNumber');
+		if (num.value == "")
+		{
+			if (firstField == "")
+			{
+				firstField = "cardNumber";
+			}
+			document.getElementById('cardNumberValidation').style.display = "block";
+		}
+		else if (!creditCardNumber())
+		{
+			if (firstField == "")
+			{
+				firstField = "cardNumber";
+			}
+		}
+		else
+		{
+			document.getElementById('cardNumberValidation').style.display = "none";
+		}
+		
+		//Expiration Date
+		var month = document.getElementById('month');
+		var year = document.getElementById('year');
+		var today = new Date();
+		month = month.options[month.selectedIndex].value;
+		year = year.options[year.selectedIndex].value;
+		
+		if (year == today.getFullYear())
+		{
+			if (month < today.getMonth() + 1)
+			{
+				if (firstField == "")
+				{
+					firstField = "month";
+				}
+				document.getElementById('expValidation').style.display = "block";
+			}
+			else
+			{
+				document.getElementById('expValidation').style.display = "none";
+			}
+		}
+		else if (year < today.getFullYear())
+		{
+			if (firstField == "")
+			{
+				firstField = "year";
+			}
+			document.getElementById('expValidation').style.display = "block";
+		}
+		else
+		{
+			document.getElementById('expValidation').style.display = "none";
+		}
+	
+		if (firstField == "")
+		{
+			return true;
+		}
+		else
+		{
+			document.getElementById(firstField).focus();
+			return false;
+		}
+	}
+	
+	// Checks to see if the zip code is 5 digits
+	function zipCode()
+	{
+		var number = document.getElementById('zip').value;
+		var ok = number.search(/^\d{5}$/);
+		
+		if (ok == 0)
+		{
+			document.getElementById('zipValidation').style.display = 'none';
+			return true;
+		}
+		else
+		{
+			document.getElementById('zipValidation').style.display = 'block';
+			return false;
+		}
+
+	}
+	
+	// Checks to see if the credit card number is 16 digits
+	function creditCardNumber()
+	{
+		var number = document.getElementById('cardNumber').value;
+		var ok = number.search(/^\d{16}$/);
+		
+		if (ok == 0)
+		{
+			document.getElementById('cardNumberValidation').style.display = 'none';
+			return true;
+		}
+		else
+		{
+			document.getElementById('cardNumberValidation').style.display = 'block';
+			return false;
+		}
+	}
+  //-->
+  </script>
+</head>
+<body onload="loading();" style="text-align: center;">
+  <div id="main">
+  <div id="errors">Every field is required</div>
+  <form action="http://157.201.194.254/cgi-bin/han03053/assign10.pl"
+        method="post" name="javascriptForm" 
+	onreset="loading();" onsubmit="return validateForm();">
+    <span class="label">First Name:</span>
+    <input type="text" class="elements"  name="firstName" id="firstName" />
+	<span class="error" id="firstNameValidation">!</span>
+    <br/>
+    <span class="label">Last Name:</span>
+    <input type="text" class="elements"  name="lastName" id="lastName" />
+	<span class="error" id="lastNameValidation">!</span>
+    <br/>
+    <span class="label">Street Address:</span>
+    <input type="text" class="elements"
+       name="streetAddress" id="streetAddress" />
+	<span class="error" id="streetAddressValidation">!</span>
+    <br/>
+    <span class="label">City:</span>
+    <input type="text" class="elements"  name="city" id="city" />
+	<span class="error" id="cityValidation">!</span>
+    <br/>
+    <span class="label">State:</span>
+    <input type="text"  class="elements" style="text-transform: uppercase" size="3"
+      maxlength="2" name="state" id="state" />
+	<span class="error" id="stateValidation">!</span>
+    <br/>
+    <span class="label">Zip Code:</span>
+    <input type="text" class="elements"  size="5" maxlength="5" 
+		onblur="zipCode();" name="zip" id="zip" />
+	<span class="error" id="zipValidation">!</span>
+    <br/>
+    <span class="label">Phone:</span>
+    <input type="text" class="elements" size="12" maxlength="12" name="phone" id="phone" />
+	<span class="error" id="phoneValidation">!</span>
+    <br/>
+	<br/>
+	<table id="purchaseItems">
+		<caption>Items To Purchase</caption>
+		<tr>
+			<th>Item</th>
+			<th>Cost</th>
+			<th>Purchase</th>
+		</tr>
+		<tr>
+			<td>Watch</td>
+			<td>94.99</td>
+			<td>
+				<input type="checkbox" name="watch" id="watch"
+					value="94.99"onclick="updateTotal('watch');"/>
+			</td>
+		</tr>
+		<tr>
+			<td>Wallet</td>
+			<td>25.99</td>
+			<td>
+				<input type="checkbox" name="wallet" id="wallet"
+				value="25.99" onclick="updateTotal('wallet');"/>
+			</td>
+		</tr>
+		<tr>
+			<td>Cuff Links</td>
+			<td>15.99</td>
+			<td>
+				<input type="checkbox" name="cuff" id="cuff"
+				value="15.99" onclick="updateTotal('cuff');"/>
+			</td>
+		</tr>
+		<tr>
+			<td>Lapel Pin</td>
+			<td>9.99</td>
+			<td>
+				<input type="checkbox" name="lapel" id="lapel"
+				value="9.99" onclick="updateTotal('lapel');"/>
+			</td>
+		</tr>
+		<tr> <!-- Displays the total purchase price -->
+			<td colspan="2"></td>
+			<td>
+			$<input type="text" readonly name="total" id="total"
+			  size="5"/>
+			</td>
+		</tr>
+	</table>
+	<span class="error" id="totalValidation">!</span>
+	<br/>
+	<span class="label">Credit Card Type:</span><br/>
+	<div style="text-align: left;">
+	<span class="error" id="cardValidation">!</span>
+	Visa<input type="radio" id="card" name="card" value="Visa" />
+	MasterCard<input type="radio" name="card" value="MstC" />
+	American Express<input type="radio" name="card" value="AmEx" />
+	</div>
+	<span class="label">Credit Card #:</span>
+    <input type="text" class="elements" size="17" maxlength="16" 
+		onblur="creditCardNumber();" name="cardNumber" id="cardNumber" />
+	<span class="error" id="cardNumberValidation">!</span>
+    <br/>
+	<span class="label">Expiration Date:</span>
+	<script type="text/javascript">
+	<!--
+		document.write("<select id='year' name='year'>");
+		document.write("<option value='2007' selected>2007</option>");
+		for (i = 2008; i <= 2020; i++)
+		{
+			document.write("<option value='" + i + "'>" + i + "</option>");
+		}
+		document.write("</select><select id='month' name='month'>");
+		document.write("<option value='1' selected>1</option>");
+		for (i = 2; i <= 12; i++)
+		{
+			document.write("<option value='" + i + "'>" + i + "</option>");
+		}		
+		document.write("</select>");
+	//-->
+	</script>
+	<span class="error" id="expValidation">!</span>
+	<br/>
+	<input type="reset" id="resetButton" value="Reset Form"/>
+	<input type="submit" id="submitButton" value="Submit" />
+  </form>
+  </div>
+  <script type="text/javascript">
+  <!--
+    document.getElementById('phone').onkeypress = phoneNumber;
+  //-->
+  </script>
+</body>
+</html>

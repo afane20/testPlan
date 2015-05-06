@@ -1,0 +1,45 @@
+/* css for the registration page */
+
+      .registerBox {
+     display: none;
+     background: #4285f4;
+     position: fixed;
+     left: 0;
+     right: 0;
+     top: 0;
+     bottom: 0;
+     padding: 50px;
+     padding-top: 20px;
+     border-radius: 15px;
+     border: solid 5px #bbb;
+     height: 500px;
+     margin: auto;
+     box-shadow: 5px 5px 5px 5px #6e6e6e;
+     width: 500px;
+   }
+}
+
+
+.registerBox div {
+   float: right;
+   text-align: left;
+}
+
+.registerBox img {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  width: 40px;
+}
+
+label {
+  width: 175px;
+  display: inline-block;
+}
+
+.registerBox input[type=button] {
+   background-color: lightgrey;
+   float: right;
+}
+
+

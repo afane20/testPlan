@@ -1,0 +1,351 @@
+<!--
+   Assignment 05
+   Brother Ercanbrack, CS 373
+   Edmund Leemhuis
+-->
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head> <title>Edmund's Assignment 5: JavaScript</title>      
+   <base src= "http://157.201.194.254/~farwest/">
+   <link rel = "stylesheet"
+      type="text/css"
+      href="styles05.css" />
+   <script type="text/javascript">
+   <!--
+
+   //Initializes the focus.
+   function startup()
+   {
+      document.getElementById('name').focus();     
+   }
+
+   //Calculates the total price   
+   function total(id)
+   {
+      var item = document.getElementById(id);
+      var grandTotal = document.getElementById('grandTotal');
+	
+      var numTotal = grandTotal.innerHTML * 1.0;
+      var numItem = item.value * 1.0;
+      
+      if (item.checked == true)
+      {
+         numTotal += numItem;
+      }
+      else
+      {
+         numTotal -= numItem;
+      }
+		
+      numTotal = Math.round(numTotal * 100);
+      numTotal /= 100;
+
+      if (numTotal == 0)
+      {
+         numTotal = "0.00";
+      }
+      grandTotal.innerHTML = numTotal;
+   }
+
+   //Checks if all fields are valid
+   function validateAll()
+   {
+      var field = "";
+
+      //checks if a name is entered.
+      if (document.getElementById('name').value == "")
+      {
+         field = "name";
+	 document.getElementById('invalidName').style.display = "block";
+      }
+      else
+         document.getElementById('invalidName').style.display = "none";
+
+      //checks if something is entered in the address field 
+      if (document.getElementById('address').value == "")
+      {
+         if (field == "")
+            field = "address";
+	 document.getElementById('invalidAddress').style.display = "block";
+      }
+      else
+      {
+         document.getElementById('invalidAddress').style.display = "none";
+      }
+
+      //checks if a city has been chosen
+      if (document.getElementById('city').value == "")
+      {
+         if (field == "")
+            field = "city";
+	 document.getElementById('invalidCity').style.display = "block";
+      }
+      else
+      {
+         document.getElementById('invalidCity').style.display = "none";
+      }
+
+      //makes sure the state is entered as two letters
+      var checker = document.getElementById('state').value;
+      if (document.getElementById('state').value == ""
+          || checker.search(/^[A-Za-z]{2}/) != 0)
+      {
+         if (field == "")
+            field = "state";
+	 document.getElementById('invalidState').style.display = "block";
+      }
+      else
+      {
+         document.getElementById('invalidState').style.display = "none";
+      }
+
+      //checks if the zip is a 5 digit number
+      checker = document.getElementById('zip').value;
+      if (document.getElementById('zip').value == ""
+          || checker.search(/\d{5}/) != 0)
+      {
+         if (field == "")
+            field = "zip";
+	 document.getElementById('invalidZip').style.display = "block";
+      }
+      else
+      {
+         document.getElementById('invalidZip').style.display = "none";
+      }
+
+      //checks if the phone number is valid: XXX-XXX-XXXX
+      checker = document.getElementById('phone').value;
+      if (document.getElementById('phone').value == ""
+          || checker.search(/\d{3}-\d{3}-\d{4}/))
+      {
+         if (field == "")
+            field = "phone";
+	 document.getElementById('invalidPhone').style.display = "block";
+      }
+      else
+      {
+         document.getElementById('invalidPhone').style.display = "none";
+      }
+
+      //checks if a type has been chosen
+      var type = document.myForm.type;
+      var typeSelected = false;
+      for (i = 0; i < type.length; i++)
+      {
+         if (type[i].checked)
+	 {
+	    typeSelected = true;
+	    break;
+	 }
+      }
+      if (!typeSelected)
+      {
+         if (field == "")
+	 {
+	    field = "type";
+	 }
+	 document.getElementById('invalidType').style.display = "block";
+      }
+      else
+      {
+         document.getElementById('invalidType').style.display = "none";
+      }
+
+      //checks if the credit card numbers is 16 digits
+      checker = document.getElementById('card').value;
+      if (document.getElementById('card').value == ""
+          || checker.search(/\d{16}/))
+      {
+         if (field == "")
+	 field = "card";
+	 document.getElementById('invalidCard').style.display = "block";
+      }
+      else
+      {
+         document.getElementById('invalidCard').style.display = "none";
+      }
+
+      //checks if the date is after October 2007 
+      checker = document.getElementById('year').value;
+      if (checker <= 2009)
+      {
+         if (field == "")
+	    field = "month";
+         document.getElementById('invalidDate').style.display = "block";
+      }
+      else
+      {
+         document.getElementById('invalidDate').style.display = "none";
+      }
+
+      //submits the form to the server (though not really)
+      if (field == "")
+      {
+         document.write("Successfully Done!");
+	 return true;
+      }
+      else
+      {
+         document.getElementById(field).focus();
+	 return false;
+      }
+         
+   }
+   
+   //-->
+   </script>
+
+   <style type="text.css">
+   .invalid
+   {
+      display: none;
+   }
+   td
+   {
+      display: none;
+   }
+   
+   </style>
+   
+      
+</head>
+
+<body onload = "startup();">
+   <h2> Get Some Canadian Stuff, eh! </h2>
+   <form action = "" name = "myForm" onreset = "startup();" onsubmit = "return validateAll();">
+   <table>
+      <tr>
+         <td> Complete Name:</td>
+	 <td> <input type = "text" name = "name" id = "name"
+	             size = "30"></td>
+         <td class = "invalid" id = "invalidName">
+	 First and Last name required.</td>
+      </tr>
+      <tr>
+         <td> Address: </td>
+	 <td><input type = "text" name = "address" id = "address"
+	            size = "30"></td>
+	 <td class = "invalid" id = "invalidAddress">
+	 Street address required.</td>
+      </tr>
+      <tr>
+         <td> City: </td>
+	 <td><input type = "text" name = "city" id = "city"
+	            size = "30"></td>
+	 <td class = "invalid" id = "invalidCity">
+	 City required.</td>
+      </tr>
+      <tr>
+         <td> State: </td>
+	 <td><input type = "text" name = "state" id = "state"
+	            size = "3" maxlength="2"></td>
+         <td class = "invalid" id = "invalidState">
+	 State required.</td>
+      </tr>
+      <tr>
+         <td> Zip: </td>
+	 <td><input type = "text" name = "zip" id = "zip"
+	            size = "6" maxlength="5"></td>
+	 <td class = "invalid" id = "invalidZip">
+	 5 digit zip code required.</td>
+      </tr>
+      <tr>
+         <td> Phone Number:</td>
+	 <td><input type = "text" name = "phone" id = "phone"
+	            size = "13" maxlength="12"></td>
+         <td class = "invalid" id = "invalidPhone">
+	 Phone number required: XXX-XXX-XXXX</td>
+      </tr>
+   </table>
+
+   <table border>
+      <caption><h4>Canadian Goods</caption>
+      <tr>
+         <th> </th>
+	 <th> Description</th>
+	 <th> Price </th>
+      </tr>
+      <tr>
+         <td><input type = "checkbox" name = "maple" id = "maple"
+	            value = "5.59" onclick = "total('maple');" /></td>
+         <td> Maple Syrop </td>
+         <td> $5.59 </td>
+      </tr>
+      <tr>
+         <td><input type = "checkbox" name = "toque" id = "toque"
+	            value = "14.95" onclick = "total('toque');" /></td>
+         <td> Toque </td>
+         <td> $14.95 </td>
+      </tr>
+      <tr>
+         <td><input type = "checkbox" name = "chester" id = "chester"
+	            value = "349.95" onclick = "total('chester');" /></td>
+         <td> Chesterfield </td>
+         <td> $349.95 </td>
+      </tr>
+      <tr>
+         <td><input type = "checkbox" name = "skidoo" id = "skidoo"
+	            value = "4559.95" onclick = "total('skidoo');"/></td>
+         <td> skidoo </td>
+         <td> $4,559.95 </td>
+      </tr>
+      <tr>
+         <td colspan="2">Total:</td>
+	 <td id = "grandTotal"></td>
+	 <td class = "invalid" id = "invalidGoods">Buy something.</td>
+      </tr>
+   </table>
+
+      <p> <b> Credit Card Type:</b>
+         <input type = "radio" name = "type" id = "type" value = "master" />
+	 MasterCard
+	 <input type = "radio" name = "type" value = "visa" />
+	 Visa
+	 <input type = "radio" name = "type" value = "american"/>
+	 American Express
+	 <span class = "invalid" id = "invalidType">Choose a card type.</span>		     
+      </p>
+
+      <table>
+         <tr>
+	    <td><b> Credit Card #: </b></td>
+            <td><input type = "text" name = "card" id = "card" size = "16"
+	      maxlength = "16"></td>
+	    <td class = "invalid" id = "invalidCard">
+	              Must be 16 digits.</td>
+         </tr>
+      </table>
+
+      <p> <b> Expiration Date: </b>
+      <script type="text/javascript">
+      <!--
+         document.write("<select id=\"month\">");
+	 for (i = 1; i <= 12; i++)
+	 {
+	    document.write("<option value=\"" + i + "\">" + i + "</option>");
+	 }
+	 document.write("</select>")
+	 document.write("<select id=\"year\">");
+	 for (i = 2007; i <= 2015; i++)
+	 {
+	    document.write("<option value=\"" + i + "\">" + i + "</option>");
+	 }
+         document.write("</select>")
+      //-->
+      </script>
+      <span class = "invalid" id = "invalidDate">Valid date required.</span>
+      </p>
+	    <p>
+	       <input type = "submit" value = "Submit" /> 
+	       <input type = "reset" value = "Reset"
+	          style = "position : relative; left : 1in" />
+	    </p>
+	    </span>
+         </form>
+
+</body>
+</html>

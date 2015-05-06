@@ -1,0 +1,36 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//w3c/DTD XHTML 1.0 strict //EN"
+   "http://www.w3.org/TR/xhtml/DTD/xhtml11-strict.dtd">
+<!--
+ Assignment 04, Style Sheets
+ Brother Ercanback, CS 373
+ S. Scott Ercanbrack
+-->
+
+<html>
+<head>
+ <title>Scott's Home Page</title>
+<script type = "text/javascript">
+function newLocation()
+{
+  window.location = "http://www.byui.edu";
+}
+function currentLocation()
+{
+   location = "http://www.w3schools.com";
+}
+</script>
+
+</head>
+<body>
+   <h1>This is document 1 </h1>
+   <script type = "text/javascript">
+       document.writeln(window.location.host);
+
+       document.writeln(window.location.pathname);
+   </script>
+   <h1> this is following the script</h1>
+   <input type = "button" onclick = "currentLocation()" value = "Current Location" />
+   <input type = "button" onclick = "newLocation()" value = "New Location" />
+</body>
+</html>

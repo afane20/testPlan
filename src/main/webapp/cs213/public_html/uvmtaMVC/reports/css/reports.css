@@ -1,0 +1,11 @@
+.center {
+   text-align: center;    
+}
+.print td {
+    position: relative;
+    left: 10px;
+}
+
+td {
+ padding: 3px 3px 3px 3px   
+}

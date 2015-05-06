@@ -1,0 +1,24 @@
+
+<!-- TODO define your own vocabulary/syntax. Example follows:  -->
+<!ELEMENT bsa (council+)>
+<!ELEMENT council (troop)+>
+<!ATTLIST council name CDATA #REQUIRED>
+
+<!ELEMENT troop (scout+)>
+<!ATTLIST troop number CDATA #REQUIRED>
+<!ATTLIST troop unitName CDATA #REQUIRED>
+
+<!ELEMENT scout (firstName, lastName, phoneNumber, address, rank*, meritBadge*)>
+<!ATTLIST rank dateEarn CDATA #REQUIRED>
+<!ATTLIST meritBadge dateEarn CDATA #REQUIRED>
+
+<!ELEMENT firstName (#PCDATA)>
+<!ELEMENT lastName (#PCDATA)>
+<!ELEMENT phoneNumber (#PCDATA)>
+<!ELEMENT address (street, city, state)>
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT state (#PCDATA)>
+<!ELEMENT rank (#PCDATA)>
+<!ELEMENT meritBadge (#PCDATA)>
+

@@ -1,0 +1,52 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<!-- byui.xsd
+     A simple schema for byui_xsd.xml
+-->
+
+<xsd:schema 
+    xmlns:xsd = "http://www.w3.org/2001/XMLSchema"
+    targetNamespace = "http://ercanbracks.byui.edu/byuiSchema"
+    xmlns = "http://ercanbracks.byui.edu/byuiSchema"
+    elementFormDefault = "qualified">
+
+ 
+   <xsd:element name = "department" type = "xsd:string" />
+   <xsd:element name = "name" type = "xsd:string" />
+   <xsd:attribute name = "name" type = "xsd:string" /> 
+
+   <xsd:element name = "department1">
+      <xsd:complexType>
+         <xsd:sequence>
+              <xsd:element ref = "name" minOccurs = "0" maxOccurs = "1" />            
+              <xsd:element name = "major" type = "xsd:string">
+              </xsd:element>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+
+   <xsd:element name = "college">
+      <xsd:complexType>
+         <xsd:sequence>
+             <xsd:element ref = "department" minOccurs = "1" maxOccurs = "unbounded" />
+             <xsd:element ref = "department1" minOccurs = "1" maxOccurs = "unbounded" />
+         </xsd:sequence>
+         <xsd:attribute ref = "name" use = "required"/>
+      </xsd:complexType>
+   </xsd:element>
+
+   <xsd:element name = "byui">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element ref = "college" minOccurs = "1" maxOccurs = "unbounded" />
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+ 
+  
+
+ 
+</xsd:schema>
+
+
+

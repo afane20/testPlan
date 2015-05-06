@@ -1,0 +1,104 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+    <!-- validator2.html
+       An example of input validation using the change and submit 
+       events, using the DOM 2 event model
+       Note: This document does not work with IE6
+     -->
+
+<html xmlns = "http://www.w3.org/1999/xhtml">
+  <head>
+    <title> Illustrate form input validation with DOM 2> </title>
+    <script type = "text/javascript">
+      <!--
+      // ********************************************************** //
+      // The event handler function for the name text box
+
+      function chkName(event)
+      {
+      
+        // Get the target node of the event
+
+        var myName = event.currentTarget;
+
+        // Test the format of the input name 
+        //  Allow the spaces after the commas to be optional
+        //  Allow the period after the initial to be optional
+
+        var pos = myName.value.search(/\w+, ?\w+, ?\w.?/);
+
+        if (pos != 0)
+        {
+          alert("The name you entered (" + myName.value + 
+                ") is not in the correct form. \n" +
+                "The correct form is: " +
+                "last-name, first-name, middle-initial \n" +
+                "Please go back and fix your name");
+          myName.focus();
+          myName.select();
+        } 
+      }
+
+      // ********************************************************** //
+      // The event handler function for the phone number text box
+
+      function chkPhone(event)
+      {
+
+        // Get the target node of the event
+
+        var myPhone = event.currentTarget;
+
+        // Test the format of the input phone number
+ 
+        var pos = myPhone.value.search(/^\d{3}-\d{3}-\d{4}$/);
+ 
+        if (pos != 0)
+        {
+          alert("The phone number you entered (" + myPhone.value +
+                ") is not in the correct form. \n" +
+                "The correct form is: ddd-ddd-dddd \n" +
+                "Please go back and fix your phone number");
+          myPhone.focus();
+          myPhone.select();
+        } 
+      }
+
+      // -->
+    </script>
+
+  </head>
+  <body>
+    <h3> Customer Information </h3>
+    <form action = "">
+      <p>
+        <input type = "text"  id = "custName" />
+         Name (last name, first name, middle initial)
+        <br /><br />
+
+        <input type = "text"  id = "phone" />
+        Phone number (ddd-ddd-dddd)
+        <br /><br />
+
+        <input type = "reset" />
+    
+        <input type = "submit"  id = "submitButton" />
+      </p>
+    </form>
+    <script type = "text/javascript">
+      <!--
+
+      // Get the DOM addresses of the elements and register 
+      //    the event handlers
+
+      var customerNode = document.getElementById("custName");
+      var phoneNode = document.getElementById("phone");
+      customerNode.addEventListener("change", chkName, false);
+      phoneNode.addEventListener("change", chkPhone, false);
+
+      // -->
+    </script>
+  </body>
+</html>

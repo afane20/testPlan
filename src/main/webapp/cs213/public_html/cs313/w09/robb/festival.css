@@ -1,0 +1,32 @@
+form fieldset
+{
+   margin: auto;
+   width: 50em;
+   padding: 0px;
+   position: relative;
+}
+form div
+{
+   margin: 2px 10px;
+}
+legend
+{
+   margin: auto 10px;
+}
+#musicians table
+{
+   margin: 10px auto;
+   width: 50em;
+   padding: 4px;
+}
+#musicians table em
+{
+   font-size: small;
+}
+#note
+{
+   font-size: 600%;
+   position: absolute;
+   top: 0px;
+   right: 10px;
+}

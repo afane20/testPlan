@@ -1,0 +1,285 @@
+           
+
+           <tr>
+             <td style="text-align:right;">
+               BirthDate:
+             </td>
+             <td>
+                <input type="text" name="txtStudBirthDate" id="txtStudBirthDate" size="20" maxlength="16">
+             </td>
+           </tr>            
+           <tr>
+             <td style="text-align:right;">
+               Gender:
+             </td>
+             <td>
+                <input type="radio" name="rdoStudGender" id="rdoMale" value="male" checked>
+                Male&nbsp;&nbsp;&nbsp; 
+                <input type="radio" name="rdoStudGender" id="rdoFemale" value="female">   
+                Female        
+             </td>
+           </tr>            
+           <tr>
+             <td style="text-align:right;">
+               Email:
+             </td>
+             <td>
+                <input type="text" name="txtStudEmail" id="txtStudEmail" size="20" maxlength="32">
+             </td>
+           </tr>            
+           <tr>
+             <td style="text-align:right;">
+               Mailing Address:
+             </td>
+             <td>
+                <textarea name="txtStudAddress" id="txtStudAddress" rows="3" cols="15"></textarea>
+             </td>
+           </tr>            
+           <tr>
+             <td style="text-align:right;">
+               City:
+             </td>
+             <td>
+                <input type="text" name="txtStudCity" id="txtStudCity" size="20" maxlength="16"
+                   onkeypress="return keypressLettersOnly(event);">
+             </td>
+           </tr>            
+           <tr>
+             <td style="text-align:right;">
+               State:
+             </td>
+             <td>
+                <select class="drpState" id="drpState" name="drpState">
+                   <option value = "NONE">STATE</option>
+                   <option value = "AK">AK</option>
+                   <option value = "AL">AL</option>
+                   <option value = "AR">AR</option>
+                   <option value = "AZ">AZ</option>
+                   <option value = "CA">CA</option>
+                   <option value = "CO">CO</option>
+                   <option value = "CT">CT</option>
+                   <option value = "DE">DE</option>
+                   <option value = "FL">FL</option>
+                   <option value = "GA">GA</option>
+                   <option value = "HI">HI</option>
+                   <option value = "IA">IA</option>
+                   <option value = "ID">ID</option>
+                   <option value = "IL">IL</option>
+                   <option value = "IN">IN</option>
+                   <option value = "KS">KS</option>
+                   <option value = "KY">KY</option>
+                   <option value = "LA">LA</option>
+                   <option value = "MA">MA</option>
+                   <option value = "MD">MD</option>
+                   <option value = "ME">ME</option>
+                   <option value = "MI">MI</option>
+                   <option value = "MN">MN</option>
+                   <option value = "MO">MO</option>
+                   <option value = "MS">MS</option>
+                   <option value = "MT">MT</option>
+                   <option value = "NC">NC</option>
+                   <option value = "ND">ND</option>
+                   <option value = "NE">NE</option>
+                   <option value = "NH">NH</option>
+                   <option value = "NJ">NJ</option>
+                   <option value = "NM">NM</option>
+                   <option value = "NV">NV</option>
+                   <option value = "NY">NY</option>
+                   <option value = "OH">OH</option>
+                   <option value = "OK">OK</option>
+                   <option value = "OR">OR</option>
+                   <option value = "PA">PA</option>
+                   <option value = "RI">RI</option>
+                   <option value = "SC">SC</option>
+                   <option value = "SD">SD</option>
+                   <option value = "TN">TN</option>
+                   <option value = "TX">TX</option>
+                   <option value = "UT">UT</option>
+                   <option value = "VA">VA</option>
+                   <option value = "VI">VI</option>
+                   <option value = "VT">VT</option>
+                   <option value = "WA">WA</option>
+                   <option value = "WI">WI</option>
+                   <option value = "WV">WV</option>
+                   <option value = "WY">WY</option>
+                </select>
+             </td>
+           </tr>            
+           <tr>
+             <td style="text-align:right;">
+               Zip:
+             </td>
+             <td>
+                <input type="text" name="txtStudZip" id="txtStudZip" size="20" maxlength="16"
+                   onkeypress="return keypressNumbersOnly(event);">
+             </td>
+           </tr>            
+           <tr>
+             <td style="text-align:right;">
+               Phone Number:
+             </td>
+             <td>
+                <input type="text" name="txtStudPhone" id="txtStudPhone" size="20" maxlength="16">
+             </td>
+           </tr>            
+        </table>
+           <input type="button" value="Add" 
+            onclick="if(validateForm(new Array('txtStudFirstName','txtStudLastName','txtStudBirthDate',
+                          'txtStudEmail','txtStudCity','txtStudZip','txtStudPhone', 'txtStudAddress'),  
+                          new Array('First Name', 'Last Name', 'Birth Date', 'Email Address', 'City', 
+                          'Zip Code', 'Phone Number', 'Mailing Address')))
+                        {
+                           if(document.getElementById('drpState').selectedIndex < 1)
+                           {
+                              alert('You must select a state.');
+                           }
+                           else
+                           {
+                              if (confirm('Add ' + document.getElementById('txtStudFirstName').value + ' ' +
+                                           document.getElementById('txtStudLastName').value + ' to your list of students?'))
+                              {
+                                 var request = 'addstudent&firstname=';
+                                 request += document.getElementById('txtStudFirstName').value;
+                                 request += '&lastname=' + document.getElementById('txtStudLastName').value;
+                                 request += '&instrument=' + document.getElementById('drpInstrument').selectedIndex;
+                                 request += '&birthdate=' + document.getElementById('txtStudBirthDate').value;
+                                 if (document.getElementById('rdoMale').checked == true)
+                                 {
+                                    request += '&gender=m';
+                                 }
+                                 else
+                                 {
+                                    request += '&gender=f';
+                                 }
+                                 request += '&email=' + document.getElementById('txtStudEmail').value;
+                                 request += '&address=' + document.getElementById('txtStudAddress').value;
+                                 request += '&city=' + document.getElementById('txtStudCity').value;
+                                 request += '&state=' + document.getElementById('drpState').value;
+                                 request += '&zip=' + document.getElementById('txtStudZip').value;
+                                 request += '&phone=' + document.getElementById('txtStudPhone').value;
+                                 //alert(request);
+                                 sendRequest(request, gStudents);
+                              }
+                           }
+                        }" />
+
+
+   
+           <input type="button" value="Modify" 
+              onclick="if(document.getElementById('StudentList').selectedIndex >= 0)
+                       {
+                          if(validateForm(new Array('txtStudFirstName','txtStudLastName','txtStudBirthDate',
+                             'txtStudEmail','txtStudCity','txtStudZip','txtStudPhone', 'txtStudAddress'),  
+                             new Array('First Name', 'Last Name', 'Birth Date', 'Email Address', 'City', 
+                             'Zip Code', 'Phone Number', 'Mailing Address')))
+                          {   
+                             if(document.getElementById('drpState').selectedIndex < 1)
+                             {
+                                alert('You must select a state.');
+                             }
+                             else
+                             {
+                                var studentIdx = document.getElementById('StudentList').selectedIndex;
+                                var modifyRequest = 'modifystudent';
+                                if(document.getElementById('txtStudFirstName').value != gStudents[studentIdx][1])
+                                {
+                                   modifyRequest += '&firstname=' + document.getElementById('txtStudFirstName').value;
+                                }
+                                if(document.getElementById('txtStudLastName').value != gStudents[studentIdx][2])
+                                {
+                                   modifyRequest += '&lastname=' + document.getElementById('txtStudLastName').value;
+                                }
+
+                                if(document.getElementById('drpInstrument').selectedIndex != gStudents[studentIdx][3])
+                                {
+                                   modifyRequest += '&instrument=' + document.getElementById('drpInstrument').selectedIndex;
+                                }
+                                if(document.getElementById('txtStudBirthDate').value != gStudents[studentIdx][4])
+                                {
+                                   modifyRequest += '&birthdate=' + document.getElementById('txtStudBirthDate').value;
+                                }
+                                if ((document.getElementById('rdoMale').checked == true) && (gStudents[studentIdx][5] != 'm'))
+                                {
+                                   modifyRequest += '&gender=m';
+                                }
+
+                                if ((document.getElementById('rdoFemale').checked == true) && gStudents[studentIdx][5] != 'f')
+                                {
+                                   modifyRequest += '&gender=f';
+                                }
+                                if(document.getElementById('txtStudEmail').value != gStudents[studentIdx][6])
+                                {
+                                   modifyRequest += '&email=' + document.getElementById('txtStudEmail').value;
+                                }
+
+                                if(document.getElementById('txtStudAddress').value != gStudents[studentIdx][7])
+                                {
+                                   modifyRequest += '&address=' + document.getElementById('txtStudAddress').value;
+                                }
+
+                                if(document.getElementById('txtStudCity').value != gStudents[studentIdx][8])
+                                {
+                                   modifyRequest += '&city=' + document.getElementById('txtStudCity').value;
+                                }
+
+                                if(document.getElementById('drpState').value != gStudents[studentIdx][9])
+                                {
+                                   modifyRequest += '&state=' + document.getElementById('drpState').value;
+                                }
+                                if(document.getElementById('txtStudZip').value != gStudents[studentIdx][10])
+                                {
+                                   modifyRequest += '&zip=' + document.getElementById('txtStudZip').value;
+                                }
+                                if(document.getElementById('txtStudPhone').value != gStudents[studentIdx][11])
+                                {
+                                   modifyRequest += '&phone=' + document.getElementById('txtStudPhone').value;
+                                }
+                                if(modifyRequest == 'modifystudent')
+                                {
+                                   alert('No changes have been made to this student.');
+                                }
+                                else
+                                {
+                                   modifyRequest += '&studentid=' + gStudents[studentIdx][0];
+                                   sendRequest(modifyRequest, gStudents);
+                                   document.getElementById('StudentList').selectedIndex = -1;
+                                   document.getElementById('txtStudFirstName').value = '';
+                                   document.getElementById('txtStudLastName').value = '';
+                                   document.getElementById('drpInstrument').selectedIndex = 0;
+                                   document.getElementById('txtStudBirthDate').value = '';
+                                   document.getElementById('rdoMale').checked = true;
+                                   document.getElementById('txtStudEmail').value = '';
+                                   document.getElementById('txtStudAddress').value = '';
+                                   document.getElementById('txtStudCity').value = '';
+                                   document.getElementById('drpState').selectedIndex = 0;
+                                   document.getElementById('txtStudZip').value = '';
+                                   document.getElementById('txtStudPhone').value = '';
+                                }
+                             }
+                          }
+                       }
+                       else
+                       {
+                          alert('You must select a student to modify');
+                       }"/> 
+
+
+
+
+           <input type="button" value="Clear" 
+              onclick="document.getElementById('StudentList').selectedIndex = -1;
+                       document.getElementById('txtStudFirstName').value = '';
+                       document.getElementById('txtStudLastName').value = '';
+                       document.getElementById('drpInstrument').selectedIndex = 0;
+                       document.getElementById('txtStudBirthDate').value = '';
+                       document.getElementById('rdoMale').checked = true;
+                       document.getElementById('txtStudEmail').value = '';
+                       document.getElementById('txtStudAddress').value = '';
+                       document.getElementById('txtStudCity').value = '';
+                       document.getElementById('drpState').selectedIndex = 0;
+                       document.getElementById('txtStudZip').value = '';
+                       document.getElementById('txtStudPhone').value = '';
+                    "/>        
+      </td>
+      <td style="vertical-align:top;">
+         <div style="text-align:center">

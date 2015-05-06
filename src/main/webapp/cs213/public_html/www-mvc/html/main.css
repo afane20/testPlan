@@ -1,0 +1,52 @@
+body {
+background: #a1d1f9;
+background: black;
+margin: 0px;
+padding: 0px;
+font-family: "Courier";
+color: #777;
+}
+
+#content {
+color: black;
+width: 700px;
+margin: 20px auto;
+background: white;
+border-width: 0px 1px 1px 1px;
+border-style: solid;
+border-color: black;
+min-height: 500px;
+padding: 10px;
+text-align: center;
+}
+
+#header {
+margin-bottom: 50px;
+}
+
+#header img {
+width: 590px;
+border: 1px solid black;
+}
+
+table {
+border-collapse: collapse;
+color: black;
+}
+
+table th {
+padding: 3px 7px;
+}
+
+table td {
+border: 1px solid #aaa;
+margin: 0px;
+padding: 3px 7px;
+}
+
+#header ul li {
+display: block;
+float: left;
+border: 1px solid black;
+width: 130px;
+}

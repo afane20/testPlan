@@ -1,0 +1,38 @@
+#!/usr/bin/perl
+
+# Assignment 01    (e.g., Assignment 01)
+# Brother Ercanbrack, CS 373  (e.g., Brother Ercanbrack, CS 373)
+# your name
+
+sub CgiGetFormData
+{
+    my $formData;
+    if ($ENV{'REQUEST_METHOD'} eq "GET")
+    {
+        $formData = $ENV{'QUERY_STRING'};
+    }
+       else
+       {
+           read (STDIN, $formData, $ENV{'CONTENT_LENGTH'});
+       }
+    @keyValuePairs = split (/&/, $formData);
+       foreach $keyValue (@keyValuePairs)
+       {
+           ($key, $value) = split (/=/, $keyValue);
+           $value =~ tr/+/ /;
+           $value =~ s/%([\dA-Fa-f][\dA-Fa-f])/pack ("C", hex ($1))/eg;
+           if (defined ($form{$key}))
+           {
+               $form{$key} = join ("\0", $form{$key}, $value);
+           }
+                   else
+                   {
+                       $form{$key} = $value;
+                   }
+       }
+    return %form;
+}
+
+#  This function reads the form "query string"
+#  It returns a hash consisting of the form elements "name/value" pairs.
+#  This function handles both an http "get" or "post" method.

@@ -1,0 +1,69 @@
+#main
+{
+	background: darkkhaki;
+	width: 600px; 
+	margin: 0 auto; 
+	text-align: center;
+	border: solid 2px;
+}
+
+hr
+{
+	border: solid 1px darkgreen; width: 600px;
+}
+
+.councils
+{
+	width: 600px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+.troops
+{
+	float: left;
+	width: 300px;
+}
+
+.troopNumber
+{
+	font-size: 10pt;
+	color: darkgreen;
+	font-weight: bold;
+}
+
+.scout
+{
+	text-align: left;
+	padding-left: 3px;
+	float: left;
+	clear: both;
+	border: solid 1px;
+	width: 275px;
+	margin-left: 7px;
+	margin-bottom: 7px;
+}
+
+ul{margin: 0; padding: 0; list-style: none; font-size: 10pt;}
+
+.meritBadges{float: right; margin-top: 15px; font-size: 11pt; width: 155px;}
+
+.scoutName{ font-weight: bold; text-decoration: underline;}
+.phoneNumber{ font-size: 10pt;}
+.rank
+{
+	font-weight: bold; 
+	float: right; 
+	margin-right: 3px; 
+	color: darkgreen;
+}
+
+.ranks
+{
+	width: 155px;
+	float: right;
+}
+
+.address{float: left; margin-top: 15px;}
+
+h4{ margin: 0; padding: 0;}
