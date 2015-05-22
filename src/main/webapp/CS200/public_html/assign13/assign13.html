@@ -1,0 +1,634 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Piano Festival</title>
+    <link href="style.css" rel="stylesheet" type="text/css"> 
+
+   <style type = "text/css">
+.myButton {
+-moz-box-shadow: 0px 10px 14px -7px #276873;
+-webkit-box-shadow: 0px 10px 14px -7px #276873;
+box-shadow: 0px 10px 14px -7px #276873;
+background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #599bb3), color-stop(1, #408c99));
+background:-moz-linear-gradient(top, #599bb3 5%, #408c99 100%);
+background:-webkit-linear-gradient(top, #599bb3 5%, #408c99 100%);
+background:-o-linear-gradient(top, #599bb3 5%, #408c99 100%);
+background:-ms-linear-gradient(top, #599bb3 5%, #408c99 100%);
+background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bb3', endColorstr='#408c99',GradientType=0);
+background-color:#599bb3;
+-moz-border-radius:8px;
+-webkit-border-radius:8px;
+border-radius:8px;
+display:inline-block;
+cursor:pointer;
+color:#ffffff;
+font-family:arial;
+font-size:12px;
+font-weight:bold;
+padding:13px 30px;
+text-decoration:none;
+text-shadow:0px 1px 0px #3d768a;
+}
+
+.myButton:hover {
+background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #599bb3));
+background:-moz-linear-gradient(top, #408c99 5%, #599bb3 100%);
+background:-webkit-linear-gradient(top, #408c99 5%, #599bb3 100%);
+background:-o-linear-gradient(top, #408c99 5%, #599bb3 100%);
+background:-ms-linear-gradient(top, #408c99 5%, #599bb3 100%);
+background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#599bb3',GradientType=0);
+background-color:#408c99;
+}
+
+.myButton:active {
+position:relative;
+top:1px;
+}
+
+.myButton:focus {
+	outline: none; 
+	}
+
+a {
+	width:20%;display:block;float:left;background-color:#4D4D4D; text-align:center;
+	color:#FFFFFF;text-transform:uppercase;padding-top:6px;padding-bottom: 6px;
+}
+
+#wrapper {
+background-color:#FFFFFF; width:100%; min-width:700px; max-width: 1100px; 
+margin-left:auto; margin-right:auto;
+}
+
+h1 {
+font-size:72px; color: rgba(25,190,55,0.70);text-align:center;font-weight:500;
+}
+
+body {
+margin:0px; 
+font-family:'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', 'Helvetica', 'Arial', 'sans-serif';
+background-color: #EFF5F8;
+}
+
+blockquote {
+	background: #f9f9f9; border-left: 10px solid medium;
+	padding: 0.5em 50px; text-align: center;
+}
+</style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type = "text/javascript">
+
+	var clear;
+	var xmlhttp;
+
+function du()
+{
+	var duet = document.getElementById("duet");
+	var solo = document.getElementById("solo");
+	var concerto = document.getElementById("concerto");
+	
+	if (duet.checked == true)
+	{
+		document.getElementById("secondStudent").style.visibility = "visible";
+	}
+	else if (solo.checked == false)
+	{
+		document.getElementById("secondStudent").style.visibility = "hidden";
+	}
+	else 
+		document.getElementById("secondStudent").style.visibility = "hidden";
+
+}
+
+function check(){
+	// Chrome, FireFox, etc.
+	if (window.XMLHttpRequest)
+    	{
+            xmlhttp=new XMLHttpRequest();
+        }
+	 // Internet Explorer 
+         else if (window.ActiveXObject)
+	 	{
+	    xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+		 }
+
+	 // Make sure the variable was given a value depending on the browser
+	 if (xmlhttp != null)
+	 {
+   	    // Go to the function and make the display
+	    xmlhttp.onreadystatechange=function(){
+	     if (xmlhttp.readyState==4)
+	 		{
+           		 if (xmlhttp.status==200)	
+               document.getElementById("output").innerHTML=xmlhttp.responseText;
+	    }
+	    
+	    }
+	    xmlhttp.open("GET", "http://157.201.194.254/~afane/data/assign13Delete.php", true);
+	    xmlhttp.send(null);
+	 }
+	 else 
+	 {
+	    alert("Your browser does not support XMLHTTP.");
+	 }
+}  
+
+     
+      
+        
+       
+function addStudent()
+{	  
+	//validate();
+	xmlhttp = null;
+	var queryOn = query1();
+        
+
+	// Chrome, FireFox, etc.
+	if (window.XMLHttpRequest)
+    	{
+            xmlhttp=new XMLHttpRequest();
+        }
+	 // Internet Explorer 
+         else if (window.ActiveXObject)
+	 {
+	    xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+	 }
+
+	 // Make sure the variable was given a value depending on the browser
+	 if (xmlhttp != null)
+	 {
+   	    // Go to the function and make the display
+	    xmlhttp.onreadystatechange=state_Change;
+	    xmlhttp.open("GET", "http://157.201.194.254/~afane/data/assign13.php" + queryOn, true);
+	    xmlhttp.send(null);
+	 }
+	 else 
+	 {
+	    alert("Your browser does not support XMLHTTP.");
+	 }
+      }   
+
+      function state_Change()
+      {
+         if (xmlhttp.readyState==4)
+	 {
+            if (xmlhttp.status==200)
+            {	
+               document.getElementById("output").innerHTML=xmlhttp.responseText;
+            } 
+	    else
+	       alert("Are you using the right link?");
+	 }  
+      } 
+
+   function query1()
+{
+	var query = new Array();
+	query[0] = document.getElementById("firstName");
+	query[1] = document.getElementById("lastName");
+	
+	var radio =  document.forms[0].presentationType;
+	for (var i = 0; i < radio.length;i++)
+	{
+		if (radio[i].checked)
+		query[2] =  radio[i];
+	}
+	
+	query[3] = document.getElementById("identify");
+	query[4] = document.getElementById("skillLevel");
+	query[5] = document.getElementById("Instrument");
+	query[6] = document.getElementById("Location");
+	query[7] = document.getElementById("Room");
+	query[8] = document.getElementById("Time");
+
+	if (radio[1].checked){
+		query[9] = document.getElementById("firstName2");
+		query[10] = document.getElementById("lastName2");
+		query[11] = document.getElementById("identify2");
+	}
+
+	var getQuery = "?";
+	
+	for (var i = 0; i < query.length; i++)
+	{
+		getQuery += query[i].name + "=" + query[i].value;
+		if (i != query.length - 1)
+		getQuery += "&";
+	}
+	
+	//alert(getQuery);
+	return getQuery;
+} 
+     
+function myFunction(){
+	//document.getElementById("firstName").focus();
+	du();
+	getData(); // ajax to grab the file that has been saved 
+}
+// grabs the data from a file through AJAX call when you run the site
+function getData()
+{
+	var ajax = null;
+	
+	if (window.XMLHttpRequest)
+    	{
+            ajax =new XMLHttpRequest();
+        }
+	 // Internet Explorer 
+         else if (window.ActiveXObject)
+	 {
+	    ajax = new ActiveXObject("Microsoft.XMLHTTP");
+	 }
+
+	 // Make sure the variable was given a value depending on the browser
+	 if (ajax != null)
+	 {
+   	    // Go to the function and make the display
+	    ajax.onreadystatechange=function() {
+	     if (ajax.readyState==4)
+	 	{
+            if (ajax.status==200)
+            {	
+            	var getData = ajax.responseText;
+            	var text = "<h3 style= \"text-align:center\">Add more Students!</h3>" + " <h2 style= \"text-align:center\">Students Participating</h2>";
+            	var text0 = "<table width=\"1100\"  border=\"1\" align=\"center\" cellpadding=\"6\" tbcolor: bgcolor=\"#61E6B9\">";
+    			var text1 = "<tbody><tr><th><p>First Name:</p></th><th><p>Last Name</p></th>";
+    			var text2 = "<th><p>Student ID</p></th><th><p>Performance Type</p></th>";
+        		var text3 = "<th><p>Skill Level</p></th><th><p>Instrument</p></th><th><p>Location</p></th>";
+        		var text4 = "<th><p>Room Number</p></th><th><p>Time Slot</p></th></tr>";
+        		
+        		text = text + text0 + text1 + text2 + text3 + text4 + getData;
+               document.getElementById("output").innerHTML= text;
+            } 
+	 }  
+	    
+	    }
+	    ajax.open("POST", "http://157.201.194.254/~afane/data/data.txt", true);
+	    ajax.send(null);
+	 }
+	 else 
+	 {
+	    alert("Your browser does not support XMLHTTP.");
+	 }
+
+}
+//to validate 
+function checnum(as)
+{
+	var input = as.value;
+	if(isNaN(input))
+        {
+		input = input.substring(0,(input.length-1));
+		as.value = input;
+		}
+}
+
+function checkNumber(){
+	var inputNum = document.getElementById("identify");
+	var phoneNum = inputNum.value.search(/^\d{2}-\d{3}-\d{4}$/);
+	var error = "";
+	if (phoneNum != 0){
+	    document.getElementById("identify").style.background = "#FF8585";
+		return false;
+	} else {
+	    document.getElementById("identify").style.background = "white";
+
+	}
+			return true;
+
+}
+
+function checkNumber2(){
+	var inputNum = document.getElementById("identify2");
+	var phoneNum = inputNum.value.search(/^\d{2}-\d{3}-\d{4}$/);
+	var error = "";
+	if (phoneNum != 0){
+	    document.getElementById("identify2").style.background = "#FF8585";
+		return false;
+	} else {
+	    document.getElementById("identify2").style.background = "white";
+	}
+	return true;
+}
+
+function validateName()
+{
+	var text1 = document.getElementById("firstName");
+		
+		if (text1.value == "") 
+		{
+		document.getElementById("firstName").style.background ="#FF8585";
+		return false;
+		}
+		else 
+		document.getElementById("firstName").style.background ="white";
+		
+		return true;
+
+}
+
+function validateName2()
+{
+	var type = document.getElementById("duet");
+	if (type.value == "duet")
+	{
+		var text1 = document.getElementById("firstName2");
+
+		if (text1.value == "") 
+		{
+		document.getElementById("firstName2").style.background ="#FF8585";
+		return false;
+		}
+		else 
+		document.getElementById("firstName2").style.background ="white";
+	}
+		return true;
+
+}
+function validateLastName()
+{
+	var text1 = document.getElementById("lastName");
+		
+		if (text1.value == "") 
+		{
+		document.getElementById("lastName").style.background ="#FF8585";
+		return false;
+		}
+		else 
+		document.getElementById("lastName").style.background ="white";
+		
+		return true;
+
+}
+
+function validateLastName2()
+{
+	var type = document.getElementById("duet");
+	if (type.value == "duet")
+	{
+		var text1 = document.getElementById("lastName2");
+
+		if (text1.value == "") 
+		{
+		document.getElementById("lastName2").style.background ="#FF8585";
+		return false;
+		}
+		else 
+		document.getElementById("lastName2").style.background ="white";
+	}
+		return true;
+}
+function validRoom()
+{
+	var text1 = document.getElementById("Room");
+		
+		if (text1.value == "") 
+		{
+		document.getElementById("Room").style.background ="#FF8585";
+		return false;
+		}
+		else 
+		document.getElementById("Room").style.background ="white";
+		
+		return true;
+
+}
+function validate(){
+	var radio = document.getElementById("duet");
+	validateName();
+	if (radio.value == "duet")
+	{
+	validateName2();
+	validateLastName2();
+	checkNumber2();
+	}
+	validRoom();
+	validateLastName();
+	checkNumber();
+
+	if (validateName() == false)
+	return false;
+	
+
+	if (radio.checked == true){
+
+		if (validateName2() == false)
+		return false;
+
+		if (validateLastName2() == false)
+		return false;
+	
+		if (checkNumber2() == false)
+		return false;
+	}
+	
+	if (validateLastName() == false)
+	return false;
+	
+	if (checkNumber() == false)
+	return false;
+	
+	if (validRoom() == false)
+	return false;
+
+	addStudent();
+	resetF();
+}
+
+function resetF()
+{
+	document.getElementById("Room").style.background ="white";
+	document.getElementById("firstName").style.background ="white";
+	document.getElementById("lastName").style.background ="white";
+	document.getElementById("firstName2").style.background ="white";
+	document.getElementById("lastName2").style.background ="white";
+	document.getElementById("identify2").style.background ="white";
+	document.getElementById("identify").style.background ="white";
+
+}
+
+   </script>
+  </head>
+
+  <!-- Top of page with links -->
+ <body onload="myFunction()">
+
+<div id="wrapper">
+    <header id="top">
+        <h1>Piano Festival</h1>
+
+  <blockquote><strong><em> If thou art merry, praise the Lord with singing, with music, with dancing, 
+  and with a prayer of praise and thanksgiving. If thou art sorrowful, call on the Lord 
+  thy God with supplication, that your souls may be joyful.
+  (D&C 136:28-29)</em></strong></blockquote>
+        
+        </br>
+        
+      <nav id="mainnav">
+            <ul style="list-style-type:none; margin:0px;padding:0px">
+                <li><a href="../index.html" >Home</a></li>
+               
+                <li><a href="http://www.byui.edu/" >BYU-I</a></li>
+               
+                <li><a href="../assign02.html" >CS 213 Assignments</a></li>
+                <li><a href="https://byui.brainhoney.com/" >I-Learn</a></li>
+                <li><a href="https://pod51034.outlook.com/" >BYU-I email</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <h2 style= "text-align:center">Festival Registration</h2>
+    <form id="form1" name="form1" method="get">
+    
+    
+    <table width="564" align="center" cellpadding="6" tbcolor: bgcolor="#61E6B9">
+      <tbody>
+    
+      <tr>
+        <td  style="text-align: left">Performance Type: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+         	<input type = "radio" name = "presentationType" id = "solo" value = "solo" checked = "checked" onclick="du()" />Solo&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        	<input type = "radio" name = "presentationType" id = "duet" value = "duet"  onclick="du()"/>Duet&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        	<input type = "radio" name = "presentationType" id = "concerto" value = "concerto" onclick="du()"/>Concerto
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    
+    
+     <br/>
+
+  <table width="564" align="center" cellpadding="6" tbcolor: bgcolor="#61E6B9">
+    <tbody>
+     
+      <tr>
+        <td  style="text-align: left"><p>First Name:</p></td>
+        <td style="text-align: left">Last Name:</td>
+        <td style="text-align: left">Student ID:</td>
+      </tr>
+      
+      <tr>
+    	<td style="text-align: left"><span style="color:red;">*&nbsp</span><input name="firstName"  type="text" id="firstName" onblur="validateName()"size="19" onkeyup=checkLetter(this)></td>
+        <td style="text-align: left"><span style="color:red;">*&nbsp</span><input name="lastName"  type="text" id="lastName" onblur="validateLastName()"size="19"></td>
+        <td><span style="color:red;">*&nbsp</span><input name="id" type="text" id="identify" size="19" maxlength="11"  placeholder="11-222-3333" onblur="checkNumber()" ></td>
+        </td>
+      </tr>
+      
+      <tr id = "secondStudent">
+    	<td style="text-align: left"><span style="color:red;">*&nbsp</span><input name="firstName2"  type="text" id="firstName2" size="19" onblur="validateName2()"></td>
+        <td style="text-align: left"><span style="color:red;">*&nbsp</span><input name="lastName2"  type="text"  id="lastName2" size="19" onblur="validateLastName2()"></td>
+        <td><span style="color:red;">*&nbsp</span><input name="id2" type="text" id="identify2" size="19" maxlength="11" placeholder="11-222-3333" onblur="checkNumber2()"></td>
+        </td>
+      </tr>
+    
+      
+     
+      
+      
+      
+      
+      <tr>
+        <td style="text-align: left"><p>Skill Level: </p></td>
+        <td style="text-align: left"><select name="skill" id="skillLevel" style="width:168px;">
+          <option value="Beginner">Beginner</option> 
+          <option value="Intermediate">Intermediate</option>
+          <option value="Pre-advanced">Pre-advanced</option>
+          <option value="advanced">advanced</option>
+
+          </select></td>
+      </tr>
+      
+      
+      
+     <tr>
+        <td style="text-align: left"><p>Instrument: </p></td>
+        <td style="text-align: left"><select name="instrument" id="Instrument" style="width:168px;">
+          <option value="piano">Piano</option>
+          <option value="voice">Voice</option>
+          <option value="string">String</option>
+          <option value="organ">Organ</option>  
+          <option value="other">Other</option>
+
+
+          </select></td>
+      </tr>
+      
+      <tr>
+        <td style="text-align: left"><p>Location: </p></td>
+        <td style="text-align: left"><select name="location" id="Location" style="width:168px;">
+          <option value="Taylor">Taylor</option>
+          <option value="MC">Manwaring Center</option>
+          <option value="Spori">Spori</option>
+          <option value="Hart">Hart</option>  
+          <option value="Snow">Snow</option>
+          <option value="Austin">Austin</option>
+          <option value="Benson">Benson</option>
+          <option value="Hinckley">Hinckley</option>
+          </select></td>
+      </tr>
+      
+      <tr>
+      	<td>Room: </td>
+      	<td><span style="color:red;">*&nbsp</span><input name="room"  type="text" id="Room" size="19" placeholder="201D" onblur="validRoom()"></td></td>
+      </tr>
+      
+      <tr>
+      	<td>Time Slot: </td>
+      	<td style="text-align: left"><select name="time" id="Time" style="width:168px;">
+          <option value="8:00AM">8:00AM</option>
+          <option value="9:00AM">9:00AM</option>
+          <option value="10:00AM">10:00AM</option>
+          <option value="11:00AM">11:00AM</option>  
+          <option value="1:00PM">1:00PM</option>
+          <option value="2:00PM">2:00PM</option>
+          <option value="3:00PM">3:00PM</option>
+          <option value="4:00PM">4:00PM</option>
+          <option value="5:00PM">5:00PM</option>
+          <option value="6:00PM">6:00PM</option>
+          <option value="7:00PM">7:00PM</option>
+          <option value="8:00PM">8:00PM</option>
+          <option value="9:00PM">9:00PM</option>
+          </select></td>
+      </tr>
+      
+         
+      <tr>
+         <td style="text-align: center">
+           <input class="myButton" type="reset" name="reset" id="reset" value="Reset form" onclick = "resetF()">
+         </td>
+         
+         <td></td>
+         
+         <td style="text-align:center;"><input class="myButton" name="submit" type="button" value="Submit" onclick="validate()" >
+         </td>
+      </tr>
+        
+    </tbody>
+  </table>
+</form>
+<br>
+<div style="text-align:center">
+<button class="myButton" type="button" value="clear" name ="clear" id = "limpiar" onclick="check()">Unregister all the students</button>
+
+    <br />
+    <br />
+    <h3 style ="color:red">* All star fields are required!</h3>
+    <hr />
+   	<br />
+   	</div>
+   	<div id="output"></div>
+   	<br/>
+   	<br/>
+   	
+    </div>
+
+</body>
+</html>

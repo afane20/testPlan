@@ -1,0 +1,277 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  	<title>Ernesto Afane's Assignment #11 PHP</title>
+
+<style type = "text/css">
+
+a {
+	width:20%;display:block;float:left;background-color:#4D4D4D; text-align:center;
+	color:#FFFFFF;text-transform:uppercase;padding-top:6px;padding-bottom: 6px;
+}
+
+#wrapper {
+background-color:#FFFFFF; width:100%; min-width:700px; max-width: 1000px; 
+margin-left:auto; margin-right:auto;
+}
+
+h1 {
+font-size:72px; color: rgba(25,190,55,0.70);text-align:center;font-weight:500;
+}
+
+body {
+margin:0px; 
+font-family:'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif;
+background-color: #EFF5F8;
+}
+
+blockquote {
+	background: #f9f9f9; border-left: 10px solid medium;
+	padding: 0.5em 50px; text-align: center;
+}
+</style>
+<script type="text/javascript">
+function resetF(){
+	
+var error1 = document.getElementById("error1");
+var error2 = document.getElementById("error2");
+
+error1.innerHTML = "";
+error2.innerHTML = "";
+}
+
+function validateForm() {
+    var x = document.forms["form1"]["name"].value;
+	var x1 = document.forms["form1"]["address"].value;
+	var x2 = document.forms["form1"]["card"].value;
+
+    if (x==null || x=="") {
+        alert("First name must be filled out");
+        return false;
+    }
+	if (phoneNumber() == false){
+		//alert("The phone is wrong ");
+        return false;
+	}
+	if (cardNumber() == false){
+		return false
+	}
+	if (x1==null || x1=="") {
+        alert("Please filled out your address");
+        return false;
+    }
+	if (month() == false){
+		return false
+	}
+	if (year() == false){
+		return false
+	}
+}
+
+function myFunction(){
+	document.getElementById("name").focus();
+}
+// checks that no characters are enter into the field 
+// if they are entered then the characters will be deleted 
+function checnum(as){
+		var input = as.value;
+			if(isNaN(input))
+			{
+				input = input.substring(0,(input.length-1));
+				as.value = input;
+			}
+}
+
+// check for the numbers of the phone 
+function phoneNumber(){
+	var inputNum = document.getElementById("phone");
+	var phoneNum = inputNum.value.search(/^\d{3}-\d{3}-\d{4}$/);
+	var error = "";
+	if (phoneNum != 0){
+	    error = document.getElementById("error1");
+		error.innerHTML = "Invalid phone Number";
+		return false;
+	} else {
+		error = document.getElementById("error1");
+		error.innerHTML = "";
+		return true;
+	}
+}
+
+// check for the card digits 
+function cardNumber(){
+	var inputNum = document.getElementById("card");
+	var phoneNum = inputNum.value.search(/^\d{4}-\d{4}-\d{4}-\d{4}$/);
+	var error = "";
+	if (phoneNum != 0){
+	    error = document.getElementById("error2");
+		error.innerHTML = "Invalid card Number";
+		return false;
+	} else {
+		error = document.getElementById("error2");
+		error.innerHTML = "";
+		return true;
+	}
+}
+
+function compute(){
+	var array = document.forms[0].elements;
+	var total = 0;
+	
+	for (var i = 0; i < array.length ; i++){
+		if (array[i].checked == true && array[i].id === "item"){
+		total += parseFloat(array[i].value, 10);
+		}
+		
+	}	
+	var h4 = document.getElementById("show");
+	h4.innerHTML = "$" + total.toFixed(2);
+
+}
+
+function m(){
+	var month = document.getElementById("month").value;
+	var error = "";
+	if (month == "" || month <1 || month > 12){
+	    error = document.getElementById("error3");
+		error.innerHTML = "Invalid month Number";
+		return false;
+	} else {
+		error = document.getElementById("error3");
+		error.innerHTML = "";
+		return true;
+	}
+}
+
+function y(){
+	var year = document.getElementById("year").value;
+	var error = "";
+	if (year < 2014){
+		error = document.getElementById("error4");
+		error.innerHTML = "Invalid year";
+		return false;
+	}  else {
+		error = document.getElementById("error4");
+		error.innerHTML = "";
+		return true;
+	}
+}
+</script>
+
+</head>
+
+<body onload="myFunction()">
+
+<div id="wrapper">
+    <header id="top">
+        <h1>PHP, Assignment 11 </h1>
+
+  <blockquote><strong><em>"Behold, God is my salvation; I will trust, and not be afraid; 
+  for the Lord Jehovah is my strength and my song; he also has become my salvation".
+  (2 Nephi 22:2)</em></strong></blockquote>
+        
+        </br>
+        
+      <nav id="mainnav">
+            <ul style="list-style-type:none; margin:0px;padding:0px">
+                <li><a href="../index.html" >Home</a></li>
+               
+                <li><a href="http://www.byui.edu/" >BYU-I</a></li>
+               
+                <li><a href="../assign02.html" >CS 213 Assignments</a></li>
+                <li><a href="https://byui.brainhoney.com/" >I-Learn</a></li>
+                <li><a href="https://pod51034.outlook.com/" >BYU-I email</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <h2 style= "text-align:center">Katherine's Store</h2>
+    <form id="form1" name="form1" method="get" onsubmit="return validateForm()" action="assign11.php">
+  <table width="688" height="400" border="1" align="center" cellpadding="6" tbcolor: bgcolor="#61E6B9">
+    <tbody>
+      <tr>
+        <td width="365" style="text-align: right"><p>
+          <label for="Name">Name:</label>
+        </p></td>
+        <td width="351" style="text-align: left"><input name="name"  type="text" id="name" size="35"></td>
+      </tr>
+      <tr>
+        <td style="text-align: right"><p>
+          <label for="phone">Phone Number:</label>
+          (999-888-7777)
+        </p></td>
+        <td style="text-align: left"><input name="phone" type="text" id="phone" size="35" maxlength="12" onblur="phoneNumber()">
+        <h4 id="error1"></h4></td>
+      </tr>
+      <tr>
+        <td style="text-align: right"><p>Credit/Debit Card: (1111-2222-3333-4444)</p></td>
+        <td style="text-align: left"><input name="credit" onblur="cardNumber()"type="text" id="card" size="35">
+        <br>
+        <h4 id="error2"></h4>
+        <input type = "radio" name = "cardType" value = "Visa" >Visa
+        <input type = "radio" name = "cardType" value = "MasterCard">MasterCard
+        <input type = "radio" name = "cardType" value = "American Express">American Express
+		<br>
+        <br>
+        Expiration Date: <br>
+        Month: 
+        <input name="month" onblur="m()" type="text" id="month" size="5">
+        Year:
+        <input name="year" onblur="y()" type="text" id="year" size="8">
+        
+        <h4 id="error3"></h4>
+        <h4 id="error4"></h4>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: right"><p>Address: </p></td>
+        <td style="text-align: left"><textarea name="address" cols="26" rows="5" id="address" size="30"></textarea></td>
+      </tr>
+      <tr>
+        <td style="text-align: right"><p>What Would you like to buy?</p>
+          <p><br>
+        </p></td>
+        <td style="text-align: left"><label>
+          <input type="checkbox" name="shoes" value="100" onClick="compute()" id="item">
+        </label>
+        $100 1 pair of Shoes <br>
+          <label>
+            <input type="checkbox" name="phoneCase" value="50" onClick="compute()" id="item"></label> 
+           $50 Cellphone case <br>
+           
+          <label>
+            <input type="checkbox" name="Wallet" value="30" onClick="compute()" id="item">
+            $30 Wallet</label><br>
+          <label>
+            <input type="checkbox" name="pokemon" value="40" onClick="compute()" id="item">
+        $40 Pokemon Toy</label><br>
+        
+		<label>
+        <input type="checkbox" name="parks" onClick="compute()" value="400" id= "item">
+        $400 
+          Tickets for themeparks</label></td>
+      </tr>
+      
+         <tr>
+         <td style="text-align:right">Total Amount: </td>
+         <td style="text-align:left" ><h4 id="show"></h4></td></tr>
+         
+      <tr>
+         <td style="text-align: right">
+           <input type="reset" name="reset" id="reset" value="Reset form" onclick = "resetF()">
+         </td>
+         <td><input name="submit" type="submit" value="Submit" >
+         </td>
+      </tr>
+        
+    </tbody>
+  </table>
+</form>
+    <br>
+    </div>
+
+</body>
+</html>

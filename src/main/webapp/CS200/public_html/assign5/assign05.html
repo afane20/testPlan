@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <title>Ernesto Afane's Home Page</title>
+ <link href="assign5.css" rel="stylesheet" type="text/css">
+
+<style  type= "text/css">
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+<script type="text/javascript">
+function resetFields(){
+
+    var error1 = document.getElementById("error1");
+	error1.innerHTML = "";
+	
+	var error2 = document.getElementById("error2");
+	error2.innerHTML = "";	
+	
+	var error3 = document.getElementById("error3");
+	error3.innerHTML = "";	
+}
+function myFunction(){
+	document.getElementById("loan").focus();
+}
+ function checnum(as)
+	{
+		var input = as.value;
+			if(isNaN(input))
+			{
+				input = input.substring(0,(input.length-1));
+				as.value = input;
+			}
+	}
+ function yearsToMonths(years)
+ 	{
+		return years * 12;
+ 	}
+ 
+ function calculateM()
+ 	{
+     var p = document.getElementById("loan").value;
+	 
+	 var rate = document.getElementById("interest").value;
+	 var years = document.getElementById("years").value;
+		// convert percentage to a decimal
+	 var r = ((rate/12)/100);
+     var n = yearsToMonths(years);
+		if (p == ""){
+			var error1 = document.getElementById("error1");
+			error1.innerHTML = "Error, put something!";
+			document.getElementById("loan").focus()	
+		}
+	    if (rate == ""){
+			var error2 = document.getElementById("error2");
+			error2.innerHTML = "Error, put something!";	
+			document.getElementById("interest").focus();
+		}
+		if (years == ""){
+			var error3 = document.getElementById("error3");
+			error3.innerHTML = "Error, put something!";	
+			document.getElementById("years").focus();
+		}
+		else if (p != "" && years != "" && rate != ""){
+     var total = ((r * p) / (1 - (Math.pow((1 + r), (-n)))));
+		
+		total = total.toFixed(2);
+		var div = document.getElementById('show');
+		div.innerHTML = "$" + total;
+		resetFields();
+		}
+	}
+</script>
+</head>
+
+<body onLoad="myFunction()" >
+
+<div id="wrapper">
+    <header id="top">
+        <h1>This is CS 213</h1>
+        
+      <blockquote><p><b><i>
+        "Behold, God is my salvation; I will trust, and not be afraid; for the Lord Jehovah is my strength and my song;
+      he also has become my salvation".(2 Nephi 22:2)</i></b></p></blockquote>
+
+        
+      <nav>
+            <ul style="list-style-type:none; margin:0px;padding:0px">
+                <li><a href="../index.html" style="width:20%;display:block;float:left;background-color:#4D4D4D; 
+                text-align:center;color:#FFFFFF;text-transform:uppercase;padding-top:6px;padding-bottom: 6px;">Home</a></li>
+               
+                <li><a href="http://www.byui.edu/" style="width:20%;display:block;float:left;background-color:#4D4D4D; 
+                text-align:center;color:#FFFFFF;text-transform:uppercase;padding-top:6px;padding-bottom: 6px;">BYU-I</a></li>
+               
+                <li><a href="../assign02.html" style="width:20%;display:block;float:left;background-color:#4D4D4D; 
+                text-align:center;color:#FFFFFF;text-transform:uppercase;padding-top:6px;padding-bottom: 6px;">CS213 Assignments</a></li>
+               
+                <li><a href="http://emp.byui.edu/ercanbracks/" style="width:20%;display:block;float:left;background-color:#4D4D4D; 
+                text-align:center;color:#FFFFFF;text-transform:uppercase;padding-top:6px;padding-bottom: 6px;">CS213 Site </a></li>
+                
+              <li><a href="https://pod51034.outlook.com/" style="width:20%;display:block;float:left;background-color:#4D4D4D; 
+                text-align:center;color:#FFFFFF;text-transform:uppercase;padding-top:6px;padding-bottom: 6px;">BYU-I email</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+  <div></div>
+    
+    <div id="information">
+      <p style="color: #000000;">&nbsp;</p>
+        
+        <p style="color: #000000;">&nbsp;</p>
+       
+    <div style="text-align:center;"></div>
+  </div>
+    
+    
+  <div>
+    
+  </div>
+    
+    <div id="tell"></div>
+    
+<form id="form1" name="form1" method="post" style="color:black;">
+  <table>
+    <tbody>
+      <tr>
+        <td style="text-align: right;"><p>
+          <label for="Name"><span id="error1"></span>Loan Amount ($) :</label>
+        </p></td>
+        <td style="padding-right:30px;"><input name="amount" placeholder="How much?" 
+        type="text" id="loan" size="20" onkeyup=checnum(this)></td>
+      </tr>
+      <tr>
+        <td style="text-align: right;"><p><span id="error2"></span>
+          <label for="phone">Interest Rate (ex. 3, 3.2):</label>
+        </p></td>
+        <td style="text-align: left"><input name="inter" type="text" placeholder="APR" 
+        id="interest" size="20" onkeyup=checnum(this)></td>
+      </tr>
+      <tr>
+        <td style="text-align: right"><p><span id="error3"></span>
+          <label for="time">Loan term (in years) :</label>
+        </p></td>
+        <td style="text-align: left"><input name="email" type="text" 
+        placeholder="How Long"id="years" size="20" onkeyup=checnum(this)></td>
+      </tr> 
+      
+      <tr>
+         <td style="text-align: right">
+           <input type="reset" name="reset" id="reset" value="Reset form" onclick = "resetFields()">
+         </td>
+         <td><button type="button" id="calculate" onclick="calculateM()">Calculate Montly Payment</button>
+         </td>
+         <tr>
+         <td style="text-align:right">Total Montly Payment: </td>
+         <td style="text-align:left" ><h4 id="show"></h4></td></tr>
+    </tbody>
+  </table>
+</form>
+    <br/>
+    <hr />
+    
+    <footer>
+      <p>&copy; Salvador Ernesto Afane</p> 
+      <h3><a href="#top">click here to Go to the Top</a></h3>
+
+   <p><a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+         src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+         alt="Valid CSS!" />
+</a>
+</p>
+    </footer>
+    
+</div>
+</body>
+</html>

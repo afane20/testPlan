@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bsa SYSTEM "assign07.dtd">
+
+<bsa>
+    <council name="LightPower">
+        <troop number="1" unitName="unit1">
+            <scout>
+                <firstName>Manuel</firstName>
+                <lastName>Black</lastName>
+                <phoneNumber>333-222-1111</phoneNumber>
+                <address>
+                    <street>3195 Knox McRae</street>
+                    <city>Orlando</city>
+                    <state>Florida</state>
+                </address>
+                <rank dateEarn = "2014-5-30">Eagle</rank>
+                <meritBadge dateEarn = "2014-5-30">Cooking</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Peter</firstName>
+                <lastName>Black</lastName>
+                <phoneNumber>333-222-1111</phoneNumber>
+                <address>
+                    <street>3198 Knox McRae</street>
+                    <city>Orlando</city>
+                    <state>Florida</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Cooking</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Swimming</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Corageous</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Leader</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Communicator</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Enthusiastic</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Eater</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Fishing</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Recueter</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">crafting</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Magus</firstName>
+                <lastName>Black</lastName>
+                <phoneNumber>333-222-1111</phoneNumber>
+                <address>
+                    <street>3195 Knox McRae</street>
+                    <city>Orlando</city>
+                    <state>Texas</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Dictator</rank>
+                <meritBadge dateEarn = "2013-3-28">Cooking</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Swimming</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Corageous</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Leader</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Communicator</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Enthusiastic</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Eater</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Fishing</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Recueter</meritBadge>
+                <meritBadge dateEarn = "2013-3-28">Destroyer</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Manuel</firstName>
+                <lastName>Black</lastName>
+                <phoneNumber>333-222-1111</phoneNumber>
+                <address>
+                    <street>3195 Knox McRae</street>
+                    <city>Orlando</city>
+                    <state>Florida</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Cooking</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Manuel</firstName>
+                <lastName>Black</lastName>
+                <phoneNumber>333-222-1111</phoneNumber>
+                <address>
+                    <street>3195 Knox McRae</street>
+                    <city>Orlando</city>
+                    <state>Florida</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Cooking</meritBadge>
+            </scout>
+        </troop>
+        <troop number="" unitName="">
+            <scout>
+                <firstName>Joseph</firstName>
+                <lastName>Black</lastName>
+                <phoneNumber>333-222-1111</phoneNumber>
+                <address>
+                    <street>3195 Knox McRae</street>
+                    <city>Orlando</city>
+                    <state>Florida</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Cooking</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Manuel</firstName>
+                <lastName>Black</lastName>
+                <phoneNumber>333-222-1111</phoneNumber>
+                <address>
+                    <street>3195 Knox McRae</street>
+                    <city>Orlando</city>
+                    <state>Florida</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Cooking</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Manuel</firstName>
+                <lastName>Black</lastName>
+                <phoneNumber>333-222-1111</phoneNumber>
+                <address>
+                    <street>3195 Knox McRae</street>
+                    <city>Orlando</city>
+                    <state>Florida</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">first Aid</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Manuel</firstName>
+                <lastName>Black</lastName>
+                <phoneNumber>333-222-1111</phoneNumber>
+                <address>
+                    <street>3195 Knox McRae</street>
+                    <city>Orlando</city>
+                    <state>Florida</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Cooking</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Manuel</firstName>
+                <lastName>Black</lastName>
+                <phoneNumber>333-222-1111</phoneNumber>
+                <address>
+                    <street>3195 Knox McRae</street>
+                    <city>Orlando</city>
+                    <state>Florida</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Life Saving</meritBadge>
+            </scout>
+            
+        </troop>
+    </council>
+    <council name= "">
+        <troop number="" unitName="">
+            <scout>
+                <firstName>Manuel</firstName>
+                <lastName>Black</lastName>
+                <phoneNumber>333-222-1111</phoneNumber>
+                <address>
+                    <street>3195 Knox McRae</street>
+                    <city>Orlando</city>
+                    <state>Florida</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Enviromental Science</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Manuel</firstName>
+                <lastName>Black</lastName>
+                <phoneNumber>333-222-1111</phoneNumber>
+                <address>
+                    <street>3195 Knox McRae</street>
+                    <city>Orlando</city>
+                    <state>Florida</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Cooking</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Manuel</firstName>
+                <lastName>Black</lastName>
+                <phoneNumber>333-222-1111</phoneNumber>
+                <address>
+                    <street>3195 Knox McRae</street>
+                    <city>Orlando</city>
+                    <state>Florida</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Cooking</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Manuel</firstName>
+                <lastName>Black</lastName>
+                <phoneNumber>333-222-1111</phoneNumber>
+                <address>
+                    <street>3195 Knox McRae</street>
+                    <city>Orlando</city>
+                    <state>Florida</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Cooking</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Manuel</firstName>
+                <lastName>Black</lastName>
+                <phoneNumber>333-222-1111</phoneNumber>
+                <address>
+                    <street>3195 Knox McRae</street>
+                    <city>Orlando</city>
+                    <state>Florida</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Cooking</meritBadge>
+            </scout>
+        </troop>
+        <troop number="" unitName="">
+            <scout>
+                <firstName>Manuel</firstName>
+                <lastName>Black</lastName>
+                <phoneNumber>333-222-1111</phoneNumber>
+                <address>
+                    <street>3195 Knox McRae</street>
+                    <city>Orlando</city>
+                    <state>Florida</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Cooking</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Manuel</firstName>
+                <lastName>Black</lastName>
+                <phoneNumber>333-222-1111</phoneNumber>
+                <address>
+                    <street>3195 Knox McRae</street>
+                    <city>Orlando</city>
+                    <state>Florida</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Cooking</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Manuel</firstName>
+                <lastName>Black</lastName>
+                <phoneNumber>333-222-1111</phoneNumber>
+                <address>
+                    <street>3195 Knox McRae</street>
+                    <city>Orlando</city>
+                    <state>Florida</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Cooking</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Manuel</firstName>
+                <lastName>Black</lastName>
+                <phoneNumber>333-222-1111</phoneNumber>
+                <address>
+                    <street>3195 Knox McRae</street>
+                    <city>Orlando</city>
+                    <state>Florida</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2013-3-28">Cooking</meritBadge>
+            </scout>
+            <scout>
+                <firstName>Manuel</firstName>
+                <lastName>Black</lastName>
+                <phoneNumber>333-222-1111</phoneNumber>
+                <address>
+                    <street>3195 Knox McRae</street>
+                    <city>Orlando</city>
+                    <state>Florida</state>
+                </address>
+                <rank dateEarn = "2013-3-28">Eagle</rank>
+                <meritBadge dateEarn = "2014-6-12">Cooking</meritBadge>
+                <meritBadge dateEarn = "2014-2-3">Swimming</meritBadge>
+                <meritBadge dateEarn = "2013-12-30">Corageous</meritBadge>
+                <meritBadge dateEarn = "2011-11-29">Leader</meritBadge>
+            </scout>
+            
+        </troop>
+    </council>
+</bsa>
