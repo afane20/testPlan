@@ -49,9 +49,9 @@ public class EditEvents extends HttpServlet {
    //String USER = "root";
   // String PASS = "root";
    //FOR OPENSHIFT
-   String DB_URL = "jdbc:mysql://127.11.76.130/planit";
-   String USER = "adminJINwHhB";
-   String PASS = "lrUe_5DxE1eK";
+   String DB_URL = "jdbc:mysql://127.11.251.130/planit";
+   String USER = "adminqvt78mw";
+   String PASS = "yR3dXZIcZK8n";
    
    Connection conn = null;
    Statement stmt = null;
