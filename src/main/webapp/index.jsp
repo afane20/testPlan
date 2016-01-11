@@ -110,18 +110,28 @@
         </header>
         <div class="container-fluid">
             <main>
-                <div class="row events-container">   ${review.getTitle()}
+                <div class="row events-container">  
                     <c:forEach items="${list}" var="event">
+                    <%
+                        // The date format that is stored as the value
+                        DateFormat databaseFormat = new SimpleDateFormat("yyyy-MM-dd");
+
+                        Calendar cal = Calendar.getInstance();
+
+                        String gotDataBase = (databaseFormat.format(cal.getTime()));
+                        if (gotDatabase.equals(event.getDate())
+                        {
                         <div class="col-xs-12 col-md-6 event"><div class="col-xs-4 col-md-2 event-img"><img src=" + ${event.getPicture()} + " 
-                    + alt="event" class="img-responsive"></div><div class="col-xs-5 col-md-7 event-title"><h1 class="text-muted event-title"> 
-                    ${event.getTitle()}</h1></div><div class="col-xs-3 col-md-3 event-info"><p class="event-info event-info-highlight"><span class="glyphicon glyphicon-time"></span> 
-                    ${event.getStartTime()}</p><p class="event-info"><span class="glyphicon glyphicon-usd"></span>
-                    ${event.getPrice()}</p><p class="event-info"><span class="glyphicon glyphicon-map-marker"></span>
-                    + '2mi' + '</p></div><div class="col-xs-12 event-description"><span class="glyphicon glyphicon-time"></span><h2 class="event-time text-muted">' 
-                    ${event.getStartTime()} <span>-</span>
-                    ${event.getEndTime()}  </h2><span class="glyphicon glyphicon-map-marker"></span><h2 class="event-location text-muted">' 
-                    ${event.getLocation()} </h2><p> 
-                    ${event.getDescription()}</div></div>
+                        + alt="event" class="img-responsive"></div><div class="col-xs-5 col-md-7 event-title"><h1 class="text-muted event-title"> 
+                        ${event.getTitle()}</h1></div><div class="col-xs-3 col-md-3 event-info"><p class="event-info event-info-highlight"><span class="glyphicon glyphicon-time"></span> 
+                        ${event.getStartTime()}</p><p class="event-info"><span class="glyphicon glyphicon-usd"></span>
+                        ${event.getPrice()}</p><p class="event-info"><span class="glyphicon glyphicon-map-marker"></span>
+                        + 2mi + </p></div><div class="col-xs-12 event-description"><span class="glyphicon glyphicon-time"></span><h2 class="event-time text-muted">' 
+                        ${event.getStartTime()} <span>-</span>
+                        ${event.getEndTime()}  </h2><span class="glyphicon glyphicon-map-marker"></span><h2 class="event-location text-muted">' 
+                        ${event.getLocation()} </h2><p> 
+                        ${event.getDescription()}</div></div>
+                        }
                     </c:forEach>
                                    
                 </div>
