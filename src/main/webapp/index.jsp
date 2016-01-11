@@ -121,6 +121,7 @@
                         String gotDataBase = (databaseFormat.format(cal.getTime()));
                         if (gotDatabase.equals(event.getDate())
                         {
+                      %>  
                         <div class="col-xs-12 col-md-6 event"><div class="col-xs-4 col-md-2 event-img"><img src=" + ${event.getPicture()} + " 
                         + alt="event" class="img-responsive"></div><div class="col-xs-5 col-md-7 event-title"><h1 class="text-muted event-title"> 
                         ${event.getTitle()}</h1></div><div class="col-xs-3 col-md-3 event-info"><p class="event-info event-info-highlight"><span class="glyphicon glyphicon-time"></span> 
@@ -131,7 +132,7 @@
                         ${event.getEndTime()}  </h2><span class="glyphicon glyphicon-map-marker"></span><h2 class="event-location text-muted">' 
                         ${event.getLocation()} </h2><p> 
                         ${event.getDescription()}</div></div>
-                        }
+                    <%     }  %>
                     </c:forEach>
                                    
                 </div>
