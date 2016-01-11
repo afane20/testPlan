@@ -128,9 +128,9 @@
                         ${event.getTitle()}</h1></div><div class="col-xs-3 col-md-3 event-info"><p class="event-info event-info-highlight"><span class="glyphicon glyphicon-time"></span> 
                         ${event.getStartTime()}</p><p class="event-info"><span class="glyphicon glyphicon-usd"></span>
                         ${event.getPrice()}</p><p class="event-info"><span class="glyphicon glyphicon-map-marker"></span>
-                        2mi</p></div><div class="col-xs-12 event-description"><span class="glyphicon glyphicon-time"></span><h2 class="event-time text-muted">' 
+                        2mi</p></div><div class="col-xs-12 event-description"><span class="glyphicon glyphicon-time"></span><h2 class="event-time text-muted"> 
                         ${event.getStartTime()} <span>-</span>
-                        ${event.getEndTime()}  </h2><span class="glyphicon glyphicon-map-marker"></span><h2 class="event-location text-muted">' 
+                        ${event.getEndTime()}  </h2><span class="glyphicon glyphicon-map-marker"></span><h2 class="event-location text-muted">
                         ${event.getLocation()} </h2><p> 
                         ${event.getDescription()}</div></div>
                     <%  /*   } */ %>
