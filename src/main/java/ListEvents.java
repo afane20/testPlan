@@ -86,6 +86,7 @@ public class ListEvents extends HttpServlet {
         event.setEndTime(rs.getString("EndTime"));
         event.setLocation(rs.getString("Location"));
         event.setDescription(rs.getString("Description")); 
+        event.setPicture(event.getDescription());
         list.add(event);
       }
       //STEP 6: Clean-up environment
