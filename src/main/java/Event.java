@@ -168,7 +168,7 @@ public class Event {
                      break;
             case "Employee"    : this.picture = "img/employee.svg";
                      break;   
-            default            : this.picture = "img/dance.svg";
+            default            : this.picture = a + " " + description;//this.picture = "img/dance.svg";
                      break;
         }
     }
