@@ -163,7 +163,8 @@ public class ListEvents extends HttpServlet {
             e.printStackTrace();
           }
           
-            request.getRequestDispatcher("listEvents.jsp").forward(request,response);
+           // request.getRequestDispatcher("listEvents.jsp").forward(request,response);
+           request.getRequestDispatcher("index.jsp").forward(request,response);
    }
     }
     
