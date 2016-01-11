@@ -113,7 +113,7 @@
                 <div class="row events-container">  
                     <c:forEach items="${list}" var="event">
                     <%
-                        // The date format that is stored as the value
+                      /* // The date format that is stored as the value
                         DateFormat databaseFormat = new SimpleDateFormat("yyyy-MM-dd");
 
                         Calendar calin = Calendar.getInstance();
@@ -121,7 +121,7 @@
                         String gotDataBase = (databaseFormat.format(calin.getTime()));
                        // if(event.getDate() == $('.swiper-slide-active .date-hidden').text())
                         if (gotDatabase.equals(event.getDate())
-                        {
+                        { */
                       %>  
                         <div class="col-xs-12 col-md-6 event"><div class="col-xs-4 col-md-2 event-img"><img src=" + ${event.getPicture()} + " 
                         + alt="event" class="img-responsive"></div><div class="col-xs-5 col-md-7 event-title"><h1 class="text-muted event-title"> 
@@ -133,7 +133,7 @@
                         ${event.getEndTime()}  </h2><span class="glyphicon glyphicon-map-marker"></span><h2 class="event-location text-muted">' 
                         ${event.getLocation()} </h2><p> 
                         ${event.getDescription()}</div></div>
-                    <%     }  %>
+                    <%  /*   } */ %>
                     </c:forEach>
                                    
                 </div>
