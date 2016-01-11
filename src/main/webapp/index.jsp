@@ -116,9 +116,10 @@
                         // The date format that is stored as the value
                         DateFormat databaseFormat = new SimpleDateFormat("yyyy-MM-dd");
 
-                        Calendar cal = Calendar.getInstance();
+                        Calendar calin = Calendar.getInstance();
 
-                        String gotDataBase = (databaseFormat.format(cal.getTime()));
+                        String gotDataBase = (databaseFormat.format(calin.getTime()));
+                       // if(event.getDate() == $('.swiper-slide-active .date-hidden').text())
                         if (gotDatabase.equals(event.getDate())
                         {
                       %>  
