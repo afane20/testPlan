@@ -38,6 +38,7 @@ public class Event {
     private String startTime;
     private String endTime;
     private String date;
+    private String picture;
     
     Event() {
         
@@ -125,6 +126,53 @@ public class Event {
         this.date = date;
     }
     
+    public String getPicture() {
+        return picture;
+    }
+    
+    public void setPicture(String description) {
+        description = description.trim();
+        description = description.replaceAll("\r?\n|\r/","");
+        System.out.print(description);
+              
+        Categories ca = new Categories();
+        ca.readMap();
+        String a = ca.searchDescription(description);
+        System.out.println("found: " + a);
+        switch (a) {
+            case "Fitness"     : this.picture = "img/fitness.svg";
+                     break;
+            case "Performance" : this.picture = "img/performance.svg";
+                     break;
+            case "Outdoors"    : this.picture = "img/outdoors.svg";
+                     break;
+            case "Academics"   : this.picture = "img/academics.svg";
+                     break;
+            case "Social"      : this.picture = "img/social.svg";
+                     break;
+            case "Instruction" : this.picture = "img/instruction.svg";
+                     break;
+            case "Festive"     : this.picture = "img/festive.svg";
+                     break;
+            case "Dance"       : this.picture = "img/dance.svg";
+                     break;
+            case "Spiritual"   : this.picture = "img/spiritual.svg";
+                     break;
+            case "Conference"  : this.picture = "img/conference.svg";
+                     break;
+            case "Competition" : this.picture = "img/competition.svg";
+                     break;
+            case "Comedy"      : this.picture = "img/comedy.svg";
+                     break;
+            case "Theatre"     : this.picture = "img/theatre.svg";
+                     break;
+            case "Employee"    : this.picture = "img/employee.svg";
+                     break;   
+            default            : this.picture = "img/dance.svg";
+                     break;
+        }
+    }
+    
     public void writeFile() {
                 
            // JDBC driver name and database URL
@@ -168,6 +216,7 @@ public class Event {
         event.setEndTime(rs.getString("EndTime"));
         event.setLocation(rs.getString("Location"));
         event.setDescription(rs.getString("Description")); 
+        event.setPicture(event.getDescription());
         list.add(event);
       }
       //STEP 6: Clean-up environment
